@@ -1,0 +1,1809 @@
+{
+  "project_info": {
+    "project_number": 4,
+    "project_topic": "企业内容管理系统",
+    "project_description": "该项目旨在开发一个企业内容管理系统，帮助企业高效管理和发布多渠道内容。主要功能模块包括内容创作与编辑、版本管理、发布调度、数据收集与分析。系统将使用Node.js搭建后端服务，React负责前端展示，结合Python进行数据分析与自动化。该平台将支持内容的协同编辑和审核流程，并能与市场和社交媒体平台集成。预期成果是一个能够提升内容管理效率与发布效果的综合工具。",
+    "related_projects": [
+      1,
+      2,
+      3
+    ],
+    "generated_at": "2025-10-29T11:50:25.741570"
+  },
+  "team_composition": {
+    "total_members": 17,
+    "rank_distribution": {
+      "rank_1": 1,
+      "rank_2": 2,
+      "rank_3": 14
+    }
+  },
+  "members": [
+    {
+      "user_name": "张伟华",
+      "team": "高层管理",
+      "title": "首席执行官",
+      "rank": 1,
+      "hard_skills": [
+        {
+          "skill": "商业模式画布",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "战略分析",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "团队建设",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "绩效管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "沟通能力",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Excel高级功能",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "original_communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 1,
+          "subtask": "市场需求分析与竞争态势评估，为项目确定整体战略方向，制定核心目标和关键成功因素，输出战略规划文档与项目目标OKR",
+          "required_skills": [
+            "商业模式画布",
+            "战略分析",
+            "项目管理"
+          ],
+          "communication_requirements": "与全体Rank 2总监进行formal meeting，并提交书面战略规划文档，每周进行战略review",
+          "deadline": "2025-02-15"
+        },
+        {
+          "subtask_id": 2,
+          "subtask": "审批项目预算与资源配置方案，确保资源合理分配，监督预算执行情况，生成资源配置报告",
+          "required_skills": [
+            "绩效管理",
+            "项目管理"
+          ],
+          "communication_requirements": "与财务总监及各部门总监进行formal budget review meeting",
+          "deadline": "2025-03-01"
+        },
+        {
+          "subtask_id": 3,
+          "subtask": "跨部门协调会议，确保项目进度与目标一致性，解决各部门间协调问题，记录决策与沟通日志",
+          "required_skills": [
+            "沟通能力",
+            "团队建设"
+          ],
+          "communication_requirements": "举办monthly formal coordination meetings，与所有部门负责人沟通",
+          "deadline": "2025-02-20"
+        },
+        {
+          "subtask_id": 4,
+          "subtask": "约谈与解决项目冲突与风险评估，制定风险应对策略与整改方案，更新风险管理日志",
+          "required_skills": [
+            "项目管理",
+            "战略分析"
+          ],
+          "communication_requirements": "与项目风险管理团队进行formal risk assessment meetings",
+          "deadline": "2025-03-05"
+        },
+        {
+          "subtask_id": 5,
+          "subtask": "关注核心用户使用反馈与满意度调研，调整战略与产品功能以提升用户体验与市场竞争力",
+          "required_skills": [
+            "商业模式画布",
+            "团队建设"
+          ],
+          "communication_requirements": "定期与产品经理和用户体验团队进行feedback discussion meetings",
+          "deadline": "2025-03-25"
+        },
+        {
+          "subtask_id": 6,
+          "subtask": "项目总体战略方向审批及中期评估，根据运营数据与绩效指标调整战略规划",
+          "required_skills": [
+            "战略分析",
+            "项目管理"
+          ],
+          "communication_requirements": "与各部门总监进行mid-term strategy review meeting",
+          "deadline": "2025-03-31"
+        }
+      ]
+    },
+    {
+      "user_name": "李明志",
+      "team": "技术研发部",
+      "title": "技术总监",
+      "rank": 2,
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Docker",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Azure",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Kubernetes",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "团队管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 7,
+          "subtask": "设计与实现后端服务架构，确保Node.js服务与React前端的良好交互，撰写技术文档",
+          "required_skills": [
+            "Node.js",
+            "Docker"
+          ],
+          "communication_requirements": "与前端开发团队进行semi-formal technical meetings进行需求对接",
+          "deadline": "2025-05-15"
+        },
+        {
+          "subtask_id": 8,
+          "subtask": "构建和维护Docker容器化的开发和生产环境，确保持续集成的高效性",
+          "required_skills": [
+            "Docker",
+            "Kubernetes"
+          ],
+          "communication_requirements": "与系统管理员进行semi-formal Docker环境setup discussions",
+          "deadline": "2025-06-01"
+        },
+        {
+          "subtask_id": 9,
+          "subtask": "创建自动化测试框架，确保后端API的质量与稳定性，提交测试结果报告",
+          "required_skills": [
+            "Python",
+            "Azure"
+          ],
+          "communication_requirements": "与QA团队进行semi-formal testing strategy review",
+          "deadline": "2025-06-15"
+        },
+        {
+          "subtask_id": 10,
+          "subtask": "整合Azure云服务进行平台扩展性分析，实现灵活的资源调度",
+          "required_skills": [
+            "Azure",
+            "团队管理"
+          ],
+          "communication_requirements": "与云服务团队进行technical cloud service integration meetings",
+          "deadline": "2025-07-01"
+        },
+        {
+          "subtask_id": 11,
+          "subtask": "协调研发团队开发计划，进行任务分配与进度追踪，更新Sprint计划",
+          "required_skills": [
+            "团队管理",
+            "项目管理"
+          ],
+          "communication_requirements": "与研发团队成员进行weekly sprint planning discussions",
+          "deadline": "2025-07-15"
+        },
+        {
+          "subtask_id": 12,
+          "subtask": "优化后端服务性能提升及系统弹性扩展方案，输出性能优化报告",
+          "required_skills": [
+            "Node.js",
+            "Docker"
+          ],
+          "communication_requirements": "与开发团队进行semi-formal performance review and improvement meetings",
+          "deadline": "2025-08-01"
+        }
+      ]
+    },
+    {
+      "user_name": "陈慧兰",
+      "team": "产品设计部",
+      "title": "产品设计总监",
+      "rank": 2,
+      "hard_skills": [
+        {
+          "skill": "UX设计",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Figma",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "用户访谈",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "可用性测试",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "团队管理",
+          "proficiency": "medium"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 13,
+          "subtask": "为系统开发提供UX/UI设计指导，定义易用且直观的人机交互流程，制作用户流程图与设计原型",
+          "required_skills": [
+            "UX设计",
+            "Figma"
+          ],
+          "communication_requirements": "与UI设计师进行detailed design feedback sessions",
+          "deadline": "2025-03-15"
+        },
+        {
+          "subtask_id": 14,
+          "subtask": "进行目标用户调研与访谈，收集用户需求和反馈信息，形成用户画像和需求文档",
+          "required_skills": [
+            "用户访谈",
+            "UX设计"
+          ],
+          "communication_requirements": "与用户体验团队及部分终端用户进行semi-formal user interview sessions",
+          "deadline": "2025-02-28"
+        },
+        {
+          "subtask_id": 15,
+          "subtask": "执行系统可用性测试，分析测试数据，提出可用性改进建议，并整合结果入设计改进",
+          "required_skills": [
+            "可用性测试",
+            "Figma"
+          ],
+          "communication_requirements": "与产品经理和UI设计团队进行detailed usability testing review meetings",
+          "deadline": "2025-04-05"
+        },
+        {
+          "subtask_id": 16,
+          "subtask": "优化现有UI设计方案，根据反馈进行迭代，并维护UI组件库",
+          "required_skills": [
+            "Figma",
+            "UX设计"
+          ],
+          "communication_requirements": "与UI设计师及前端开发团队进行casual iterative design discussions",
+          "deadline": "2025-04-20"
+        },
+        {
+          "subtask_id": 17,
+          "subtask": "协助开发团队在产品设计实施过程中，确保设计理念和用户体验得到执行与优化",
+          "required_skills": [
+            "UX设计",
+            "团队管理"
+          ],
+          "communication_requirements": "与技术研发团队进行design implementation review meetings",
+          "deadline": "2025-05-10"
+        },
+        {
+          "subtask_id": 18,
+          "subtask": "对系统设计进行定期审查并与发展最新设计趋势持续对齐，确保产品竞争性",
+          "required_skills": [
+            "UX设计",
+            "用户访谈"
+          ],
+          "communication_requirements": "与设计团队进行semi-formal trend alignment meetings",
+          "deadline": "2025-06-15"
+        },
+        {
+          "subtask_id": 19,
+          "subtask": "负责项目关键设计文档的审校，确保设计理论与实现的一致性",
+          "required_skills": [
+            "Figma",
+            "可用性测试"
+          ],
+          "communication_requirements": "与设计和开发团队签署书面项目设计规范文档",
+          "deadline": "2025-07-05"
+        }
+      ]
+    },
+    {
+      "user_name": "王芳",
+      "team": "技术研发部",
+      "title": "高级软件工程师",
+      "rank": 3,
+      "hard_skills": [
+        {
+          "skill": "Java",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Spring Boot",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "MySQL",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Git",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Clarifying"
+      },
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 20,
+          "subtask": "建立用户管理模块后端API接口，确保与前端界面的数据交互顺畅",
+          "required_skills": [
+            "Java",
+            "Spring Boot"
+          ],
+          "communication_requirements": "与前端开发团队进行semi-formal API design discussions",
+          "deadline": "2025-06-01"
+        },
+        {
+          "subtask_id": 21,
+          "subtask": "优化现有MySQL数据库结构以提升应用性能，复核并更新数据库文档",
+          "required_skills": [
+            "MySQL",
+            "Spring Boot"
+          ],
+          "communication_requirements": "与数据库管理员进行formal database structure review",
+          "deadline": "2025-06-15"
+        },
+        {
+          "subtask_id": 22,
+          "subtask": "实现内容审核模块，通过API提供审核状态更新，输出操作日志",
+          "required_skills": [
+            "Java",
+            "Spring Boot"
+          ],
+          "communication_requirements": "与产品经理进行semi-formal functional requirement clarification sessions",
+          "deadline": "2025-07-10"
+        },
+        {
+          "subtask_id": 23,
+          "subtask": "维护代码库并进行版本控制，确保与团队源码库的同步和协作",
+          "required_skills": [
+            "Git",
+            "Java"
+          ],
+          "communication_requirements": "与全体开发人员进行casual code repository access meetings",
+          "deadline": "2025-07-25"
+        },
+        {
+          "subtask_id": 24,
+          "subtask": "参与内容发布调度模块的开发，并与其他模块进行整合测试",
+          "required_skills": [
+            "Java",
+            "Spring Boot"
+          ],
+          "communication_requirements": "与测试团队进行detailed integration testing and feedback",
+          "deadline": "2025-08-05"
+        }
+      ]
+    },
+    {
+      "user_name": "刘辰光",
+      "team": "技术研发部",
+      "title": "软件工程师",
+      "rank": 3,
+      "hard_skills": [
+        {
+          "skill": "JavaScript",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "React",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Node.js",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "GitHub Actions",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 25,
+          "subtask": "开发内容创作与编辑前端界面，实现用户友好的编辑体验",
+          "required_skills": [
+            "JavaScript",
+            "React"
+          ],
+          "communication_requirements": "与产品设计团队进行casual user experience improvement discussions",
+          "deadline": "2025-05-20"
+        },
+        {
+          "subtask_id": 26,
+          "subtask": "实现前端与后端认证模块交互，确保安全性与性能并提交测试报告",
+          "required_skills": [
+            "Node.js",
+            "React"
+          ],
+          "communication_requirements": "与后端开发团队进行semi-formal API interaction technical discussions",
+          "deadline": "2025-06-10"
+        },
+        {
+          "subtask_id": 27,
+          "subtask": "开发并整合内容数据分析组件，输出可视化分析结果",
+          "required_skills": [
+            "JavaScript",
+            "React"
+          ],
+          "communication_requirements": "与数据分析师进行formal data visualization review",
+          "deadline": "2025-06-30"
+        },
+        {
+          "subtask_id": 28,
+          "subtask": "维护和优化React前端工程结构，确保代码简洁和可维护性",
+          "required_skills": [
+            "React",
+            "JavaScript"
+          ],
+          "communication_requirements": "与前端开发团队进行casual peer code reviews",
+          "deadline": "2025-07-15"
+        },
+        {
+          "subtask_id": 29,
+          "subtask": "配置与监控GitHub Actions以实现CI/CD工作流，提高开发效率",
+          "required_skills": [
+            "GitHub Actions",
+            "Node.js"
+          ],
+          "communication_requirements": "与CI/CD工具团队进行semi-formal process improvement meetings",
+          "deadline": "2025-07-30"
+        },
+        {
+          "subtask_id": 30,
+          "subtask": "参与内容协同编辑模型的实现，确保多用户同步编辑功能的稳定性",
+          "required_skills": [
+            "React",
+            "JavaScript"
+          ],
+          "communication_requirements": "与团队进行casual collaborative editing solution brainstorms",
+          "deadline": "2025-08-10"
+        }
+      ]
+    },
+    {
+      "user_name": "高国强",
+      "team": "产品设计部",
+      "title": "产品经理",
+      "rank": 3,
+      "hard_skills": [
+        {
+          "skill": "需求分析",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Scrum",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Figma",
+          "proficiency": "low"
+        },
+        {
+          "skill": "Confluence",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 31,
+          "subtask": "主持需求分析专题研讨会，确定项目需求规格说明，输出需求文档",
+          "required_skills": [
+            "需求分析",
+            "项目管理"
+          ],
+          "communication_requirements": "与产品设计与技术团队进行formal requirement specification workshops",
+          "deadline": "2025-02-20"
+        },
+        {
+          "subtask_id": 32,
+          "subtask": "制定并维护项目Scrum计划，调度每日站立会议并更新Sprint回顾",
+          "required_skills": [
+            "Scrum",
+            "项目管理"
+          ],
+          "communication_requirements": "与全体开发团队进行daily stand-ups和sprint review meetings",
+          "deadline": "2025-03-10"
+        },
+        {
+          "subtask_id": 33,
+          "subtask": "分析并优化现有的项目文档管理流程，确保文档的一致性和完整性",
+          "required_skills": [
+            "Confluence",
+            "项目管理"
+          ],
+          "communication_requirements": "与文档团队及项目管理团队进行semi-formal process analysis discussions",
+          "deadline": "2025-04-01"
+        },
+        {
+          "subtask_id": 34,
+          "subtask": "与跨部门成员协调版本发布计划，监督需求向开发需求的转化",
+          "required_skills": [
+            "Scrum",
+            "需求分析"
+          ],
+          "communication_requirements": "与技术总监和产品经理进行release planning meetings",
+          "deadline": "2025-04-20"
+        },
+        {
+          "subtask_id": 35,
+          "subtask": "使用Figma协助UI团队进行设计原型的确认，确保需求与视觉的对齐",
+          "required_skills": [
+            "Figma",
+            "需求分析"
+          ],
+          "communication_requirements": "与UI设计师进行regular design confirmation sessions",
+          "deadline": "2025-05-05"
+        }
+      ]
+    },
+    {
+      "user_name": "苏颖",
+      "team": "产品设计部",
+      "title": "UI设计师",
+      "rank": 3,
+      "hard_skills": [
+        {
+          "skill": "Figma",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Adobe XD",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "用户访谈",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Axure RP",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Casual",
+        "Verbosity": "Detailed",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Plain",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "original_communication_style": {
+        "Formality": "Casual",
+        "Verbosity": "Detailed",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Plain",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 36,
+          "subtask": "设计内容管理系统的UI界面，确保其符合用户体验要求及品牌风格",
+          "required_skills": [
+            "Figma",
+            "Adobe XD"
+          ],
+          "communication_requirements": "与产品设计总监进行casual design review meetings",
+          "deadline": "2025-03-15"
+        },
+        {
+          "subtask_id": 37,
+          "subtask": "根据用户反馈迭代系统的UI设计，保证UI的实用性与美观性并提交更新报告",
+          "required_skills": [
+            "Figma",
+            "用户访谈"
+          ],
+          "communication_requirements": "与用户体验团队进行user feedback sessions",
+          "deadline": "2025-04-10"
+        },
+        {
+          "subtask_id": 38,
+          "subtask": "参与定义Axure RP的低保真原型设计，输出交互文档以指导开发",
+          "required_skills": [
+            "Axure RP",
+            "Adobe XD"
+          ],
+          "communication_requirements": "与前端开发和产品设计团队进行interaction design meetings",
+          "deadline": "2025-04-25"
+        },
+        {
+          "subtask_id": 39,
+          "subtask": "实施用户体验改进方案，整合最新设计趋势以提升产品吸引力",
+          "required_skills": [
+            "用户访谈",
+            "Figma"
+          ],
+          "communication_requirements": "与UI设计团队进行creative brainstorming workshops",
+          "deadline": "2025-05-15"
+        },
+        {
+          "subtask_id": 40,
+          "subtask": "维护UI设计文件库，确保所有设计文件的版本化管理和可访问性",
+          "required_skills": [
+            "Figma",
+            "Adobe XD"
+          ],
+          "communication_requirements": "与设计团队进行file management discussions",
+          "deadline": "2025-05-30"
+        },
+        {
+          "subtask_id": 41,
+          "subtask": "评审UI设计的技术实现可行性，提出可行性报告以计划技术攻关方向",
+          "required_skills": [
+            "Figma",
+            "Adobe XD"
+          ],
+          "communication_requirements": "与前端开发团队进行technical feasibility analysis meetings",
+          "deadline": "2025-06-15"
+        }
+      ]
+    },
+    {
+      "user_name": "韩成龙",
+      "team": "技术研发部",
+      "title": "系统管理员",
+      "rank": 3,
+      "hard_skills": [
+        {
+          "skill": "Linux",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Docker",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "AWS",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Jenkins",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "original_communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 42,
+          "subtask": "搭建并优化Linux服务器环境，确保服务器的稳定性和安全性",
+          "required_skills": [
+            "Linux",
+            "AWS"
+          ],
+          "communication_requirements": "与技术总监进行formal server environment setup consultations",
+          "deadline": "2025-05-15"
+        },
+        {
+          "subtask_id": 43,
+          "subtask": "实现并维护Docker环境的持续集成与部署流程，撰写技术文档",
+          "required_skills": [
+            "Docker",
+            "Jenkins"
+          ],
+          "communication_requirements": "与CI/CD团队进行formal integration process meetings",
+          "deadline": "2025-06-01"
+        },
+        {
+          "subtask_id": 44,
+          "subtask": "配置AWS云服务以支持应用的横向扩展，提供技术支持",
+          "required_skills": [
+            "AWS",
+            "Linux"
+          ],
+          "communication_requirements": "与云服务团队进行regular virtual infrastructure planning meetings",
+          "deadline": "2025-06-20"
+        },
+        {
+          "subtask_id": 45,
+          "subtask": "定期监控服务器性能，进行故障分析和修复，提交性能监控报告",
+          "required_skills": [
+            "Linux",
+            "Jenkins"
+          ],
+          "communication_requirements": "与技术支持团队进行concise system performance review sessions",
+          "deadline": "2025-07-10"
+        },
+        {
+          "subtask_id": 46,
+          "subtask": "协助开发团队进行环境部署与配置，保持技术支持以解决环境异常",
+          "required_skills": [
+            "Docker",
+            "AWS"
+          ],
+          "communication_requirements": "与开发团队进行direct incident report and troubleshooting meetings",
+          "deadline": "2025-07-25"
+        }
+      ]
+    },
+    {
+      "user_name": "顾明",
+      "team": "技术研发部",
+      "title": "前端工程师",
+      "rank": 3,
+      "hard_skills": [
+        {
+          "skill": "JavaScript",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "React",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Vue.js",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "CSS3",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 47,
+          "subtask": "开发React组件库，增强组件的复用性和灵活性，并撰写组件使用指南",
+          "required_skills": [
+            "React",
+            "JavaScript"
+          ],
+          "communication_requirements": "与前端开发团队进行technical library component reviews",
+          "deadline": "2025-05-10"
+        },
+        {
+          "subtask_id": 48,
+          "subtask": "协助开发内容发布页，确保文案与设计保持一致性，进行跨浏览器测试",
+          "required_skills": [
+            "React",
+            "CSS3"
+          ],
+          "communication_requirements": "与UI设计师进行regular design implementation sessions",
+          "deadline": "2025-06-05"
+        },
+        {
+          "subtask_id": 49,
+          "subtask": "整合并优化前端性能，负责其加载效率与用户体验的提升，输出优化建议",
+          "required_skills": [
+            "JavaScript",
+            "Vue.js"
+          ],
+          "communication_requirements": "与用户体验团队进行casual optimization feedback meetings",
+          "deadline": "2025-06-25"
+        },
+        {
+          "subtask_id": 50,
+          "subtask": "编写文档以帮助新开发人员理解React应用的结构和实现方式",
+          "required_skills": [
+            "React",
+            "JavaScript"
+          ],
+          "communication_requirements": "与新人开发人员进行balanced technical writing assistance",
+          "deadline": "2025-07-10"
+        },
+        {
+          "subtask_id": 51,
+          "subtask": "参与前端技术研讨会，共同商议和解决潜在的技术难题",
+          "required_skills": [
+            "JavaScript",
+            "React"
+          ],
+          "communication_requirements": "与技术研发团队进行technical brainstorming workshops",
+          "deadline": "2025-07-25"
+        },
+        {
+          "subtask_id": 52,
+          "subtask": "根据用户体验反馈改进界面交互逻辑，提升用户满意度",
+          "required_skills": [
+            "React",
+            "CSS3"
+          ],
+          "communication_requirements": "与用户体验设计师进行balanced feedback integration meetings",
+          "deadline": "2025-08-05"
+        }
+      ]
+    },
+    {
+      "user_name": "丘诚",
+      "team": "运营部",
+      "title": "数据分析师",
+      "rank": 3,
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Pandas",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "SQL",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "数据可视化",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 53,
+          "subtask": "进行内容使用数据分析，输出用户行为报告，指导内容策略优化",
+          "required_skills": [
+            "Python",
+            "Pandas"
+          ],
+          "communication_requirements": "与运营团队进行formal data strategy meetings",
+          "deadline": "2025-06-01"
+        },
+        {
+          "subtask_id": 54,
+          "subtask": "搭建用于数据分析的自动化脚本，支持内容管理平台的智能化运营",
+          "required_skills": [
+            "Python",
+            "SQL"
+          ],
+          "communication_requirements": "与数据开发团队进行semi-formal script building sessions",
+          "deadline": "2025-06-20"
+        },
+        {
+          "subtask_id": 55,
+          "subtask": "设计并实施数据可视化板块，提供直观的数据分析体验",
+          "required_skills": [
+            "Python",
+            "数据可视化"
+          ],
+          "communication_requirements": "与用户体验团队进行semi-formal visual design alignment meetings",
+          "deadline": "2025-07-05"
+        },
+        {
+          "subtask_id": 56,
+          "subtask": "支持A/B测试平台的开发和数据分析，并撰写分析结果和建议报告",
+          "required_skills": [
+            "Python",
+            "Pandas"
+          ],
+          "communication_requirements": "与测试团队进行technical test results review sessions",
+          "deadline": "2025-07-20"
+        },
+        {
+          "subtask_id": 57,
+          "subtask": "协助项目经理进行定期数据分析汇报，确保策略方向的正确性",
+          "required_skills": [
+            "SQL",
+            "数据可视化"
+          ],
+          "communication_requirements": "与项目团队进行formal data insights presentations",
+          "deadline": "2025-08-10"
+        },
+        {
+          "subtask_id": 58,
+          "subtask": "负责数据治理与清洗流程的定义，确保数据质量与标准化",
+          "required_skills": [
+            "Python",
+            "SQL"
+          ],
+          "communication_requirements": "与数据管理团队进行direct data quality improvement sessions",
+          "deadline": "2025-08-25"
+        }
+      ]
+    },
+    {
+      "user_name": "黄秋英",
+      "team": "运营部",
+      "title": "运营专员",
+      "rank": 3,
+      "hard_skills": [
+        {
+          "skill": "Excel高级功能",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "数据分析",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "流程优化",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 59,
+          "subtask": "负责Excel数据分析工作，整理平台运营数据并制作图表报告",
+          "required_skills": [
+            "Excel高级功能",
+            "数据分析"
+          ],
+          "communication_requirements": "与运营团队进行balanced data interpretation seminars",
+          "deadline": "2025-06-05"
+        },
+        {
+          "subtask_id": 60,
+          "subtask": "参与设计流程优化方案，提升内容管理效率，输出优化流程手册",
+          "required_skills": [
+            "流程优化",
+            "项目管理"
+          ],
+          "communication_requirements": "与产品经理进行collaborative workflow optimization meetings",
+          "deadline": "2025-06-25"
+        },
+        {
+          "subtask_id": 61,
+          "subtask": "推进运营数据的核查与校正，确保指标的一致性与准确性",
+          "required_skills": [
+            "数据分析",
+            "Excel高级功能"
+          ],
+          "communication_requirements": "与运营总监进行formal data correctness review meetings",
+          "deadline": "2025-07-15"
+        },
+        {
+          "subtask_id": 62,
+          "subtask": "协助团队制定项目进度KPI，评估项目进展与绩效",
+          "required_skills": [
+            "项目管理",
+            "Excel高级功能"
+          ],
+          "communication_requirements": "与项目管理团队进行KPI planning workshops",
+          "deadline": "2025-07-30"
+        },
+        {
+          "subtask_id": 63,
+          "subtask": "支持制定市场策略并通过数据分析验证策略的有效性",
+          "required_skills": [
+            "数据分析",
+            "Excel高级功能"
+          ],
+          "communication_requirements": "与市场部进行strategy validation discussions",
+          "deadline": "2025-08-15"
+        }
+      ]
+    },
+    {
+      "user_name": "唐旭",
+      "team": "产品设计部",
+      "title": "产品经理",
+      "rank": 3,
+      "hard_skills": [
+        {
+          "skill": "需求分析",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "原型设计",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Confluence",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 64,
+          "subtask": "启动与协调新功能的需求评估会议，输出详细需求规格说明书",
+          "required_skills": [
+            "需求分析",
+            "项目管理"
+          ],
+          "communication_requirements": "与产品设计与开发团队进行formal requirement assessment workshops",
+          "deadline": "2025-02-10"
+        },
+        {
+          "subtask_id": 65,
+          "subtask": "维护并优化产品原型，确保其符合客户需求和市场变化，提供原型修改报告",
+          "required_skills": [
+            "原型设计",
+            "需求分析"
+          ],
+          "communication_requirements": "与UI/UX设计师进行detailed prototyping sessions",
+          "deadline": "2025-03-25"
+        },
+        {
+          "subtask_id": 66,
+          "subtask": "进行项目进度各项任务的协调和更新，确保项目计划的遵守与执行",
+          "required_skills": [
+            "项目管理",
+            "Confluence"
+          ],
+          "communication_requirements": "与项目团队进行formal status update meetings",
+          "deadline": "2025-04-15"
+        },
+        {
+          "subtask_id": 67,
+          "subtask": "使用Confluence创建项目文档库，确保信息可追溯性与共享",
+          "required_skills": [
+            "Confluence",
+            "项目管理"
+          ],
+          "communication_requirements": "与项目管理与技术团队进行documentation process training",
+          "deadline": "2025-05-01"
+        },
+        {
+          "subtask_id": 68,
+          "subtask": "为设计与开发人员提供跨部门高效沟通桥梁，解决沟通瓶颈",
+          "required_skills": [
+            "项目管理",
+            "需求分析"
+          ],
+          "communication_requirements": "与设计和开发团队进行formal bridge-building discussions",
+          "deadline": "2025-05-20"
+        }
+      ]
+    },
+    {
+      "user_name": "纪远",
+      "team": "运营部",
+      "title": "数据分析师",
+      "rank": 3,
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Pandas",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "数据可视化",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Excel高级功能",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 69,
+          "subtask": "负责内容管理系统的数据清洗与处理，构建自动化数据管道",
+          "required_skills": [
+            "Python",
+            "Pandas"
+          ],
+          "communication_requirements": "与数据工程团队进行direct data processing strategy meetings",
+          "deadline": "2025-06-10"
+        },
+        {
+          "subtask_id": 70,
+          "subtask": "开发数据模型以支持系统的智能运营，输出数据建模文档与报告",
+          "required_skills": [
+            "Python",
+            "数据可视化"
+          ],
+          "communication_requirements": "与产品和数据分析团队进行modeling impact seminars",
+          "deadline": "2025-06-30"
+        },
+        {
+          "subtask_id": 71,
+          "subtask": "定期更新数据库中数据的完整性和准确性，提交分析报告",
+          "required_skills": [
+            "SQL",
+            "Pandas"
+          ],
+          "communication_requirements": "与系统维护团队进行concise data integrity review meetings",
+          "deadline": "2025-07-20"
+        },
+        {
+          "subtask_id": 72,
+          "subtask": "辅助运营部进行数据驱动的决策制定，提供业务支持报告",
+          "required_skills": [
+            "Python",
+            "Excel高级功能"
+          ],
+          "communication_requirements": "与业务运营团队进行detailed data support meetings",
+          "deadline": "2025-08-05"
+        },
+        {
+          "subtask_id": 73,
+          "subtask": "对接数据分析仪表板的设计与实施，促进业务决策的可视化支持",
+          "required_skills": [
+            "数据可视化",
+            "Pandas"
+          ],
+          "communication_requirements": "与视觉设计团队进行interaction and visualization workshops",
+          "deadline": "2025-08-20"
+        },
+        {
+          "subtask_id": 74,
+          "subtask": "优化数据存取流程，降低数据查询的延迟并增速",
+          "required_skills": [
+            "Python",
+            "SQL"
+          ],
+          "communication_requirements": "与数据库管理员进行technical optimization review meetings",
+          "deadline": "2025-09-01"
+        }
+      ]
+    },
+    {
+      "user_name": "许明",
+      "team": "市场部",
+      "title": "市场专员",
+      "rank": 3,
+      "hard_skills": [
+        {
+          "skill": "SEO",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Google Ads",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "社交媒体运营",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "文案撰写",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Casual",
+        "Verbosity": "Detailed",
+        "Humor": "Frequent",
+        "Jargon_Usage": "Plain",
+        "Emoji_Usage": "Frequent",
+        "Directness": "Balanced",
+        "Warmth": "Warm",
+        "Questioning_Style": "Clarifying"
+      },
+      "original_communication_style": {
+        "Formality": "Casual",
+        "Verbosity": "Detailed",
+        "Humor": "Frequent",
+        "Jargon_Usage": "Plain",
+        "Emoji_Usage": "Frequent",
+        "Directness": "Balanced",
+        "Warmth": "Warm",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 75,
+          "subtask": "制定和实施SEO策略以提高企业内容管理系统在搜索引擎上的优化排名",
+          "required_skills": [
+            "SEO",
+            "Google Ads"
+          ],
+          "communication_requirements": "与市场营销团队进行casual SEO strategy workshops",
+          "deadline": "2025-06-01"
+        },
+        {
+          "subtask_id": 76,
+          "subtask": "通过社交媒体平台推动产品市场推广活动，提高曝光度和用户参与度",
+          "required_skills": [
+            "社交媒体运营",
+            "Google Ads"
+          ],
+          "communication_requirements": "与社交媒体团队进行casual engagement and promotion meetings",
+          "deadline": "2025-06-20"
+        },
+        {
+          "subtask_id": 77,
+          "subtask": "撰写相关市场推广文案，确保内容精准传达项目特征与优势",
+          "required_skills": [
+            "文案撰写",
+            "SEO"
+          ],
+          "communication_requirements": "与内容创作团队进行frequent content drafting sessions",
+          "deadline": "2025-07-10"
+        },
+        {
+          "subtask_id": 78,
+          "subtask": "监控并分析市场活动的影响力，生成报告以评估投资回报率（ROI）",
+          "required_skills": [
+            "SEO",
+            "社交媒体运营"
+          ],
+          "communication_requirements": "与分析团队进行report feedback and iteration discussions",
+          "deadline": "2025-07-30"
+        },
+        {
+          "subtask_id": 79,
+          "subtask": "策划并组织Webinar，提升企业内容管理系统的客户购买意愿",
+          "required_skills": [
+            "社交媒体运营",
+            "文案撰写"
+          ],
+          "communication_requirements": "与市场及项目团队进行webinar event planning meetings",
+          "deadline": "2025-08-20"
+        },
+        {
+          "subtask_id": 80,
+          "subtask": "利用Google Ads进行付费广告优化，支持市场推广与品牌影响力的提升",
+          "required_skills": [
+            "Google Ads",
+            "SEO"
+          ],
+          "communication_requirements": "与市场分析团队进行growth optimization discussions",
+          "deadline": "2025-09-10"
+        }
+      ]
+    },
+    {
+      "user_name": "吴星",
+      "team": "产品设计部",
+      "title": "UI设计师",
+      "rank": 3,
+      "hard_skills": [
+        {
+          "skill": "Figma",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Adobe XD",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Photoshop",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Illustrator",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Casual",
+        "Verbosity": "Detailed",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "original_communication_style": {
+        "Formality": "Casual",
+        "Verbosity": "Detailed",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 81,
+          "subtask": "为内容管理系统设计独特而直观的UI界面，确保视觉风格的一致性",
+          "required_skills": [
+            "Figma",
+            "Photoshop"
+          ],
+          "communication_requirements": "与UI设计师团队进行casual style consistency reviews",
+          "deadline": "2025-04-15"
+        },
+        {
+          "subtask_id": 82,
+          "subtask": "创建并更新设计手册，指导开发团队对设计规范的理解与实现",
+          "required_skills": [
+            "Adobe XD",
+            "Illustrator"
+          ],
+          "communication_requirements": "与前端开发团队进行balanced design guidelines explanations",
+          "deadline": "2025-05-05"
+        },
+        {
+          "subtask_id": 83,
+          "subtask": "进行跨浏览器设计渲染测试，确保系统UI在不同环境下的表现一致",
+          "required_skills": [
+            "Figma",
+            "Photoshop"
+          ],
+          "communication_requirements": "与QA测试队伍进行detailed cross-browser testing collaborations",
+          "deadline": "2025-05-30"
+        },
+        {
+          "subtask_id": 84,
+          "subtask": "结合用户反馈对设计进行持续优化，提交优化建议并撰写改进计划",
+          "required_skills": [
+            "Figma",
+            "Photoshop"
+          ],
+          "communication_requirements": "与用户体验团队进行feedback gathering and iteration workshops",
+          "deadline": "2025-06-20"
+        },
+        {
+          "subtask_id": 85,
+          "subtask": "开发并管理Design System, 以便于UI的复用和模块化",
+          "required_skills": [
+            "Figma",
+            "Adobe XD"
+          ],
+          "communication_requirements": "与设计团队进行regular design system alignment meetings",
+          "deadline": "2025-07-15"
+        }
+      ]
+    },
+    {
+      "user_name": "张志远",
+      "team": "运营部",
+      "title": "运营专员",
+      "rank": 3,
+      "hard_skills": [
+        {
+          "skill": "数据分析",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Excel高级功能",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "流程优化",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "成本效益分析",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Clarifying"
+      },
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 86,
+          "subtask": "创建并优化内容平台的操作流程，提高运营效率并降低错误率",
+          "required_skills": [
+            "流程优化",
+            "Excel高级功能"
+          ],
+          "communication_requirements": "与运营管理团队进行detailed process refinement workshops",
+          "deadline": "2025-06-10"
+        },
+        {
+          "subtask_id": 87,
+          "subtask": "监控财务状况，推动资源合理利用，并生成成本效益分析报告",
+          "required_skills": [
+            "成本效益分析",
+            "Excel高级功能"
+          ],
+          "communication_requirements": "与财务团队进行balanced financial monitoring sessions",
+          "deadline": "2025-07-01"
+        },
+        {
+          "subtask_id": 88,
+          "subtask": "审查并改进数据分析方法，确保其准确性和实用性，撰写分析改善建议",
+          "required_skills": [
+            "数据分析",
+            "Excel高级功能"
+          ],
+          "communication_requirements": "与数据分析师进行semi-formal data assessment workshops",
+          "deadline": "2025-07-25"
+        },
+        {
+          "subtask_id": 89,
+          "subtask": "协助管理部门进行项目数据监控，输出具备参考价值的数据报告",
+          "required_skills": [
+            "数据分析",
+            "Excel高级功能"
+          ],
+          "communication_requirements": "与项目管理团队进行semi-formal data reporting discussions",
+          "deadline": "2025-08-15"
+        },
+        {
+          "subtask_id": 90,
+          "subtask": "配合项目进度调整运营策略，确保项目指标与市场需求的同步",
+          "required_skills": [
+            "流程优化",
+            "数据分析"
+          ],
+          "communication_requirements": "与市场分析团队进行balanced progress and strategy review meetings",
+          "deadline": "2025-09-05"
+        },
+        {
+          "subtask_id": 91,
+          "subtask": "与执行团队一起制定项目运营的KPI，跟踪并报告其实现情况",
+          "required_skills": [
+            "流程优化",
+            "Excel高级功能"
+          ],
+          "communication_requirements": "与运营和执行团队进行formal KPI development meetings",
+          "deadline": "2025-09-20"
+        }
+      ]
+    },
+    {
+      "user_name": "吴浩",
+      "team": "技术研发部",
+      "title": "后端工程师",
+      "rank": 3,
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Django",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "PostgreSQL",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Git",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "original_communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask_id": 92,
+          "subtask": "开发企业内容管理系统后端服务，确保数据安全性与性能优化",
+          "required_skills": [
+            "Python",
+            "Django"
+          ],
+          "communication_requirements": "与后端开发团队进行concise service development and optimization sessions",
+          "deadline": "2025-06-30"
+        },
+        {
+          "subtask_id": 93,
+          "subtask": "配置并管理PostgreSQL数据库，提升查询效率和数据存储稳定性",
+          "required_skills": [
+            "PostgreSQL",
+            "Python"
+          ],
+          "communication_requirements": "与数据库管理团队进行semi-formal database optimization reviews",
+          "deadline": "2025-07-20"
+        },
+        {
+          "subtask_id": 94,
+          "subtask": "撰写后端功能模块的单元测试，提高代码可靠性并输出测试报告",
+          "required_skills": [
+            "Python",
+            "Django"
+          ],
+          "communication_requirements": "与QA测试团队进行formal test case design discussions",
+          "deadline": "2025-08-10"
+        },
+        {
+          "subtask_id": 95,
+          "subtask": "负责项目源码的版本控制，确保代码的可追溯性与变更记录",
+          "required_skills": [
+            "Git",
+            "Python"
+          ],
+          "communication_requirements": "与所有开发人员进行direct repository management meetings",
+          "deadline": "2025-08-25"
+        },
+        {
+          "subtask_id": 96,
+          "subtask": "协助技术支持团队排查后端故障及系统抛错，提高系统的稳定性",
+          "required_skills": [
+            "Python",
+            "Django"
+          ],
+          "communication_requirements": "与支持团队进行regular bug fix meetings",
+          "deadline": "2025-09-15"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_subtasks": 96,
+    "avg_subtasks_per_member": 5.65,
+    "generation_method": "GPT-5 Multi-stage",
+    "adjustments_made": {
+      "members_added": [
+        "苏颖",
+        "韩成龙",
+        "王芳",
+        "纪远"
+      ],
+      "members_removed": [],
+      "communication_style_adjusted": true
+    }
+  }
+}

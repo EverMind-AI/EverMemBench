@@ -1,0 +1,459 @@
+{
+  "generation_time": "2025-10-29T11:52:14.852285",
+  "total_projects": 5,
+  "total_tasks": 451,
+  "total_unique_employees": 42,
+  "projects_summary": [
+    {
+      "project_number": 1,
+      "project_topic": "多功能协作平台",
+      "team_size": 25,
+      "total_subtasks": 128,
+      "related_projects": []
+    },
+    {
+      "project_number": 2,
+      "project_topic": "跨平台数据中台",
+      "team_size": 15,
+      "total_subtasks": 77,
+      "related_projects": [
+        1
+      ]
+    },
+    {
+      "project_number": 3,
+      "project_topic": "移动端电商管理系统",
+      "team_size": 13,
+      "total_subtasks": 73,
+      "related_projects": [
+        1,
+        2
+      ]
+    },
+    {
+      "project_number": 4,
+      "project_topic": "企业内容管理系统",
+      "team_size": 17,
+      "total_subtasks": 96,
+      "related_projects": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "project_number": 5,
+      "project_topic": "虚拟化基础设施管理",
+      "team_size": 14,
+      "total_subtasks": 77,
+      "related_projects": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "employee_participation": {
+    "张伟华": {
+      "projects_participated": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "total_tasks": 30,
+      "rank": 1
+    },
+    "陈慧兰": {
+      "projects_participated": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "total_tasks": 32,
+      "rank": 2
+    },
+    "章远": {
+      "projects_participated": [
+        1
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "苏颖": {
+      "projects_participated": [
+        1,
+        4
+      ],
+      "total_tasks": 11,
+      "rank": 3
+    },
+    "陈虹": {
+      "projects_participated": [
+        1
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "李晨曦": {
+      "projects_participated": [
+        1,
+        2
+      ],
+      "total_tasks": 10,
+      "rank": 3
+    },
+    "崔媛": {
+      "projects_participated": [
+        1,
+        2
+      ],
+      "total_tasks": 10,
+      "rank": 3
+    },
+    "潘浩": {
+      "projects_participated": [
+        1
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "黄强": {
+      "projects_participated": [
+        1,
+        2
+      ],
+      "total_tasks": 10,
+      "rank": 3
+    },
+    "陶敏": {
+      "projects_participated": [
+        1
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "唐旭": {
+      "projects_participated": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "total_tasks": 22,
+      "rank": 3
+    },
+    "蒋峰": {
+      "projects_participated": [
+        1
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "黄秋英": {
+      "projects_participated": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "total_tasks": 21,
+      "rank": 3
+    },
+    "施威": {
+      "projects_participated": [
+        1
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "王力": {
+      "projects_participated": [
+        1
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "丘诚": {
+      "projects_participated": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "total_tasks": 26,
+      "rank": 3
+    },
+    "梁宇轩": {
+      "projects_participated": [
+        1,
+        2
+      ],
+      "total_tasks": 11,
+      "rank": 3
+    },
+    "赵丽": {
+      "projects_participated": [
+        1,
+        2
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "杨帆": {
+      "projects_participated": [
+        1
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "冯小伟": {
+      "projects_participated": [
+        1
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "龚丽": {
+      "projects_participated": [
+        1
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "郑伟": {
+      "projects_participated": [
+        1
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "倪强": {
+      "projects_participated": [
+        1
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "樊丽": {
+      "projects_participated": [
+        1
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "孙宇": {
+      "projects_participated": [
+        1
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "刘辰光": {
+      "projects_participated": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "total_tasks": 24,
+      "rank": 3
+    },
+    "高国强": {
+      "projects_participated": [
+        2,
+        3,
+        4
+      ],
+      "total_tasks": 15,
+      "rank": 3
+    },
+    "汤皓": {
+      "projects_participated": [
+        2
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "顾明": {
+      "projects_participated": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "total_tasks": 23,
+      "rank": 3
+    },
+    "吴浩": {
+      "projects_participated": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "total_tasks": 22,
+      "rank": 3
+    },
+    "李明志": {
+      "projects_participated": [
+        3,
+        4,
+        5
+      ],
+      "total_tasks": 19,
+      "rank": 2
+    },
+    "许明": {
+      "projects_participated": [
+        3,
+        4
+      ],
+      "total_tasks": 11,
+      "rank": 3
+    },
+    "吴星": {
+      "projects_participated": [
+        3,
+        4
+      ],
+      "total_tasks": 10,
+      "rank": 3
+    },
+    "张志远": {
+      "projects_participated": [
+        3,
+        4
+      ],
+      "total_tasks": 12,
+      "rank": 3
+    },
+    "王芳": {
+      "projects_participated": [
+        4,
+        5
+      ],
+      "total_tasks": 10,
+      "rank": 3
+    },
+    "韩成龙": {
+      "projects_participated": [
+        4
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "纪远": {
+      "projects_participated": [
+        4,
+        5
+      ],
+      "total_tasks": 11,
+      "rank": 3
+    },
+    "郭晓东": {
+      "projects_participated": [
+        5
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "程亮": {
+      "projects_participated": [
+        5
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "白英豪": {
+      "projects_participated": [
+        5
+      ],
+      "total_tasks": 6,
+      "rank": 3
+    },
+    "周宇": {
+      "projects_participated": [
+        5
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "崔佳": {
+      "projects_participated": [
+        5
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    }
+  },
+  "skill_usage_frequency": {
+    "Excel高级功能": 21,
+    "项目管理": 20,
+    "Python": 17,
+    "Figma": 12,
+    "Pandas": 10,
+    "团队管理": 8,
+    "需求分析": 8,
+    "Confluence": 8,
+    "数据可视化": 8,
+    "JavaScript": 8,
+    "React": 8,
+    "Docker": 8,
+    "用户访谈": 7,
+    "Git": 7,
+    "数据分析": 6,
+    "流程优化": 6,
+    "商业模式画布": 5,
+    "战略分析": 5,
+    "团队建设": 5,
+    "绩效管理": 5
+  },
+  "communication_style_distribution": {
+    "Formality": {
+      "Formal": 22,
+      "Semi-formal": 51,
+      "Casual": 11
+    },
+    "Verbosity": {
+      "Concise": 25,
+      "Detailed": 24,
+      "Moderate": 35
+    },
+    "Humor": {
+      "Minimal": 43,
+      "Occasional": 32,
+      "Frequent": 9
+    },
+    "Jargon_Usage": {
+      "Balanced": 38,
+      "Plain": 17,
+      "Technical": 29
+    },
+    "Emoji_Usage": {
+      "Rare": 50,
+      "Occasional": 22,
+      "Frequent": 12
+    },
+    "Directness": {
+      "Direct": 30,
+      "Balanced": 52,
+      "Indirect": 2
+    },
+    "Warmth": {
+      "Neutral": 37,
+      "Friendly": 35,
+      "Warm": 12
+    },
+    "Questioning_Style": {
+      "Probing": 31,
+      "Clarifying": 41,
+      "Accepting": 12
+    }
+  }
+}
