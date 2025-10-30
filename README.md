@@ -10,7 +10,7 @@ EverMemBench是一个旨在量化和诊断大语言模型记忆系统的评估�
 
 ![主图](./figures/main.png)
 
-（请根据图片内容填写此处的描述）
+（**Overview of the three capability axes evaluated in our benchmark.** **Fine-grained Detailed Recall** tests pure retrieval, requiring models to recover precise facts from prior context. **Memory Awareness** evaluates retrieval with comprehension, where models must recall past events and integrate them to produce situation-appropriate answers. ****User Profile Understanding** measures personalization grounded in historical interactions, assessing whether models adapt content and tone to an individual’s traits and preferences rather than delivering generic responses. Each panel illustrates a representative dialogue, the query, and the expected answer.）
 
 ## 目录结构
 
