@@ -1,0 +1,31 @@
+{
+  "processing_info": {
+    "timestamp": "20251030_204105",
+    "input_files": 4,
+    "qa_types": [
+      "constraint_qa",
+      "progress_continuation_qa",
+      "conflict_resolution_qa",
+      "active_reminder_qa"
+    ],
+    "output_directory": "../output/group3_example_results"
+  },
+  "refresh_stats": {
+    "total_generated": 4,
+    "passed_first_time": 0,
+    "refreshed_and_passed": 4,
+    "leaked": 0,
+    "generation_failed": 0
+  },
+  "refresh_summary": {
+    "total_attempted": 4,
+    "total_generated": 4,
+    "generation_failed": 0,
+    "passed_first_time": 0,
+    "refreshed_and_passed": 4,
+    "leaked": 0,
+    "first_pass_rate": "0.0%",
+    "refresh_success_rate": "100.0%",
+    "leakage_rate": "0.0%"
+  }
+}

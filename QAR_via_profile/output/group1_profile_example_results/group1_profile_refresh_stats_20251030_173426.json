@@ -1,0 +1,29 @@
+{
+  "processing_info": {
+    "timestamp": "20251030_173426",
+    "input_files": [
+      "multi_hop.json",
+      "group1.json"
+    ],
+    "qa_type": "profile_adaptive",
+    "output_directory": "../output/group1_profile_example_results"
+  },
+  "refresh_stats": {
+    "total_generated": 1,
+    "passed_first_time": 0,
+    "refreshed_and_passed": 1,
+    "leaked": 0,
+    "generation_failed": 0
+  },
+  "refresh_summary": {
+    "total_attempted": 1,
+    "total_generated": 1,
+    "generation_failed": 0,
+    "passed_first_time": 0,
+    "refreshed_and_passed": 1,
+    "leaked": 0,
+    "first_pass_rate": "0.0%",
+    "refresh_success_rate": "100.0%",
+    "leakage_rate": "0.0%"
+  }
+}

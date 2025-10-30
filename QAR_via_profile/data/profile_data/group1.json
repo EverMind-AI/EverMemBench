@@ -1,0 +1,149 @@
+{
+    "profiles": [
+      {
+        "identity_layer": {
+          "name": "罗刚",
+          "occupation": "SRE (运维工程师)"
+        },
+        "behavioral_patterns": {
+          "communication_style": {
+            "formality": "中",
+            "verbosity": "中",
+            "humor": "无",
+            "jargon_usage": "高",
+            "casual_language_usage": "低"
+          }
+        },
+        "knowledge_and_beliefs": {
+          "domain_knowledge": [
+            "可观测性",
+            "可维护性",
+            "生产环境",
+            "监控",
+            "日志聚合",
+            "MTTR"
+          ]
+        }
+      },
+      {
+        "identity_layer": {
+          "name": "沈博文",
+          "occupation": "架构师"
+        },
+        "behavioral_patterns": {
+          "communication_style": {
+            "formality": "高",
+            "verbosity": "中",
+            "humor": "无",
+            "jargon_usage": "高",
+            "casual_language_usage": "低"
+          }
+        },
+        "knowledge_and_beliefs": {
+          "domain_knowledge": [
+            "架构设计",
+            "可观测性",
+            "Prometheus",
+            "链路追踪",
+            "OpenTelemetry",
+            "调度策略"
+          ]
+        }
+      },
+      {
+        "identity_layer": {
+          "name": "王涛",
+          "occupation": "高级工程师 (工程实现)"
+        },
+        "behavioral_patterns": {
+          "communication_style": {
+            "formality": "中",
+            "verbosity": "中",
+            "humor": "无",
+            "jargon_usage": "高",
+            "casual_language_usage": "低"
+          }
+        },
+        "knowledge_and_beliefs": {
+          "domain_knowledge": [
+            "工程实现",
+            "状态同步",
+            "通信协议",
+            "性能瓶颈",
+            "性能探针",
+            "延迟监控"
+          ]
+        }
+      },
+      {
+        "identity_layer": {
+          "name": "方志远",
+          "occupation": "高层管理 (VP/CEO)"
+        },
+        "behavioral_patterns": {
+          "communication_style": {
+            "formality": "高",
+            "verbosity": "中",
+            "humor": "无",
+            "jargon_usage": "中",
+            "casual_language_usage": "低"
+          }
+        },
+        "knowledge_and_beliefs": {
+          "domain_knowledge": [
+            "战略规划",
+            "AI原生",
+            "项目定调"
+          ]
+        }
+      },
+      {
+        "identity_layer": {
+          "name": "许志远",
+          "occupation": "项目总监"
+        },
+        "behavioral_patterns": {
+          "communication_style": {
+            "formality": "高",
+            "verbosity": "高",
+            "humor": "无",
+            "jargon_usage": "高",
+            "casual_language_usage": "低"
+          }
+        },
+        "knowledge_and_beliefs": {
+          "domain_knowledge": [
+            "项目管理",
+            "产品落地",
+            "KPI制定",
+            "数据驱动",
+            "分阶段验证",
+            "架构"
+          ]
+        }
+      },
+      {
+        "identity_layer": {
+          "name": "陈默",
+          "occupation": "实习生"
+        },
+        "behavioral_patterns": {
+          "communication_style": {
+            "formality": "中",
+            "verbosity": "中",
+            "humor": "无",
+            "jargon_usage": "中",
+            "casual_language_usage": "低"
+          }
+        },
+        "knowledge_and_beliefs": {
+          "domain_knowledge": [
+            "Python",
+            "模拟脚本",
+            "队列模型",
+            "权重分配"
+          ]
+        }
+      }
+    ]
+  }
