@@ -1,13 +1,13 @@
 {
-  "generation_time": "2025-10-31T23:55:15.457656",
+  "generation_time": "2025-11-01T01:36:48.170713",
   "major_topics_count": 1,
   "sub_topics_count": 2,
-  "total_tasks": 95,
-  "total_unique_employees": 42,
+  "total_tasks": 302,
+  "total_unique_employees": 32,
   "major_topics_summary": [
     {
       "topic_id": "MAJOR_001",
-      "topic": "智慧医疗系统",
+      "topic": "智慧园区管理系统",
       "sub_topics_count": 2
     }
   ],
@@ -15,16 +15,16 @@
     {
       "sub_topic_id": "SUB_001_001",
       "parent_topic_id": "MAJOR_001",
-      "topic": "智能疾病诊断与预测模块",
+      "topic": "园区人车安全通行系统",
       "team_size": 22,
-      "total_subtasks": 44
+      "total_subtasks": 153
     },
     {
       "sub_topic_id": "SUB_001_002",
       "parent_topic_id": "MAJOR_001",
-      "topic": "电子健康档案管理平台",
+      "topic": "园区楼宇资产运维系统",
       "team_size": 25,
-      "total_subtasks": 51
+      "total_subtasks": 149
     }
   ],
   "employee_participation": {
@@ -33,7 +33,7 @@
         "SUB_001_001",
         "SUB_001_002"
       ],
-      "total_tasks": 10,
+      "total_tasks": 11,
       "rank": 1
     },
     "李明志": {
@@ -41,21 +41,29 @@
         "SUB_001_001",
         "SUB_001_002"
       ],
-      "total_tasks": 10,
+      "total_tasks": 13,
+      "rank": 2
+    },
+    "陈慧兰": {
+      "projects_participated": [
+        "SUB_001_001"
+      ],
+      "total_tasks": 7,
       "rank": 2
     },
     "黄建国": {
       "projects_participated": [
-        "SUB_001_001"
+        "SUB_001_001",
+        "SUB_001_002"
       ],
-      "total_tasks": 5,
+      "total_tasks": 13,
       "rank": 2
     },
-    "孙嘉豪": {
+    "周丽珍": {
       "projects_participated": [
         "SUB_001_001"
       ],
-      "total_tasks": 5,
+      "total_tasks": 6,
       "rank": 2
     },
     "王芳": {
@@ -63,7 +71,7 @@
         "SUB_001_001",
         "SUB_001_002"
       ],
-      "total_tasks": 10,
+      "total_tasks": 6,
       "rank": 3
     },
     "刘辰光": {
@@ -71,293 +79,225 @@
         "SUB_001_001",
         "SUB_001_002"
       ],
-      "total_tasks": 11,
-      "rank": 3
-    },
-    "郭晓东": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "冯佳": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "齐波": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "姚丽": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "顾欣": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "贾薇": {
-      "projects_participated": [
-        "SUB_001_001",
-        "SUB_001_002"
-      ],
-      "total_tasks": 10,
-      "rank": 3
-    },
-    "孙文杰": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "王敏": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "吴莹": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "朱倩": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "魏婧": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "汪和": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "顾彦": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "杨静": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "董浩": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "董杰": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "吴晓峰": {
-      "projects_participated": [
-        "SUB_001_002"
-      ],
-      "total_tasks": 5,
-      "rank": 2
-    },
-    "陈慧兰": {
-      "projects_participated": [
-        "SUB_001_002"
-      ],
-      "total_tasks": 5,
-      "rank": 2
-    },
-    "周丽珍": {
-      "projects_participated": [
-        "SUB_001_002"
-      ],
-      "total_tasks": 5,
-      "rank": 2
-    },
-    "董珊珊": {
-      "projects_participated": [
-        "SUB_001_002"
-      ],
-      "total_tasks": 5,
+      "total_tasks": 13,
       "rank": 3
     },
     "许佳音": {
       "projects_participated": [
+        "SUB_001_001",
         "SUB_001_002"
       ],
-      "total_tasks": 5,
+      "total_tasks": 6,
       "rank": 3
     },
     "高国强": {
       "projects_participated": [
+        "SUB_001_001",
         "SUB_001_002"
       ],
-      "total_tasks": 5,
+      "total_tasks": 13,
       "rank": 3
     },
-    "林瑞": {
+    "李晨曦": {
       "projects_participated": [
-        "SUB_001_002"
+        "SUB_001_001"
       ],
-      "total_tasks": 5,
+      "total_tasks": 7,
       "rank": 3
     },
-    "蔡英俊": {
+    "曾宇凡": {
       "projects_participated": [
+        "SUB_001_001",
         "SUB_001_002"
       ],
-      "total_tasks": 5,
+      "total_tasks": 13,
+      "rank": 3
+    },
+    "邱思源": {
+      "projects_participated": [
+        "SUB_001_001",
+        "SUB_001_002"
+      ],
+      "total_tasks": 6,
+      "rank": 3
+    },
+    "韩成龙": {
+      "projects_participated": [
+        "SUB_001_001"
+      ],
+      "total_tasks": 7,
+      "rank": 3
+    },
+    "谭志勇": {
+      "projects_participated": [
+        "SUB_001_001"
+      ],
+      "total_tasks": 0,
+      "rank": 3
+    },
+    "顾明": {
+      "projects_participated": [
+        "SUB_001_001",
+        "SUB_001_002"
+      ],
+      "total_tasks": 13,
+      "rank": 3
+    },
+    "程亮": {
+      "projects_participated": [
+        "SUB_001_001",
+        "SUB_001_002"
+      ],
+      "total_tasks": 13,
+      "rank": 3
+    },
+    "毛悦": {
+      "projects_participated": [
+        "SUB_001_001"
+      ],
+      "total_tasks": 7,
+      "rank": 3
+    },
+    "万菲": {
+      "projects_participated": [
+        "SUB_001_001",
+        "SUB_001_002"
+      ],
+      "total_tasks": 13,
+      "rank": 3
+    },
+    "齐波": {
+      "projects_participated": [
+        "SUB_001_001",
+        "SUB_001_002"
+      ],
+      "total_tasks": 13,
+      "rank": 3
+    },
+    "韩雪": {
+      "projects_participated": [
+        "SUB_001_001",
+        "SUB_001_002"
+      ],
+      "total_tasks": 13,
+      "rank": 3
+    },
+    "邹明辉": {
+      "projects_participated": [
+        "SUB_001_001"
+      ],
+      "total_tasks": 7,
+      "rank": 3
+    },
+    "梁宇轩": {
+      "projects_participated": [
+        "SUB_001_001",
+        "SUB_001_002"
+      ],
+      "total_tasks": 13,
       "rank": 3
     },
     "郝慧敏": {
       "projects_participated": [
         "SUB_001_002"
       ],
-      "total_tasks": 5,
+      "total_tasks": 6,
       "rank": 3
     },
     "汤皓": {
       "projects_participated": [
         "SUB_001_002"
       ],
-      "total_tasks": 5,
+      "total_tasks": 6,
       "rank": 3
     },
-    "胡志恒": {
+    "郭晓东": {
       "projects_participated": [
         "SUB_001_002"
       ],
-      "total_tasks": 5,
+      "total_tasks": 6,
       "rank": 3
     },
-    "杜新宇": {
+    "钱敏": {
       "projects_participated": [
         "SUB_001_002"
       ],
-      "total_tasks": 5,
+      "total_tasks": 6,
       "rank": 3
     },
-    "杜华": {
+    "杨志勇": {
       "projects_participated": [
         "SUB_001_002"
       ],
-      "total_tasks": 5,
+      "total_tasks": 6,
       "rank": 3
     },
-    "石晶": {
+    "白英豪": {
       "projects_participated": [
         "SUB_001_002"
       ],
-      "total_tasks": 5,
+      "total_tasks": 6,
       "rank": 3
     },
-    "孙浩": {
+    "梁健": {
       "projects_participated": [
         "SUB_001_002"
       ],
-      "total_tasks": 5,
+      "total_tasks": 6,
       "rank": 3
     },
-    "何阳": {
+    "黎明": {
       "projects_participated": [
         "SUB_001_002"
       ],
-      "total_tasks": 5,
+      "total_tasks": 6,
       "rank": 3
     },
-    "田枫": {
+    "孔娜": {
       "projects_participated": [
         "SUB_001_002"
       ],
-      "total_tasks": 5,
+      "total_tasks": 6,
       "rank": 3
     },
-    "潘浩": {
+    "吴浩": {
       "projects_participated": [
         "SUB_001_002"
       ],
-      "total_tasks": 0,
-      "rank": 3
-    },
-    "彭华": {
-      "projects_participated": [
-        "SUB_001_002"
-      ],
-      "total_tasks": 5,
-      "rank": 3
-    },
-    "姜飞": {
-      "projects_participated": [
-        "SUB_001_002"
-      ],
-      "total_tasks": 5,
+      "total_tasks": 6,
       "rank": 3
     }
   },
   "skill_usage_frequency": {
-    "Excel高级功能": 10,
-    "项目管理": 7,
-    "团队管理": 7,
-    "数据分析": 7,
+    "项目管理": 12,
+    "Docker": 10,
+    "Python": 9,
+    "Excel高级功能": 8,
     "Figma": 7,
-    "客户关系管理": 7,
-    "Python": 5,
-    "顾问式销售": 5,
-    "SPIN销售法": 5,
-    "商务谈判": 5,
-    "绩效管理": 4,
-    "Docker": 4,
-    "Java": 4,
-    "Spring Boot": 4,
-    "MySQL": 4,
-    "Google Analytics": 4,
-    "Tableau": 4,
-    "可用性测试": 4,
-    "文案撰写": 4,
-    "Salesforce": 4,
-    "市场分析": 4,
-    "内容营销": 3,
-    "Google Ads": 3,
+    "团队管理": 6,
+    "数据分析": 6,
+    "Java": 6,
+    "Spring Boot": 6,
+    "MySQL": 6,
+    "流程优化": 5,
+    "Git": 5,
+    "JavaScript": 5,
+    "React": 5,
+    "Pandas": 5,
+    "Kubernetes": 4,
+    "Axure RP": 4,
+    "需求分析": 4,
+    "Selenium": 4,
+    "pytest": 4,
+    "JMeter": 4,
+    "Linux": 4,
+    "TensorFlow": 4,
+    "scikit-learn": 4,
     "用户访谈": 3,
-    "Axure RP": 3,
+    "可用性测试": 3,
+    "CSS3": 3,
     "商业模式画布": 2,
     "战略分析": 2,
-    "团队建设": 2,
-    "沟通能力": 2,
-    "Azure": 2
+    "团队建设": 2
   }
 }

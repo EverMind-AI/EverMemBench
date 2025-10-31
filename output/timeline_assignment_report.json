@@ -1,5 +1,5 @@
 {
-  "generation_time": "2025-11-01T00:10:44.566271",
+  "generation_time": "2025-11-01T01:44:43.338051",
   "total_projects": 2,
   "timeline_config": {
     "start_date": "2025-01-01",
@@ -7,58 +7,58 @@
   },
   "projects": [
     {
-      "project_name": "智能疾病诊断与预测模块",
+      "project_name": "园区人车安全通行系统",
       "sub_topic_id": "SUB_001_001",
       "parent_topic_id": "MAJOR_001",
       "success": true,
-      "total_subtasks": 110,
-      "assigned_tasks": 110,
+      "total_subtasks": 124,
+      "assigned_tasks": 124,
       "validation": {
         "valid": true,
         "errors": [],
         "warnings": [],
-        "total_subtasks": 110,
-        "assigned_tasks": 110
+        "total_subtasks": 124,
+        "assigned_tasks": 124
       },
       "timeline_summary": {
         "start_date": "2025-01-01",
         "end_date": "2025-12-31",
-        "total_tasks": 110,
+        "total_tasks": 124,
         "phase_breakdown": {
-          "前期（1-3月）": 30,
-          "中期（4-8月）": 50,
-          "后期（9-12月）": 30
+          "前期（1-3月）": 51,
+          "中期（4-8月）": 35,
+          "后期（9-12月）": 38
         }
       }
     },
     {
-      "project_name": "电子健康档案管理平台",
+      "project_name": "园区楼宇资产运维系统",
       "sub_topic_id": "SUB_001_002",
       "parent_topic_id": "MAJOR_001",
       "success": true,
-      "total_subtasks": 121,
-      "assigned_tasks": 121,
+      "total_subtasks": 149,
+      "assigned_tasks": 149,
       "validation": {
         "valid": true,
         "errors": [],
         "warnings": [],
-        "total_subtasks": 121,
-        "assigned_tasks": 121
+        "total_subtasks": 149,
+        "assigned_tasks": 149
       },
       "timeline_summary": {
         "start_date": "2025-01-01",
         "end_date": "2025-12-31",
-        "total_tasks": 121,
+        "total_tasks": 149,
         "phase_breakdown": {
-          "前期（1-3月）": 32,
-          "中期（4-8月）": 43,
-          "后期（9-12月）": 46
+          "前期（1-3月）": 30,
+          "中期（4-8月）": 60,
+          "后期（9-12月）": 59
         }
       }
     }
   ],
   "statistics": {
-    "total_tasks_processed": 231,
+    "total_tasks_processed": 273,
     "successful_projects": 2,
     "failed_projects": 0
   }
