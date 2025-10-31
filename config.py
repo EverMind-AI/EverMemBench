@@ -21,7 +21,7 @@ if not OPENAI_API_KEY:
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # OpenRouter model name (use OpenAI models through OpenRouter)
-OPENAI_MODEL = "openai/gpt-4o"  # Using GPT-4o through OpenRouter
+OPENAI_MODEL = "google/gemini-2.5-pro"  # Using Gemini 2.5 Pro through OpenRouter
 
 # API 调用参数
 # 注意：GPT-5 模型对某些参数有限制，只支持默认值
