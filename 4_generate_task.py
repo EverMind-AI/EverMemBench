@@ -2,18 +2,23 @@
 # -*- coding: utf-8 -*-
 
 """
-Phase 4: Task Generation
+Phase 4: Topic-Driven Task Generation (New Architecture)
 
-根据员工的Hard Skills和Communication Style生成项目和任务分配
+新的架构流程：
+1. Stage 1: 生成大 Topic
+2. Stage 2: 拆分小 Topic
+3. Stage 3: 选择团队成员
+4. Stage 4: 生成并排序 Subtask
+5. Stage 5: 分配 Subtask 到成员
 """
 
 import os
 import sys
 import json
 import time
-import random
+import re
 import pandas as pd
-from typing import List, Dict, Optional, Tuple
+from typing import List, Dict, Optional
 from datetime import datetime
 from collections import Counter
 from tqdm import tqdm
@@ -22,8 +27,8 @@ from tqdm import tqdm
 try:
     from openai import OpenAI
 except ImportError as e:
-    print(f"错误: 缺少必要的依赖库 - {e}")
-    print("请运行: pip install openai pandas openpyxl python-dotenv tqdm")
+    print(f"错误: 无法导入 openai 库: {e}")
+    print("请安装依赖: pip install openai")
     sys.exit(1)
 
 # 导入配置和提示词
@@ -31,11 +36,11 @@ import config
 from prompt import PromptTemplate
 
 
-# ==================== OpenAI API 调用模块 ==========
+# ==================== OpenAI API 调用模块 ====================
 
-def call_gpt5_phase4(prompt: str, retries: int = None) -> Optional[Dict]:
+def call_gpt_phase4(prompt: str, retries: int = None) -> Optional[Dict]:
     """
-    调用 OpenAI GPT-5 API（Phase 4专用）
+    调用 OpenAI GPT API（Phase 4专用）
 
     参数:
         prompt: 提示词
@@ -52,7 +57,7 @@ def call_gpt5_phase4(prompt: str, retries: int = None) -> Optional[Dict]:
         print("错误: OPENAI_API_KEY 未设置")
         return None
 
-    # 初始化 OpenAI 客户端（通过 OpenRouter）
+    # 初始化 OpenAI 客户端
     client = OpenAI(
         api_key=config.OPENAI_API_KEY,
         base_url=config.OPENAI_BASE_URL
@@ -68,7 +73,7 @@ def call_gpt5_phase4(prompt: str, retries: int = None) -> Optional[Dict]:
                 "messages": [
                     {
                         "role": "system",
-                        "content": "你是一位专业的项目管理和组织架构专家，擅长任务拆解和团队协作。请严格按照要求输出 JSON 格式的数据。"
+                        "content": "你是一位专业的项目管理和组织架构专家。请严格按照要求输出 JSON 格式的数据。"
                     },
                     {
                         "role": "user",
@@ -80,7 +85,7 @@ def call_gpt5_phase4(prompt: str, retries: int = None) -> Optional[Dict]:
             # 添加配置中的参数
             api_kwargs.update(config.API_PARAMS)
 
-            print("⏳ 正在等待 GPT-5 响应...")
+            print("⏳ 正在等待 GPT 响应...")
 
             response = client.chat.completions.create(**api_kwargs)
 
@@ -99,6 +104,10 @@ def call_gpt5_phase4(prompt: str, retries: int = None) -> Optional[Dict]:
             if content.endswith("```"):
                 content = content[:-3]
             content = content.strip()
+
+            # 清理控制字符（移除未转义的换行符、制表符等）
+            # 保留空格，移除其他ASCII控制字符（0x00-0x1F, 0x7F）
+            content = re.sub(r'[\x00-\x08\x0B-\x0C\x0E-\x1F\x7F]', '', content)
 
             # 解析 JSON
             try:
@@ -135,12 +144,11 @@ def parse_hard_skills(hard_skills_str: str) -> List[Dict]:
     """
     解析Hard_Skills字符串为结构化数组
 
-    输入: "商业模式画布(strong), SWOT分析(strong), OKR(strong), KPI(medium)"
+    输入: "Python(strong), Java(medium), SQL(low)"
     输出: [
-        {"skill": "商业模式画布", "proficiency": "strong"},
-        {"skill": "SWOT分析", "proficiency": "strong"},
-        {"skill": "OKR", "proficiency": "strong"},
-        {"skill": "KPI", "proficiency": "medium"}
+        {"skill": "Python", "proficiency": "strong"},
+        {"skill": "Java", "proficiency": "medium"},
+        {"skill": "SQL", "proficiency": "low"}
     ]
     """
     if pd.isna(hard_skills_str) or not hard_skills_str:
@@ -156,13 +164,31 @@ def parse_hard_skills(hard_skills_str: str) -> List[Dict]:
     return skills
 
 
-def load_employees_data() -> pd.DataFrame:
+def parse_communication_style(cs_str: str) -> Dict:
     """
-    加载Phase 3的输出：员工数据（含Communication Style）
+    解析Communication_Style JSON字符串
 
-    注意:
-    - Hard_Skills是string格式，转dict时需要用parse_hard_skills()解析
-    - Communication_Style是JSON string，转dict时需要用json.loads()解析
+    输入: '{"Formality": "Formal", "Verbosity": "Concise", ...}'
+    输出: {"Formality": "Formal", "Verbosity": "Concise", ...}
+    """
+    if pd.isna(cs_str) or not cs_str:
+        return {}
+
+    if isinstance(cs_str, str):
+        return json.loads(cs_str)
+    else:
+        return cs_str
+
+
+def load_all_employees() -> List[Dict]:
+    """
+    加载全量员工数据
+
+    Returns:
+        List[Dict]: 员工列表，每个员工包含：
+        - user_name, user_id, team, rank, title
+        - hard_skills: List[Dict]
+        - communication_style: Dict
     """
     print(f"\n{'='*60}")
     print("加载员工数据...")
@@ -176,634 +202,190 @@ def load_employees_data() -> pd.DataFrame:
 
     df = pd.read_excel(file_path)
 
-    print(f"✓ 已加载 {len(df)} 名员工")
+    print(f"✓ 成功加载 {len(df)} 名员工")
     print(f"  - Rank 1: {len(df[df['Rank']==1])} 人")
     print(f"  - Rank 2: {len(df[df['Rank']==2])} 人")
     print(f"  - Rank 3: {len(df[df['Rank']==3])} 人")
 
-    return df
+    employees = []
+    for _, row in df.iterrows():
+        employee = {
+            "user_name": row["Name"],
+            "user_id": row["User_ID"],
+            "team": row["Team"],
+            "rank": int(row["Rank"]),
+            "title": row["Title"],
+            "hard_skills": parse_hard_skills(row["Hard_Skills"]),
+            "communication_style": parse_communication_style(row["Communication_Style"])
+        }
+        employees.append(employee)
+
+    return employees
 
 
-def employee_row_to_dict(row: pd.Series) -> Dict:
+# ==================== Stage 1: 生成大 Topic ====================
+
+def generate_major_topics() -> List[Dict]:
     """
-    将DataFrame的一行转换为结构化字典
-
-    处理:
-    1. Hard_Skills字符串 -> List[Dict]
-    2. Communication_Style JSON string -> Dict
-    """
-    employee = {
-        "user_name": row["Name"],
-        "team": row["Team"],
-        "title": row["Title"],
-        "rank": int(row["Rank"]),
-        "hard_skills": parse_hard_skills(row["Hard_Skills"]),
-        "communication_style": json.loads(row["Communication_Style"]) if isinstance(row["Communication_Style"], str) else row["Communication_Style"]
-    }
-
-    return employee
-
-
-# ==================== Project 1: 初始化 ====================
-
-def initialize_first_team(df: pd.DataFrame) -> List[Dict]:
-    """
-    随机初始化第一个项目的团队
-    根据config.FIRST_TEAM_SIZE配置选择成员：
-    - rank_1个 Rank 1
-    - rank_2个 Rank 2
-    - rank_3个 Rank 3
+    Stage 1: 生成大 Topic
 
     Returns:
-        List[Dict]: 成员的结构化数据（包含解析后的hard_skills和communication_style）
+        List[Dict]: 大 topic 列表
     """
     print(f"\n{'='*60}")
-    print("初始化第一个项目的团队...")
+    print("Stage 1: 生成大 Topic...")
     print(f"{'='*60}")
 
-    # 设置随机种子（如果配置了）
-    if config.RANDOM_SEED is not None:
-        random.seed(config.RANDOM_SEED)
+    prompt = PromptTemplate.get_major_topics_generation_prompt()
+    result = call_gpt_phase4(prompt)
 
-    # 从config读取团队规模配置
-    rank1_count = config.FIRST_TEAM_SIZE['rank_1']
-    rank2_count = config.FIRST_TEAM_SIZE['rank_2']
-    rank3_count = config.FIRST_TEAM_SIZE['rank_3']
+    if not result:
+        print("✗ 生成大 Topic 失败")
+        return None
 
-    print(f"团队规模配置: Rank 1={rank1_count}, Rank 2={rank2_count}, Rank 3={rank3_count}")
+    major_topics = result.get("major_topics", [])
 
-    rank1_employees = df[df['Rank'] == 1].sample(n=rank1_count)
-    rank2_employees = df[df['Rank'] == 2].sample(n=rank2_count)
-    rank3_employees = df[df['Rank'] == 3].sample(n=rank3_count)
+    print(f"✓ 成功生成 {len(major_topics)} 个大 Topic:")
+    for i, topic in enumerate(major_topics, 1):
+        print(f"  {i}. {topic.get('topic', '未命名')}")
 
-    team_df = pd.concat([rank1_employees, rank2_employees, rank3_employees])
+    return major_topics
 
-    # 转换为结构化字典列表
-    team_members = [employee_row_to_dict(row) for _, row in team_df.iterrows()]
 
-    print(f"✓ 团队初始化完成，共 {len(team_members)} 人")
+def save_major_topics(major_topics: List[Dict]):
+    """保存大 Topic 到文件"""
+    os.makedirs(config.PROJECTS_DIR, exist_ok=True)
 
-    # 统计各职别人数并打印
-    rank_counts = {}
-    for member in team_members:
-        rank = member['rank']
-        rank_counts[rank] = rank_counts.get(rank, 0) + 1
+    data = {
+        "generated_at": datetime.now().isoformat(),
+        "count": len(major_topics),
+        "major_topics": major_topics
+    }
 
+    with open(config.MAJOR_TOPICS_FILE, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+    print(f"✓ 大 Topic 已保存: {config.MAJOR_TOPICS_FILE}")
+
+
+# ==================== Stage 2: 拆分小 Topic ====================
+
+def generate_sub_topics(major_topic: Dict) -> List[Dict]:
+    """
+    Stage 2: 拆分小 Topic
+
+    Args:
+        major_topic: 大 topic 数据
+
+    Returns:
+        List[Dict]: 小 topic 列表
+    """
+    topic_name = major_topic.get('topic', '未命名')
+    print(f"\n拆分大 Topic: {topic_name}")
+
+    prompt = PromptTemplate.get_sub_topics_generation_prompt(major_topic)
+    result = call_gpt_phase4(prompt)
+
+    if not result:
+        print(f"✗ 拆分 {topic_name} 失败")
+        return []
+
+    sub_topics = result.get("sub_topics", [])
+
+    print(f"✓ 成功拆分为 {len(sub_topics)} 个小 Topic:")
+    for i, st in enumerate(sub_topics, 1):
+        print(f"  {i}. {st.get('topic', '未命名')}")
+
+    return sub_topics
+
+
+def save_sub_topics(sub_topics: List[Dict]):
+    """保存所有小 Topic 到汇总文件"""
+    data = {
+        "generated_at": datetime.now().isoformat(),
+        "count": len(sub_topics),
+        "sub_topics": sub_topics
+    }
+
+    with open(config.SUB_TOPICS_FILE, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+    print(f"✓ 小 Topic 已保存: {config.SUB_TOPICS_FILE}")
+
+
+# ==================== Stage 3: 选择团队成员 ====================
+
+def select_team_members(sub_topic: Dict, all_employees: List[Dict]) -> List[Dict]:
+    """
+    Stage 3: 选择团队成员
+
+    Args:
+        sub_topic: 小 topic 数据
+        all_employees: 全量员工列表
+
+    Returns:
+        List[Dict]: 选中的团队成员列表
+    """
+    topic_name = sub_topic.get('topic', '未命名')
+    print(f"\n为项目 '{topic_name}' 选择团队成员...")
+
+    prompt = PromptTemplate.get_team_selection_prompt(sub_topic, all_employees)
+    result = call_gpt_phase4(prompt)
+
+    if not result:
+        print(f"✗ 选择团队失败")
+        return None
+
+    # 从 all_employees 中提取完整信息
+    selected_names = [m['user_name'] for m in result.get('selected_members', [])]
+    team = [emp.copy() for emp in all_employees if emp['user_name'] in selected_names]
+
+    # 添加 selection_reason
+    reason_map = {m['user_name']: m['selection_reason'] for m in result.get('selected_members', [])}
+    for member in team:
+        member['selection_reason'] = reason_map.get(member['user_name'], '')
+
+    # 验证团队约束
+    if not validate_team_selection(team):
+        print("⚠ 团队选择验证未通过，但继续执行")
+
+    print(f"✓ 成功选择 {len(team)} 名成员:")
+    rank_counts = Counter([m['rank'] for m in team])
     print(f"  - Rank 1: {rank_counts.get(1, 0)} 人")
     print(f"  - Rank 2: {rank_counts.get(2, 0)} 人")
     print(f"  - Rank 3: {rank_counts.get(3, 0)} 人")
 
-    return team_members
+    return team
 
 
-def generate_project_1(team_members: List[Dict]) -> Dict:
+def validate_team_selection(team: List[Dict]) -> bool:
     """
-    生成第一个项目
-
-    流程:
-    1. 调用GPT生成project topic和description
-    2. 调用GPT拆解任务并分配
-    3. 构建完整的项目JSON数据
-
-    Returns:
-        完整的项目JSON数据
-    """
-    print(f"\n{'='*60}")
-    print("生成 Project 1...")
-    print(f"{'='*60}")
-
-    # ========== 阶段1: 生成项目主题和描述 ==========
-    print("\n[阶段1/2] 生成项目主题和描述...")
-
-    prompt = PromptTemplate.get_project_generation_prompt(
-        team_members=team_members,
-        project_number=1,
-        previous_projects=None
-    )
-
-    result = call_gpt5_phase4(prompt)
-
-    if not result:
-        print("✗ 生成项目主题失败")
-        return None
-
-    project_topic = result.get("project_topic", "未命名项目")
-    project_description = result.get("project_description", "")
-
-    print(f"✓ 项目主题: {project_topic}")
-    print(f"  项目描述: {project_description[:80]}...")
-
-    # ========== 阶段2: 拆解任务并分配 ==========
-    print("\n[阶段2/2] 拆解任务并分配...")
-
-    # 为Project 1，communication_style不需要调整，直接使用原始的
-    # 添加original_communication_style字段
-    for member in team_members:
-        member['original_communication_style'] = member['communication_style'].copy()
-
-    prompt = PromptTemplate.get_task_breakdown_and_assignment_prompt(
-        project_topic=project_topic,
-        project_description=project_description,
-        team_members=team_members
-    )
-
-    result = call_gpt5_phase4(prompt)
-
-    if not result:
-        print("✗ 任务拆解失败")
-        return None
-
-    task_assignments = result.get("task_assignments", [])
-
-    # 验证任务分配
-    if not validate_task_assignments(task_assignments, team_members):
-        print("⚠ 任务分配验证未通过，但继续执行")
-
-    # ========== 构建完整的项目数据 ==========
-    project_data = build_complete_project_data(
-        project_number=1,
-        project_topic=project_topic,
-        project_description=project_description,
-        team_members=team_members,
-        task_assignments=task_assignments,
-        related_projects=[],
-        adjustments_made={
-            "members_added": [],
-            "members_removed": [],
-            "communication_style_adjusted": False
-        }
-    )
-
-    # 保存项目
-    save_project(project_data)
-
-    print(f"\n✓ Project 1 生成完成")
-    print(f"  - 团队规模: {len(project_data['members'])} 人")
-    print(f"  - 总任务数: {project_data['metadata']['total_subtasks']}")
-
-    return project_data
-
-
-# ==================== Project 2+: 迭代生成 ====================
-
-def generate_next_project(
-    project_number: int,
-    previous_projects: List[Dict],
-    all_employees_df: pd.DataFrame
-) -> Dict:
-    """
-    生成第N个项目（N >= 2）
-
-    流程:
-    1. 调用GPT生成新project topic/description和调整成员
-    2. 调用GPT根据项目架构调整communication style
-    3. 调用GPT拆解任务并分配
-    4. 保存到文件
-
-    Returns:
-        完整的项目JSON数据
-    """
-    print(f"\n{'='*60}")
-    print(f"生成 Project {project_number}...")
-    print(f"{'='*60}")
-
-    # ========== 阶段1: 生成项目并调整成员 ==========
-    project_topic, project_description, new_team, adjustment_info = stage1_generate_project_and_adjust_members(
-        project_number=project_number,
-        previous_projects=previous_projects,
-        all_employees_df=all_employees_df
-    )
-
-    if not new_team:
-        print("✗ 成员调整失败")
-        return None
-
-    # ========== 阶段2: 调整Communication Style ==========
-    updated_team = stage2_adjust_communication_styles(
-        project_topic=project_topic,
-        project_description=project_description,
-        team_members=new_team
-    )
-
-    if not updated_team:
-        print("✗ Communication Style调整失败")
-        return None
-
-    # ========== 阶段3: 拆解任务并分配 ==========
-    project_data = stage3_breakdown_and_assign_tasks(
-        project_number=project_number,
-        project_topic=project_topic,
-        project_description=project_description,
-        team_members=updated_team,
-        related_projects=[p['project_info']['project_number'] for p in previous_projects],
-        adjustments_made=adjustment_info
-    )
-
-    if not project_data:
-        print("✗ 任务拆解失败")
-        return None
-
-    # 保存项目
-    save_project(project_data)
-
-    print(f"\n✓ Project {project_number} 生成完成")
-    print(f"  - 团队规模: {len(project_data['members'])} 人")
-    print(f"  - 总任务数: {project_data['metadata']['total_subtasks']}")
-    print(f"  - 成员调整: +{len(adjustment_info.get('members_added', []))} -{len(adjustment_info.get('members_removed', []))}")
-
-    return project_data
-
-
-# ==================== 阶段1: 生成项目和调整成员 ====================
-
-def stage1_generate_project_and_adjust_members(
-    project_number: int,
-    previous_projects: List[Dict],
-    all_employees_df: pd.DataFrame
-) -> Tuple[str, str, List[Dict], Dict]:
-    """
-    阶段1: 生成新项目并调整团队成员
-
-    Returns:
-        (project_topic, project_description, new_team_members, adjustment_info)
-    """
-    print("\n[阶段1/3] 生成项目并调整成员...")
-
-    # 获取上一个项目的团队成员
-    previous_project = previous_projects[-1]
-    current_team = previous_project['members']
-
-    # 将所有员工转换为字典列表
-    all_employees = [employee_row_to_dict(row) for _, row in all_employees_df.iterrows()]
-
-    # 首先生成新项目的topic和description
-    prompt_gen = PromptTemplate.get_project_generation_prompt(
-        team_members=current_team,
-        project_number=project_number,
-        previous_projects=previous_projects
-    )
-
-    result_gen = call_gpt5_phase4(prompt_gen)
-
-    if not result_gen:
-        print("✗ 生成项目主题失败")
-        return None, None, None, None
-
-    project_topic = result_gen.get("project_topic", "未命名项目")
-    project_description = result_gen.get("project_description", "")
-
-    print(f"✓ 新项目: {project_topic}")
-
-    # 然后调整成员
-    prompt_adj = PromptTemplate.get_member_adjustment_prompt(
-        new_project_topic=project_topic,
-        new_project_description=project_description,
-        current_team=current_team,
-        all_employees=all_employees,
-        previous_projects=previous_projects
-    )
-
-    result_adj = call_gpt5_phase4(prompt_adj)
-
-    if not result_adj:
-        print("✗ 成员调整失败")
-        return None, None, None, None
-
-    # 构建新团队
-    new_team = build_team_from_adjustments(result_adj, all_employees_df)
-
-    if not new_team:
-        print("✗ 构建新团队失败")
-        return None, None, None, None
-
-    # 验证约束
-    if not validate_team_constraints(new_team):
-        print("⚠ 团队约束验证未通过，但继续执行")
-
-    # 计算实际的成员变化（而不是依赖GPT的声明）
-    current_team_names = set([m['user_name'] for m in current_team])
-    new_team_names = set([m['user_name'] for m in new_team])
-
-    actual_added = list(new_team_names - current_team_names)
-    actual_removed = list(current_team_names - new_team_names)
-
-    adjustment_info = {
-        "members_added": actual_added,  # 实际新增的成员
-        "members_removed": actual_removed,  # 实际移除的成员
-        "communication_style_adjusted": True
-    }
-
-    print(f"✓ 团队调整完成: 新增 {len(adjustment_info['members_added'])} 人, 移除 {len(adjustment_info['members_removed'])} 人")
-
-    # 调试信息：对比GPT声明 vs 实际变化
-    gpt_added = [m['user_name'] for m in result_adj.get('member_adjustments', {}).get('add_members', [])]
-    gpt_removed = [m['user_name'] for m in result_adj.get('member_adjustments', {}).get('remove_members', [])]
-    if len(gpt_added) != len(actual_added) or len(gpt_removed) != len(actual_removed):
-        print(f"  ⚠️  注意: GPT声明 (+{len(gpt_added)}/-{len(gpt_removed)})与实际变化不一致")
-
-    return project_topic, project_description, new_team, adjustment_info
-
-
-def build_team_from_adjustments(adjustments: Dict, all_employees_df: pd.DataFrame) -> List[Dict]:
-    """
-    根据调整信息构建新团队
-
-    参数:
-        adjustments: GPT返回的调整信息
-        all_employees_df: 所有员工的DataFrame
-
-    Returns:
-        新团队成员列表
-    """
-    member_adj = adjustments.get('member_adjustments', {})
-    keep_names = set(member_adj.get('keep_members', []))
-    add_names = set([m.get('user_name') for m in member_adj.get('add_members', [])])
-
-    # 合并keep和add
-    all_names = keep_names | add_names
-
-    # 从DataFrame中提取这些员工
-    team_df = all_employees_df[all_employees_df['Name'].isin(all_names)]
-
-    # 转换为字典列表
-    team_members = [employee_row_to_dict(row) for _, row in team_df.iterrows()]
-
-    return team_members
-
-
-# ==================== 阶段2: 调整Communication Style ====================
-
-def stage2_adjust_communication_styles(
-    project_topic: str,
-    project_description: str,
-    team_members: List[Dict]
-) -> List[Dict]:
-    """
-    阶段2: 根据项目架构调整成员的communication style
-
-    Returns:
-        更新后的team_members（communication_style已调整）
-    """
-    print("\n[阶段2/3] 调整Communication Style...")
-
-    # 保存原始communication_style
-    for member in team_members:
-        if 'original_communication_style' not in member:
-            member['original_communication_style'] = member['communication_style'].copy()
-
-    # 构建prompt
-    prompt = PromptTemplate.get_communication_style_adjustment_prompt(
-        project_topic=project_topic,
-        project_description=project_description,
-        team_members=team_members
-    )
-
-    # 调用GPT
-    result = call_gpt5_phase4(prompt)
-
-    if not result:
-        print("✗ Communication Style调整失败")
-        return None
-
-    # 应用调整
-    updated_team = apply_style_adjustments(team_members, result)
-
-    # 验证调整后的style
-    if not validate_communication_styles(updated_team):
-        print("⚠ Communication Style验证未通过，但继续执行")
-
-    print(f"✓ Communication Style调整完成")
-
-    return updated_team
-
-
-def apply_style_adjustments(team_members: List[Dict], adjustments: Dict) -> List[Dict]:
-    """
-    应用Communication Style调整
-
-    参数:
-        team_members: 团队成员列表
-        adjustments: GPT返回的调整信息
-
-    Returns:
-        更新后的团队成员列表
-    """
-    adjusted_styles = adjustments.get('adjusted_styles', [])
-
-    # 创建user_name到adjusted_style的映射
-    style_map = {}
-    for adj in adjusted_styles:
-        user_name = adj.get('user_name')
-        adjusted_style = adj.get('adjusted_style', {})
-        style_map[user_name] = adjusted_style
-
-    # 应用调整
-    for member in team_members:
-        user_name = member['user_name']
-        if user_name in style_map:
-            member['communication_style'] = style_map[user_name]
-
-    return team_members
-
-
-# ==================== 阶段3: 拆解任务 ====================
-
-def stage3_breakdown_and_assign_tasks(
-    project_number: int,
-    project_topic: str,
-    project_description: str,
-    team_members: List[Dict],
-    related_projects: List[int],
-    adjustments_made: Dict
-) -> Dict:
-    """
-    阶段3: 拆解项目任务并分配给成员
-
-    Returns:
-        完整的project JSON数据
-    """
-    print("\n[阶段3/3] 拆解任务并分配...")
-
-    # 构建prompt
-    prompt = PromptTemplate.get_task_breakdown_and_assignment_prompt(
-        project_topic=project_topic,
-        project_description=project_description,
-        team_members=team_members
-    )
-
-    # 调用GPT
-    result = call_gpt5_phase4(prompt)
-
-    if not result:
-        print("✗ 任务拆解失败")
-        return None
-
-    task_assignments = result.get('task_assignments', [])
-
-    # 验证任务分配
-    if not validate_task_assignments(task_assignments, team_members):
-        print("⚠ 任务分配验证未通过，但继续执行")
-
-    # 构建完整project数据
-    project_data = build_complete_project_data(
-        project_number=project_number,
-        project_topic=project_topic,
-        project_description=project_description,
-        team_members=team_members,
-        task_assignments=task_assignments,
-        related_projects=related_projects,
-        adjustments_made=adjustments_made
-    )
-
-    print(f"✓ 任务拆解完成，共 {project_data['metadata']['total_subtasks']} 个任务")
-
-    return project_data
-
-
-def build_complete_project_data(
-    project_number: int,
-    project_topic: str,
-    project_description: str,
-    team_members: List[Dict],
-    task_assignments: List[Dict],
-    related_projects: List[int],
-    adjustments_made: Dict
-) -> Dict:
-    """
-    构建完整的项目JSON数据
-
-    Returns:
-        完整的项目数据结构
-    """
-    # 构建成员到任务的映射
-    user_to_tasks = {}
-    for assignment in task_assignments:
-        user_name = assignment.get('user_name')
-        subtasks = assignment.get('subtasks', [])
-        user_to_tasks[user_name] = subtasks
-
-    # 为每个成员添加subtasks
-    members_with_tasks = []
-    for member in team_members:
-        member_copy = member.copy()
-        user_name = member['user_name']
-        member_copy['subtasks'] = user_to_tasks.get(user_name, [])
-        members_with_tasks.append(member_copy)
-
-    # 计算统计数据
-    rank_counts = Counter([m['rank'] for m in team_members])
-    total_subtasks = sum(len(m['subtasks']) for m in members_with_tasks)
-    avg_subtasks = total_subtasks / len(members_with_tasks) if members_with_tasks else 0
-
-    # 构建完整数据
-    project_data = {
-        "project_info": {
-            "project_number": project_number,
-            "project_topic": project_topic,
-            "project_description": project_description,
-            "related_projects": related_projects,
-            "generated_at": datetime.now().isoformat()
-        },
-        "team_composition": {
-            "total_members": len(members_with_tasks),
-            "rank_distribution": {
-                "rank_1": rank_counts.get(1, 0),
-                "rank_2": rank_counts.get(2, 0),
-                "rank_3": rank_counts.get(3, 0)
-            }
-        },
-        "members": members_with_tasks,
-        "metadata": {
-            "total_subtasks": total_subtasks,
-            "avg_subtasks_per_member": round(avg_subtasks, 2),
-            "generation_method": "GPT-5 Multi-stage",
-            "adjustments_made": adjustments_made
-        }
-    }
-
-    return project_data
-
-
-# ==================== 文件操作 ====================
-
-def save_project(project_data: Dict) -> str:
-    """
-    保存项目到文件
-
-    路径: projects/{project_topic}/{project_topic}.json
-
-    Returns:
-        文件路径
-    """
-    project_topic = project_data['project_info']['project_topic']
-
-    # 创建项目目录
-    project_dir = os.path.join(config.PROJECTS_DIR, project_topic)
-    os.makedirs(project_dir, exist_ok=True)
-
-    # 保存文件
-    file_path = os.path.join(project_dir, f"{project_topic}.json")
-
-    with open(file_path, 'w', encoding='utf-8') as f:
-        json.dump(project_data, f, ensure_ascii=False, indent=2)
-
-    print(f"✓ 项目已保存: {file_path}")
-
-    return file_path
-
-
-def load_project(project_topic: str) -> Dict:
-    """
-    加载已保存的项目
-
-    参数:
-        project_topic: 项目主题
-
-    Returns:
-        项目数据
-    """
-    file_path = os.path.join(config.PROJECTS_DIR, project_topic, f"{project_topic}.json")
-
-    if not os.path.exists(file_path):
-        print(f"✗ 项目文件不存在: {file_path}")
-        return None
-
-    with open(file_path, 'r', encoding='utf-8') as f:
-        project_data = json.load(f)
-
-    return project_data
-
-
-# ==================== 验证函数 ====================
-
-def validate_team_constraints(team: List[Dict]) -> bool:
-    """
-    验证团队约束：Rank 1必须有，Rank 2至少1个
-
-    Returns:
-        是否通过验证
+    验证团队选择是否符合要求
+
+    检查：
+    1. 至少 1 个 Rank 1
+    2. 至少 1 个 Rank 2
+    3. 团队规模在配置范围内
     """
     rank_counts = Counter([m['rank'] for m in team])
 
     errors = []
 
-    # 检查Rank 1
-    if rank_counts.get(1, 0) < 1:
-        errors.append("团队必须至少有1个Rank 1成员")
+    if rank_counts.get(1, 0) < config.SUB_TOPIC_TEAM_SIZE['rank_1_min']:
+        errors.append(f"Rank 1 数量不足（需要至少 {config.SUB_TOPIC_TEAM_SIZE['rank_1_min']} 人）")
 
-    # 检查Rank 2
-    if rank_counts.get(2, 0) < 1:
-        errors.append("团队必须至少有1个Rank 2成员")
+    if rank_counts.get(2, 0) < config.SUB_TOPIC_TEAM_SIZE['rank_2_min']:
+        errors.append(f"Rank 2 数量不足（需要至少 {config.SUB_TOPIC_TEAM_SIZE['rank_2_min']} 人）")
 
-    # 检查团队规模
-    if len(team) < config.SUBSEQUENT_TEAM_SIZE_RANGE['min']:
-        errors.append(f"团队规模({len(team)})小于最小值({config.SUBSEQUENT_TEAM_SIZE_RANGE['min']})")
+    team_size = len(team)
+    if team_size < config.SUB_TOPIC_TEAM_SIZE['min']:
+        errors.append(f"团队规模不足（{team_size} < {config.SUB_TOPIC_TEAM_SIZE['min']}）")
 
-    if len(team) > config.SUBSEQUENT_TEAM_SIZE_RANGE['max']:
-        errors.append(f"团队规模({len(team)})大于最大值({config.SUBSEQUENT_TEAM_SIZE_RANGE['max']})")
+    if team_size > config.SUB_TOPIC_TEAM_SIZE['max']:
+        errors.append(f"团队规模超限（{team_size} > {config.SUB_TOPIC_TEAM_SIZE['max']}）")
 
     if errors:
-        print("团队约束验证失败:")
+        print("团队选择验证失败:")
         for error in errors:
             print(f"  - {error}")
         return False
@@ -811,92 +393,198 @@ def validate_team_constraints(team: List[Dict]) -> bool:
     return True
 
 
-def validate_communication_styles(team: List[Dict]) -> bool:
+# ==================== Stage 3.5: 调整 Communication Style ====================
+
+def adjust_communication_styles(sub_topic: Dict, team_members: List[Dict]) -> bool:
     """
-    验证communication style的值都是合法的
+    Stage 3.5: 根据项目主题和团队结构调整成员的 communication_style
+
+    Args:
+        sub_topic: 小 topic 数据
+        team_members: 团队成员列表（会被修改，添加调整后的 communication_style）
 
     Returns:
-        是否通过验证
+        bool: 是否成功
     """
-    valid_values = {
-        "Formality": ["Formal", "Semi-formal", "Casual"],
-        "Verbosity": ["Detailed", "Moderate", "Concise"],
-        "Humor": ["Frequent", "Occasional", "Minimal"],
-        "Jargon_Usage": ["Technical", "Balanced", "Plain"],
-        "Emoji_Usage": ["Frequent", "Occasional", "Rare"],
-        "Directness": ["Direct", "Balanced", "Indirect"],
-        "Warmth": ["Warm", "Friendly", "Neutral"],
-        "Questioning_Style": ["Probing", "Clarifying", "Accepting"]
-    }
+    topic_name = sub_topic.get('topic', '未命名')
+    print(f"\n调整团队成员的 Communication Style...")
 
-    errors = []
+    # 保存原始 communication_style
+    for member in team_members:
+        if 'original_communication_style' not in member:
+            member['original_communication_style'] = member['communication_style'].copy()
 
-    for member in team:
-        user_name = member.get('user_name')
-        cs = member.get('communication_style', {})
+    # 构建 prompt
+    prompt = PromptTemplate.get_communication_style_adjustment_prompt(
+        project_topic=topic_name,
+        project_description=sub_topic.get('description', ''),
+        team_members=team_members
+    )
 
-        for dimension, valid_vals in valid_values.items():
-            value = cs.get(dimension)
-            if value not in valid_vals:
-                errors.append(f"{user_name}的{dimension}值({value})不合法")
+    # 调用 GPT
+    result = call_gpt_phase4(prompt)
 
-    if errors:
-        print("Communication Style验证失败:")
-        for error in errors[:10]:  # 只显示前10个错误
-            print(f"  - {error}")
-        if len(errors) > 10:
-            print(f"  ... 还有 {len(errors)-10} 个错误")
+    if not result:
+        print(f"✗ Communication Style 调整失败")
         return False
+
+    # 应用调整
+    adjusted_styles = result.get('adjusted_styles', [])
+
+    if not adjusted_styles:
+        print(f"⚠ GPT 未返回调整结果，communication_style 保持不变")
+        return True
+
+    # 验证是否返回了所有成员
+    if len(adjusted_styles) < len(team_members):
+        print(f"⚠ 警告：GPT 只返回了 {len(adjusted_styles)}/{len(team_members)} 个成员的调整")
+        missing_members = [m['user_name'] for m in team_members
+                          if m['user_name'] not in [s.get('user_name') for s in adjusted_styles]]
+        if len(missing_members) <= 5:
+            print(f"  未调整的成员: {', '.join(missing_members)}")
+        else:
+            print(f"  未调整的成员: {', '.join(missing_members[:5])} 等 {len(missing_members)} 人")
+
+    # 创建用户名到调整后风格的映射
+    style_map = {}
+    for item in adjusted_styles:
+        user_name = item.get('user_name')
+        new_style = item.get('adjusted_style', {})
+        if user_name and new_style:
+            style_map[user_name] = new_style
+
+    # 更新成员的 communication_style
+    updated_count = 0
+    for member in team_members:
+        user_name = member['user_name']
+        if user_name in style_map:
+            member['communication_style'] = style_map[user_name]
+            updated_count += 1
+
+    print(f"✓ Communication Style 调整完成")
+    print(f"  - GPT 返回了 {len(adjusted_styles)} 个调整结果")
+    print(f"  - 成功应用了 {updated_count}/{len(team_members)} 名成员的调整")
+
+    # 显示调整统计
+    adjusted_count = len([m for m in team_members if m.get('communication_style') != m.get('original_communication_style')])
+    print(f"  - 实际改变了 {adjusted_count}/{len(team_members)} 名成员的沟通风格")
 
     return True
 
 
-def validate_task_assignments(assignments: List[Dict], team: List[Dict]) -> bool:
+# ==================== Stage 4: 生成并排序 Subtask ====================
+
+def generate_and_sequence_subtasks(sub_topic: Dict, team_members: List[Dict]) -> List[Dict]:
     """
-    验证任务分配:
-    - 所有团队成员都被分配了任务
-    - 每个成员至少5个任务
-    - user_name都存在
-    - required_skills匹配成员技能
+    Stage 4: 生成并排序 Subtask
+
+    Args:
+        sub_topic: 小 topic 数据
+        team_members: 团队成员列表
 
     Returns:
-        是否通过验证
+        List[Dict]: 排序后的 subtask 列表
     """
-    team_names = set([m['user_name'] for m in team])
-    team_skills = {}
-    for m in team:
-        team_skills[m['user_name']] = set([s['skill'] for s in m['hard_skills']])
+    topic_name = sub_topic.get('topic', '未命名')
+    print(f"\n为项目 '{topic_name}' 生成并排序 Subtask...")
 
+    prompt = PromptTemplate.get_subtask_generation_and_sequencing_prompt(sub_topic, team_members)
+    result = call_gpt_phase4(prompt)
+
+    if not result:
+        print(f"✗ 生成任务失败")
+        return None
+
+    subtasks = result.get("subtasks", [])
+
+    # 暂时不分配 subtask_id，在分配完成后统一分配
+    print(f"✓ 成功生成 {len(subtasks)} 个任务")
+
+    # 显示 phase 分布
+    phase_dist = Counter([st.get('phase', 'Unknown') for st in subtasks])
+    print(f"  Phase 分布:")
+    for phase, count in phase_dist.items():
+        print(f"    - {phase}: {count} 个")
+
+    return subtasks
+
+
+# ==================== Stage 5: 分配 Subtask 到成员 ====================
+
+def assign_subtasks_to_members(subtasks: List[Dict], team_members: List[Dict]) -> bool:
+    """
+    Stage 5: 分配 Subtask 到成员
+
+    Args:
+        subtasks: 排序后的 subtask 列表（包含 subtask_id）
+        team_members: 团队成员列表（会被修改，添加 subtasks 字段）
+
+    Returns:
+        bool: 是否成功
+    """
+    print(f"\n分配任务到成员...")
+
+    prompt = PromptTemplate.get_subtask_assignment_prompt(subtasks, team_members)
+    result = call_gpt_phase4(prompt)
+
+    if not result:
+        print(f"✗ 任务分配失败")
+        return False
+
+    # 将分配结果写入 team_members
+    task_assignments = result.get('task_assignments', [])
+
+    for assignment in task_assignments:
+        user_name = assignment['user_name']
+        assigned_subtasks = assignment.get('assigned_subtasks', [])
+
+        # 找到对应的成员
+        for member in team_members:
+            if member['user_name'] == user_name:
+                member['subtasks'] = assigned_subtasks
+                break
+
+    # 分配完成后，统一为所有 subtask 分配递增的 ID
+    subtask_counter = 1
+    for member in team_members:
+        for subtask in member.get('subtasks', []):
+            subtask['subtask_id'] = subtask_counter
+            subtask_counter += 1
+
+    print(f"✓ 已为 {subtask_counter - 1} 个 subtasks 分配 ID")
+
+    # 验证任务分配
+    if not validate_task_assignment(team_members):
+        print("⚠ 任务分配验证未通过，但继续执行")
+
+    print(f"✓ 任务分配完成")
+
+    # 显示统计
+    for member in team_members:
+        subtasks_count = len(member.get('subtasks', []))
+        print(f"  - {member['user_name']}: {subtasks_count} 个任务")
+
+    return True
+
+
+def validate_task_assignment(team_members: List[Dict]) -> bool:
+    """
+    验证任务分配是否符合要求
+
+    检查：
+    1. 所有成员都被分配了任务
+    2. 每个成员至少 MIN_SUBTASKS_PER_MEMBER 个任务
+    """
     errors = []
 
-    # 收集已分配任务的成员
-    assigned_names = set([a.get('user_name') for a in assignments])
+    for member in team_members:
+        user_name = member['user_name']
+        subtasks = member.get('subtasks', [])
 
-    # ⚠️ CRITICAL: 检查是否所有团队成员都被分配了任务
-    missing_members = team_names - assigned_names
-    if missing_members:
-        errors.append(f"以下成员没有被分配任务: {', '.join(missing_members)}")
-
-    # 检查每个分配
-    for assignment in assignments:
-        user_name = assignment.get('user_name')
-        subtasks = assignment.get('subtasks', [])
-
-        # 检查user_name存在
-        if user_name not in team_names:
-            errors.append(f"用户 {user_name} 不在团队中")
-            continue
-
-        # 检查任务数量
-        if len(subtasks) < config.MIN_SUBTASKS_PER_MEMBER:
-            errors.append(f"{user_name}的任务数({len(subtasks)})少于最小值({config.MIN_SUBTASKS_PER_MEMBER})")
-
-        # 检查required_skills (暂时跳过，因为可能不严格匹配)
-        # for subtask in subtasks:
-        #     required_skills = subtask.get('required_skills', [])
-        #     member_skills = team_skills.get(user_name, set())
-        #     # 检查是否有至少一个技能匹配
-        #     # ...
+        if len(subtasks) == 0:
+            errors.append(f"{user_name} 没有被分配任务")
+        elif len(subtasks) < config.MIN_SUBTASKS_PER_MEMBER:
+            errors.append(f"{user_name} 的任务数量不足（{len(subtasks)} < {config.MIN_SUBTASKS_PER_MEMBER}）")
 
     if errors:
         print("任务分配验证失败:")
@@ -909,33 +597,86 @@ def validate_task_assignments(assignments: List[Dict], team: List[Dict]) -> bool
     return True
 
 
-# ==================== 统计和报告 ====================
+# ==================== 文件保存 ====================
 
-def generate_summary_report(all_projects: List[Dict]) -> Dict:
+def save_sub_topic_project(sub_topic: Dict, team_members: List[Dict], subtasks: List[Dict]):
     """
-    生成所有项目的统计报告
+    保存单个小 Topic 的完整项目数据
 
-    包括:
-    - 项目数量
-    - 总任务数
-    - 成员参与度统计
-    - 技能使用频率
-    - Communication style分布
+    Args:
+        sub_topic: 小 topic 数据
+        team_members: 团队成员列表（含 subtasks）
+        subtasks: 所有 subtask 列表
+    """
+    topic_name = sub_topic.get('topic', '未命名项目')
+    project_dir = os.path.join(config.PROJECTS_DIR, topic_name)
+    os.makedirs(project_dir, exist_ok=True)
+
+    file_path = os.path.join(project_dir, f"{topic_name}.json")
+
+    # 计算统计数据
+    rank_counts = Counter([m['rank'] for m in team_members])
+    total_subtasks = sum(len(m.get('subtasks', [])) for m in team_members)
+    avg_subtasks = total_subtasks / len(team_members) if team_members else 0
+    phase_dist = Counter([st.get('phase', 'Unknown') for st in subtasks])
+
+    # 构建完整数据结构
+    project_data = {
+        "sub_topic_info": {
+            "sub_topic_id": sub_topic.get('sub_topic_id'),
+            "parent_topic_id": sub_topic.get('parent_topic_id'),
+            "topic": topic_name,
+            "description": sub_topic.get('description', ''),
+            "generated_at": datetime.now().isoformat()
+        },
+        "team_composition": {
+            "total_members": len(team_members),
+            "rank_distribution": {
+                "rank_1": rank_counts.get(1, 0),
+                "rank_2": rank_counts.get(2, 0),
+                "rank_3": rank_counts.get(3, 0)
+            }
+        },
+        "members": team_members,
+        "metadata": {
+            "total_subtasks": total_subtasks,
+            "avg_subtasks_per_member": round(avg_subtasks, 2),
+            "phase_distribution": dict(phase_dist),
+            "generation_method": "Topic-Driven Multi-stage",
+            "communication_style_adjusted": True
+        }
+    }
+
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(project_data, f, ensure_ascii=False, indent=2)
+
+    print(f"✓ 项目已保存: {file_path}")
+
+
+# ==================== 统计报告 ====================
+
+def generate_summary_report(major_topics: List[Dict], sub_topics_data: List[Dict]):
+    """
+    生成统计报告
+
+    Args:
+        major_topics: 大 topic 列表
+        sub_topics_data: 小 topic 完整数据列表（含 team_members）
     """
     print(f"\n{'='*60}")
     print("生成统计报告...")
     print(f"{'='*60}")
 
-    total_projects = len(all_projects)
-    total_tasks = sum([p['metadata']['total_subtasks'] for p in all_projects])
+    total_projects = len(sub_topics_data)
+    total_tasks = sum([st['metadata']['total_subtasks'] for st in sub_topics_data])
 
-    # 收集所有参与的员工
+    # 员工参与度
     all_participants = set()
     employee_participation = {}
 
-    for project in all_projects:
-        project_num = project['project_info']['project_number']
-        for member in project['members']:
+    for st in sub_topics_data:
+        sub_topic_id = st['sub_topic_info']['sub_topic_id']
+        for member in st['members']:
             user_name = member['user_name']
             all_participants.add(user_name)
 
@@ -946,139 +687,183 @@ def generate_summary_report(all_projects: List[Dict]) -> Dict:
                     "rank": member['rank']
                 }
 
-            employee_participation[user_name]['projects_participated'].append(project_num)
+            employee_participation[user_name]['projects_participated'].append(sub_topic_id)
             employee_participation[user_name]['total_tasks'] += len(member.get('subtasks', []))
 
     # 技能使用频率
     skill_usage = Counter()
-    for project in all_projects:
-        for member in project['members']:
+    for st in sub_topics_data:
+        for member in st['members']:
             for skill in member.get('hard_skills', []):
                 skill_usage[skill['skill']] += 1
 
-    # Communication Style分布
-    cs_distribution = {}
-    dimensions = ["Formality", "Verbosity", "Humor", "Jargon_Usage", "Emoji_Usage",
-                  "Directness", "Warmth", "Questioning_Style"]
-
-    for dim in dimensions:
-        cs_distribution[dim] = Counter()
-
-    for project in all_projects:
-        for member in project['members']:
-            cs = member.get('communication_style', {})
-            for dim in dimensions:
-                value = cs.get(dim, 'Unknown')
-                cs_distribution[dim][value] += 1
-
     # 项目摘要
     projects_summary = []
-    for project in all_projects:
+    for st in sub_topics_data:
         projects_summary.append({
-            "project_number": project['project_info']['project_number'],
-            "project_topic": project['project_info']['project_topic'],
-            "team_size": len(project['members']),
-            "total_subtasks": project['metadata']['total_subtasks'],
-            "related_projects": project['project_info']['related_projects']
+            "sub_topic_id": st['sub_topic_info']['sub_topic_id'],
+            "parent_topic_id": st['sub_topic_info']['parent_topic_id'],
+            "topic": st['sub_topic_info']['topic'],
+            "team_size": st['team_composition']['total_members'],
+            "total_subtasks": st['metadata']['total_subtasks']
         })
 
     # 构建报告
     summary = {
         "generation_time": datetime.now().isoformat(),
-        "total_projects": total_projects,
+        "major_topics_count": len(major_topics),
+        "sub_topics_count": total_projects,
         "total_tasks": total_tasks,
         "total_unique_employees": len(all_participants),
+        "major_topics_summary": [
+            {
+                "topic_id": mt['topic_id'],
+                "topic": mt['topic'],
+                "sub_topics_count": len([st for st in sub_topics_data
+                                        if st['sub_topic_info']['parent_topic_id'] == mt['topic_id']])
+            }
+            for mt in major_topics
+        ],
         "projects_summary": projects_summary,
         "employee_participation": employee_participation,
-        "skill_usage_frequency": dict(skill_usage.most_common(20)),  # 只保留前20
-        "communication_style_distribution": {
-            dim: dict(cs_distribution[dim]) for dim in dimensions
-        }
+        "skill_usage_frequency": dict(skill_usage.most_common(30))
     }
 
+    with open(config.PROJECTS_SUMMARY_REPORT, 'w', encoding='utf-8') as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
+
     print(f"✓ 统计报告生成完成")
-    print(f"  - 项目总数: {total_projects}")
+    print(f"  - 大 Topic 总数: {len(major_topics)}")
+    print(f"  - 小 Topic 总数: {total_projects}")
     print(f"  - 任务总数: {total_tasks}")
     print(f"  - 参与员工: {len(all_participants)} 人")
-
-    return summary
+    print(f"✓ 统计报告已保存: {config.PROJECTS_SUMMARY_REPORT}")
 
 
 # ==================== 主函数 ====================
 
 def main():
     """
-    主流程
+    主流程：Topic-Driven Task Generation
     """
     print("\n" + "="*60)
-    print("Phase 4: Task Generation")
+    print("Phase 4: Topic-Driven Task Generation")
     print("="*60)
     print(f"启动时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
     # 创建输出目录
     os.makedirs(config.PROJECTS_DIR, exist_ok=True)
 
-    # 1. 加载数据
-    print("\n[步骤 1/4] 加载员工数据...")
-    df = load_employees_data()
+    # 1. 加载全量员工数据
+    print("\n[步骤 1/6] 加载员工数据...")
+    all_employees = load_all_employees()
 
-    if df is None:
+    if all_employees is None:
         print("✗ 加载数据失败")
         return 1
 
-    # 2. 生成Project 1
-    print("\n[步骤 2/4] 生成Project 1...")
-    team_1 = initialize_first_team(df)
-    project_1 = generate_project_1(team_1)
+    # 2. 生成大 Topic
+    print("\n[步骤 2/6] 生成大 Topic...")
+    major_topics = generate_major_topics()
 
-    if not project_1:
-        print("✗ Project 1 生成失败")
+    if not major_topics:
+        print("✗ 生成大 Topic 失败")
         return 1
 
-    print(f"\n✓ Project 1 完成: {project_1['project_info']['project_topic']}")
+    save_major_topics(major_topics)
 
-    all_projects = [project_1]
+    # 3. 拆分小 Topic
+    print(f"\n[步骤 3/6] 拆分小 Topic...")
+    print(f"将为 {len(major_topics)} 个大 Topic 各拆分为 {config.NUM_SUB_TOPICS_PER_MAJOR} 个小 Topic")
 
-    # 3. 生成Project 2 到 N
-    print(f"\n[步骤 3/4] 生成Project 2 到 {config.NUM_PROJECTS}...")
+    all_sub_topics = []
+    for i, major_topic in enumerate(major_topics, 1):
+        print(f"\n--- 处理大 Topic {i}/{len(major_topics)} ---")
+        sub_topics = generate_sub_topics(major_topic)
+        if sub_topics:
+            all_sub_topics.extend(sub_topics)
 
-    for i in range(2, config.NUM_PROJECTS + 1):
-        project = generate_next_project(
-            project_number=i,
-            previous_projects=all_projects,
-            all_employees_df=df
-        )
+    if not all_sub_topics:
+        print("✗ 拆分小 Topic 失败")
+        return 1
 
-        if not project:
-            print(f"✗ Project {i} 生成失败")
-            return 1
+    save_sub_topics(all_sub_topics)
+    print(f"\n✓ 共生成 {len(all_sub_topics)} 个小 Topic")
 
-        all_projects.append(project)
-        print(f"\n✓ Project {i} 完成: {project['project_info']['project_topic']}")
+    # 4. 为每个小 Topic 选择团队、调整沟通风格、生成任务、分配任务
+    print(f"\n[步骤 4/7] 为每个小 Topic 选择团队...")
+    print(f"\n[步骤 5/7] 调整 Communication Style...")
+    print(f"\n[步骤 6/7] 生成并排序 Subtask...")
+    print(f"\n[步骤 7/7] 分配 Subtask 到成员...")
 
-    # 4. 生成统计报告
-    print("\n[步骤 4/4] 生成统计报告...")
-    summary = generate_summary_report(all_projects)
+    sub_topics_full_data = []
 
-    summary_path = config.PROJECTS_SUMMARY_REPORT
-    os.makedirs(os.path.dirname(summary_path), exist_ok=True)
-    with open(summary_path, 'w', encoding='utf-8') as f:
-        json.dump(summary, f, ensure_ascii=False, indent=2)
+    for i, sub_topic in enumerate(all_sub_topics, 1):
+        print(f"\n{'='*60}")
+        print(f"处理小 Topic {i}/{len(all_sub_topics)}")
+        print(f"{'='*60}")
 
-    print(f"✓ 统计报告已保存: {summary_path}")
+        # Stage 3: 选择团队
+        team_members = select_team_members(sub_topic, all_employees)
+        if not team_members:
+            print(f"✗ 小 Topic {i} 团队选择失败，跳过")
+            continue
 
-    # 5. 打印总结
+        # Stage 3.5: 调整 Communication Style
+        success = adjust_communication_styles(sub_topic, team_members)
+        if not success:
+            print(f"✗ 小 Topic {i} Communication Style 调整失败，跳过")
+            continue
+
+        # Stage 4: 生成并排序 Subtask
+        subtasks = generate_and_sequence_subtasks(sub_topic, team_members)
+        if not subtasks:
+            print(f"✗ 小 Topic {i} 任务生成失败，跳过")
+            continue
+
+        # Stage 5: 分配 Subtask 到成员
+        success = assign_subtasks_to_members(subtasks, team_members)
+        if not success:
+            print(f"✗ 小 Topic {i} 任务分配失败，跳过")
+            continue
+
+        # 保存项目
+        save_sub_topic_project(sub_topic, team_members, subtasks)
+
+        # 保存完整数据用于统计报告
+        rank_counts = Counter([m['rank'] for m in team_members])
+        sub_topics_full_data.append({
+            "sub_topic_info": sub_topic,
+            "members": team_members,
+            "team_composition": {
+                "total_members": len(team_members),
+                "rank_1_count": rank_counts.get(1, 0),
+                "rank_2_count": rank_counts.get(2, 0),
+                "rank_3_count": rank_counts.get(3, 0)
+            },
+            "metadata": {
+                "total_subtasks": len(subtasks),
+                "phase_distribution": dict(Counter([st.get('phase', 'Unknown') for st in subtasks]))
+            }
+        })
+
+        print(f"\n✓ 小 Topic {i} 完成")
+
+    # 5. 生成统计报告
+    print("\n[报告] 生成统计报告...")
+    generate_summary_report(major_topics, sub_topics_full_data)
+
+    # 6. 打印总结
     print("\n" + "="*60)
     print("✅ 所有项目生成完成！")
     print("="*60)
-    print(f"总项目数: {len(all_projects)}")
-    print(f"总任务数: {sum(p['metadata']['total_subtasks'] for p in all_projects)}")
-    print(f"参与员工数: {len(set(m['user_name'] for p in all_projects for m in p['members']))}")
-    print(f"\n项目列表:")
-    for i, p in enumerate(all_projects, 1):
-        topic = p['project_info']['project_topic']
-        print(f"  {i}. {topic}")
-        print(f"     路径: {os.path.join(config.PROJECTS_DIR, topic, topic + '.json')}")
+    print(f"大 Topic 数量: {len(major_topics)}")
+    print(f"小 Topic 数量: {len(sub_topics_full_data)}")
+    print(f"总任务数: {sum(st['metadata']['total_subtasks'] for st in sub_topics_full_data)}")
+
+    print(f"\n大 Topic 列表:")
+    for i, mt in enumerate(major_topics, 1):
+        print(f"  {i}. {mt['topic']}")
 
     print(f"\n完成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("="*60 + "\n")
@@ -1087,5 +872,4 @@ def main():
 
 
 if __name__ == "__main__":
-    exit_code = main()
-    sys.exit(exit_code)
+    sys.exit(main())

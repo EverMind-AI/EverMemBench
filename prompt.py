@@ -701,6 +701,33 @@ class PromptTemplate:
         """获取任务拆解和分配提示词（拆解project为subtasks）"""
         return get_task_breakdown_and_assignment_prompt_phase4(project_topic, project_description, team_members)
 
+    # ==================== Phase 4 (New): Topic-Driven Task Generation Prompts ====================
+
+    @staticmethod
+    def get_major_topics_generation_prompt() -> str:
+        """获取大 Topic 生成提示词（Stage 1）"""
+        return get_major_topics_generation_prompt_new()
+
+    @staticmethod
+    def get_sub_topics_generation_prompt(major_topic: Dict) -> str:
+        """获取小 Topic 生成提示词（Stage 2）"""
+        return get_sub_topics_generation_prompt_new(major_topic)
+
+    @staticmethod
+    def get_team_selection_prompt(sub_topic: Dict, all_employees: List[Dict]) -> str:
+        """获取团队选择提示词（Stage 3）"""
+        return get_team_selection_prompt_new(sub_topic, all_employees)
+
+    @staticmethod
+    def get_subtask_generation_and_sequencing_prompt(sub_topic: Dict, team_members: List[Dict]) -> str:
+        """获取 Subtask 生成和排序提示词（Stage 4）"""
+        return get_subtask_generation_and_sequencing_prompt_new(sub_topic, team_members)
+
+    @staticmethod
+    def get_subtask_assignment_prompt(sequenced_subtasks: List[Dict], team_members: List[Dict]) -> str:
+        """获取 Subtask 分配提示词（Stage 5）"""
+        return get_subtask_assignment_prompt_new(sequenced_subtasks, team_members)
+
 
 # ==================== Phase 4: Task Generation Prompt Functions ====================
 
@@ -894,7 +921,7 @@ def get_member_adjustment_prompt_phase4(new_project_topic: str, new_project_desc
 
 现在需要根据这个新项目的需求，决定团队成员的调整。
 
-⚠️ **【重要约束】最终团队总人数必须在{config.SUBSEQUENT_TEAM_SIZE_RANGE['min']}-{config.SUBSEQUENT_TEAM_SIZE_RANGE['max']}人之间！这是硬性要求，必须严格遵守！**
+⚠️ **【重要约束】最终团队总人数必须在{config.SUB_TOPIC_TEAM_SIZE['min']}-{config.SUB_TOPIC_TEAM_SIZE['max']}人之间！这是硬性要求，必须严格遵守！**
 
 ## 当前团队成员
 以下是上一个项目的团队成员：
@@ -914,14 +941,14 @@ def get_member_adjustment_prompt_phase4(new_project_topic: str, new_project_desc
 **必须遵守的约束**：
 1. ⚠️ **Rank 1的员工绝对不能移除**: {', '.join(rank1_members)}
 2. ⚠️ **Rank 2的员工至少保留1个**
-3. ⚠️ **团队总人数必须严格在{config.SUBSEQUENT_TEAM_SIZE_RANGE['min']}-{config.SUBSEQUENT_TEAM_SIZE_RANGE['max']}人之间（包含边界值）**
-   - 最少{config.SUBSEQUENT_TEAM_SIZE_RANGE['min']}人，最多{config.SUBSEQUENT_TEAM_SIZE_RANGE['max']}人
+3. ⚠️ **团队总人数必须严格在{config.SUB_TOPIC_TEAM_SIZE['min']}-{config.SUB_TOPIC_TEAM_SIZE['max']}人之间（包含边界值）**
+   - 最少{config.SUB_TOPIC_TEAM_SIZE['min']}人，最多{config.SUB_TOPIC_TEAM_SIZE['max']}人
    - 这是硬性要求，不是建议！
    - 计算方法：len(keep_members) + len(add_members) 必须在此范围内
    - 如果当前团队人数已经符合要求，可以微调但不要超出范围
 
 **调整原则**：
-1. **先满足人数约束，再考虑技能匹配**：确保最终团队人数在{config.SUBSEQUENT_TEAM_SIZE_RANGE['min']}-{config.SUBSEQUENT_TEAM_SIZE_RANGE['max']}人范围内
+1. **先满足人数约束，再考虑技能匹配**：确保最终团队人数在{config.SUB_TOPIC_TEAM_SIZE['min']}-{config.SUB_TOPIC_TEAM_SIZE['max']}人范围内
 2. **技能匹配**：在满足人数约束的前提下，选择技能最匹配的成员
 3. **避免重复使用**：优先选择在之前项目中较少使用的员工（从all_employees中选择）
 4. **团队平衡**：考虑不同部门、不同技能的平衡
@@ -931,7 +958,7 @@ def get_member_adjustment_prompt_phase4(new_project_topic: str, new_project_desc
 
 请严格按照以下JSON格式输出（不要添加任何其他文字）：
 
-**注意：示例中的total_members必须在{config.SUBSEQUENT_TEAM_SIZE_RANGE['min']}-{config.SUBSEQUENT_TEAM_SIZE_RANGE['max']}范围内！**
+**注意：示例中的total_members必须在{config.SUB_TOPIC_TEAM_SIZE['min']}-{config.SUB_TOPIC_TEAM_SIZE['max']}范围内！**
 
 ```json
 {{
@@ -969,11 +996,11 @@ def get_member_adjustment_prompt_phase4(new_project_topic: str, new_project_desc
         "rank": 3,
         "reason": "需要更多后端开发资源"
       }},
-      ... （添加足够的成员，确保 len(keep_members) + len(add_members) 在{config.SUBSEQUENT_TEAM_SIZE_RANGE['min']}-{config.SUBSEQUENT_TEAM_SIZE_RANGE['max']}范围内）
+      ... （添加足够的成员，确保 len(keep_members) + len(add_members) 在{config.SUB_TOPIC_TEAM_SIZE['min']}-{config.SUB_TOPIC_TEAM_SIZE['max']}范围内）
     ]
   }},
   "final_team_composition": {{
-    "total_members": 18,  // 必须在{config.SUBSEQUENT_TEAM_SIZE_RANGE['min']}-{config.SUBSEQUENT_TEAM_SIZE_RANGE['max']}范围内，且等于keep_members + add_members的总数
+    "total_members": 18,  // 必须在{config.SUB_TOPIC_TEAM_SIZE['min']}-{config.SUB_TOPIC_TEAM_SIZE['max']}范围内，且等于keep_members + add_members的总数
     "rank_1": 1,
     "rank_2": 1,
     "rank_3": 16
@@ -984,8 +1011,8 @@ def get_member_adjustment_prompt_phase4(new_project_topic: str, new_project_desc
 
 ## 重要提示
 
-- ⚠️ **CRITICAL**: 最终团队总人数（keep_members + add_members的总数）必须在{config.SUBSEQUENT_TEAM_SIZE_RANGE['min']}-{config.SUBSEQUENT_TEAM_SIZE_RANGE['max']}人之间
-- ⚠️ **CRITICAL**: final_team_composition.total_members 必须等于 len(keep_members) + len(add_members)，且必须在{config.SUBSEQUENT_TEAM_SIZE_RANGE['min']}-{config.SUBSEQUENT_TEAM_SIZE_RANGE['max']}范围内
+- ⚠️ **CRITICAL**: 最终团队总人数（keep_members + add_members的总数）必须在{config.SUB_TOPIC_TEAM_SIZE['min']}-{config.SUB_TOPIC_TEAM_SIZE['max']}人之间
+- ⚠️ **CRITICAL**: final_team_composition.total_members 必须等于 len(keep_members) + len(add_members)，且必须在{config.SUB_TOPIC_TEAM_SIZE['min']}-{config.SUB_TOPIC_TEAM_SIZE['max']}范围内
 - ⚠️ 必须严格遵守Rank约束（Rank 1不能移除，Rank 2至少1个）
 - remove_members和add_members中的user_name必须是实际存在的员工姓名
 - keep_members列表应包含所有保留的员工姓名（包括Rank 1）
@@ -1060,9 +1087,9 @@ def get_communication_style_adjustment_prompt_phase4(project_topic: str, project
    - 1个CEO配多个总监：CEO需要平衡各方
 
 3. **团队规模影响**：
-   - 小团队({config.SUBSEQUENT_TEAM_SIZE_RANGE['min']}-{config.SUBSEQUENT_TEAM_SIZE_RANGE['min'] + (config.SUBSEQUENT_TEAM_SIZE_RANGE['max'] - config.SUBSEQUENT_TEAM_SIZE_RANGE['min']) // 3}人)：更casual，更direct
-   - 中团队({config.SUBSEQUENT_TEAM_SIZE_RANGE['min'] + (config.SUBSEQUENT_TEAM_SIZE_RANGE['max'] - config.SUBSEQUENT_TEAM_SIZE_RANGE['min']) // 3 + 1}-{config.SUBSEQUENT_TEAM_SIZE_RANGE['min'] + 2 * (config.SUBSEQUENT_TEAM_SIZE_RANGE['max'] - config.SUBSEQUENT_TEAM_SIZE_RANGE['min']) // 3}人)：balanced
-   - 大团队({config.SUBSEQUENT_TEAM_SIZE_RANGE['min'] + 2 * (config.SUBSEQUENT_TEAM_SIZE_RANGE['max'] - config.SUBSEQUENT_TEAM_SIZE_RANGE['min']) // 3 + 1}+人)：更formal，更structured
+   - 小团队({config.SUB_TOPIC_TEAM_SIZE['min']}-{config.SUB_TOPIC_TEAM_SIZE['min'] + (config.SUB_TOPIC_TEAM_SIZE['max'] - config.SUB_TOPIC_TEAM_SIZE['min']) // 3}人)：更casual，更direct
+   - 中团队({config.SUB_TOPIC_TEAM_SIZE['min'] + (config.SUB_TOPIC_TEAM_SIZE['max'] - config.SUB_TOPIC_TEAM_SIZE['min']) // 3 + 1}-{config.SUB_TOPIC_TEAM_SIZE['min'] + 2 * (config.SUB_TOPIC_TEAM_SIZE['max'] - config.SUB_TOPIC_TEAM_SIZE['min']) // 3}人)：balanced
+   - 大团队({config.SUB_TOPIC_TEAM_SIZE['min'] + 2 * (config.SUB_TOPIC_TEAM_SIZE['max'] - config.SUB_TOPIC_TEAM_SIZE['min']) // 3 + 1}+人)：更formal，更structured
 
 **调整幅度**：
 - 每个维度可以调整1-2个级别（例如：Casual → Semi-formal → Formal）
@@ -1133,6 +1160,8 @@ def get_communication_style_adjustment_prompt_phase4(project_topic: str, project
 
 ## 重要提示
 
+- **必须为所有 {len(team_members)} 名成员都返回调整结果**（即使某个成员不需要调整，也要包含在 adjusted_styles 数组中）
+- 如果某个成员的风格已经很适合，adjusted_style 可以和 original_style 保持一致，但必须包含该成员
 - 不要大幅度改变所有维度，只调整受架构影响明显的维度
 - 主要调整的维度：Formality, Directness, Warmth
 - 次要调整的维度：Verbosity, Questioning_Style
@@ -1142,7 +1171,7 @@ def get_communication_style_adjustment_prompt_phase4(project_topic: str, project
 - 如果某个维度不需要调整，在adjustments_made中不要包含它
 - 只返回JSON数据，不要包含任何其他说明文字
 
-现在请根据项目架构调整团队成员的沟通风格。"""
+现在请根据项目架构调整团队成员的沟通风格。记住：adjusted_styles 数组必须包含全部 {len(team_members)} 名成员！"""
     
     return prompt
 
@@ -1233,19 +1262,16 @@ def get_task_breakdown_and_assignment_prompt_phase4(project_topic: str, project_
       "total_assigned": 6,
       "subtasks": [
         {{
-          "subtask_id": 1,
           "subtask": "分析市场需求和竞争态势，制定项目的整体战略方向和核心目标，明确关键成功因素和里程碑，输出战略规划文档和项目目标OKR",
           "required_skills": ["商业模式画布", "SWOT分析", "OKR"],
           "communication_requirements": "需要与所有Rank 2总监进行formal meeting和书面战略文档沟通，每周进行战略review"
         }},
         {{
-          "subtask_id": 2,
           "subtask": "审批项目预算和资源配置方案，确保各部门资源合理分配，监督预算执行情况，输出资源配置报告",
           "required_skills": ["KPI", "BSC平衡计分卡"],
           "communication_requirements": "与财务总监和各部门总监进行formal budget review meeting"
         }},
         {{
-          "subtask_id": 3,
           "subtask": "..."
         }}
       ]
@@ -1256,7 +1282,6 @@ def get_task_breakdown_and_assignment_prompt_phase4(project_topic: str, project_
       "total_assigned": 7,
       "subtasks": [
         {{
-          "subtask_id": 7,
           "subtask": "设计系统整体技术架构，选择合适的技术栈和框架，制定技术规范和开发标准，输出技术架构文档",
           "required_skills": ["Java", "Kubernetes", "Spring Boot"],
           "communication_requirements": "与CEO进行formal架构review，与开发团队进行technical discussion"
@@ -1317,12 +1342,19 @@ def get_task_timeline_assignment_prompt(
         user_name = member.get('user_name')
         rank = member.get('rank')
         for subtask in member.get('subtasks', []):
+            # 安全地获取 subtask_id，如果缺少则跳过
+            subtask_id = subtask.get('subtask_id')
+            if subtask_id is None:
+                print(f"  ⚠ 警告: 成员 {user_name} 的 subtask 缺少 subtask_id: {subtask.get('subtask', 'N/A')}")
+                continue
+
             all_tasks.append({
-                'subtask_id': subtask['subtask_id'],
+                'subtask_id': subtask_id,
                 'user_name': user_name,
                 'rank': rank,
-                'subtask': subtask['subtask'],
-                'required_skills': subtask['required_skills']
+                'subtask': subtask.get('subtask', 'N/A'),
+                'phase': subtask.get('phase', 'Unknown'),
+                'required_skills': subtask.get('required_skills', [])
             })
 
     total_tasks = len(all_tasks)
@@ -1345,21 +1377,41 @@ def get_task_timeline_assignment_prompt(
 
 # 排序和时间分配要求
 
-## 1. 排序原则
-- **依赖关系优先**:
-  - 战略规划 → 需求分析 → 设计 → 开发 → 测试 → 部署
-  - CEO/高层任务通常在前期（战略、预算、资源分配）
-  - Rank 1（高层）任务在最前，Rank 2（总监）次之，Rank 3（员工）根据任务类型分布
+## 1. **Phase 顺序（最重要！）**
 
-- **任务类型顺序**:
-  1. 战略规划与目标制定
-  2. 预算与资源配置
-  3. 需求分析与调研
-  4. 系统设计（架构设计、UX设计、原型设计）
-  5. 开发实施（前端、后端、算法、数据）
-  6. 测试与优化
-  7. 部署与上线
-  8. 运营维护与迭代
+每个任务都有一个 `phase` 字段，表示它所属的项目阶段。**必须严格按照以下 phase 顺序分配 deadline**：
+
+1. **Strategy & Planning**（战略与规划）
+   - 时间段建议：项目开始后 0-2 个月
+   - 包括：战略规划、需求调研、市场分析、项目规划
+
+2. **Design & Architecture**（设计与架构）
+   - 时间段建议：项目开始后 1-4 个月
+   - 包括：系统架构设计、数据库设计、UI/UX设计、技术选型
+
+3. **Development & Implementation**（开发与实现）
+   - 时间段建议：项目开始后 3-9 个月
+   - 包括：功能开发、API开发、前端/后端实现、集成开发
+
+4. **Testing & Optimization**（测试与优化）
+   - 时间段建议：项目开始后 8-11 个月
+   - 包括：功能测试、性能优化、安全测试、Bug修复
+
+5. **Deployment & Launch**（部署与上线）
+   - 时间段建议：项目开始后 10-12 个月
+   - 包括：环境部署、数据迁移、用户培训、上线发布
+
+**⚠️ 关键规则**：
+- 后一个 phase 的所有任务 deadline 必须晚于前一个 phase
+- 同一 phase 内的任务可以有重叠的 deadline（并行执行）
+- Phase 之间可以有适当重叠（如 Design 和 Development），但必须保持总体顺序
+
+## 2. 其他排序原则
+
+- **Rank 级别考虑**:
+  - Rank 1（高层）任务通常在每个 phase 的早期
+  - Rank 2（总监）任务在 phase 的中期
+  - Rank 3（员工）任务根据具体内容分布
 
 - **合理性原则**:
   - 任务deadline应合理分布在365天内
@@ -1367,16 +1419,12 @@ def get_task_timeline_assignment_prompt(
   - 考虑任务复杂度：复杂任务给予更长的准备时间
   - 考虑团队负载：同一个人的多个任务不应deadline过于集中
 
-## 2. 时间分配建议
-- **项目前期（1-3月）**: 战略规划、需求分析、预算审批、架构设计
-- **项目中期（4-8月）**: 系统开发、迭代测试、功能实现
-- **项目后期（9-12月）**: 集成测试、性能优化、上线部署、文档完善
-
 ## 3. ⚠️ 硬性约束
 - **所有deadline必须在 {start_date} 到 {end_date} 之间（包含边界）**
 - **每个subtask必须分配一个deadline，不能遗漏**
 - **deadline格式必须为 YYYY-MM-DD**
-- **后续依赖任务的deadline不能早于前置任务**
+- **必须严格遵守 phase 顺序：Strategy & Planning → Design & Architecture → Development & Implementation → Testing & Optimization → Deployment & Launch**
+- **同一 phase 内的任务，Rank 1 的 deadline 应早于或等于 Rank 3 的 deadline**
 
 # 输出格式要求
 
@@ -1419,10 +1467,933 @@ def get_task_timeline_assignment_prompt(
 **重要提示**：
 1. `task_timeline` 数组必须包含所有{total_tasks}个subtask，一个都不能少
 2. 每个任务必须有 `subtask_id`, `user_name`, `deadline`, `phase`, `reasoning` 五个字段
-3. `deadline` 必须是 YYYY-MM-DD 格式的字符串
-4. `phase` 必须是 "前期"、"中期" 或 "后期" 之一
-5. `reasoning` 简要说明（10-30字）为什么这个任务安排在这个时间点
+3. `subtask_id` 是整数，必须与输入的任务列表中的 `subtask_id` 完全一致
+4. `deadline` 必须是 YYYY-MM-DD 格式的字符串
+5. `phase` 必须是 "前期"、"中期" 或 "后期" 之一
+6. `reasoning` 简要说明（10-30字）为什么这个任务安排在这个时间点
+7. **只返回 JSON 数据，不要包含任何其他说明文字**
 
-请开始分配任务时间线。
+请开始分配任务时间线。记住：只输出上述格式的 JSON，不要添加任何解释或说明文字。
+"""
+    return prompt
+
+
+# ==================== Phase 4 (New): Topic-Driven Task Generation Prompt Functions ====================
+
+def get_major_topics_generation_prompt_new() -> str:
+    """
+    Stage 1: 生成大 Topic
+
+    要求：
+    1. 生成 NUM_MAJOR_TOPICS 个大项目主题
+    2. 每个主题跨度大、互不重复
+    3. 适合科技公司的业务场景
+    4. 每个主题包含 topic 和 description
+
+    返回格式：
+    {
+      "major_topics": [
+        {
+          "topic_id": "MAJOR_001",
+          "topic": "智能制造平台",
+          "description": "构建覆盖生产设备监控、质量追溯、供应链协同的智能制造解决方案..."
+        },
+        ...
+      ]
+    }
+    """
+    import config
+
+    prompt = f"""你是一位资深的项目规划专家。现在需要为一家中国科技公司规划多个大型项目主题。
+
+## 公司背景
+这是一家综合性科技公司，拥有以下部门：
+- 技术研发部：负责软件开发、系统架构、技术创新
+- 产品设计部：负责产品规划、用户体验、界面设计
+- 市场部：负责市场推广、品牌建设、用户增长
+- 销售部：负责商务拓展、客户关系、销售管理
+- 运营部：负责业务运营、流程优化、数据分析
+- 财务部：负责财务管理、成本控制、投资决策
+- 人力资源部：负责招聘、培训、绩效管理
+
+公司员工共 300 人，涵盖技术、产品、管理、运营等多个领域。
+
+## 核心任务
+请生成 **{config.NUM_MAJOR_TOPICS}** 个大型项目主题（Major Topics），这些主题将作为公司的战略级项目。
+
+## 严格要求
+
+### 1. 主题多样性和跨度
+项目主题必须跨度大、类型多样，覆盖不同的业务领域和技术方向。
+
+✅ **正确示例**（跨度大、类型多样）：
+- 智能制造平台（制造业+IoT）
+- 企业资产管理系统（企业服务+财务）
+- 跨境电商平台（电商+国际化）
+- 智慧医疗系统（医疗+AI）
+- 供应链金融平台（金融+供应链）
+
+❌ **禁止**（主题重复、跨度小）：
+- 智能客服系统
+- 智能推荐系统
+- 智能分析系统
+（都是"智能xxx"，类型单一）
+
+### 2. 业务场景要求
+每个主题必须：
+- 是完整的、可独立运作的业务系统
+- 有明确的目标用户和应用场景
+- 需要跨部门协作完成
+- 具有商业价值和技术挑战
+
+### 3. 描述要求
+每个主题的 description 需要包含：
+- 项目的核心目标和价值（2-3句话）
+- 主要功能模块或业务范围（3-5点）
+- 预期覆盖的用户群体或应用场景
+
+description 长度：150-300字
+
+## 输出格式
+
+请严格按照以下 JSON 格式输出：
+
+```json
+{{
+  "major_topics": [
+    {{
+      "topic_id": "MAJOR_001",
+      "topic": "智能制造平台",
+      "description": "构建覆盖生产设备监控、质量追溯、供应链协同的智能制造解决方案。核心功能包括：实时设备监控与预警、生产数据采集与分析、质量管理与追溯、供应链协同管理、生产计划优化。面向制造企业提供数字化转型解决方案，帮助企业提升生产效率、降低运营成本。"
+    }},
+    {{
+      "topic_id": "MAJOR_002",
+      "topic": "企业资产管理系统",
+      "description": "开发全生命周期的企业资产管理平台，涵盖资产采购、使用、维护、报废全流程管理。核心功能包括：资产登记与编码、资产分配与调拨、维护保养计划、资产盘点与审计、折旧计算与报表。面向中大型企业的资产管理部门，提高资产利用率和管理效率。"
+    }},
+    ...（共{config.NUM_MAJOR_TOPICS}个）
+  ]
+}}
+```
+
+## 重要提醒
+1. 必须生成恰好 **{config.NUM_MAJOR_TOPICS}** 个主题
+2. topic_id 格式：MAJOR_001, MAJOR_002, ..., MAJOR_{config.NUM_MAJOR_TOPICS:03d}
+3. 每个主题的 topic 名称要简洁（4-8个字）
+4. 每个主题的 description 要详细（150-300字）
+5. 主题之间要有明显的区别，不能重复或重叠
+6. 只返回 JSON 数据，不要包含任何其他说明文字
+
+请开始生成 {config.NUM_MAJOR_TOPICS} 个大型项目主题。
+"""
+    return prompt
+
+
+def get_sub_topics_generation_prompt_new(major_topic: Dict) -> str:
+    """
+    Stage 2: 拆分小 Topic
+
+    输入：
+    - major_topic: {"topic_id": "MAJOR_001", "topic": "...", "description": "..."}
+
+    要求：
+    1. 生成 NUM_SUB_TOPICS_PER_MAJOR 个小 topic
+    2. 小 topic 之间必须互不重复、非父子关系
+    3. 每个小 topic 是独立的、可并行的项目
+
+    返回格式：
+    {
+      "sub_topics": [
+        {
+          "sub_topic_id": "SUB_001_001",
+          "parent_topic_id": "MAJOR_001",
+          "topic": "生产设备实时监控系统",
+          "description": "...",
+          "reasoning": "..."
+        },
+        ...
+      ]
+    }
+    """
+    import config
+
+    topic_id = major_topic.get('topic_id', 'MAJOR_XXX')
+    topic = major_topic.get('topic', '未命名主题')
+    description = major_topic.get('description', '')
+
+    # 提取主题编号（例如 MAJOR_001 -> 001）
+    topic_number = topic_id.replace('MAJOR_', '')
+
+    prompt = f"""你是一位资深的项目拆解专家。现在需要将一个大型项目主题拆分为多个可并行执行的子项目。
+
+## 大型项目主题
+
+**主题ID**: {topic_id}
+**主题名称**: {topic}
+**主题描述**: {description}
+
+## 核心任务
+
+请将这个大型主题拆分为 **{config.NUM_SUB_TOPICS_PER_MAJOR}** 个小型项目（Sub Topics）。每个小型项目是一个独立的、可并行开发的子系统或模块。
+
+## 严格要求
+
+### 1. 互斥性和独立性（最重要！）
+
+小 topic 之间必须**完全互斥**、**独立并行**，不能有以下情况：
+
+❌ **禁止父子关系**：
+- 大 topic: "智能制造平台"
+  - ✗ 错误拆分: "开发制造执行系统" 和 "开发制造执行系统的生产排程模块"
+    （后者是前者的子模块，存在父子关系）
+
+  - ✓ 正确拆分: "生产设备实时监控系统"、"质量追溯管理系统"、"供应链协同平台"
+    （三个独立的子系统，可以并行开发）
+
+❌ **禁止重复或重叠**：
+- ✗ 错误: "用户管理系统" 和 "用户权限管理系统"（功能重叠）
+- ✓ 正确: "用户管理系统" 和 "订单管理系统"（功能独立）
+
+❌ **禁止依赖关系**：
+- ✗ 错误: "数据采集模块" 和 "数据分析模块"（后者依赖前者）
+- ✓ 正确: "设备监控系统" 和 "质量管理系统"（可并行）
+
+### 2. 完整性要求
+
+每个小 topic 必须：
+- 是一个完整的、可独立部署的子系统
+- 有明确的功能边界和目标
+- 有自己的用户界面或API接口
+- 可以独立测试和上线
+
+### 3. 与大主题的关系
+
+所有小 topic 加起来应该：
+- 覆盖大 topic 的主要功能范围
+- 但不需要100%覆盖（可以聚焦核心功能）
+- 每个小 topic 都是大 topic 的重要组成部分
+
+### 4. 描述和推理要求
+
+- **description**: 150-250字，详细说明该子项目的功能范围、核心模块、目标用户
+- **reasoning**: 50-100字，解释为什么这是一个独立的子项目，以及它在大主题中的作用
+
+## 输出格式
+
+请严格按照以下 JSON 格式输出：
+
+```json
+{{
+  "sub_topics": [
+    {{
+      "sub_topic_id": "SUB_{topic_number}_001",
+      "parent_topic_id": "{topic_id}",
+      "topic": "生产设备实时监控系统",
+      "description": "开发覆盖工厂全域的设备实时监控平台，实现设备状态采集、异常预警、远程控制等功能。核心模块包括：设备数据采集、实时监控看板、异常检测与预警、设备远程控制、历史数据分析。面向生产管理人员和设备维护人员，帮助企业及时发现设备问题，减少停机时间。",
+      "reasoning": "设备监控是智能制造的基础，需要独立的数据采集和监控系统，可以作为独立子系统并行开发和部署。"
+    }},
+    {{
+      "sub_topic_id": "SUB_{topic_number}_002",
+      "parent_topic_id": "{topic_id}",
+      "topic": "质量追溯管理系统",
+      "description": "构建产品全生命周期的质量管理和追溯平台，实现从原材料到成品的全程质量跟踪。核心模块包括：质量数据采集、批次管理、缺陷记录与分析、追溯查询、质量报表。面向质量管理部门，提升产品质量管控能力，满足合规要求。",
+      "reasoning": "质量管理是独立的业务流程，与设备监控并行但不依赖，可以独立开发和部署。"
+    }},
+    ...（共{config.NUM_SUB_TOPICS_PER_MAJOR}个）
+  ]
+}}
+```
+
+## 重要提醒
+
+1. 必须生成恰好 **{config.NUM_SUB_TOPICS_PER_MAJOR}** 个小 topic
+2. sub_topic_id 格式：SUB_{topic_number}_001, SUB_{topic_number}_002, ..., SUB_{topic_number}_{config.NUM_SUB_TOPICS_PER_MAJOR:03d}
+3. 每个 topic 名称要清晰具体（6-12个字）
+4. 每个 description 要详细（150-250字）
+5. 每个 reasoning 要简明（50-100字）
+6. 小 topic 之间必须独立、互不重复、无父子关系
+7. 只返回 JSON 数据，不要包含任何其他说明文字
+
+请开始拆分 "{topic}" 为 {config.NUM_SUB_TOPICS_PER_MAJOR} 个独立的子项目。
+"""
+    return prompt
+
+
+def get_team_selection_prompt_new(sub_topic: Dict, all_employees: List[Dict]) -> str:
+    """
+    Stage 3: 选择团队成员
+
+    输入：
+    - sub_topic: {"sub_topic_id": "SUB_001_001", "topic": "...", "description": "..."}
+    - all_employees: 所有员工的完整信息（300人）
+
+    要求：
+    1. 根据 sub_topic 需求从 all_employees 中选择合适团队
+    2. 必须至少 1 个 Rank 1 + 1 个 Rank 2
+    3. 团队规模在配置范围内
+    4. 优先选择技能匹配的成员
+
+    返回格式：
+    {
+      "sub_topic_id": "SUB_001_001",
+      "selected_members": [
+        {
+          "user_name": "张伟华",
+          "selection_reason": "作为CEO，具备战略分析能力..."
+        },
+        ...
+      ]
+    }
+    """
+    import config
+
+    sub_topic_id = sub_topic.get('sub_topic_id', 'SUB_XXX_XXX')
+    topic = sub_topic.get('topic', '未命名项目')
+    description = sub_topic.get('description', '')
+
+    # 格式化员工信息（只保留关键字段，优化 token 使用）
+    employees_info = []
+    for i, emp in enumerate(all_employees, 1):
+        # 格式化 hard_skills
+        skills_str = ", ".join([f"{s['skill']}({s['proficiency']})" for s in emp.get('hard_skills', [])])
+
+        # 简化 communication_style（只显示关键维度）
+        cs = emp.get('communication_style', {})
+        cs_brief = f"{cs.get('Formality', 'N/A')}/{cs.get('Directness', 'N/A')}/{cs.get('Warmth', 'N/A')}"
+
+        employees_info.append(f"{i}. {emp['user_name']} | {emp['title']} | Rank {emp['rank']} | {emp['team']}")
+        employees_info.append(f"   技能: {skills_str}")
+        employees_info.append(f"   风格: {cs_brief}")
+
+    employees_list = "\n".join(employees_info)
+
+    prompt = f"""你是一位资深的团队组建专家。现在需要为一个项目从公司全体员工中选择合适的团队成员。
+
+## 项目信息
+
+**项目ID**: {sub_topic_id}
+**项目名称**: {topic}
+**项目描述**: {description}
+
+## 团队配置要求
+
+### 1. 团队规模
+- 总人数：{config.SUB_TOPIC_TEAM_SIZE['min']} ~ {config.SUB_TOPIC_TEAM_SIZE['max']} 人
+- **必须**至少有 **{config.SUB_TOPIC_TEAM_SIZE['rank_1_min']}** 个 Rank 1 成员（公司高层领导）
+- **必须**至少有 **{config.SUB_TOPIC_TEAM_SIZE['rank_2_min']}** 个 Rank 2 成员（部门总监）
+- 其余为 Rank 3 成员（普通员工）
+
+### 2. 技能匹配原则
+- 优先选择 hard_skills 与项目需求匹配的成员
+- 确保团队具备项目所需的核心技能
+- 技能的 proficiency 越高越好（strong > medium > low）
+
+### 3. Communication Style 考虑
+- 团队成员的沟通风格要互补
+- Rank 1/2 通常更 Formal、Direct
+- 考虑团队协作的有效性
+
+### 4. 部门多样性
+- 优先考虑跨部门协作
+- 根据项目需求选择相关部门的成员
+
+## 可选员工列表（共{len(all_employees)}人）
+
+{employees_list}
+
+## 输出格式
+
+请严格按照以下 JSON 格式输出：
+
+```json
+{{
+  "sub_topic_id": "{sub_topic_id}",
+  "selected_members": [
+    {{
+      "user_name": "张伟华",
+      "selection_reason": "作为CEO（Rank 1），具备商业模式画布、战略分析等strong级技能，适合领导智能制造平台的战略规划和整体推进。沟通风格Formal且Direct，能有效指导项目方向。"
+    }},
+    {{
+      "user_name": "李明",
+      "selection_reason": "作为技术总监（Rank 2），拥有系统架构、云计算等strong级技能，能够设计设备监控系统的技术架构。作为技术研发部负责人，能调动技术资源支持项目。"
+    }},
+    {{
+      "user_name": "王芳",
+      "selection_reason": "作为高级软件工程师（Rank 3），精通Java、Python等编程语言，以及数据库设计，能够负责监控系统的核心功能开发。"
+    }},
+    ...（共 {config.SUB_TOPIC_TEAM_SIZE['min']} ~ {config.SUB_TOPIC_TEAM_SIZE['max']} 人）
+  ],
+  "team_summary": {{
+    "total_members": 25,
+    "rank_1_count": 1,
+    "rank_2_count": 2,
+    "rank_3_count": 22,
+    "key_skills_covered": ["系统架构", "Java", "Python", "数据库设计", "前端开发", "测试", "项目管理"]
+  }}
+}}
+```
+
+## 重要提醒
+
+1. **必须**选择至少 {config.SUB_TOPIC_TEAM_SIZE['rank_1_min']} 个 Rank 1 和 {config.SUB_TOPIC_TEAM_SIZE['rank_2_min']} 个 Rank 2
+2. 团队总人数必须在 {config.SUB_TOPIC_TEAM_SIZE['min']} ~ {config.SUB_TOPIC_TEAM_SIZE['max']} 人之间
+3. 每个成员的 user_name 必须**完全匹配**上面列表中的姓名（不能修改或编造）
+4. selection_reason 要详细（50-100字），说明：
+   - 该成员的职位和 Rank
+   - 该成员的核心技能及熟练度
+   - 为什么这些技能适合这个项目
+   - （如果是 Rank 1/2）该成员的领导力和资源调动能力
+5. team_summary 中的 key_skills_covered 要列出团队覆盖的关键技能
+6. 只返回 JSON 数据，不要包含任何其他说明文字
+
+请根据项目需求，从 {len(all_employees)} 名员工中选择合适的团队成员。
+"""
+    return prompt
+
+
+def get_subtask_generation_and_sequencing_prompt_new(sub_topic: Dict, team_members: List[Dict]) -> str:
+    """
+    Stage 4: 生成并排序 Subtask
+
+    输入：
+    - sub_topic: 小 topic 信息
+    - team_members: 团队成员列表（已选定）
+
+    要求：
+    1. 拆解项目为独立的 subtask
+    2. 按照时间线排序（Strategy → Design → Development → Testing → Deployment）
+    3. 每个 subtask 包含 required_skills
+
+    返回格式：
+    {
+      "subtasks": [
+        {
+          "subtask": "进行设备监控需求调研",
+          "phase": "Strategy & Planning",
+          "required_skills": ["需求分析", "行业研究"],
+          "reasoning": "..."
+        },
+        ...
+      ]
+    }
+    """
+    import config
+
+    sub_topic_id = sub_topic.get('sub_topic_id', 'SUB_XXX_XXX')
+    topic = sub_topic.get('topic', '未命名项目')
+    description = sub_topic.get('description', '')
+
+    # 格式化团队成员信息
+    team_info = []
+    for i, member in enumerate(team_members, 1):
+        skills_str = ", ".join([f"{s['skill']}({s['proficiency']})" for s in member.get('hard_skills', [])])
+        team_info.append(f"{i}. {member['user_name']} - {member['title']} (Rank {member['rank']})")
+        team_info.append(f"   技能: {skills_str}")
+
+    team_list = "\n".join(team_info)
+
+    # 计算最小任务数（每人至少5个任务）
+    min_total_tasks = len(team_members) * config.MIN_SUBTASKS_PER_MEMBER
+    recommended_min_tasks = len(team_members) * 8  # 推荐最少每人8个任务
+    recommended_max_tasks = len(team_members) * 12  # 推荐最多每人12个任务
+
+    prompt = f"""你是一位资深的项目拆解和任务规划专家。现在需要将一个项目拆解为**非常细粒度**的子任务（subtasks），并按照时间线排序。
+
+## 项目信息
+
+**项目ID**: {sub_topic_id}
+**项目名称**: {topic}
+**项目描述**: {description}
+
+## 团队成员（共{len(team_members)}人）
+
+{team_list}
+
+## ⚠️ 核心要求：任务必须拆得足够细！
+
+这是**最重要**的要求：任务必须拆分到足够细的粒度，确保每个成员都能分配到充足的任务。
+
+### 什么是"足够细"的拆分？
+
+**示例1：需求调研阶段**
+❌ **太粗**（只有1个任务）：
+- "进行需求调研"
+
+✅ **足够细**（拆分为8个具体任务）：
+- "调研目标用户群体画像"
+- "收集竞品功能清单"
+- "访谈内部业务部门需求"
+- "整理现有系统痛点列表"
+- "编写需求调研问卷"
+- "组织用户焦点小组讨论"
+- "分析调研数据并输出报告"
+- "制定需求优先级矩阵"
+
+**示例2：系统设计阶段**
+❌ **太粗**（只有2个任务）：
+- "设计系统架构"
+- "设计数据库"
+
+✅ **足够细**（拆分为12个具体任务）：
+- "设计系统总体架构图"
+- "设计前后端分离方案"
+- "设计微服务拆分策略"
+- "设计API网关架构"
+- "设计缓存架构方案"
+- "设计消息队列架构"
+- "设计数据库主从架构"
+- "设计用户表结构"
+- "设计订单表结构"
+- "设计权限表结构"
+- "设计索引优化方案"
+- "编写数据库设计文档"
+
+**示例3：开发实现阶段**
+❌ **太粗**（只有3个任务）：
+- "开发后端API"
+- "开发前端页面"
+- "开发数据库"
+
+✅ **足够细**（拆分为20+个具体任务）：
+- "实现用户注册接口"
+- "实现用户登录接口"
+- "实现密码重置接口"
+- "实现用户信息查询接口"
+- "实现用户信息更新接口"
+- "实现订单创建接口"
+- "实现订单查询接口"
+- "实现订单状态更新接口"
+- "实现支付回调接口"
+- "开发用户注册页面"
+- "开发用户登录页面"
+- "开发用户中心页面"
+- "开发订单列表页面"
+- "开发订单详情页面"
+- "开发支付页面"
+- "实现前端表单验证"
+- "实现前端状态管理"
+- "实现前端路由配置"
+- "对接后端API"
+- "编写前端单元测试"
+- ...（还可以继续细分）
+
+## 核心任务
+
+请完成以下两个步骤：
+
+### 步骤1：拆解项目为 Subtasks（必须足够细粒度！）
+
+**任务数量要求**：
+- **最少**：{min_total_tasks} 个任务（{len(team_members)}人 × {config.MIN_SUBTASKS_PER_MEMBER}任务/人）
+- **推荐范围**：{recommended_min_tasks} ~ {recommended_max_tasks} 个任务（每人 8-12 个任务）
+- **目标**：尽可能多地拆分，确保每个成员都有充足的任务
+
+**任务拆解原则**：
+1. **细粒度**：将每个工作拆分到最小的可执行单元
+2. **独立性**：每个 subtask 必须是独立的、可并行的
+3. **具体性**：每个 subtask 要清晰、具体、可执行
+4. **完整性**：列出项目的所有工作项，不要遗漏任何环节
+5. **互斥性**：不能有父子关系或重复
+
+**如何做到足够细？**
+- 将"设计"拆分为多个具体设计项（架构、数据库、接口、UI等）
+- 将"开发"拆分为每个具体的功能模块或接口
+- 将"测试"拆分为每个功能的测试项
+- 将"文档"拆分为每份具体的文档
+- 将"部署"拆分为每个具体的部署步骤
+
+❌ **禁止的拆分方式**（太粗、有父子关系）：
+- "开发系统" 和 "开发系统的登录模块"（父子关系）
+- "设计UI"（太粗，应拆分为具体的每个页面）
+- "编写文档"（太粗，应拆分为具体的每份文档）
+- "开发后端"（太粗，应拆分为具体的每个接口或模块）
+
+✅ **正确的拆分方式**（足够细、独立并行）：
+- "设计用户注册页面UI"、"设计用户登录页面UI"、"设计用户中心页面UI"
+- "实现用户注册接口"、"实现用户登录接口"、"实现用户信息查询接口"
+- "编写API接口文档"、"编写部署运维文档"、"编写用户使用手册"
+
+### 步骤2：按时间线排序
+将所有 subtasks 按照项目的典型时间线排序，分为以下5个阶段：
+
+**Phase 1: Strategy & Planning（战略与规划）**
+- 需求调研、市场分析
+- 项目规划、可行性分析
+- 商业模式设计
+
+**Phase 2: Design & Architecture（设计与架构）**
+- 系统架构设计
+- 数据库设计
+- UI/UX设计
+- 技术选型
+
+**Phase 3: Development & Implementation（开发与实现）**
+- 功能模块开发
+- API开发
+- 前端/后端实现
+- 集成开发
+
+**Phase 4: Testing & Optimization（测试与优化）**
+- 功能测试
+- 性能优化
+- 安全测试
+- Bug修复
+
+**Phase 5: Deployment & Launch（部署与上线）**
+- 环境部署
+- 数据迁移
+- 用户培训
+- 上线发布
+
+**排序要求**：
+- 为每个 subtask 标注所属的 phase
+- 按照 phase 的先后顺序组织任务（Strategy & Planning → Design & Architecture → Development & Implementation → Testing & Optimization → Deployment & Launch）
+- 同一 phase 内的任务可以并行，但 phase 之间有先后关系
+
+## 输出格式
+
+请严格按照以下 JSON 格式输出（以下展示细粒度拆分示例）：
+
+```json
+{{
+  "subtasks": [
+    {{
+      "subtask": "调研目标用户群体画像",
+      "phase": "Strategy & Planning",
+      "required_skills": ["需求分析", "用户研究"],
+      "reasoning": "明确目标用户是谁，他们的特征、需求和痛点，为产品定位提供基础。"
+    }},
+    {{
+      "subtask": "收集竞品功能清单",
+      "phase": "Strategy & Planning",
+      "required_skills": ["行业研究", "竞品分析"],
+      "reasoning": "了解市场上同类产品的功能和特点，为功能规划提供参考。"
+    }},
+    {{
+      "subtask": "访谈内部业务部门需求",
+      "phase": "Strategy & Planning",
+      "required_skills": ["需求分析", "沟通能力"],
+      "reasoning": "收集内部业务部门的实际需求和期望，确保产品符合业务目标。"
+    }},
+    {{
+      "subtask": "编写需求调研问卷",
+      "phase": "Strategy & Planning",
+      "required_skills": ["需求分析", "问卷设计"],
+      "reasoning": "设计调研问卷，系统化地收集用户需求和反馈。"
+    }},
+    {{
+      "subtask": "组织用户焦点小组讨论",
+      "phase": "Strategy & Planning",
+      "required_skills": ["用户研究", "沟通能力"],
+      "reasoning": "通过焦点小组深入了解用户真实需求和痛点。"
+    }},
+    {{
+      "subtask": "设计系统总体架构图",
+      "phase": "Design & Architecture",
+      "required_skills": ["系统架构", "架构设计"],
+      "reasoning": "绘制系统的整体架构图，明确各模块之间的关系和数据流。"
+    }},
+    {{
+      "subtask": "设计前后端分离方案",
+      "phase": "Design & Architecture",
+      "required_skills": ["系统架构", "技术选型"],
+      "reasoning": "确定前后端分离的技术栈和通信方式，提高开发效率和可维护性。"
+    }},
+    {{
+      "subtask": "设计用户表结构",
+      "phase": "Design & Architecture",
+      "required_skills": ["数据库设计", "数据建模"],
+      "reasoning": "设计用户相关的数据表结构，包括字段、类型、索引等。"
+    }},
+    {{
+      "subtask": "设计订单表结构",
+      "phase": "Design & Architecture",
+      "required_skills": ["数据库设计", "数据建模"],
+      "reasoning": "设计订单相关的数据表结构，支持订单的创建、查询和状态管理。"
+    }},
+    {{
+      "subtask": "设计权限表结构",
+      "phase": "Design & Architecture",
+      "required_skills": ["数据库设计", "权限设计"],
+      "reasoning": "设计RBAC权限模型的数据表，支持灵活的权限管理。"
+    }},
+    {{
+      "subtask": "设计用户注册页面UI",
+      "phase": "Design & Architecture",
+      "required_skills": ["UI设计", "用户体验"],
+      "reasoning": "设计用户注册页面的界面布局、交互流程和视觉效果。"
+    }},
+    {{
+      "subtask": "设计用户登录页面UI",
+      "phase": "Design & Architecture",
+      "required_skills": ["UI设计", "用户体验"],
+      "reasoning": "设计用户登录页面的界面布局和交互流程。"
+    }},
+    {{
+      "subtask": "实现用户注册接口",
+      "phase": "Development & Implementation",
+      "required_skills": ["Java", "Spring Boot", "API开发"],
+      "reasoning": "开发用户注册的后端接口，包括参数验证、密码加密、数据存储。"
+    }},
+    {{
+      "subtask": "实现用户登录接口",
+      "phase": "Development & Implementation",
+      "required_skills": ["Java", "Spring Boot", "JWT"],
+      "reasoning": "开发用户登录接口，包括身份验证、Token生成和返回。"
+    }},
+    {{
+      "subtask": "实现用户信息查询接口",
+      "phase": "Development & Implementation",
+      "required_skills": ["Java", "Spring Boot", "MySQL"],
+      "reasoning": "开发用户信息查询接口，支持根据用户ID获取用户详细信息。"
+    }},
+    {{
+      "subtask": "实现用户信息更新接口",
+      "phase": "Development & Implementation",
+      "required_skills": ["Java", "Spring Boot", "MySQL"],
+      "reasoning": "开发用户信息更新接口，支持用户修改个人信息。"
+    }},
+    {{
+      "subtask": "实现密码重置接口",
+      "phase": "Development & Implementation",
+      "required_skills": ["Java", "Spring Boot", "邮件服务"],
+      "reasoning": "开发密码重置功能，包括邮件验证和密码更新。"
+    }},
+    {{
+      "subtask": "开发用户注册页面",
+      "phase": "Development & Implementation",
+      "required_skills": ["React", "JavaScript", "前端开发"],
+      "reasoning": "实现用户注册页面的前端代码，包括表单、验证和提交逻辑。"
+    }},
+    {{
+      "subtask": "开发用户登录页面",
+      "phase": "Development & Implementation",
+      "required_skills": ["React", "JavaScript", "前端开发"],
+      "reasoning": "实现用户登录页面的前端代码，包括表单、状态管理和Token存储。"
+    }},
+    {{
+      "subtask": "开发用户中心页面",
+      "phase": "Development & Implementation",
+      "required_skills": ["React", "JavaScript", "前端开发"],
+      "reasoning": "实现用户中心页面，展示用户信息和提供信息修改功能。"
+    }}
+  ],
+  "summary": {{
+    "total_subtasks": {recommended_min_tasks},
+    "phase_distribution": {{
+      "Strategy & Planning": {int(recommended_min_tasks * 0.15)},
+      "Design & Architecture": {int(recommended_min_tasks * 0.20)},
+      "Development & Implementation": {int(recommended_min_tasks * 0.40)},
+      "Testing & Optimization": {int(recommended_min_tasks * 0.15)},
+      "Deployment & Launch": {int(recommended_min_tasks * 0.10)}
+    }}
+  }}
+}}
+```
+
+**注意**：上述示例仅展示部分任务，实际需要继续列出所有任务直到达到 {recommended_min_tasks}~{recommended_max_tasks} 个。
+
+## ⚠️ 重要提醒（必读！）
+
+1. **任务数量要求**：
+   - **最少**：{min_total_tasks} 个任务（每人至少{config.MIN_SUBTASKS_PER_MEMBER}个）
+   - **推荐**：{recommended_min_tasks} ~ {recommended_max_tasks} 个任务（每人 8-12 个）
+   - **目标**：尽可能多地拆分，不要遗漏任何工作项
+
+2. **细粒度要求**（最关键！）：
+   - 将每个"设计"拆分为具体的设计项（每个页面、每个模块、每个表）
+   - 将每个"开发"拆分为具体的功能（每个接口、每个页面、每个组件）
+   - 将每个"测试"拆分为具体的测试项（每个功能、每个场景）
+   - 将每个"文档"拆分为具体的文档（API文档、用户手册、部署文档等）
+
+3. **格式要求**：
+   - subtask 名称要清晰具体（6-15个字），**直接描述要做的事情**
+   - phase 必须是 5 个阶段之一（Strategy & Planning, Design & Architecture, Development & Implementation, Testing & Optimization, Deployment & Launch）
+   - 任务按照 phase 顺序排列（不需要编号，系统会自动生成）
+
+4. **质量要求**：
+   - required_skills 要准确列出所需技能（参考团队成员的技能列表）
+   - reasoning 要简明扼要（30-80字）
+   - 任务之间必须独立、互不重复、无父子关系
+   - **严格要求**：只返回纯 JSON 数据，不要包含任何注释（不要使用 // 或 /* */）
+   - 不要包含任何其他说明文字
+
+请开始拆解项目 "{topic}" 并按时间线排序任务。记住：
+1. 任务要拆得足够细，数量要达到 {recommended_min_tasks}~{recommended_max_tasks} 个
+2. 输出纯 JSON，不要添加任何注释或说明文字
+"""
+    return prompt
+
+
+def get_subtask_assignment_prompt_new(sequenced_subtasks: List[Dict], team_members: List[Dict]) -> str:
+    """
+    Stage 5: 分配 Subtask 到成员
+
+    输入：
+    - sequenced_subtasks: 已按时间线排序的 subtask 列表（按 phase 顺序）
+    - team_members: 团队成员列表（带 hard_skills）
+
+    要求：
+    1. 根据成员的 hard_skills 分配 subtask
+    2. 确保每个成员至少 MIN_SUBTASKS_PER_MEMBER 个任务
+    3. 为每个分配提供详细的 CoT 推理原因
+
+    返回格式：
+    {
+      "task_assignments": [
+        {
+          "user_name": "张伟华",
+          "rank": 1,
+          "assigned_subtasks": [
+            {
+              "subtask": "进行设备监控需求调研",
+              "phase": "Strategy & Planning",
+              "required_skills": ["需求分析", "行业研究"],
+              "assignment_reason": "张伟华作为CEO..."
+            },
+            ...
+          ],
+          "total_assigned": 8
+        },
+        ...
+      ]
+    }
+    """
+    import config
+
+    # 格式化团队成员信息
+    team_info = []
+    for i, member in enumerate(team_members, 1):
+        skills_str = ", ".join([f"{s['skill']}({s['proficiency']})" for s in member.get('hard_skills', [])])
+        team_info.append(f"{i}. {member['user_name']} - {member['title']} (Rank {member['rank']})")
+        team_info.append(f"   技能: {skills_str}")
+
+    team_list = "\n".join(team_info)
+
+    # 格式化 subtask 列表
+    subtask_info = []
+    for i, subtask in enumerate(sequenced_subtasks, 1):
+        required_skills_str = ", ".join(subtask.get('required_skills', []))
+        subtask_info.append(
+            f"{i}. {subtask.get('subtask', '未命名任务')} "
+            f"({subtask.get('phase', 'N/A')})"
+        )
+        # subtask_id 在分配后才会生成，这里不显示
+        subtask_info.append(f"   需要技能: {required_skills_str}")
+
+    subtask_list = "\n".join(subtask_info)
+
+    prompt = f"""你是一位资深的任务分配专家。现在需要将已经排序好的任务分配给团队成员，确保每个人都能充分发挥自己的技能。
+
+## 团队成员（共{len(team_members)}人）
+
+{team_list}
+
+## 待分配任务（共{len(sequenced_subtasks)}个，已按时间线排序）
+
+{subtask_list}
+
+## 分配原则
+
+### 1. 技能匹配
+- **优先匹配技能**：任务的 required_skills 要与成员的 hard_skills 匹配
+- **技能熟练度**：优先分配给该技能 proficiency 为 strong 的成员
+- **如果多人都有该技能**：选择熟练度更高的，或者工作量更轻的成员
+
+### 2. 工作量平衡
+- **最低要求**：每个成员至少分配 **{config.MIN_SUBTASKS_PER_MEMBER}** 个任务
+- **平衡原则**：尽量让每个成员的任务数量相近
+- **推荐范围**：每人 {config.MIN_SUBTASKS_PER_MEMBER} ~ {config.MIN_SUBTASKS_PER_MEMBER + 3} 个任务
+
+### 3. Rank 级别考虑
+- **Rank 1（高层领导）**：
+  - 优先分配 "Strategy & Planning" 阶段的任务
+  - 适合：战略规划、需求调研、商业模式设计
+  - 任务数量可以略少（{config.MIN_SUBTASKS_PER_MEMBER}个左右）
+
+- **Rank 2（部门总监）**：
+  - 优先分配 "Design & Architecture" 和管理类任务
+  - 适合：系统架构、技术选型、团队管理
+  - 任务数量适中（{config.MIN_SUBTASKS_PER_MEMBER}-{config.MIN_SUBTASKS_PER_MEMBER + 2}个）
+
+- **Rank 3（普通员工）**：
+  - 主要分配 "Development & Implementation" 和 "Testing & Optimization" 任务
+  - 适合：功能开发、测试、文档编写
+  - 任务数量可以略多（{config.MIN_SUBTASKS_PER_MEMBER}-{config.MIN_SUBTASKS_PER_MEMBER + 3}个）
+
+### 4. 阶段覆盖
+- 确保每个阶段都有足够的人员覆盖
+- 同一阶段的任务可以分配给多个人（并行执行）
+
+## 输出格式
+
+请严格按照以下 JSON 格式输出：
+
+```json
+{{
+  "task_assignments": [
+    {{
+      "user_name": "张伟华",
+      "rank": 1,
+      "assigned_subtasks": [
+        {{
+          "subtask": "进行设备监控需求调研",
+          "phase": "Strategy & Planning",
+          "required_skills": ["需求分析", "行业研究"],
+          "assignment_reason": "张伟华作为CEO（Rank 1），具备商业模式画布(strong)、战略分析(strong)等技能，非常适合主导项目的需求调研工作。作为高层领导，他能够从战略高度理解业务需求，为后续设计提供准确的方向指引。"
+        }},
+        {{
+          "subtask": "制定项目整体规划",
+          "phase": "Strategy & Planning",
+          "required_skills": ["项目管理", "战略规划"],
+          "assignment_reason": "张伟华具备项目管理和战略规划能力，能够基于需求调研结果制定清晰的项目规划，包括里程碑、资源分配和风险管理。"
+        }},
+        ...
+      ],
+      "total_assigned": 6
+    }},
+    {{
+      "user_name": "李明",
+      "rank": 2,
+      "assigned_subtasks": [
+        {{
+          "subtask": "设计系统总体架构",
+          "phase": "Design & Architecture",
+          "required_skills": ["系统架构", "技术选型"],
+          "assignment_reason": "李明作为技术总监（Rank 2），拥有系统架构(strong)和云计算(strong)技能，是设计系统架构的最佳人选。他能够设计可扩展、高可用的技术架构。"
+        }},
+        ...
+      ],
+      "total_assigned": 7
+    }},
+    ...（所有{len(team_members)}个成员）
+  ],
+  "validation": {{
+    "all_members_assigned": true,
+    "min_tasks_per_member_met": true,
+    "all_subtasks_assigned": true,
+    "unassigned_subtasks": [],
+    "members_below_minimum": []
+  }}
+}}
+```
+
+## 重要提醒
+
+1. **必须**为所有 {len(team_members)} 个成员都分配任务
+2. **必须**分配所有 {len(sequenced_subtasks)} 个任务（一个不能少）
+3. 每个成员的 assigned_subtasks 数量 >= {config.MIN_SUBTASKS_PER_MEMBER}
+4. assignment_reason 要详细（60-120字），必须包含：
+   - 成员的职位和 Rank
+   - 成员具备的相关技能及熟练度
+   - 为什么这些技能适合这个任务
+   - （可选）任务在项目中的重要性
+5. 保留每个 subtask 的所有字段（subtask, phase, required_skills）
+   - 注意：subtask_id 会由系统自动生成，不需要包含在输出中
+6. validation 部分要如实反映分配情况
+7. 只返回 JSON 数据，不要包含任何其他说明文字
+8. **严格要求**：assignment_reason 必须是**单行文本**，不要使用换行符、制表符或其他控制字符
+
+请开始为 {len(team_members)} 名成员分配 {len(sequenced_subtasks)} 个任务。记住：所有文本字段必须是单行，不要包含换行符或控制字符。
 """
     return prompt

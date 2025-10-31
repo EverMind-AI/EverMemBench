@@ -8,6 +8,7 @@ Phase 5: 任务时间线分配
 
 import os
 import json
+import re
 import time
 from datetime import datetime
 from pathlib import Path
@@ -78,8 +79,21 @@ def call_gpt_for_timeline(
                 content = content[:-3]
             content = content.strip()
 
+            # 清理控制字符（移除未转义的换行符、制表符等）
+            content = re.sub(r'[\x00-\x08\x0B-\x0C\x0E-\x1F\x7F]', '', content)
+
+            # 尝试提取 JSON（处理前后可能有额外文字的情况）
+            # 找到第一个 { 和最后一个 }
+            start_idx = content.find('{')
+            end_idx = content.rfind('}')
+
+            if start_idx == -1 or end_idx == -1 or start_idx >= end_idx:
+                raise ValueError(f"无法在响应中找到有效的 JSON 对象\n响应前200字符: {content[:200]}")
+
+            json_str = content[start_idx:end_idx+1]
+
             # 解析JSON
-            result = json.loads(content)
+            result = json.loads(json_str)
 
             # 验证必要字段
             if 'task_timeline' not in result:
@@ -220,7 +234,8 @@ def process_single_project(
 
     # 1. 加载项目数据
     project_data = load_project_file(str(project_path))
-    project_info = project_data.get('project_info', {})
+    # 新架构使用 sub_topic_info 而不是 project_info
+    sub_topic_info = project_data.get('sub_topic_info', {})
     members = project_data.get('members', [])
 
     total_subtasks = sum(len(m.get('subtasks', [])) for m in members)
@@ -228,8 +243,14 @@ def process_single_project(
 
     # 2. 调用GPT进行时间线分配
     print(f"  调用GPT进行时间线分配...")
+    # 将 sub_topic_info 转换为 prompt 期望的格式
+    project_info_for_prompt = {
+        'project_number': sub_topic_info.get('sub_topic_id', ''),
+        'project_topic': sub_topic_info.get('topic', ''),
+        'project_description': sub_topic_info.get('description', '')
+    }
     timeline_result = call_gpt_for_timeline(
-        project_info=project_info,
+        project_info=project_info_for_prompt,
         members_with_subtasks=members
     )
 
@@ -265,7 +286,8 @@ def process_single_project(
     # 6. 返回处理报告
     return {
         'project_name': project_name,
-        'project_number': project_info.get('project_number'),
+        'sub_topic_id': sub_topic_info.get('sub_topic_id'),
+        'parent_topic_id': sub_topic_info.get('parent_topic_id'),
         'success': True,
         'total_subtasks': total_subtasks,
         'assigned_tasks': validation['assigned_tasks'],

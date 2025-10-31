@@ -192,34 +192,33 @@ EMPLOYEES_WITH_COMMUNICATION_STYLE_FILE = os.path.join(OUTPUT_DIR, "employees_wi
 # Communication Style分配报告
 COMMUNICATION_STYLE_ASSIGNMENT_REPORT = os.path.join(OUTPUT_DIR, "communication_style_assignment_report.json")
 
-# ==================== Phase 4: Task Generation ====================
+# ==================== Phase 4: Topic-Driven Task Generation ====================
 
-# 项目数量（可配置）
-NUM_PROJECTS = 5  # 默认生成3个项目，用户可以改成5、10等
+# 大 Topic 数量（可配置）
+NUM_MAJOR_TOPICS = 1  # 生成5个大的项目主题
+
+# 每个大 Topic 下的小 Topic 数量（可配置）
+NUM_SUB_TOPICS_PER_MAJOR = 2  # 每个大 topic 拆分为3个小 topic
 
 # 项目目录
 PROJECTS_DIR = os.path.join(OUTPUT_DIR, "projects")
 
-# 第一个项目的团队规模
-FIRST_TEAM_SIZE = {
-    "rank_1": 1,
-    "rank_2": 1,
-    "rank_3": 23
-}
-
-# 后续项目的团队规模范围
-SUBSEQUENT_TEAM_SIZE_RANGE = {
-    "min": 15,
+# 小 Topic 的团队规模范围
+SUB_TOPIC_TEAM_SIZE = {
+    "min": 20,
     "max": 60,
-    "rank_1": 1,  # 固定1个
-    "rank_2_min": 1,  # 至少1个
+    "rank_1_min": 1,  # 至少1个 Rank 1
+    "rank_2_min": 1,  # 至少1个 Rank 2
 }
 
-# 每个成员的最小subtask数量
+# 每个成员的最小 subtask 数量
 MIN_SUBTASKS_PER_MEMBER = 5
 
-# 项目生成的随机种子（可选，用于可重复性）
-RANDOM_SEED = None  # 设为整数可以固定随机结果
+# 大 Topic 汇总文件
+MAJOR_TOPICS_FILE = os.path.join(PROJECTS_DIR, "major_topics.json")
+
+# 小 Topic 汇总文件
+SUB_TOPICS_FILE = os.path.join(PROJECTS_DIR, "sub_topics.json")
 
 # 统计报告文件
 PROJECTS_SUMMARY_REPORT = os.path.join(PROJECTS_DIR, "summary_report.json")

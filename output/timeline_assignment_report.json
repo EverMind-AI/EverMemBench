@@ -1,135 +1,65 @@
 {
-  "generation_time": "2025-10-29T22:06:34.757840",
-  "total_projects": 5,
+  "generation_time": "2025-11-01T00:10:44.566271",
+  "total_projects": 2,
   "timeline_config": {
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
   },
   "projects": [
     {
-      "project_name": "跨平台数据中台",
-      "project_number": 2,
+      "project_name": "智能疾病诊断与预测模块",
+      "sub_topic_id": "SUB_001_001",
+      "parent_topic_id": "MAJOR_001",
       "success": true,
-      "total_subtasks": 77,
-      "assigned_tasks": 77,
+      "total_subtasks": 110,
+      "assigned_tasks": 110,
       "validation": {
         "valid": true,
         "errors": [],
         "warnings": [],
-        "total_subtasks": 77,
-        "assigned_tasks": 77
+        "total_subtasks": 110,
+        "assigned_tasks": 110
       },
       "timeline_summary": {
         "start_date": "2025-01-01",
         "end_date": "2025-12-31",
-        "total_tasks": 77,
-        "phase_breakdown": {
-          "前期（1-3月）": 15,
-          "中期（4-8月）": 35,
-          "后期（9-12月）": 27
-        }
-      }
-    },
-    {
-      "project_name": "企业内容管理系统",
-      "project_number": 4,
-      "success": true,
-      "total_subtasks": 96,
-      "assigned_tasks": 96,
-      "validation": {
-        "valid": true,
-        "errors": [],
-        "warnings": [],
-        "total_subtasks": 96,
-        "assigned_tasks": 96
-      },
-      "timeline_summary": {
-        "start_date": "2025-01-01",
-        "end_date": "2025-12-31",
-        "total_tasks": 96,
-        "phase_breakdown": {
-          "前期（1-3月）": 24,
-          "中期（4-8月）": 50,
-          "后期（9-12月）": 22
-        }
-      }
-    },
-    {
-      "project_name": "多功能协作平台",
-      "project_number": 1,
-      "success": true,
-      "total_subtasks": 128,
-      "assigned_tasks": 128,
-      "validation": {
-        "valid": true,
-        "errors": [],
-        "warnings": [],
-        "total_subtasks": 128,
-        "assigned_tasks": 128
-      },
-      "timeline_summary": {
-        "start_date": "2025-01-01",
-        "end_date": "2025-12-31",
-        "total_tasks": 128,
+        "total_tasks": 110,
         "phase_breakdown": {
           "前期（1-3月）": 30,
-          "中期（4-8月）": 60,
-          "后期（9-12月）": 38
-        }
-      }
-    },
-    {
-      "project_name": "移动端电商管理系统",
-      "project_number": 3,
-      "success": true,
-      "total_subtasks": 73,
-      "assigned_tasks": 73,
-      "validation": {
-        "valid": true,
-        "errors": [],
-        "warnings": [],
-        "total_subtasks": 73,
-        "assigned_tasks": 73
-      },
-      "timeline_summary": {
-        "start_date": "2025-01-01",
-        "end_date": "2025-12-31",
-        "total_tasks": 73,
-        "phase_breakdown": {
-          "前期（1-3月）": 18,
-          "中期（4-8月）": 35,
-          "后期（9-12月）": 20
-        }
-      }
-    },
-    {
-      "project_name": "虚拟化基础设施管理",
-      "project_number": 5,
-      "success": true,
-      "total_subtasks": 77,
-      "assigned_tasks": 77,
-      "validation": {
-        "valid": true,
-        "errors": [],
-        "warnings": [],
-        "total_subtasks": 77,
-        "assigned_tasks": 77
-      },
-      "timeline_summary": {
-        "start_date": "2025-01-01",
-        "end_date": "2025-12-31",
-        "total_tasks": 77,
-        "phase_breakdown": {
-          "前期（1-3月）": 13,
-          "中期（4-8月）": 34,
+          "中期（4-8月）": 50,
           "后期（9-12月）": 30
+        }
+      }
+    },
+    {
+      "project_name": "电子健康档案管理平台",
+      "sub_topic_id": "SUB_001_002",
+      "parent_topic_id": "MAJOR_001",
+      "success": true,
+      "total_subtasks": 121,
+      "assigned_tasks": 121,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 121,
+        "assigned_tasks": 121
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 121,
+        "phase_breakdown": {
+          "前期（1-3月）": 32,
+          "中期（4-8月）": 43,
+          "后期（9-12月）": 46
         }
       }
     }
   ],
   "statistics": {
-    "total_tasks_processed": 451,
-    "successful_projects": 5,
+    "total_tasks_processed": 231,
+    "successful_projects": 2,
     "failed_projects": 0
   }
 }
