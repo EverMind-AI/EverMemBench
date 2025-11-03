@@ -10,6 +10,7 @@ import os
 import json
 import re
 import time
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from tqdm import tqdm
@@ -145,6 +146,7 @@ def validate_timeline(
             task_ids_in_project.add(subtask['subtask_id'])
 
     task_ids_assigned = set()
+    task_ids_list = []  # 用于检测重复
     for task in timeline_result.get('task_timeline', []):
         task_id = task.get('subtask_id')
         deadline = task.get('deadline')
@@ -154,6 +156,7 @@ def validate_timeline(
             errors.append(f"任务缺少subtask_id字段")
             continue
 
+        task_ids_list.append(task_id)
         task_ids_assigned.add(task_id)
 
         # 检查deadline格式
@@ -172,12 +175,18 @@ def validate_timeline(
         except ValueError:
             errors.append(f"任务{task_id}的deadline格式错误: {deadline}")
 
-    # 3. 检查缺失的任务
+    # 3. 检查重复的任务
+    if len(task_ids_list) != len(task_ids_assigned):
+        id_counts = Counter(task_ids_list)
+        duplicates = [task_id for task_id, count in id_counts.items() if count > 1]
+        errors.append(f"以下任务被重复分配: {sorted(duplicates)} (共 {len(task_ids_list) - len(task_ids_assigned)} 次重复)")
+
+    # 4. 检查缺失的任务
     missing_tasks = task_ids_in_project - task_ids_assigned
     if missing_tasks:
         errors.append(f"以下任务未被分配时间: {sorted(missing_tasks)}")
 
-    # 4. 检查多余的任务
+    # 5. 检查多余的任务
     extra_tasks = task_ids_assigned - task_ids_in_project
     if extra_tasks:
         warnings.append(f"以下任务不在原项目中: {sorted(extra_tasks)}")
@@ -241,7 +250,7 @@ def process_single_project(
     total_subtasks = sum(len(m.get('subtasks', [])) for m in members)
     print(f"  任务总数: {total_subtasks}")
 
-    # 2. 调用GPT进行时间线分配
+    # 2. 调用GPT进行时间线分配（带重试）
     print(f"  调用GPT进行时间线分配...")
     # 将 sub_topic_info 转换为 prompt 期望的格式
     project_info_for_prompt = {
@@ -249,22 +258,42 @@ def process_single_project(
         'project_topic': sub_topic_info.get('topic', ''),
         'project_description': sub_topic_info.get('description', '')
     }
-    timeline_result = call_gpt_for_timeline(
-        project_info=project_info_for_prompt,
-        members_with_subtasks=members
-    )
 
-    # 3. 验证结果
-    print(f"  验证时间线分配...")
-    validation = validate_timeline(
-        project_data=project_data,
-        timeline_result=timeline_result,
-        start_date=config.TIMELINE_START_DATE,
-        end_date=config.TIMELINE_END_DATE
-    )
+    # 尝试多次，直到验证通过或达到最大重试次数
+    max_validation_retries = 3
+    timeline_result = None
+    validation = None
 
+    for retry in range(max_validation_retries):
+        if retry > 0:
+            print(f"  🔄 重试 {retry}/{max_validation_retries - 1}...")
+
+        timeline_result = call_gpt_for_timeline(
+            project_info=project_info_for_prompt,
+            members_with_subtasks=members
+        )
+
+        # 3. 验证结果
+        print(f"  验证时间线分配...")
+        validation = validate_timeline(
+            project_data=project_data,
+            timeline_result=timeline_result,
+            start_date=config.TIMELINE_START_DATE,
+            end_date=config.TIMELINE_END_DATE
+        )
+
+        if validation['valid']:
+            break  # 验证通过，退出重试循环
+        else:
+            print(f"  ❌ 验证失败 (尝试 {retry + 1}/{max_validation_retries}):")
+            for error in validation['errors'][:3]:  # 只显示前3个错误
+                print(f"    - {error}")
+            if len(validation['errors']) > 3:
+                print(f"    - ... 还有 {len(validation['errors']) - 3} 个错误")
+
+    # 如果所有重试都失败了
     if not validation['valid']:
-        print(f"  ❌ 验证失败:")
+        print(f"  ❌ 验证失败（已重试 {max_validation_retries} 次）:")
         for error in validation['errors']:
             print(f"    - {error}")
         raise ValueError(f"项目 {project_name} 时间线分配验证失败")

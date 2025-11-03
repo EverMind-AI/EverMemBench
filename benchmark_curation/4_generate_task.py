@@ -340,10 +340,11 @@ def select_team_members(sub_topic: Dict, all_employees: List[Dict]) -> List[Dict
     selected_names = [m['user_name'] for m in result.get('selected_members', [])]
     team = [emp.copy() for emp in all_employees if emp['user_name'] in selected_names]
 
-    # 添加 selection_reason
-    reason_map = {m['user_name']: m['selection_reason'] for m in result.get('selected_members', [])}
+    # 添加 selection_reason（安全地获取，避免 KeyError）
+    reason_map = {m['user_name']: m.get('selection_reason', '未提供选择理由')
+                  for m in result.get('selected_members', [])}
     for member in team:
-        member['selection_reason'] = reason_map.get(member['user_name'], '')
+        member['selection_reason'] = reason_map.get(member['user_name'], '未提供选择理由')
 
     # 验证团队约束
     if not validate_team_selection(team):

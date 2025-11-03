@@ -195,10 +195,10 @@ COMMUNICATION_STYLE_ASSIGNMENT_REPORT = os.path.join(OUTPUT_DIR, "communication_
 # ==================== Phase 4: Topic-Driven Task Generation ====================
 
 # 大 Topic 数量（可配置）
-NUM_MAJOR_TOPICS = 1  # 生成5个大的项目主题
+NUM_MAJOR_TOPICS = 20  # 生成5个大的项目主题
 
 # 每个大 Topic 下的小 Topic 数量（可配置）
-NUM_SUB_TOPICS_PER_MAJOR = 2  # 每个大 topic 拆分为3个小 topic
+NUM_SUB_TOPICS_PER_MAJOR = 3  # 每个大 topic 拆分为3个小 topic
 
 # 项目目录
 PROJECTS_DIR = os.path.join(OUTPUT_DIR, "projects")

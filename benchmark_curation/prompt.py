@@ -1465,13 +1465,22 @@ def get_task_timeline_assignment_prompt(
 ```
 
 **重要提示**：
-1. `task_timeline` 数组必须包含所有{total_tasks}个subtask，一个都不能少
+1. `task_timeline` 数组必须**严格包含**上面任务列表中的所有 {total_tasks} 个任务，一个都不能少，一个都不能多
 2. 每个任务必须有 `subtask_id`, `user_name`, `deadline`, `phase`, `reasoning` 五个字段
-3. `subtask_id` 是整数，必须与输入的任务列表中的 `subtask_id` 完全一致
-4. `deadline` 必须是 YYYY-MM-DD 格式的字符串
-5. `phase` 必须是 "前期"、"中期" 或 "后期" 之一
-6. `reasoning` 简要说明（10-30字）为什么这个任务安排在这个时间点
-7. **只返回 JSON 数据，不要包含任何其他说明文字**
+3. `subtask_id` 是整数，必须与输入的任务列表中的 `subtask_id` **完全一致**
+4. **禁止重复**：每个 `subtask_id` 只能出现一次，不能重复
+5. **禁止遗漏**：输入列表中的每个任务都必须在输出中出现
+6. **禁止创造**：不能添加输入列表中不存在的 `subtask_id`
+7. `deadline` 必须是 YYYY-MM-DD 格式的字符串
+8. `phase` 必须是 "前期"、"中期" 或 "后期" 之一
+9. `reasoning` 简要说明（10-30字）为什么这个任务安排在这个时间点
+10. **只返回 JSON 数据，不要包含任何其他说明文字**
+
+**验证清单**（在返回前自查）：
+✓ task_timeline 数组长度 = {total_tasks}
+✓ 所有 subtask_id 都在输入列表中
+✓ 没有重复的 subtask_id
+✓ 没有遗漏任何任务
 
 请开始分配任务时间线。记住：只输出上述格式的 JSON，不要添加任何解释或说明文字。
 """
