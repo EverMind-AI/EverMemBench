@@ -1,303 +1,2642 @@
 {
-  "generation_time": "2025-11-01T01:36:48.170713",
-  "major_topics_count": 1,
-  "sub_topics_count": 2,
-  "total_tasks": 302,
-  "total_unique_employees": 32,
+  "generation_time": "2025-11-03T14:34:11.093145",
+  "major_topics_count": 20,
+  "sub_topics_count": 60,
+  "total_tasks": 9055,
+  "total_unique_employees": 107,
   "major_topics_summary": [
     {
       "topic_id": "MAJOR_001",
-      "topic": "智慧园区管理系统",
-      "sub_topics_count": 2
+      "topic": "智慧农业云平台",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_002",
+      "topic": "新零售O2O系统",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_003",
+      "topic": "供应链金融服务平台",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_004",
+      "topic": "企业碳中和管理系统",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_005",
+      "topic": "远程医疗与健康管理平台",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_006",
+      "topic": "智能合同管理平台",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_007",
+      "topic": "低代码应用开发平台 (LCAP)",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_008",
+      "topic": "跨境电商综合服务平台",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_009",
+      "topic": "智慧工地管理系统",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_010",
+      "topic": "社区团购电商平台",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_011",
+      "topic": "企业级数据中台",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_012",
+      "topic": "虚拟会展与社交平台",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_013",
+      "topic": "物联网边缘计算平台",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_014",
+      "topic": "全渠道客户关系管理 (CRM)",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_015",
+      "topic": "数字孪生城市系统",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_016",
+      "topic": "个性化财富管理顾问",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_017",
+      "topic": "智慧物流仓储系统 (WMS)",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_018",
+      "topic": "企业学习与发展平台 (LXP)",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_019",
+      "topic": "隐私计算协作平台",
+      "sub_topics_count": 3
+    },
+    {
+      "topic_id": "MAJOR_020",
+      "topic": "中小企业云ERP系统",
+      "sub_topics_count": 3
     }
   ],
   "projects_summary": [
     {
       "sub_topic_id": "SUB_001_001",
       "parent_topic_id": "MAJOR_001",
-      "topic": "园区人车安全通行系统",
-      "team_size": 22,
-      "total_subtasks": 153
+      "topic": "农田物联网监测与智能控制系统",
+      "team_size": 24,
+      "total_subtasks": 142
     },
     {
       "sub_topic_id": "SUB_001_002",
       "parent_topic_id": "MAJOR_001",
-      "topic": "园区楼宇资产运维系统",
+      "topic": "农产品质量安全溯源管理平台",
+      "team_size": 23,
+      "total_subtasks": 172
+    },
+    {
+      "sub_topic_id": "SUB_001_003",
+      "parent_topic_id": "MAJOR_001",
+      "topic": "农业生产大数据与遥感分析平台",
+      "team_size": 23,
+      "total_subtasks": 135
+    },
+    {
+      "sub_topic_id": "SUB_002_001",
+      "parent_topic_id": "MAJOR_002",
+      "topic": "全渠道交易前台系统",
+      "team_size": 22,
+      "total_subtasks": 138
+    },
+    {
+      "sub_topic_id": "SUB_002_002",
+      "parent_topic_id": "MAJOR_002",
+      "topic": "会员与营销自动化系统",
+      "team_size": 22,
+      "total_subtasks": 196
+    },
+    {
+      "sub_topic_id": "SUB_002_003",
+      "parent_topic_id": "MAJOR_002",
+      "topic": "智慧仓配履约系统",
+      "team_size": 26,
+      "total_subtasks": 226
+    },
+    {
+      "sub_topic_id": "SUB_003_001",
+      "parent_topic_id": "MAJOR_003",
+      "topic": "供应链数字融资业务系统",
+      "team_size": 24,
+      "total_subtasks": 133
+    },
+    {
+      "sub_topic_id": "SUB_003_002",
+      "parent_topic_id": "MAJOR_003",
+      "topic": "企业智能风控与征信平台",
+      "team_size": 24,
+      "total_subtasks": 156
+    },
+    {
+      "sub_topic_id": "SUB_003_003",
+      "parent_topic_id": "MAJOR_003",
+      "topic": "电子合同与司法存证系统",
+      "team_size": 22,
+      "total_subtasks": 122
+    },
+    {
+      "sub_topic_id": "SUB_004_001",
+      "parent_topic_id": "MAJOR_004",
+      "topic": "企业能耗监测与节能诊断系统",
+      "team_size": 21,
+      "total_subtasks": 157
+    },
+    {
+      "sub_topic_id": "SUB_004_002",
+      "parent_topic_id": "MAJOR_004",
+      "topic": "碳排放核算与资产管理平台",
+      "team_size": 23,
+      "total_subtasks": 129
+    },
+    {
+      "sub_topic_id": "SUB_004_003",
+      "parent_topic_id": "MAJOR_004",
+      "topic": "供应链碳足迹协同管理系统",
       "team_size": 25,
       "total_subtasks": 149
+    },
+    {
+      "sub_topic_id": "SUB_005_001",
+      "parent_topic_id": "MAJOR_005",
+      "topic": "实时在线诊疗服务系统",
+      "team_size": 22,
+      "total_subtasks": 133
+    },
+    {
+      "sub_topic_id": "SUB_005_002",
+      "parent_topic_id": "MAJOR_005",
+      "topic": "智能物联健康监测系统",
+      "team_size": 23,
+      "total_subtasks": 138
+    },
+    {
+      "sub_topic_id": "SUB_005_003",
+      "parent_topic_id": "MAJOR_005",
+      "topic": "个人健康档案与慢病管理系统",
+      "team_size": 26,
+      "total_subtasks": 155
+    },
+    {
+      "sub_topic_id": "SUB_006_001",
+      "parent_topic_id": "MAJOR_006",
+      "topic": "AI合同智能审查引擎",
+      "team_size": 23,
+      "total_subtasks": 112
+    },
+    {
+      "sub_topic_id": "SUB_006_002",
+      "parent_topic_id": "MAJOR_006",
+      "topic": "合同协同与履约管理平台",
+      "team_size": 26,
+      "total_subtasks": 156
+    },
+    {
+      "sub_topic_id": "SUB_006_003",
+      "parent_topic_id": "MAJOR_006",
+      "topic": "电子签约与数字存证平台",
+      "team_size": 21,
+      "total_subtasks": 124
+    },
+    {
+      "sub_topic_id": "SUB_007_001",
+      "parent_topic_id": "MAJOR_007",
+      "topic": "可视化应用构建与编排引擎",
+      "team_size": 20,
+      "total_subtasks": 161
+    },
+    {
+      "sub_topic_id": "SUB_007_002",
+      "parent_topic_id": "MAJOR_007",
+      "topic": "企业级集成与连接平台",
+      "team_size": 24,
+      "total_subtasks": 138
+    },
+    {
+      "sub_topic_id": "SUB_007_003",
+      "parent_topic_id": "MAJOR_007",
+      "topic": "应用部署与运维管理中心",
+      "team_size": 22,
+      "total_subtasks": 120
+    },
+    {
+      "sub_topic_id": "SUB_008_001",
+      "parent_topic_id": "MAJOR_008",
+      "topic": "多平台商品与订单中台",
+      "team_size": 21,
+      "total_subtasks": 136
+    },
+    {
+      "sub_topic_id": "SUB_008_002",
+      "parent_topic_id": "MAJOR_008",
+      "topic": "全球智能物流与仓储系统",
+      "team_size": 25,
+      "total_subtasks": 139
+    },
+    {
+      "sub_topic_id": "SUB_008_003",
+      "parent_topic_id": "MAJOR_008",
+      "topic": "营销自动化与本地化建站平台",
+      "team_size": 26,
+      "total_subtasks": 135
+    },
+    {
+      "sub_topic_id": "SUB_009_001",
+      "parent_topic_id": "MAJOR_009",
+      "topic": "人员与机械设备定位管理系统",
+      "team_size": 24,
+      "total_subtasks": 125
+    },
+    {
+      "sub_topic_id": "SUB_009_002",
+      "parent_topic_id": "MAJOR_009",
+      "topic": "AI视频安全行为识别系统",
+      "team_size": 27,
+      "total_subtasks": 146
+    },
+    {
+      "sub_topic_id": "SUB_009_003",
+      "parent_topic_id": "MAJOR_009",
+      "topic": "环境监测与扬尘噪音控制系统",
+      "team_size": 27,
+      "total_subtasks": 135
+    },
+    {
+      "sub_topic_id": "SUB_010_001",
+      "parent_topic_id": "MAJOR_010",
+      "topic": "供应链与商品管理后台",
+      "team_size": 23,
+      "total_subtasks": 133
+    },
+    {
+      "sub_topic_id": "SUB_010_002",
+      "parent_topic_id": "MAJOR_010",
+      "topic": "团长协作与分佣系统",
+      "team_size": 25,
+      "total_subtasks": 153
+    },
+    {
+      "sub_topic_id": "SUB_010_003",
+      "parent_topic_id": "MAJOR_010",
+      "topic": "用户端购物交易小程序",
+      "team_size": 28,
+      "total_subtasks": 157
+    },
+    {
+      "sub_topic_id": "SUB_011_001",
+      "parent_topic_id": "MAJOR_011",
+      "topic": "统一数据开发与治理平台",
+      "team_size": 21,
+      "total_subtasks": 130
+    },
+    {
+      "sub_topic_id": "SUB_011_002",
+      "parent_topic_id": "MAJOR_011",
+      "topic": "数据资产目录与分析门户",
+      "team_size": 24,
+      "total_subtasks": 130
+    },
+    {
+      "sub_topic_id": "SUB_011_003",
+      "parent_topic_id": "MAJOR_011",
+      "topic": "统一数据服务（API）中心",
+      "team_size": 22,
+      "total_subtasks": 181
+    },
+    {
+      "sub_topic_id": "SUB_012_001",
+      "parent_topic_id": "MAJOR_012",
+      "topic": "沉浸式3D空间与虚拟形象引擎",
+      "team_size": 22,
+      "total_subtasks": 186
+    },
+    {
+      "sub_topic_id": "SUB_012_002",
+      "parent_topic_id": "MAJOR_012",
+      "topic": "多媒体实时互动与直播系统",
+      "team_size": 21,
+      "total_subtasks": 121
+    },
+    {
+      "sub_topic_id": "SUB_012_003",
+      "parent_topic_id": "MAJOR_012",
+      "topic": "会展管理与数据分析平台",
+      "team_size": 27,
+      "total_subtasks": 110
+    },
+    {
+      "sub_topic_id": "SUB_013_001",
+      "parent_topic_id": "MAJOR_013",
+      "topic": "边缘节点与设备管理平台",
+      "team_size": 20,
+      "total_subtasks": 170
+    },
+    {
+      "sub_topic_id": "SUB_013_002",
+      "parent_topic_id": "MAJOR_013",
+      "topic": "边缘应用与容器编排系统",
+      "team_size": 26,
+      "total_subtasks": 207
+    },
+    {
+      "sub_topic_id": "SUB_013_003",
+      "parent_topic_id": "MAJOR_013",
+      "topic": "边云数据协同与AI服务总线",
+      "team_size": 23,
+      "total_subtasks": 156
+    },
+    {
+      "sub_topic_id": "SUB_014_001",
+      "parent_topic_id": "MAJOR_014",
+      "topic": "营销自动化与线索培育平台",
+      "team_size": 25,
+      "total_subtasks": 133
+    },
+    {
+      "sub_topic_id": "SUB_014_002",
+      "parent_topic_id": "MAJOR_014",
+      "topic": "销售流程与业绩管理系统",
+      "team_size": 20,
+      "total_subtasks": 140
+    },
+    {
+      "sub_topic_id": "SUB_014_003",
+      "parent_topic_id": "MAJOR_014",
+      "topic": "全渠道客户服务协同平台",
+      "team_size": 25,
+      "total_subtasks": 144
+    },
+    {
+      "sub_topic_id": "SUB_015_001",
+      "parent_topic_id": "MAJOR_015",
+      "topic": "城市信息模型(CIM)基础平台",
+      "team_size": 21,
+      "total_subtasks": 119
+    },
+    {
+      "sub_topic_id": "SUB_015_002",
+      "parent_topic_id": "MAJOR_015",
+      "topic": "城市运行体征监测与可视化系统",
+      "team_size": 28,
+      "total_subtasks": 167
+    },
+    {
+      "sub_topic_id": "SUB_015_003",
+      "parent_topic_id": "MAJOR_015",
+      "topic": "应急事件模拟与预案推演系统",
+      "team_size": 26,
+      "total_subtasks": 191
+    },
+    {
+      "sub_topic_id": "SUB_016_001",
+      "parent_topic_id": "MAJOR_016",
+      "topic": "智能投顾算法与策略引擎",
+      "team_size": 21,
+      "total_subtasks": 190
+    },
+    {
+      "sub_topic_id": "SUB_016_002",
+      "parent_topic_id": "MAJOR_016",
+      "topic": "用户财务诊断与规划应用",
+      "team_size": 25,
+      "total_subtasks": 142
+    },
+    {
+      "sub_topic_id": "SUB_016_003",
+      "parent_topic_id": "MAJOR_016",
+      "topic": "金融市场数据与内容中台",
+      "team_size": 26,
+      "total_subtasks": 121
+    },
+    {
+      "sub_topic_id": "SUB_017_001",
+      "parent_topic_id": "MAJOR_017",
+      "topic": "核心仓储管理子系统",
+      "team_size": 24,
+      "total_subtasks": 136
+    },
+    {
+      "sub_topic_id": "SUB_017_002",
+      "parent_topic_id": "MAJOR_017",
+      "topic": "自动化设备调度控制子系统",
+      "team_size": 23,
+      "total_subtasks": 133
+    },
+    {
+      "sub_topic_id": "SUB_017_003",
+      "parent_topic_id": "MAJOR_017",
+      "topic": "智能订单履约与拣选子系统",
+      "team_size": 27,
+      "total_subtasks": 196
+    },
+    {
+      "sub_topic_id": "SUB_018_001",
+      "parent_topic_id": "MAJOR_018",
+      "topic": "企业内容与学习路径平台",
+      "team_size": 30,
+      "total_subtasks": 220
+    },
+    {
+      "sub_topic_id": "SUB_018_002",
+      "parent_topic_id": "MAJOR_018",
+      "topic": "互动培训与知识社区平台",
+      "team_size": 26,
+      "total_subtasks": 140
+    },
+    {
+      "sub_topic_id": "SUB_018_003",
+      "parent_topic_id": "MAJOR_018",
+      "topic": "学习分析与人才画像系统",
+      "team_size": 24,
+      "total_subtasks": 152
+    },
+    {
+      "sub_topic_id": "SUB_019_001",
+      "parent_topic_id": "MAJOR_019",
+      "topic": "联邦学习建模训练平台",
+      "team_size": 24,
+      "total_subtasks": 133
+    },
+    {
+      "sub_topic_id": "SUB_019_002",
+      "parent_topic_id": "MAJOR_019",
+      "topic": "多方安全联合分析系统",
+      "team_size": 22,
+      "total_subtasks": 126
+    },
+    {
+      "sub_topic_id": "SUB_019_003",
+      "parent_topic_id": "MAJOR_019",
+      "topic": "隐私计算安全节点系统",
+      "team_size": 24,
+      "total_subtasks": 123
+    },
+    {
+      "sub_topic_id": "SUB_020_001",
+      "parent_topic_id": "MAJOR_020",
+      "topic": "企业进销存与仓储系统",
+      "team_size": 22,
+      "total_subtasks": 203
+    },
+    {
+      "sub_topic_id": "SUB_020_002",
+      "parent_topic_id": "MAJOR_020",
+      "topic": "云端财务会计与核算系统",
+      "team_size": 31,
+      "total_subtasks": 169
+    },
+    {
+      "sub_topic_id": "SUB_020_003",
+      "parent_topic_id": "MAJOR_020",
+      "topic": "人力资源与薪酬管理系统",
+      "team_size": 23,
+      "total_subtasks": 235
     }
   ],
   "employee_participation": {
     "张伟华": {
       "projects_participated": [
         "SUB_001_001",
-        "SUB_001_002"
+        "SUB_001_002",
+        "SUB_001_003",
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_003_002",
+        "SUB_003_003",
+        "SUB_004_001",
+        "SUB_004_002",
+        "SUB_004_003",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_001",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_007_003",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_008_003",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_001",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_012_001",
+        "SUB_012_002",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_013_003",
+        "SUB_014_001",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_015_001",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_001",
+        "SUB_016_002",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_018_003",
+        "SUB_019_001",
+        "SUB_019_002",
+        "SUB_019_003",
+        "SUB_020_001",
+        "SUB_020_002",
+        "SUB_020_003"
       ],
-      "total_tasks": 11,
+      "total_tasks": 332,
       "rank": 1
     },
     "李明志": {
       "projects_participated": [
         "SUB_001_001",
-        "SUB_001_002"
+        "SUB_001_002",
+        "SUB_001_003",
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_003_002",
+        "SUB_003_003",
+        "SUB_004_001",
+        "SUB_004_002",
+        "SUB_004_003",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_001",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_007_003",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_008_003",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_001",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_012_001",
+        "SUB_012_002",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_013_003",
+        "SUB_014_001",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_015_001",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_001",
+        "SUB_016_002",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_018_003",
+        "SUB_019_001",
+        "SUB_019_002",
+        "SUB_019_003",
+        "SUB_020_001",
+        "SUB_020_002",
+        "SUB_020_003"
       ],
-      "total_tasks": 13,
+      "total_tasks": 382,
       "rank": 2
     },
     "陈慧兰": {
       "projects_participated": [
-        "SUB_001_001"
+        "SUB_001_001",
+        "SUB_002_001",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_003_003",
+        "SUB_004_003",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_008_003",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_012_001",
+        "SUB_012_002",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_013_003",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_015_001",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_002",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_018_003",
+        "SUB_019_001",
+        "SUB_019_002",
+        "SUB_020_003"
       ],
-      "total_tasks": 7,
+      "total_tasks": 225,
       "rank": 2
     },
     "黄建国": {
       "projects_participated": [
         "SUB_001_001",
-        "SUB_001_002"
+        "SUB_001_002",
+        "SUB_001_003",
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_003_002",
+        "SUB_003_003",
+        "SUB_004_001",
+        "SUB_004_002",
+        "SUB_004_003",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_001",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_002",
+        "SUB_007_003",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_001",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_013_003",
+        "SUB_014_003",
+        "SUB_015_001",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_001",
+        "SUB_016_002",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_003",
+        "SUB_019_002",
+        "SUB_019_003",
+        "SUB_020_001",
+        "SUB_020_002",
+        "SUB_020_003"
       ],
-      "total_tasks": 13,
-      "rank": 2
-    },
-    "周丽珍": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 6,
+      "total_tasks": 311,
       "rank": 2
     },
     "王芳": {
       "projects_participated": [
         "SUB_001_001",
-        "SUB_001_002"
+        "SUB_001_002",
+        "SUB_001_003",
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_003_002",
+        "SUB_003_003",
+        "SUB_004_001",
+        "SUB_004_002",
+        "SUB_004_003",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_007_003",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_008_003",
+        "SUB_009_001",
+        "SUB_009_003",
+        "SUB_010_001",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_012_001",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_013_003",
+        "SUB_014_001",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_001",
+        "SUB_016_002",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_019_001",
+        "SUB_019_002",
+        "SUB_020_001",
+        "SUB_020_002",
+        "SUB_020_003"
       ],
-      "total_tasks": 6,
+      "total_tasks": 353,
       "rank": 3
     },
     "刘辰光": {
       "projects_participated": [
         "SUB_001_001",
-        "SUB_001_002"
+        "SUB_001_002",
+        "SUB_001_003",
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_003_002",
+        "SUB_003_003",
+        "SUB_004_002",
+        "SUB_004_003",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_008_003",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_001",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_012_002",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_013_003",
+        "SUB_014_001",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_015_002",
+        "SUB_016_002",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_018_003",
+        "SUB_019_001",
+        "SUB_019_002",
+        "SUB_020_001",
+        "SUB_020_002",
+        "SUB_020_003"
       ],
-      "total_tasks": 13,
+      "total_tasks": 350,
+      "rank": 3
+    },
+    "董珊珊": {
+      "projects_participated": [
+        "SUB_001_001",
+        "SUB_001_002",
+        "SUB_002_002",
+        "SUB_014_001",
+        "SUB_016_002",
+        "SUB_016_003"
+      ],
+      "total_tasks": 34,
       "rank": 3
     },
     "许佳音": {
       "projects_participated": [
         "SUB_001_001",
-        "SUB_001_002"
+        "SUB_001_002",
+        "SUB_001_003",
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_003_001",
+        "SUB_003_002",
+        "SUB_004_002",
+        "SUB_005_002",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_001",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_012_001",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_002",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_002",
+        "SUB_018_003",
+        "SUB_019_001",
+        "SUB_019_002",
+        "SUB_019_003",
+        "SUB_020_001",
+        "SUB_020_002",
+        "SUB_020_003"
       ],
-      "total_tasks": 6,
+      "total_tasks": 270,
       "rank": 3
     },
     "高国强": {
       "projects_participated": [
         "SUB_001_001",
-        "SUB_001_002"
+        "SUB_001_002",
+        "SUB_001_003",
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_003_002",
+        "SUB_003_003",
+        "SUB_004_002",
+        "SUB_004_003",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_001",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_008_003",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_001",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_012_001",
+        "SUB_012_002",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_013_003",
+        "SUB_014_001",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_015_001",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_001",
+        "SUB_016_002",
+        "SUB_016_003",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_018_003",
+        "SUB_019_001",
+        "SUB_019_002",
+        "SUB_019_003",
+        "SUB_020_001",
+        "SUB_020_002",
+        "SUB_020_003"
       ],
-      "total_tasks": 13,
+      "total_tasks": 352,
       "rank": 3
     },
-    "李晨曦": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 7,
-      "rank": 3
-    },
-    "曾宇凡": {
+    "汤皓": {
       "projects_participated": [
         "SUB_001_001",
-        "SUB_001_002"
+        "SUB_001_002",
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_004_003",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_001",
+        "SUB_008_003",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_002",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_012_003",
+        "SUB_013_002",
+        "SUB_013_003",
+        "SUB_014_001",
+        "SUB_014_003",
+        "SUB_015_001",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_002",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_003",
+        "SUB_019_002",
+        "SUB_020_002",
+        "SUB_020_003"
       ],
-      "total_tasks": 13,
+      "total_tasks": 193,
+      "rank": 3
+    },
+    "郭晓东": {
+      "projects_participated": [
+        "SUB_001_001",
+        "SUB_001_002",
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_003_002",
+        "SUB_003_003",
+        "SUB_004_002",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_001",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_008_002",
+        "SUB_008_003",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_001",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_011_002",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_014_001",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_019_002",
+        "SUB_020_001",
+        "SUB_020_002",
+        "SUB_020_003"
+      ],
+      "total_tasks": 280,
       "rank": 3
     },
     "邱思源": {
       "projects_participated": [
         "SUB_001_001",
-        "SUB_001_002"
+        "SUB_001_002",
+        "SUB_001_003",
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_003_002",
+        "SUB_003_003",
+        "SUB_004_001",
+        "SUB_004_002",
+        "SUB_004_003",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_001",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_007_003",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_008_003",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_001",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_012_001",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_014_001",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_015_001",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_001",
+        "SUB_016_002",
+        "SUB_016_003",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_018_003",
+        "SUB_019_001",
+        "SUB_019_002",
+        "SUB_019_003",
+        "SUB_020_001",
+        "SUB_020_002",
+        "SUB_020_003"
       ],
-      "total_tasks": 6,
+      "total_tasks": 357,
+      "rank": 3
+    },
+    "杜新宇": {
+      "projects_participated": [
+        "SUB_001_001",
+        "SUB_014_001",
+        "SUB_014_002"
+      ],
+      "total_tasks": 17,
+      "rank": 3
+    },
+    "梁雨薇": {
+      "projects_participated": [
+        "SUB_001_001",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_018_003"
+      ],
+      "total_tasks": 23,
       "rank": 3
     },
     "韩成龙": {
       "projects_participated": [
-        "SUB_001_001"
+        "SUB_001_001",
+        "SUB_001_002",
+        "SUB_001_003",
+        "SUB_002_001",
+        "SUB_002_003",
+        "SUB_003_002",
+        "SUB_003_003",
+        "SUB_004_002",
+        "SUB_004_003",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_003",
+        "SUB_008_001",
+        "SUB_008_003",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_002",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_012_001",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_015_001",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_019_003",
+        "SUB_020_002",
+        "SUB_020_003"
       ],
-      "total_tasks": 7,
+      "total_tasks": 246,
       "rank": 3
     },
-    "谭志勇": {
-      "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 0,
-      "rank": 3
-    },
-    "顾明": {
+    "石彬": {
       "projects_participated": [
         "SUB_001_001",
-        "SUB_001_002"
+        "SUB_009_001",
+        "SUB_012_001",
+        "SUB_015_001",
+        "SUB_015_003"
       ],
-      "total_tasks": 13,
+      "total_tasks": 31,
       "rank": 3
     },
     "程亮": {
       "projects_participated": [
         "SUB_001_001",
-        "SUB_001_002"
+        "SUB_001_002",
+        "SUB_001_003",
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_003_002",
+        "SUB_003_003",
+        "SUB_004_001",
+        "SUB_004_002",
+        "SUB_004_003",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_001",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_007_003",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_008_003",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_001",
+        "SUB_010_003",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_012_001",
+        "SUB_012_002",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_013_003",
+        "SUB_014_001",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_015_001",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_001",
+        "SUB_016_002",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_018_003",
+        "SUB_019_001",
+        "SUB_019_002",
+        "SUB_019_003",
+        "SUB_020_001",
+        "SUB_020_002",
+        "SUB_020_003"
       ],
-      "total_tasks": 13,
+      "total_tasks": 388,
       "rank": 3
     },
     "毛悦": {
       "projects_participated": [
-        "SUB_001_001"
-      ],
-      "total_tasks": 7,
-      "rank": 3
-    },
-    "万菲": {
-      "projects_participated": [
         "SUB_001_001",
-        "SUB_001_002"
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_003_003",
+        "SUB_004_002",
+        "SUB_005_003",
+        "SUB_006_001",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_007_003",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_008_003",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_001",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_011_003",
+        "SUB_012_001",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_014_001",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_015_001",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_002",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_019_001",
+        "SUB_019_003",
+        "SUB_020_002",
+        "SUB_020_003"
       ],
-      "total_tasks": 13,
+      "total_tasks": 239,
       "rank": 3
     },
     "齐波": {
       "projects_participated": [
         "SUB_001_001",
-        "SUB_001_002"
+        "SUB_001_002",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_003_002",
+        "SUB_004_001",
+        "SUB_004_002",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_001",
+        "SUB_007_002",
+        "SUB_008_002",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_010_001",
+        "SUB_012_001",
+        "SUB_012_003",
+        "SUB_013_003",
+        "SUB_014_001",
+        "SUB_014_003",
+        "SUB_015_003",
+        "SUB_016_001",
+        "SUB_016_002",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_003",
+        "SUB_018_002",
+        "SUB_018_003",
+        "SUB_019_002",
+        "SUB_019_003"
       ],
-      "total_tasks": 13,
+      "total_tasks": 186,
+      "rank": 3
+    },
+    "沈梅": {
+      "projects_participated": [
+        "SUB_001_001",
+        "SUB_001_002",
+        "SUB_001_003",
+        "SUB_002_001",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_003_002",
+        "SUB_003_003",
+        "SUB_004_001",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_001",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_007_003",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_001",
+        "SUB_011_001",
+        "SUB_011_003",
+        "SUB_012_001",
+        "SUB_012_002",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_014_001",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_015_001",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_001",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_018_003",
+        "SUB_019_001",
+        "SUB_019_002",
+        "SUB_019_003",
+        "SUB_020_001",
+        "SUB_020_003"
+      ],
+      "total_tasks": 294,
+      "rank": 3
+    },
+    "杨志勇": {
+      "projects_participated": [
+        "SUB_001_001",
+        "SUB_001_003",
+        "SUB_002_003",
+        "SUB_004_001",
+        "SUB_004_002",
+        "SUB_004_003",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_007_001",
+        "SUB_007_003",
+        "SUB_008_001",
+        "SUB_008_003",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_003",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_014_002",
+        "SUB_015_001",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_002",
+        "SUB_017_001",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_018_003",
+        "SUB_019_001",
+        "SUB_019_003",
+        "SUB_020_001",
+        "SUB_020_002"
+      ],
+      "total_tasks": 242,
       "rank": 3
     },
     "韩雪": {
       "projects_participated": [
         "SUB_001_001",
-        "SUB_001_002"
+        "SUB_001_002",
+        "SUB_001_003",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_004_001",
+        "SUB_004_002",
+        "SUB_004_003",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_001",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_007_003",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_008_003",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_012_001",
+        "SUB_012_002",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_014_001",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_015_001",
+        "SUB_015_002",
+        "SUB_016_002",
+        "SUB_016_003",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_018_003",
+        "SUB_019_001",
+        "SUB_019_002",
+        "SUB_020_001",
+        "SUB_020_002",
+        "SUB_020_003"
       ],
-      "total_tasks": 13,
+      "total_tasks": 291,
       "rank": 3
     },
-    "邹明辉": {
+    "魏婧": {
       "projects_participated": [
         "SUB_001_001"
       ],
-      "total_tasks": 7,
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "吴浩": {
+      "projects_participated": [
+        "SUB_001_001",
+        "SUB_001_002",
+        "SUB_001_003",
+        "SUB_002_002",
+        "SUB_003_002",
+        "SUB_003_003",
+        "SUB_004_001",
+        "SUB_004_002",
+        "SUB_004_003",
+        "SUB_006_001",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_007_003",
+        "SUB_008_001",
+        "SUB_008_003",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_011_001",
+        "SUB_011_003",
+        "SUB_012_001",
+        "SUB_012_002",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_014_001",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_015_001",
+        "SUB_015_002",
+        "SUB_016_001",
+        "SUB_016_003",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_018_003",
+        "SUB_019_001",
+        "SUB_019_002",
+        "SUB_019_003",
+        "SUB_020_001",
+        "SUB_020_002"
+      ],
+      "total_tasks": 270,
+      "rank": 3
+    },
+    "顾明": {
+      "projects_participated": [
+        "SUB_001_002",
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_003_001",
+        "SUB_003_002",
+        "SUB_004_001",
+        "SUB_004_003",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_007_003",
+        "SUB_008_002",
+        "SUB_008_003",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_001",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_012_001",
+        "SUB_012_002",
+        "SUB_012_003",
+        "SUB_013_002",
+        "SUB_014_001",
+        "SUB_014_003",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_019_001",
+        "SUB_019_002",
+        "SUB_019_003",
+        "SUB_020_002",
+        "SUB_020_003"
+      ],
+      "total_tasks": 252,
+      "rank": 3
+    },
+    "叶婷": {
+      "projects_participated": [
+        "SUB_001_002",
+        "SUB_002_002",
+        "SUB_005_001",
+        "SUB_010_003",
+        "SUB_014_001",
+        "SUB_016_002",
+        "SUB_016_003"
+      ],
+      "total_tasks": 40,
+      "rank": 3
+    },
+    "万菲": {
+      "projects_participated": [
+        "SUB_001_002",
+        "SUB_001_003",
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_003_002",
+        "SUB_003_003",
+        "SUB_004_001",
+        "SUB_004_002",
+        "SUB_004_003",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_007_002",
+        "SUB_007_003",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_008_003",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_010_001",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_012_002",
+        "SUB_012_003",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_013_003",
+        "SUB_014_001",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_002",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_018_003",
+        "SUB_019_001",
+        "SUB_019_002",
+        "SUB_019_003",
+        "SUB_020_001",
+        "SUB_020_002",
+        "SUB_020_003"
+      ],
+      "total_tasks": 325,
+      "rank": 3
+    },
+    "吕佳": {
+      "projects_participated": [
+        "SUB_001_002",
+        "SUB_003_001",
+        "SUB_003_002",
+        "SUB_004_001",
+        "SUB_004_003",
+        "SUB_006_002",
+        "SUB_010_001",
+        "SUB_015_002",
+        "SUB_020_001"
+      ],
+      "total_tasks": 55,
+      "rank": 3
+    },
+    "冯俊": {
+      "projects_participated": [
+        "SUB_001_002",
+        "SUB_002_001",
+        "SUB_002_003",
+        "SUB_006_002",
+        "SUB_008_002",
+        "SUB_009_003",
+        "SUB_010_001",
+        "SUB_015_002",
+        "SUB_016_002",
+        "SUB_017_001",
+        "SUB_020_002"
+      ],
+      "total_tasks": 74,
+      "rank": 3
+    },
+    "黎明": {
+      "projects_participated": [
+        "SUB_001_002",
+        "SUB_003_002",
+        "SUB_015_003"
+      ],
+      "total_tasks": 21,
+      "rank": 3
+    },
+    "丘诚": {
+      "projects_participated": [
+        "SUB_001_003",
+        "SUB_003_002",
+        "SUB_004_001",
+        "SUB_004_003",
+        "SUB_006_001",
+        "SUB_006_002",
+        "SUB_007_003",
+        "SUB_008_002",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_013_003",
+        "SUB_015_001",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_003",
+        "SUB_018_003",
+        "SUB_019_002",
+        "SUB_019_003"
+      ],
+      "total_tasks": 102,
+      "rank": 3
+    },
+    "罗强": {
+      "projects_participated": [
+        "SUB_001_003",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_002",
+        "SUB_006_003",
+        "SUB_008_002",
+        "SUB_008_003",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_011_003",
+        "SUB_014_003",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_002",
+        "SUB_018_001",
+        "SUB_018_002"
+      ],
+      "total_tasks": 91,
+      "rank": 3
+    },
+    "孙文杰": {
+      "projects_participated": [
+        "SUB_001_003",
+        "SUB_004_001",
+        "SUB_005_003",
+        "SUB_006_002",
+        "SUB_007_002",
+        "SUB_008_001",
+        "SUB_009_001",
+        "SUB_009_003",
+        "SUB_010_003",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_011_003",
+        "SUB_012_002",
+        "SUB_012_003",
+        "SUB_013_003",
+        "SUB_014_003",
+        "SUB_015_001",
+        "SUB_016_002",
+        "SUB_017_003",
+        "SUB_019_001",
+        "SUB_019_003",
+        "SUB_020_001",
+        "SUB_020_002"
+      ],
+      "total_tasks": 145,
+      "rank": 3
+    },
+    "唐旭": {
+      "projects_participated": [
+        "SUB_001_003",
+        "SUB_004_001",
+        "SUB_004_003",
+        "SUB_007_003",
+        "SUB_008_003",
+        "SUB_009_001",
+        "SUB_010_001",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_012_002",
+        "SUB_013_003",
+        "SUB_015_002",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_003",
+        "SUB_018_003",
+        "SUB_019_001",
+        "SUB_019_002",
+        "SUB_020_001",
+        "SUB_020_002"
+      ],
+      "total_tasks": 115,
+      "rank": 3
+    },
+    "孔娜": {
+      "projects_participated": [
+        "SUB_001_003",
+        "SUB_002_003",
+        "SUB_003_002",
+        "SUB_004_002",
+        "SUB_004_003",
+        "SUB_008_001",
+        "SUB_008_003",
+        "SUB_009_001",
+        "SUB_012_003",
+        "SUB_016_001"
+      ],
+      "total_tasks": 61,
       "rank": 3
     },
     "梁宇轩": {
       "projects_participated": [
-        "SUB_001_001",
-        "SUB_001_002"
+        "SUB_001_003",
+        "SUB_002_003",
+        "SUB_003_002",
+        "SUB_003_003",
+        "SUB_004_001",
+        "SUB_004_002",
+        "SUB_005_002",
+        "SUB_006_001",
+        "SUB_008_002",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_012_001",
+        "SUB_013_003",
+        "SUB_014_001",
+        "SUB_015_001",
+        "SUB_015_002",
+        "SUB_015_003",
+        "SUB_016_001",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_019_001",
+        "SUB_019_002"
       ],
-      "total_tasks": 13,
+      "total_tasks": 145,
+      "rank": 3
+    },
+    "罗佳": {
+      "projects_participated": [
+        "SUB_001_003",
+        "SUB_006_001",
+        "SUB_009_002",
+        "SUB_013_002",
+        "SUB_015_003",
+        "SUB_016_001",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_003",
+        "SUB_019_001",
+        "SUB_019_003"
+      ],
+      "total_tasks": 57,
+      "rank": 3
+    },
+    "许芳": {
+      "projects_participated": [
+        "SUB_001_003",
+        "SUB_003_002",
+        "SUB_006_001",
+        "SUB_009_002",
+        "SUB_012_001",
+        "SUB_012_002",
+        "SUB_013_003",
+        "SUB_016_001",
+        "SUB_019_001",
+        "SUB_019_003"
+      ],
+      "total_tasks": 58,
       "rank": 3
     },
     "郝慧敏": {
       "projects_participated": [
-        "SUB_001_002"
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_004_002",
+        "SUB_004_003",
+        "SUB_005_001",
+        "SUB_006_002",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_012_003",
+        "SUB_014_002",
+        "SUB_014_003",
+        "SUB_016_002",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_002",
+        "SUB_020_001",
+        "SUB_020_002"
       ],
-      "total_tasks": 6,
+      "total_tasks": 134,
       "rank": 3
     },
-    "汤皓": {
+    "谭志勇": {
       "projects_participated": [
-        "SUB_001_002"
+        "SUB_002_001",
+        "SUB_002_002",
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_003_002",
+        "SUB_005_001",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_001",
+        "SUB_006_003",
+        "SUB_007_001",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_010_001",
+        "SUB_010_003",
+        "SUB_012_001",
+        "SUB_015_003",
+        "SUB_016_001",
+        "SUB_016_003",
+        "SUB_017_001",
+        "SUB_017_002",
+        "SUB_017_003",
+        "SUB_018_003",
+        "SUB_020_001",
+        "SUB_020_002"
       ],
-      "total_tasks": 6,
+      "total_tasks": 179,
       "rank": 3
     },
-    "郭晓东": {
+    "颜丽": {
       "projects_participated": [
-        "SUB_001_002"
+        "SUB_002_001",
+        "SUB_005_003",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_011_003",
+        "SUB_016_003",
+        "SUB_018_001",
+        "SUB_018_002"
       ],
-      "total_tasks": 6,
+      "total_tasks": 48,
+      "rank": 3
+    },
+    "高祥": {
+      "projects_participated": [
+        "SUB_002_001",
+        "SUB_006_002",
+        "SUB_007_002",
+        "SUB_008_002",
+        "SUB_015_003",
+        "SUB_017_001"
+      ],
+      "total_tasks": 37,
+      "rank": 3
+    },
+    "吴晓峰": {
+      "projects_participated": [
+        "SUB_002_002",
+        "SUB_008_003",
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_012_003",
+        "SUB_014_001"
+      ],
+      "total_tasks": 32,
+      "rank": 2
+    },
+    "曾宇凡": {
+      "projects_participated": [
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_004_003",
+        "SUB_007_003",
+        "SUB_010_001",
+        "SUB_013_002",
+        "SUB_014_001",
+        "SUB_017_001",
+        "SUB_017_003",
+        "SUB_020_001"
+      ],
+      "total_tasks": 57,
+      "rank": 3
+    },
+    "邹晓月": {
+      "projects_participated": [
+        "SUB_002_003",
+        "SUB_003_001",
+        "SUB_003_003",
+        "SUB_005_002",
+        "SUB_005_003",
+        "SUB_006_001",
+        "SUB_010_001",
+        "SUB_017_001",
+        "SUB_019_003",
+        "SUB_020_002"
+      ],
+      "total_tasks": 59,
+      "rank": 3
+    },
+    "邹明辉": {
+      "projects_participated": [
+        "SUB_002_003",
+        "SUB_010_003",
+        "SUB_011_003"
+      ],
+      "total_tasks": 23,
+      "rank": 3
+    },
+    "周丽珍": {
+      "projects_participated": [
+        "SUB_003_001",
+        "SUB_004_002",
+        "SUB_010_002",
+        "SUB_016_001",
+        "SUB_016_002",
+        "SUB_020_002"
+      ],
+      "total_tasks": 35,
+      "rank": 2
+    },
+    "李晨曦": {
+      "projects_participated": [
+        "SUB_003_001",
+        "SUB_010_002",
+        "SUB_016_002"
+      ],
+      "total_tasks": 16,
       "rank": 3
     },
     "钱敏": {
       "projects_participated": [
-        "SUB_001_002"
+        "SUB_003_001",
+        "SUB_004_002",
+        "SUB_020_002"
       ],
-      "total_tasks": 6,
+      "total_tasks": 15,
       "rank": 3
     },
-    "杨志勇": {
+    "姚丽": {
       "projects_participated": [
-        "SUB_001_002"
+        "SUB_003_002",
+        "SUB_006_003",
+        "SUB_017_001"
       ],
-      "total_tasks": 6,
+      "total_tasks": 18,
       "rank": 3
     },
-    "白英豪": {
+    "蔡英俊": {
       "projects_participated": [
-        "SUB_001_002"
+        "SUB_003_003",
+        "SUB_004_003",
+        "SUB_008_002",
+        "SUB_010_002",
+        "SUB_012_003"
+      ],
+      "total_tasks": 26,
+      "rank": 3
+    },
+    "贾明辉": {
+      "projects_participated": [
+        "SUB_003_003",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_011_002",
+        "SUB_014_001",
+        "SUB_014_003",
+        "SUB_015_002",
+        "SUB_017_002"
+      ],
+      "total_tasks": 41,
+      "rank": 3
+    },
+    "何美琪": {
+      "projects_participated": [
+        "SUB_003_003",
+        "SUB_004_003",
+        "SUB_005_001",
+        "SUB_005_003",
+        "SUB_006_002",
+        "SUB_017_001",
+        "SUB_019_001"
+      ],
+      "total_tasks": 39,
+      "rank": 3
+    },
+    "章远": {
+      "projects_participated": [
+        "SUB_003_003",
+        "SUB_006_002",
+        "SUB_006_003"
+      ],
+      "total_tasks": 15,
+      "rank": 3
+    },
+    "赵宇": {
+      "projects_participated": [
+        "SUB_003_003",
+        "SUB_006_001",
+        "SUB_007_002",
+        "SUB_011_001",
+        "SUB_012_002",
+        "SUB_013_001",
+        "SUB_013_002",
+        "SUB_013_003",
+        "SUB_019_003"
+      ],
+      "total_tasks": 49,
+      "rank": 3
+    },
+    "袁小宁": {
+      "projects_participated": [
+        "SUB_004_001"
+      ],
+      "total_tasks": 7,
+      "rank": 3
+    },
+    "雷莹轩": {
+      "projects_participated": [
+        "SUB_004_001",
+        "SUB_007_003"
+      ],
+      "total_tasks": 13,
+      "rank": 3
+    },
+    "罗军": {
+      "projects_participated": [
+        "SUB_004_001",
+        "SUB_006_001",
+        "SUB_007_002",
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_012_002",
+        "SUB_013_002",
+        "SUB_013_003",
+        "SUB_015_001",
+        "SUB_016_001",
+        "SUB_017_002",
+        "SUB_019_002",
+        "SUB_019_003"
+      ],
+      "total_tasks": 76,
+      "rank": 3
+    },
+    "魏虹": {
+      "projects_participated": [
+        "SUB_004_002",
+        "SUB_020_002",
+        "SUB_020_003"
+      ],
+      "total_tasks": 20,
+      "rank": 3
+    },
+    "邓文": {
+      "projects_participated": [
+        "SUB_004_003",
+        "SUB_008_001",
+        "SUB_008_002",
+        "SUB_010_001",
+        "SUB_010_003",
+        "SUB_011_002",
+        "SUB_014_003"
+      ],
+      "total_tasks": 39,
+      "rank": 3
+    },
+    "戴璐": {
+      "projects_participated": [
+        "SUB_005_001"
       ],
       "total_tasks": 6,
       "rank": 3
     },
     "梁健": {
       "projects_participated": [
-        "SUB_001_002"
+        "SUB_005_001",
+        "SUB_005_003",
+        "SUB_007_002",
+        "SUB_011_001",
+        "SUB_012_002",
+        "SUB_013_003",
+        "SUB_015_001",
+        "SUB_019_003"
+      ],
+      "total_tasks": 50,
+      "rank": 3
+    },
+    "陆诗涵": {
+      "projects_participated": [
+        "SUB_006_001",
+        "SUB_018_001",
+        "SUB_020_003"
+      ],
+      "total_tasks": 22,
+      "rank": 3
+    },
+    "周欣": {
+      "projects_participated": [
+        "SUB_006_001",
+        "SUB_015_002"
+      ],
+      "total_tasks": 12,
+      "rank": 3
+    },
+    "赵子昂": {
+      "projects_participated": [
+        "SUB_006_002",
+        "SUB_014_002",
+        "SUB_015_003"
+      ],
+      "total_tasks": 18,
+      "rank": 2
+    },
+    "季佳": {
+      "projects_participated": [
+        "SUB_007_001",
+        "SUB_008_003",
+        "SUB_009_003",
+        "SUB_011_001",
+        "SUB_011_002",
+        "SUB_012_003",
+        "SUB_018_001",
+        "SUB_020_002"
+      ],
+      "total_tasks": 44,
+      "rank": 3
+    },
+    "白英豪": {
+      "projects_participated": [
+        "SUB_007_002",
+        "SUB_007_003",
+        "SUB_009_003",
+        "SUB_012_002",
+        "SUB_013_002",
+        "SUB_013_003",
+        "SUB_019_001"
+      ],
+      "total_tasks": 35,
+      "rank": 3
+    },
+    "曲帆": {
+      "projects_participated": [
+        "SUB_007_003"
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "肖锋": {
+      "projects_participated": [
+        "SUB_007_003"
       ],
       "total_tasks": 6,
       "rank": 3
     },
-    "黎明": {
+    "程麟": {
       "projects_participated": [
-        "SUB_001_002"
+        "SUB_007_003",
+        "SUB_012_002",
+        "SUB_013_002",
+        "SUB_013_003"
+      ],
+      "total_tasks": 17,
+      "rank": 3
+    },
+    "杜华": {
+      "projects_participated": [
+        "SUB_008_003"
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "陶靖": {
+      "projects_participated": [
+        "SUB_008_003"
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "沈乐": {
+      "projects_participated": [
+        "SUB_008_003"
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "何阳": {
+      "projects_participated": [
+        "SUB_008_003"
       ],
       "total_tasks": 6,
       "rank": 3
     },
-    "孔娜": {
+    "邹磊": {
       "projects_participated": [
-        "SUB_001_002"
+        "SUB_009_001",
+        "SUB_009_002",
+        "SUB_009_003",
+        "SUB_013_003",
+        "SUB_019_001"
+      ],
+      "total_tasks": 27,
+      "rank": 3
+    },
+    "尹德华": {
+      "projects_participated": [
+        "SUB_010_001",
+        "SUB_017_003"
+      ],
+      "total_tasks": 13,
+      "rank": 3
+    },
+    "潘慧杰": {
+      "projects_participated": [
+        "SUB_010_002"
       ],
       "total_tasks": 6,
       "rank": 3
     },
-    "吴浩": {
+    "丁聪": {
       "projects_participated": [
-        "SUB_001_002"
+        "SUB_010_002",
+        "SUB_010_003",
+        "SUB_018_002"
+      ],
+      "total_tasks": 16,
+      "rank": 3
+    },
+    "鲁杰": {
+      "projects_participated": [
+        "SUB_010_002",
+        "SUB_014_003"
+      ],
+      "total_tasks": 11,
+      "rank": 3
+    },
+    "彭月": {
+      "projects_participated": [
+        "SUB_010_003",
+        "SUB_014_001"
+      ],
+      "total_tasks": 10,
+      "rank": 3
+    },
+    "钱宁": {
+      "projects_participated": [
+        "SUB_010_003"
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "纪远": {
+      "projects_participated": [
+        "SUB_010_003"
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "方雅": {
+      "projects_participated": [
+        "SUB_012_001",
+        "SUB_015_001"
+      ],
+      "total_tasks": 14,
+      "rank": 3
+    },
+    "尹洁": {
+      "projects_participated": [
+        "SUB_012_001"
+      ],
+      "total_tasks": 9,
+      "rank": 3
+    },
+    "郝莉": {
+      "projects_participated": [
+        "SUB_012_001"
+      ],
+      "total_tasks": 9,
+      "rank": 3
+    },
+    "胡旭": {
+      "projects_participated": [
+        "SUB_012_002",
+        "SUB_013_002",
+        "SUB_016_001",
+        "SUB_017_002"
+      ],
+      "total_tasks": 21,
+      "rank": 3
+    },
+    "王晨": {
+      "projects_participated": [
+        "SUB_012_002"
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "曹敏杰": {
+      "projects_participated": [
+        "SUB_012_003",
+        "SUB_018_002"
+      ],
+      "total_tasks": 9,
+      "rank": 3
+    },
+    "谢磊": {
+      "projects_participated": [
+        "SUB_013_001",
+        "SUB_016_001",
+        "SUB_017_002"
+      ],
+      "total_tasks": 23,
+      "rank": 3
+    },
+    "徐思远": {
+      "projects_participated": [
+        "SUB_013_003"
       ],
       "total_tasks": 6,
+      "rank": 3
+    },
+    "苏颖": {
+      "projects_participated": [
+        "SUB_014_001",
+        "SUB_015_002",
+        "SUB_018_003"
+      ],
+      "total_tasks": 17,
+      "rank": 3
+    },
+    "林瑞": {
+      "projects_participated": [
+        "SUB_014_002"
+      ],
+      "total_tasks": 7,
+      "rank": 3
+    },
+    "郭洋": {
+      "projects_participated": [
+        "SUB_016_001"
+      ],
+      "total_tasks": 9,
+      "rank": 3
+    },
+    "石云": {
+      "projects_participated": [
+        "SUB_016_001"
+      ],
+      "total_tasks": 9,
+      "rank": 3
+    },
+    "何坤": {
+      "projects_participated": [
+        "SUB_016_002"
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "黎倩": {
+      "projects_participated": [
+        "SUB_016_003"
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "孙嘉豪": {
+      "projects_participated": [
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_018_003",
+        "SUB_020_003"
+      ],
+      "total_tasks": 27,
+      "rank": 2
+    },
+    "方紫涵": {
+      "projects_participated": [
+        "SUB_018_001"
+      ],
+      "total_tasks": 7,
+      "rank": 3
+    },
+    "程欣": {
+      "projects_participated": [
+        "SUB_018_001",
+        "SUB_020_003"
+      ],
+      "total_tasks": 16,
+      "rank": 3
+    },
+    "侯娟": {
+      "projects_participated": [
+        "SUB_018_001",
+        "SUB_018_002",
+        "SUB_018_003"
+      ],
+      "total_tasks": 18,
+      "rank": 3
+    },
+    "钟航": {
+      "projects_participated": [
+        "SUB_018_001"
+      ],
+      "total_tasks": 8,
+      "rank": 3
+    },
+    "贾薇": {
+      "projects_participated": [
+        "SUB_018_001"
+      ],
+      "total_tasks": 7,
+      "rank": 3
+    },
+    "蒋志浩": {
+      "projects_participated": [
+        "SUB_019_003"
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "何雅丽": {
+      "projects_participated": [
+        "SUB_020_001",
+        "SUB_020_002"
+      ],
+      "total_tasks": 14,
+      "rank": 3
+    },
+    "沈伟": {
+      "projects_participated": [
+        "SUB_020_002"
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "董华": {
+      "projects_participated": [
+        "SUB_020_002"
+      ],
+      "total_tasks": 5,
+      "rank": 3
+    },
+    "高敏": {
+      "projects_participated": [
+        "SUB_020_003"
+      ],
+      "total_tasks": 9,
       "rank": 3
     }
   },
   "skill_usage_frequency": {
-    "项目管理": 12,
-    "Docker": 10,
-    "Python": 9,
-    "Excel高级功能": 8,
-    "Figma": 7,
-    "团队管理": 6,
-    "数据分析": 6,
-    "Java": 6,
-    "Spring Boot": 6,
-    "MySQL": 6,
-    "流程优化": 5,
-    "Git": 5,
-    "JavaScript": 5,
-    "React": 5,
-    "Pandas": 5,
-    "Kubernetes": 4,
-    "Axure RP": 4,
-    "需求分析": 4,
-    "Selenium": 4,
-    "pytest": 4,
-    "JMeter": 4,
-    "Linux": 4,
-    "TensorFlow": 4,
-    "scikit-learn": 4,
-    "用户访谈": 3,
-    "可用性测试": 3,
-    "CSS3": 3,
-    "商业模式画布": 2,
-    "战略分析": 2,
-    "团队建设": 2
+    "项目管理": 365,
+    "Docker": 310,
+    "Python": 251,
+    "Figma": 220,
+    "Java": 190,
+    "Spring Boot": 190,
+    "MySQL": 188,
+    "团队管理": 171,
+    "Git": 153,
+    "流程优化": 142,
+    "Kubernetes": 141,
+    "Selenium": 133,
+    "pytest": 128,
+    "JavaScript": 126,
+    "React": 126,
+    "Confluence": 126,
+    "数据分析": 125,
+    "需求分析": 124,
+    "Excel高级功能": 118,
+    "Linux": 118,
+    "Pandas": 117,
+    "用户访谈": 115,
+    "JMeter": 115,
+    "可用性测试": 112,
+    "Axure RP": 103,
+    "TensorFlow": 77,
+    "JUnit": 75,
+    "CSS3": 74,
+    "绩效管理": 72,
+    "Photoshop": 68
   }
 }

@@ -1,0 +1,3705 @@
+{
+  "sub_topic_info": {
+    "sub_topic_id": "SUB_002_003",
+    "parent_topic_id": "MAJOR_002",
+    "topic": "智慧仓配履约系统",
+    "description": "开发后端仓储、库存与订单履约一体化解决方案（OMS/WMS），支撑全渠道订单的高效处理。核心模块涵盖：多仓（含门店）库存统一管理与同步、订单履约中心（智能分单、路由）、仓储作业管理（拣货、打包、发货流程）、以及与第三方物流系统的对接。其用户为仓储、运营及供应链管理人员，目标是保障库存准确性与订单履约时效。",
+    "generated_at": "2025-11-03T01:55:56.335172"
+  },
+  "team_composition": {
+    "total_members": 26,
+    "rank_distribution": {
+      "rank_1": 1,
+      "rank_2": 3,
+      "rank_3": 22
+    }
+  },
+  "members": [
+    {
+      "user_name": "张伟华",
+      "user_id": "0368rqsm",
+      "team": "高层管理",
+      "rank": 1,
+      "title": "首席执行官",
+      "hard_skills": [
+        {
+          "skill": "商业模式画布",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "战略分析",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "团队建设",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "绩效管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "沟通能力",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Excel高级功能",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为首席执行官（Rank 1），其具备的商业模式画布和战略分析等strong级技能，对智慧仓配这种重资产、重运营的系统项目至关重要，能从公司最高层面提供战略指导和资源保障。其Formal/Direct的沟通风格有助于明确项目目标和关键决策。",
+      "original_communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "主持项目启动会",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "沟通能力"
+          ],
+          "subtask_id": 1,
+          "deadline": "2025-01-08"
+        },
+        {
+          "subtask": "定义项目成功衡量指标(KPIs)",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "KPI",
+            "战略分析",
+            "数据分析"
+          ],
+          "subtask_id": 2,
+          "deadline": "2025-01-22"
+        },
+        {
+          "subtask": "编写商业需求文档 (BRD)",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "商业模式画布",
+            "战略分析"
+          ],
+          "subtask_id": 3,
+          "deadline": "2025-02-28"
+        },
+        {
+          "subtask": "建立项目沟通协作机制",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "团队建设"
+          ],
+          "subtask_id": 4,
+          "deadline": "2025-01-15"
+        },
+        {
+          "subtask": "确定项目整体预算",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "财务分析"
+          ],
+          "subtask_id": 5,
+          "deadline": "2025-02-26"
+        },
+        {
+          "subtask": "确认系统达到上线标准",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "项目管理",
+            "质量保证"
+          ],
+          "subtask_id": 6,
+          "deadline": "2025-11-26"
+        },
+        {
+          "subtask": "组建上线后应急响应团队",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "团队管理",
+            "项目管理"
+          ],
+          "subtask_id": 7,
+          "deadline": "2025-12-23"
+        },
+        {
+          "subtask": "发布项目上线成功通知",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "沟通能力",
+            "项目管理"
+          ],
+          "subtask_id": 8,
+          "deadline": "2025-12-26"
+        }
+      ]
+    },
+    {
+      "user_name": "李明志",
+      "user_id": "izllu93a",
+      "team": "技术研发部",
+      "rank": 2,
+      "title": "技术总监",
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Docker",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Azure",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Kubernetes",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "团队管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为技术总监（Rank 2），其在Python、Docker方面的strong级技能及Kubernetes经验，是构建现代化、可扩展的OMS/WMS微服务架构的核心。他能领导技术团队攻克技术难题，并确保与第三方物流系统对接的顺利进行。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "评估项目技术可行性",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "Python",
+            "Java",
+            "系统架构"
+          ],
+          "subtask_id": 9,
+          "deadline": "2025-02-17"
+        },
+        {
+          "subtask": "最终确定技术栈选型",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Java",
+            "Python",
+            "React",
+            "技术选型"
+          ],
+          "subtask_id": 10,
+          "deadline": "2025-03-12"
+        },
+        {
+          "subtask": "设计系统整体分层架构",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "系统架构",
+            "架构设计"
+          ],
+          "subtask_id": 11,
+          "deadline": "2025-03-17"
+        },
+        {
+          "subtask": "设计微服务拆分边界",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "系统架构",
+            "微服务"
+          ],
+          "subtask_id": 12,
+          "deadline": "2025-03-21"
+        },
+        {
+          "subtask": "设计服务间通信机制 (RPC/REST)",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "系统架构",
+            "微服务",
+            "API设计"
+          ],
+          "subtask_id": 13,
+          "deadline": "2025-03-25"
+        },
+        {
+          "subtask": "设计消息队列架构 (Kafka/RabbitMQ)",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "系统架构",
+            "微服务"
+          ],
+          "subtask_id": 14,
+          "deadline": "2025-03-26"
+        },
+        {
+          "subtask": "设计库存扣减与回滚逻辑",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "系统架构",
+            "数据库设计"
+          ],
+          "subtask_id": 15,
+          "deadline": "2025-04-15"
+        },
+        {
+          "subtask": "最终代码冻结与版本标记",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "Git",
+            "版本控制"
+          ],
+          "subtask_id": 16,
+          "deadline": "2025-11-27"
+        }
+      ]
+    },
+    {
+      "user_name": "陈慧兰",
+      "user_id": "3lr5dbn2",
+      "team": "产品设计部",
+      "rank": 2,
+      "title": "产品设计总监",
+      "hard_skills": [
+        {
+          "skill": "UX设计",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Figma",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "用户访谈",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "可用性测试",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "团队管理",
+          "proficiency": "medium"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为产品设计总监（Rank 2），她的strong级UX设计能力对于提升系统易用性至关重要，尤其是面向仓储、运营人员的作业界面。她将领导产品团队确保系统交互逻辑清晰、操作高效，从而降低员工培训成本，提高作业准确性。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计用户画像-仓储操作员",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "用户访谈",
+            "UX设计"
+          ],
+          "subtask_id": 17,
+          "deadline": "2025-02-25"
+        },
+        {
+          "subtask": "设计用户画像-运营管理员",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "用户访谈",
+            "UX设计"
+          ],
+          "subtask_id": 18,
+          "deadline": "2025-02-25"
+        },
+        {
+          "subtask": "设计系统操作主仪表盘UX流程",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "UX设计",
+            "用户访谈"
+          ],
+          "subtask_id": 19,
+          "deadline": "2025-04-16"
+        },
+        {
+          "subtask": "设计系统整体视觉风格(VI)",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "UX设计",
+            "UI设计"
+          ],
+          "subtask_id": 20,
+          "deadline": "2025-04-17"
+        },
+        {
+          "subtask": "创建通用UI组件库 (Design System)",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Figma",
+            "UI设计",
+            "React"
+          ],
+          "subtask_id": 21,
+          "deadline": "2025-05-07"
+        },
+        {
+          "subtask": "设计主仪表盘高保真UI",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Figma",
+            "UI设计"
+          ],
+          "subtask_id": 22,
+          "deadline": "2025-05-16"
+        },
+        {
+          "subtask": "设计库存列表与详情页高保真UI",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Figma",
+            "UI设计"
+          ],
+          "subtask_id": 23,
+          "deadline": "2025-05-22"
+        },
+        {
+          "subtask": "组织设计方案评审会",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "UX设计",
+            "项目管理"
+          ],
+          "subtask_id": 24,
+          "deadline": "2025-05-08"
+        }
+      ]
+    },
+    {
+      "user_name": "黄建国",
+      "user_id": "h0fwjo2d",
+      "team": "运营部",
+      "rank": 2,
+      "title": "运营总监",
+      "hard_skills": [
+        {
+          "skill": "流程优化",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "数据分析",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "KPI",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "团队管理",
+          "proficiency": "medium"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为运营总监（Rank 2），他是本项目的核心业务方代表。其在流程优化和项目管理上的strong级技能，能确保系统设计紧密贴合仓储作业和订单履约的实际需求。他将主导业务流程的梳理与再造，保障项目成果能真正提升履约时效。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "制定项目整体时间规划",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "流程优化"
+          ],
+          "subtask_id": 25,
+          "deadline": "2025-03-10"
+        },
+        {
+          "subtask": "分析现有仓储作业流程",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "流程优化",
+            "用户访谈"
+          ],
+          "subtask_id": 26,
+          "deadline": "2025-01-31"
+        },
+        {
+          "subtask": "分析现有订单履约流程",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "流程优化",
+            "数据分析"
+          ],
+          "subtask_id": 27,
+          "deadline": "2025-01-31"
+        },
+        {
+          "subtask": "识别项目主要风险点",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "风险管理"
+          ],
+          "subtask_id": 28,
+          "deadline": "2025-01-24"
+        },
+        {
+          "subtask": "设计订单状态机流转图",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "流程优化",
+            "需求分析"
+          ],
+          "subtask_id": 29,
+          "deadline": "2025-03-20"
+        },
+        {
+          "subtask": "设计出入库流程作业图",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "流程优化",
+            "需求分析"
+          ],
+          "subtask_id": 30,
+          "deadline": "2025-03-20"
+        },
+        {
+          "subtask": "制定上线发布计划 (Go-live Plan)",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "项目管理",
+            "发布管理"
+          ],
+          "subtask_id": 31,
+          "deadline": "2025-11-07"
+        },
+        {
+          "subtask": "制定上线失败的回滚方案",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "风险管理",
+            "发布管理"
+          ],
+          "subtask_id": 32,
+          "deadline": "2025-11-13"
+        }
+      ]
+    },
+    {
+      "user_name": "王芳",
+      "user_id": "8v3tz3te",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "高级软件工程师",
+      "hard_skills": [
+        {
+          "skill": "Java",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Spring Boot",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "MySQL",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Git",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为高级软件工程师（Rank 3），其strong级的Java技能是后端核心业务逻辑开发的中坚力量。她可以负责订单履约中心或库存管理等复杂模块的架构设计与代码实现，保障系统的高性能和稳定性。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计缓存策略与技术选型 (Redis)",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "系统架构",
+            "Redis"
+          ],
+          "subtask_id": 33,
+          "deadline": "2025-03-31"
+        },
+        {
+          "subtask": "设计与第三方物流系统对接方案",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "系统架构",
+            "API设计"
+          ],
+          "subtask_id": 34,
+          "deadline": "2025-04-18"
+        },
+        {
+          "subtask": "制定API接口设计规范 (OpenAPI 3.0)",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "API设计",
+            "文档撰写"
+          ],
+          "subtask_id": 35,
+          "deadline": "2025-04-14"
+        },
+        {
+          "subtask": "搭建后端项目脚手架 (Spring Boot)",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "Git"
+          ],
+          "subtask_id": 36,
+          "deadline": "2025-04-10"
+        },
+        {
+          "subtask": "实现用户注册与密码加密接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 37,
+          "deadline": "2025-05-12"
+        },
+        {
+          "subtask": "实现用户登录与Token生成接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "JWT"
+          ],
+          "subtask_id": 38,
+          "deadline": "2025-05-15"
+        },
+        {
+          "subtask": "实现用户权限验证中间件",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "Spring Security"
+          ],
+          "subtask_id": 39,
+          "deadline": "2025-05-20"
+        },
+        {
+          "subtask": "编写库存扣减服务的单元测试",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "JUnit"
+          ],
+          "subtask_id": 40,
+          "deadline": "2025-08-29"
+        },
+        {
+          "subtask": "审查代码安全漏洞(SQL注入, XSS)",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "安全测试",
+            "Java",
+            "React"
+          ],
+          "subtask_id": 41,
+          "deadline": "2025-10-15"
+        }
+      ]
+    },
+    {
+      "user_name": "刘辰光",
+      "user_id": "exsjoq1q",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "软件工程师",
+      "hard_skills": [
+        {
+          "skill": "JavaScript",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "React",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Node.js",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "GitHub Actions",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为软件工程师（Rank 3），其JavaScript和React技能是构建后台管理系统前端界面的理想选择。他将负责开发供运营人员使用的订单管理、库存查询和报表展示等界面，提供流畅、直观的用户操作体验。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "配置Git代码仓库和分支策略",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Git",
+            "GitHub Actions"
+          ],
+          "subtask_id": 42,
+          "deadline": "2025-04-30"
+        },
+        {
+          "subtask": "开发前端通用Layout组件",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "CSS3"
+          ],
+          "subtask_id": 43,
+          "deadline": "2025-05-19"
+        },
+        {
+          "subtask": "开发前端登录和注册页面",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "HTML5"
+          ],
+          "subtask_id": 44,
+          "deadline": "2025-06-04"
+        },
+        {
+          "subtask": "开发前端用户管理页面",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "Ant Design"
+          ],
+          "subtask_id": 45,
+          "deadline": "2025-06-11"
+        },
+        {
+          "subtask": "开发前端角色权限管理页面",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "Ant Design"
+          ],
+          "subtask_id": 46,
+          "deadline": "2025-06-18"
+        },
+        {
+          "subtask": "实现前端路由与导航守卫",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "react-router"
+          ],
+          "subtask_id": 47,
+          "deadline": "2025-05-29"
+        },
+        {
+          "subtask": "实现前端全局状态管理(Redux/Zustand)",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "Redux",
+            "状态管理"
+          ],
+          "subtask_id": 48,
+          "deadline": "2025-05-26"
+        },
+        {
+          "subtask": "对接前端与用户认证API",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "API对接",
+            "axios"
+          ],
+          "subtask_id": 49,
+          "deadline": "2025-06-06"
+        },
+        {
+          "subtask": "编写前端登录页面的单元测试(Jest)",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "Jest"
+          ],
+          "subtask_id": 50,
+          "deadline": "2025-06-13"
+        }
+      ]
+    },
+    {
+      "user_name": "高国强",
+      "user_id": "10p62m6v",
+      "team": "产品设计部",
+      "rank": 3,
+      "title": "产品经理",
+      "hard_skills": [
+        {
+          "skill": "需求分析",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Scrum",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Figma",
+          "proficiency": "low"
+        },
+        {
+          "skill": "Confluence",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为产品经理（Rank 3），其强大的需求分析能力是项目成功的基石。他将负责将运营团队复杂的业务需求转化为清晰的产品需求文档和开发任务，特别是在智能分单、库存同步等核心模块，确保开发方向准确无误。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "定义项目范围与边界",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "需求分析"
+          ],
+          "subtask_id": 51,
+          "deadline": "2025-01-20"
+        },
+        {
+          "subtask": "整理内部需求清单",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "需求分析",
+            "Confluence"
+          ],
+          "subtask_id": 52,
+          "deadline": "2025-02-21"
+        },
+        {
+          "subtask": "调研竞品A-OMS系统功能",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "需求分析",
+            "竞品分析"
+          ],
+          "subtask_id": 53,
+          "deadline": "2025-02-18"
+        },
+        {
+          "subtask": "调研竞品B-WMS系统功能",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "需求分析",
+            "竞品分析"
+          ],
+          "subtask_id": 54,
+          "deadline": "2025-02-18"
+        },
+        {
+          "subtask": "初步梳理产品功能列表 (Feature List)",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "需求分析",
+            "项目管理"
+          ],
+          "subtask_id": 55,
+          "deadline": "2025-02-27"
+        },
+        {
+          "subtask": "制定初步的需求优先级矩阵 (MoSCoW)",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "Scrum"
+          ],
+          "subtask_id": 56,
+          "deadline": "2025-03-03"
+        },
+        {
+          "subtask": "编写用户操作手册 - 仓储部分",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "文档撰写",
+            "用户培训"
+          ],
+          "subtask_id": 57,
+          "deadline": "2025-12-03"
+        },
+        {
+          "subtask": "编写用户操作手册 - 运营部分",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "文档撰写",
+            "用户培训"
+          ],
+          "subtask_id": 58,
+          "deadline": "2025-12-05"
+        },
+        {
+          "subtask": "对运营管理人员进行系统操作培训",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "用户培训",
+            "沟通能力"
+          ],
+          "subtask_id": 59,
+          "deadline": "2025-12-12"
+        }
+      ]
+    },
+    {
+      "user_name": "郝慧敏",
+      "user_id": "qv3v6g9l",
+      "team": "运营部",
+      "rank": 3,
+      "title": "运营专员",
+      "hard_skills": [
+        {
+          "skill": "数据分析",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Tableau",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "流程优化",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Power BI",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为运营专员（Rank 3），她的数据分析和流程优化(medium)技能，能帮助产品团队深入理解现有仓配流程的痛点和瓶颈。她是连接实际业务和系统需求的桥梁，为系统功能的实用性提供第一手输入。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "输出竞品分析报告",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "数据分析",
+            "战略分析"
+          ],
+          "subtask_id": 60,
+          "deadline": "2025-02-24"
+        },
+        {
+          "subtask": "实现基础的数据报表-订单量统计",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "MySQL",
+            "数据可视化"
+          ],
+          "subtask_id": 61,
+          "deadline": "2025-09-03"
+        },
+        {
+          "subtask": "实现基础的数据报表-库存周转率",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "MySQL",
+            "数据可视化"
+          ],
+          "subtask_id": 62,
+          "deadline": "2025-09-10"
+        },
+        {
+          "subtask": "实现基础的数据报表-履约时效",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "MySQL",
+            "数据可视化"
+          ],
+          "subtask_id": 63,
+          "deadline": "2025-09-17"
+        },
+        {
+          "subtask": "制定集成测试计划与用例",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "测试计划",
+            "测试用例设计"
+          ],
+          "subtask_id": 64,
+          "deadline": "2025-08-15"
+        },
+        {
+          "subtask": "制定系统测试计划与用例",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "测试计划",
+            "测试用例设计"
+          ],
+          "subtask_id": 65,
+          "deadline": "2025-08-20"
+        },
+        {
+          "subtask": "执行用户管理模块的集成测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "集成测试",
+            "API测试"
+          ],
+          "subtask_id": 66,
+          "deadline": "2025-09-24"
+        },
+        {
+          "subtask": "测试库存同步的准确性和延迟",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "集成测试",
+            "数据一致性"
+          ],
+          "subtask_id": 67,
+          "deadline": "2025-10-10"
+        },
+        {
+          "subtask": "模拟第三方物流API异常场景测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "异常测试",
+            "API测试"
+          ],
+          "subtask_id": 68,
+          "deadline": "2025-11-05"
+        }
+      ]
+    },
+    {
+      "user_name": "汤皓",
+      "user_id": "2wx2s0yg",
+      "team": "运营部",
+      "rank": 3,
+      "title": "数据分析师",
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Pandas",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "NumPy",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "数据可视化",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为数据分析师（Rank 3），他的Python(strong)技能可以直接处理和分析海量的历史订单和库存数据。他能为智能分单算法提供数据支持，并通过数据挖掘发现潜在的运营优化点，是项目数据驱动决策的关键支撑。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计数据库主从与分库分表策略",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "MySQL",
+            "数据库设计",
+            "系统架构"
+          ],
+          "subtask_id": 69,
+          "deadline": "2025-04-07"
+        },
+        {
+          "subtask": "设计商品中心数据库表结构",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "MySQL",
+            "数据库设计"
+          ],
+          "subtask_id": 70,
+          "deadline": "2025-04-03"
+        },
+        {
+          "subtask": "设计库存中心数据库表结构",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "MySQL",
+            "数据库设计"
+          ],
+          "subtask_id": 71,
+          "deadline": "2025-04-09"
+        },
+        {
+          "subtask": "编写数据库设计(ERD)详细文档",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "数据库设计",
+            "文档撰写"
+          ],
+          "subtask_id": 72,
+          "deadline": "2025-04-21"
+        },
+        {
+          "subtask": "实现基于成本最优的订单路由算法",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "scikit-learn",
+            "算法开发"
+          ],
+          "subtask_id": 73,
+          "deadline": "2025-07-17"
+        },
+        {
+          "subtask": "检查并添加必要的数据库索引",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "MySQL",
+            "数据库设计",
+            "性能优化"
+          ],
+          "subtask_id": 74,
+          "deadline": "2025-11-10"
+        },
+        {
+          "subtask": "部署生产环境数据库集群",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "MySQL",
+            "数据库管理",
+            "高可用"
+          ],
+          "subtask_id": 75,
+          "deadline": "2025-12-02"
+        },
+        {
+          "subtask": "编写数据迁移方案与脚本",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "数据库迁移",
+            "Python",
+            "ETL"
+          ],
+          "subtask_id": 76,
+          "deadline": "2025-11-24"
+        },
+        {
+          "subtask": "执行数据迁移前的备份",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "数据库备份",
+            "风险管理"
+          ],
+          "subtask_id": 77,
+          "deadline": "2025-12-15"
+        }
+      ]
+    },
+    {
+      "user_name": "郭晓东",
+      "user_id": "q381zymq",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "后端工程师",
+      "hard_skills": [
+        {
+          "skill": "Java",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Spring Boot",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "MySQL",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Docker",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为后端工程师（Rank 3），其Java、Spring Boot及MySQL技能组合与项目技术栈高度匹配。他可以投入到仓储作业管理模块的开发，实现拣货、打包、发货等具体功能，并通过Docker技能支持应用的容器化部署。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计用户与权限(RBAC)数据库表结构",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "MySQL",
+            "数据库设计",
+            "安全设计"
+          ],
+          "subtask_id": 78,
+          "deadline": "2025-04-02"
+        },
+        {
+          "subtask": "实现获取当前用户信息接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 79,
+          "deadline": "2025-05-23"
+        },
+        {
+          "subtask": "实现用户列表查询与管理接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 80,
+          "deadline": "2025-05-28"
+        },
+        {
+          "subtask": "实现角色与权限配置接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 81,
+          "deadline": "2025-06-03"
+        },
+        {
+          "subtask": "实现商品分类管理接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 82,
+          "deadline": "2025-06-27"
+        },
+        {
+          "subtask": "实现库存盘点任务创建接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 83,
+          "deadline": "2025-08-28"
+        },
+        {
+          "subtask": "实现全渠道订单接入服务",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "API开发"
+          ],
+          "subtask_id": 84,
+          "deadline": "2025-07-16"
+        },
+        {
+          "subtask": "编写用户服务模块的单元测试(JUnit)",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "JUnit"
+          ],
+          "subtask_id": 85,
+          "deadline": "2025-06-09"
+        },
+        {
+          "subtask": "撰写Swagger/OpenAPI接口文档",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "Swagger"
+          ],
+          "subtask_id": 86,
+          "deadline": "2025-09-26"
+        }
+      ]
+    },
+    {
+      "user_name": "曾宇凡",
+      "user_id": "kn5xjgge",
+      "team": "运营部",
+      "rank": 3,
+      "title": "运营专员",
+      "hard_skills": [
+        {
+          "skill": "数据分析",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "流程优化",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Excel高级功能",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为运营专员（Rank 3），他兼具数据分析、项目管理和流程优化的能力，是运营侧的骨干力量。他可以协助运营总监跟进项目进度，并利用数据分析来量化系统上线前后履约时效和库存准确性的改善情况。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "梳理项目关键干系人",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "沟通能力"
+          ],
+          "subtask_id": 87,
+          "deadline": "2025-01-17"
+        },
+        {
+          "subtask": "整理现有系统痛点列表",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "需求分析",
+            "流程优化"
+          ],
+          "subtask_id": 88,
+          "deadline": "2025-02-20"
+        },
+        {
+          "subtask": "召开需求评审会议",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "沟通能力",
+            "需求分析"
+          ],
+          "subtask_id": 89,
+          "deadline": "2025-03-07"
+        },
+        {
+          "subtask": "搭建项目文档知识库 (Confluence)",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "Confluence",
+            "项目管理"
+          ],
+          "subtask_id": 90,
+          "deadline": "2025-01-28"
+        },
+        {
+          "subtask": "制定用户验收测试(UAT)计划",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "项目管理",
+            "UAT"
+          ],
+          "subtask_id": 91,
+          "deadline": "2025-10-13"
+        },
+        {
+          "subtask": "组织第一轮用户验收测试(UAT)",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "UAT",
+            "项目管理"
+          ],
+          "subtask_id": 92,
+          "deadline": "2025-10-31"
+        },
+        {
+          "subtask": "收集并记录UAT反馈问题",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "UAT",
+            "Jira"
+          ],
+          "subtask_id": 93,
+          "deadline": "2025-11-04"
+        },
+        {
+          "subtask": "组织第二轮用户验收测试(UAT)",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "UAT",
+            "项目管理"
+          ],
+          "subtask_id": 94,
+          "deadline": "2025-11-19"
+        },
+        {
+          "subtask": "验证UAT缺陷修复情况",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "功能测试",
+            "回归测试"
+          ],
+          "subtask_id": 95,
+          "deadline": "2025-11-21"
+        }
+      ]
+    },
+    {
+      "user_name": "邱思源",
+      "user_id": "qp98z7cp",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "软件测试工程师",
+      "hard_skills": [
+        {
+          "skill": "JUnit",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Selenium",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "pytest",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "JMeter",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为软件测试工程师（Rank 3），其掌握的JUnit和Selenium技能覆盖了后端单元测试和前端UI自动化测试。他将负责设计和执行测试用例，验证库存同步、订单处理等核心逻辑的准确性，是保障系统质量的关键一环。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "执行商品与库存模块的集成测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "集成测试",
+            "API测试"
+          ],
+          "subtask_id": 96,
+          "deadline": "2025-09-29"
+        },
+        {
+          "subtask": "执行订单与库存模块的集成测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "集成测试",
+            "API测试"
+          ],
+          "subtask_id": 97,
+          "deadline": "2025-09-30"
+        },
+        {
+          "subtask": "执行订单与仓储模块的集成测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "集成测试",
+            "API测试"
+          ],
+          "subtask_id": 98,
+          "deadline": "2025-09-30"
+        },
+        {
+          "subtask": "执行仓储与物流模块的集成测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "集成测试",
+            "API测试"
+          ],
+          "subtask_id": 99,
+          "deadline": "2025-10-14"
+        },
+        {
+          "subtask": "编写并执行全流程E2E测试脚本(正常下单)",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "Selenium",
+            "E2E测试"
+          ],
+          "subtask_id": 100,
+          "deadline": "2025-10-20"
+        },
+        {
+          "subtask": "编写并执行全流程E2E测试脚本(缺货下单)",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "Selenium",
+            "E2E测试"
+          ],
+          "subtask_id": 101,
+          "deadline": "2025-10-24"
+        },
+        {
+          "subtask": "回归测试核心功能模块",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "回归测试",
+            "自动化测试"
+          ],
+          "subtask_id": 102,
+          "deadline": "2025-11-17"
+        },
+        {
+          "subtask": "撰写系统测试报告",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "测试报告",
+            "文档撰写"
+          ],
+          "subtask_id": 103,
+          "deadline": "2025-11-25"
+        },
+        {
+          "subtask": "在预生产环境演练数据迁移",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "数据迁移",
+            "测试"
+          ],
+          "subtask_id": 104,
+          "deadline": "2025-12-01"
+        }
+      ]
+    },
+    {
+      "user_name": "韩成龙",
+      "user_id": "yoyehym0",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "系统管理员",
+      "hard_skills": [
+        {
+          "skill": "Linux",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Docker",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "AWS",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Jenkins",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为系统管理员（Rank 3），其Linux、Docker、AWS的技能组合，对于部署和维护一个高可用的后端系统至关重要。他将负责搭建和管理开发、测试及生产环境，保障系统基础设施的稳定运行。",
+      "original_communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计系统日志收集方案 (ELK)",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Linux",
+            "Docker",
+            "系统架构"
+          ],
+          "subtask_id": 105,
+          "deadline": "2025-03-28"
+        },
+        {
+          "subtask": "设计CI/CD流程和工具链",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Docker",
+            "Kubernetes",
+            "Jenkins",
+            "GitHub Actions"
+          ],
+          "subtask_id": 106,
+          "deadline": "2025-03-14"
+        },
+        {
+          "subtask": "配置基础CI流水线",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Jenkins",
+            "Docker",
+            "GitHub Actions"
+          ],
+          "subtask_id": 107,
+          "deadline": "2025-05-21"
+        },
+        {
+          "subtask": "编写docker-compose用于本地开发环境",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Docker",
+            "docker-compose"
+          ],
+          "subtask_id": 108,
+          "deadline": "2025-05-05"
+        },
+        {
+          "subtask": "准备生产环境服务器资源(Azure/AWS)",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "Azure",
+            "AWS",
+            "Linux"
+          ],
+          "subtask_id": 109,
+          "deadline": "2025-11-18"
+        },
+        {
+          "subtask": "配置生产环境网络与安全组",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "网络安全",
+            "Azure",
+            "AWS"
+          ],
+          "subtask_id": 110,
+          "deadline": "2025-11-28"
+        },
+        {
+          "subtask": "配置域名和HTTPS证书",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "DNS",
+            "SSL",
+            "网络安全"
+          ],
+          "subtask_id": 111,
+          "deadline": "2025-12-09"
+        },
+        {
+          "subtask": "最终确定并发布生产环境CI/CD流水线",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "CI/CD",
+            "Jenkins",
+            "Kubernetes"
+          ],
+          "subtask_id": 112,
+          "deadline": "2025-12-11"
+        },
+        {
+          "subtask": "执行系统正式上线发布",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "发布管理",
+            "运维"
+          ],
+          "subtask_id": 113,
+          "deadline": "2025-12-20"
+        }
+      ]
+    },
+    {
+      "user_name": "谭志勇",
+      "user_id": "291ioa8a",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "后端工程师",
+      "hard_skills": [
+        {
+          "skill": "Java",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Spring Boot",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "MySQL",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Docker",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为后端工程师（Rank 3），其扎实的Java和Spring Boot技能使其成为开发团队的可靠成员。他适合负责开发与第三方物流系统对接的接口模块，处理数据同步和API调用，确保订单状态和物流信息的准确传递。",
+      "original_communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计订单中心数据库表结构",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "MySQL",
+            "数据库设计"
+          ],
+          "subtask_id": 114,
+          "deadline": "2025-04-08"
+        },
+        {
+          "subtask": "撰写库存管理模块API定义",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "API设计",
+            "Swagger"
+          ],
+          "subtask_id": 115,
+          "deadline": "2025-04-29"
+        },
+        {
+          "subtask": "实现仓库信息增删改查接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 116,
+          "deadline": "2025-06-17"
+        },
+        {
+          "subtask": "实现库区与库位管理接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 117,
+          "deadline": "2025-06-26"
+        },
+        {
+          "subtask": "实现订单数据清洗与校验服务",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot"
+          ],
+          "subtask_id": 118,
+          "deadline": "2025-07-22"
+        },
+        {
+          "subtask": "实现订单自动审核与转待发货逻辑",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot"
+          ],
+          "subtask_id": 119,
+          "deadline": "2025-07-30"
+        },
+        {
+          "subtask": "实现手动处理异常订单接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 120,
+          "deadline": "2025-08-05"
+        },
+        {
+          "subtask": "开发与顺丰快递API的对接模块",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "API开发"
+          ],
+          "subtask_id": 121,
+          "deadline": "2025-09-05"
+        },
+        {
+          "subtask": "编写订单服务模块的单元测试(JUnit)",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "JUnit"
+          ],
+          "subtask_id": 122,
+          "deadline": "2025-08-14"
+        }
+      ]
+    },
+    {
+      "user_name": "邹晓月",
+      "user_id": "htsbvn3i",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "测试工程师",
+      "hard_skills": [
+        {
+          "skill": "JUnit",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Selenium",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "pytest",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "JMeter",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为测试工程师（Rank 3），她的JUnit和Selenium技能为项目质量保障提供了双重火力。她可以专注于对仓储作业流程进行端到端的自动化测试，模拟拣货、打包、发货全过程，确保线上操作的稳定性和数据的正确性。",
+      "original_communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "编写并执行全流程E2E测试脚本(订单取消)",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "Selenium",
+            "E2E测试"
+          ],
+          "subtask_id": 123,
+          "deadline": "2025-11-03"
+        },
+        {
+          "subtask": "进行UI界面在Chrome/Firefox的兼容性测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "兼容性测试",
+            "Selenium"
+          ],
+          "subtask_id": 124,
+          "deadline": "2025-10-21"
+        },
+        {
+          "subtask": "进行系统在不同分辨率下的响应式布局测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "兼容性测试",
+            "响应式设计"
+          ],
+          "subtask_id": 125,
+          "deadline": "2025-11-06"
+        },
+        {
+          "subtask": "对订单创建接口进行压力测试(JMeter)",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "JMeter",
+            "性能测试"
+          ],
+          "subtask_id": 126,
+          "deadline": "2025-10-22"
+        },
+        {
+          "subtask": "对库存查询接口进行并发测试(JMeter)",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "JMeter",
+            "性能测试"
+          ],
+          "subtask_id": 127,
+          "deadline": "2025-10-28"
+        },
+        {
+          "subtask": "撰写性能测试报告",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "性能测试",
+            "文档撰写"
+          ],
+          "subtask_id": 128,
+          "deadline": "2025-11-12"
+        },
+        {
+          "subtask": "对分单服务器进行压力测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "性能测试",
+            "JMeter"
+          ],
+          "subtask_id": 129,
+          "deadline": "2025-10-29"
+        },
+        {
+          "subtask": "测试系统断电或重启后的数据恢复能力",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "容灾测试",
+            "数据库管理"
+          ],
+          "subtask_id": 130,
+          "deadline": "2025-11-14"
+        },
+        {
+          "subtask": "执行生产环境数据迁移",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "数据库迁移",
+            "ETL"
+          ],
+          "subtask_id": 131,
+          "deadline": "2025-12-16"
+        }
+      ]
+    },
+    {
+      "user_name": "程亮",
+      "user_id": "meqit6l2",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "运维工程师",
+      "hard_skills": [
+        {
+          "skill": "Linux",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Ansible",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Kubernetes",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Docker",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为运维工程师（Rank 3），其掌握的Kubernetes技能对于管理本项目可能采用的微服务架构至关重要。他将负责服务的自动化部署、弹性伸缩和监控，确保系统能应对全渠道订单带来的流量高峰，提升整体可靠性。",
+      "original_communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计系统监控告警方案 (Prometheus/Grafana)",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Kubernetes",
+            "Docker",
+            "系统架构"
+          ],
+          "subtask_id": 132,
+          "deadline": "2025-03-31"
+        },
+        {
+          "subtask": "搭建Docker镜像构建流程",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Docker",
+            "Jenkins",
+            "CI/CD"
+          ],
+          "subtask_id": 133,
+          "deadline": "2025-06-02"
+        },
+        {
+          "subtask": "编写核心服务的Dockerfile",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Docker",
+            "Java",
+            "Python"
+          ],
+          "subtask_id": 134,
+          "deadline": "2025-05-13"
+        },
+        {
+          "subtask": "部署生产环境Redis缓存集群",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "Redis",
+            "高可用"
+          ],
+          "subtask_id": 135,
+          "deadline": "2025-12-04"
+        },
+        {
+          "subtask": "部署生产环境消息队列集群",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "Kafka",
+            "RabbitMQ",
+            "高可用"
+          ],
+          "subtask_id": 136,
+          "deadline": "2025-12-08"
+        },
+        {
+          "subtask": "执行系统灰度发布",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "发布管理",
+            "Kubernetes"
+          ],
+          "subtask_id": 137,
+          "deadline": "2025-12-18"
+        },
+        {
+          "subtask": "搭建生产环境监控大盘(Grafana)",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "运维",
+            "监控",
+            "Grafana"
+          ],
+          "subtask_id": 138,
+          "deadline": "2025-12-22"
+        },
+        {
+          "subtask": "配置生产环境核心指标告警规则",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "运维",
+            "监控",
+            "Prometheus"
+          ],
+          "subtask_id": 139,
+          "deadline": "2025-12-24"
+        },
+        {
+          "subtask": "编写系统运维手册",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "文档撰写",
+            "运维"
+          ],
+          "subtask_id": 140,
+          "deadline": "2025-12-19"
+        }
+      ]
+    },
+    {
+      "user_name": "毛悦",
+      "user_id": "392bo971",
+      "team": "产品设计部",
+      "rank": 3,
+      "title": "产品经理",
+      "hard_skills": [
+        {
+          "skill": "原型设计",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "需求分析",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Asana",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为产品经理（Rank 3），其在原型设计和需求分析方面的strong级技能，能有效地将复杂的仓储作业流程（如拣货、打包）可视化，便于与开发和运营团队沟通确认。她将专注于设计高效、防错的作业流程界面，提升一线员工的工作效率。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "访谈运营团队需求",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "用户访谈",
+            "需求分析"
+          ],
+          "subtask_id": 141,
+          "deadline": "2025-02-12"
+        },
+        {
+          "subtask": "编制需求调研问卷",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "需求分析",
+            "问卷设计"
+          ],
+          "subtask_id": 142,
+          "deadline": "2025-02-10"
+        },
+        {
+          "subtask": "编写产品需求文档 (PRD)",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "需求分析",
+            "原型设计"
+          ],
+          "subtask_id": 143,
+          "deadline": "2025-03-05"
+        },
+        {
+          "subtask": "绘制核心功能线框图(Wireframes)",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "UX设计",
+            "Figma",
+            "原型设计"
+          ],
+          "subtask_id": 144,
+          "deadline": "2025-03-19"
+        },
+        {
+          "subtask": "设计库存管理页面UX流程",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "UX设计",
+            "Figma"
+          ],
+          "subtask_id": 145,
+          "deadline": "2025-04-22"
+        },
+        {
+          "subtask": "设计订单处理页面UX流程",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "UX设计",
+            "Figma"
+          ],
+          "subtask_id": 146,
+          "deadline": "2025-04-23"
+        },
+        {
+          "subtask": "设计拣货任务移动端UX流程",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "UX设计",
+            "用户访谈"
+          ],
+          "subtask_id": 147,
+          "deadline": "2025-04-28"
+        },
+        {
+          "subtask": "对仓储一线员工进行系统操作培训",
+          "phase": "Deployment & Launch",
+          "required_skills": [],
+          "subtask_id": 148,
+          "deadline": "2025-12-10"
+        },
+        {
+          "subtask": "对智能分单算法进行性能分析与优化",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "Python",
+            "性能优化"
+          ],
+          "subtask_id": 149,
+          "deadline": "2025-10-23"
+        }
+      ]
+    },
+    {
+      "user_name": "万菲",
+      "user_id": "b49u2p75",
+      "team": "产品设计部",
+      "rank": 3,
+      "title": "UX设计师",
+      "hard_skills": [
+        {
+          "skill": "用户访谈",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "可用性测试",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Figma",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Axure RP",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Casual",
+        "Verbosity": "Detailed",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Plain",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Indirect",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为UX设计师（Rank 3），其在用户访谈和可用性测试方面的strong级技能，对于理解仓储一线员工的实际工作场景和痛点至关重要。她将通过用户研究，确保系统设计贴合用户习惯，降低操作复杂度和错误率，是保障系统落地效果的关键角色。",
+      "original_communication_style": {
+        "Formality": "Casual",
+        "Verbosity": "Detailed",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Plain",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Indirect",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "访谈仓储经理需求",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "用户访谈",
+            "需求分析"
+          ],
+          "subtask_id": 150,
+          "deadline": "2025-02-12"
+        },
+        {
+          "subtask": "访谈供应链经理需求",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "用户访谈",
+            "需求分析"
+          ],
+          "subtask_id": 151,
+          "deadline": "2025-02-14"
+        },
+        {
+          "subtask": "访谈一线拣货员痛点",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "用户访谈",
+            "UX设计"
+          ],
+          "subtask_id": 152,
+          "deadline": "2025-02-07"
+        },
+        {
+          "subtask": "访谈一线打包员痛点",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "用户访谈",
+            "UX设计"
+          ],
+          "subtask_id": 153,
+          "deadline": "2025-02-07"
+        },
+        {
+          "subtask": "组织业务部门焦点小组讨论",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "沟通能力",
+            "用户访谈"
+          ],
+          "subtask_id": 154,
+          "deadline": "2025-02-19"
+        },
+        {
+          "subtask": "设计订单列表与详情页高保真UI",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Figma",
+            "UI设计"
+          ],
+          "subtask_id": 155,
+          "deadline": "2025-05-27"
+        },
+        {
+          "subtask": "设计拣货任务列表高保真UI",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Figma",
+            "UI设计"
+          ],
+          "subtask_id": 156,
+          "deadline": "2025-06-05"
+        },
+        {
+          "subtask": "设计打包复核工作台高保真UI",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Figma",
+            "UI设计"
+          ],
+          "subtask_id": 157,
+          "deadline": "2025-06-10"
+        },
+        {
+          "subtask": "设计系统设置页面高保真UI",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Figma",
+            "UI设计"
+          ],
+          "subtask_id": 158,
+          "deadline": "2025-06-16"
+        }
+      ]
+    },
+    {
+      "user_name": "冯俊",
+      "user_id": "y9hf1sjx",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "后端工程师",
+      "hard_skills": [
+        {
+          "skill": "Java",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Spring Boot",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "MySQL",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Docker",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为后端工程师（Rank 3），他的Java和Spring Boot技能非常适合本项目。他可以专注于多仓库存统一管理与同步模块的开发，处理高并发下的库存扣减与回源逻辑，这是保障库存准确性的核心技术挑战。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计仓储中心数据库表结构",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "MySQL",
+            "数据库设计"
+          ],
+          "subtask_id": 159,
+          "deadline": "2025-04-10"
+        },
+        {
+          "subtask": "撰写商品管理模块API定义",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "API设计",
+            "Swagger"
+          ],
+          "subtask_id": 160,
+          "deadline": "2025-04-25"
+        },
+        {
+          "subtask": "实现商品信息(SPU/SKU)创建接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 161,
+          "deadline": "2025-06-12"
+        },
+        {
+          "subtask": "实现商品信息查询与更新接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 162,
+          "deadline": "2025-06-19"
+        },
+        {
+          "subtask": "实现波次单生成与分配逻辑",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 163,
+          "deadline": "2025-08-06"
+        },
+        {
+          "subtask": "实现拣货完成状态回传接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 164,
+          "deadline": "2025-08-22"
+        },
+        {
+          "subtask": "实现包裹称重与计算运费接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "API开发"
+          ],
+          "subtask_id": 165,
+          "deadline": "2025-09-02"
+        },
+        {
+          "subtask": "实现电子面单打印接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "API开发"
+          ],
+          "subtask_id": 166,
+          "deadline": "2025-09-09"
+        },
+        {
+          "subtask": "编写商品服务模块的单元测试(JUnit)",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "JUnit"
+          ],
+          "subtask_id": 167,
+          "deadline": "2025-07-24"
+        }
+      ]
+    },
+    {
+      "user_name": "齐波",
+      "user_id": "he3oyvm0",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "算法工程师",
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "TensorFlow",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "scikit-learn",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Pandas",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为算法工程师（Rank 3），其掌握的Python和TensorFlow技能是实现“智能分单、路由”这一核心功能的关键。他将负责设计和训练算法模型，以优化订单分配策略，平衡物流成本、时效和仓库负载，是项目“智慧”化的核心贡献者。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计智能分单与路径规划核心算法",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Python",
+            "算法设计",
+            "TensorFlow"
+          ],
+          "subtask_id": 168,
+          "deadline": "2025-03-27"
+        },
+        {
+          "subtask": "搭建算法服务项目脚手架 (Python)",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "Pandas",
+            "scikit-learn"
+          ],
+          "subtask_id": 169,
+          "deadline": "2025-05-14"
+        },
+        {
+          "subtask": "实现基于库存位置的订单路由算法",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "Pandas",
+            "算法开发"
+          ],
+          "subtask_id": 170,
+          "deadline": "2025-07-03"
+        },
+        {
+          "subtask": "实现基于算法的拣货路径优化",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "算法开发"
+          ],
+          "subtask_id": 171,
+          "deadline": "2025-08-08"
+        },
+        {
+          "subtask": "编写订单路由算法的单元测试",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "pytest"
+          ],
+          "subtask_id": 172,
+          "deadline": "2025-07-25"
+        },
+        {
+          "subtask": "撰写核心模块的开发者文档",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "文档撰写",
+            "Confluence"
+          ],
+          "subtask_id": 173,
+          "deadline": "2025-10-09"
+        },
+        {
+          "subtask": "实现系统操作日志记录功能",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "AOP"
+          ],
+          "subtask_id": 174,
+          "deadline": "2025-09-01"
+        },
+        {
+          "subtask": "实现库存同步服务的定时任务",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "定时任务"
+          ],
+          "subtask_id": 175,
+          "deadline": "2025-09-23"
+        },
+        {
+          "subtask": "实现物流信息拉取的定时任务",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "定时任务"
+          ],
+          "subtask_id": 176,
+          "deadline": "2025-10-08"
+        }
+      ]
+    },
+    {
+      "user_name": "沈梅",
+      "user_id": "6e0ne40a",
+      "team": "运营部",
+      "rank": 3,
+      "title": "项目运营专员",
+      "hard_skills": [
+        {
+          "skill": "项目管理",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "流程优化",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Jira",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Confluence",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Plain",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为项目运营专员（Rank 3），其strong级的项目管理能力和Jira使用经验，使她成为团队理想的Scrum Master或项目协调人。她将负责跟进开发进度、组织跨部门会议、管理项目文档，确保项目按照既定节奏高效推进。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Plain",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "制定系统测试计划与用例",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "测试计划",
+            "测试用例设计"
+          ],
+          "subtask_id": 177,
+          "deadline": "2025-08-20"
+        },
+        {
+          "subtask": "制定性能测试方案",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "JMeter",
+            "性能测试"
+          ],
+          "subtask_id": 178,
+          "deadline": "2025-10-16"
+        },
+        {
+          "subtask": "修复UAT中发现的P0/P1级缺陷",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "Java",
+            "React",
+            "缺陷修复"
+          ],
+          "subtask_id": 179,
+          "deadline": "2025-11-11"
+        },
+        {
+          "subtask": "实现拆分单与合并单前置检查规则",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "规则引擎"
+          ],
+          "subtask_id": 180,
+          "deadline": "2025-07-29"
+        },
+        {
+          "subtask": "实现订单状态同步更新接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "消息队列"
+          ],
+          "subtask_id": 181,
+          "deadline": "2025-09-19"
+        },
+        {
+          "subtask": "开发与中通快递API的对接模块",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "API开发"
+          ],
+          "subtask_id": 182,
+          "deadline": "2025-09-12"
+        },
+        {
+          "subtask": "实现物流轨迹信息拉取与更新服务",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "定时任务"
+          ],
+          "subtask_id": 183,
+          "deadline": "2025-09-25"
+        },
+        {
+          "subtask": "实现库存同步至第三方电商平台接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "API开发"
+          ],
+          "subtask_id": 184,
+          "deadline": "2025-09-29"
+        },
+        {
+          "subtask": "编写仓储服务模块的单元测试(JUnit)",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "JUnit"
+          ],
+          "subtask_id": 185,
+          "deadline": "2025-09-22"
+        }
+      ]
+    },
+    {
+      "user_name": "杨志勇",
+      "user_id": "1b7augm8",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "前端工程师",
+      "hard_skills": [
+        {
+          "skill": "React",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "JavaScript",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "HTML5",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "CSS3",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为前端工程师（Rank 3），他的React(strong)技能可以确保前端应用的质量和性能。他将与UX/UI设计师紧密合作，将设计稿高保真地实现为可交互的前端组件，特别是在开发高频操作的仓储作业界面时，他的专业能力尤为重要。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "开发前端仪表盘(Dashboard)页面",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "数据可视化"
+          ],
+          "subtask_id": 186,
+          "deadline": "2025-06-25"
+        },
+        {
+          "subtask": "开发前端商品管理列表页",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "Ant Design"
+          ],
+          "subtask_id": 187,
+          "deadline": "2025-07-02"
+        },
+        {
+          "subtask": "开发前端商品编辑/新建页",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "Ant Design"
+          ],
+          "subtask_id": 188,
+          "deadline": "2025-07-07"
+        },
+        {
+          "subtask": "开发前端订单列表页",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "Ant Design"
+          ],
+          "subtask_id": 189,
+          "deadline": "2025-08-01"
+        },
+        {
+          "subtask": "开发前端订单详情页",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "Ant Design"
+          ],
+          "subtask_id": 190,
+          "deadline": "2025-08-07"
+        },
+        {
+          "subtask": "对接前端与商品管理API",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "API对接",
+            "axios"
+          ],
+          "subtask_id": 191,
+          "deadline": "2025-07-10"
+        },
+        {
+          "subtask": "对接前端与订单处理API",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "API对接",
+            "axios"
+          ],
+          "subtask_id": 192,
+          "deadline": "2025-08-11"
+        },
+        {
+          "subtask": "对接前端与仓储作业API",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "API对接",
+            "axios"
+          ],
+          "subtask_id": 193,
+          "deadline": "2025-08-27"
+        },
+        {
+          "subtask": "编写前端订单列表组件的单元测试(Jest)",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "Jest"
+          ],
+          "subtask_id": 194,
+          "deadline": "2025-09-08"
+        }
+      ]
+    },
+    {
+      "user_name": "韩雪",
+      "user_id": "i5uw5yt9",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "软件测试工程师",
+      "hard_skills": [
+        {
+          "skill": "Selenium",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "pytest",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "JMeter",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Git",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为软件测试工程师（Rank 3），其Selenium(strong)和pytest技能非常适合本项目。她不仅可以负责UI自动化测试，还能利用pytest对Python编写的智能路由算法模块进行测试，确保算法的准确性和边界条件的正确处理。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "制定系统测试计划与用例",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "测试计划",
+            "测试用例设计"
+          ],
+          "subtask_id": 195,
+          "deadline": "2025-08-20"
+        },
+        {
+          "subtask": "制定性能测试方案",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "JMeter",
+            "性能测试"
+          ],
+          "subtask_id": 196,
+          "deadline": "2025-10-16"
+        },
+        {
+          "subtask": "制定用户验收测试(UAT)计划",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "项目管理",
+            "UAT"
+          ],
+          "subtask_id": 197,
+          "deadline": "2025-10-13"
+        },
+        {
+          "subtask": "组织第一轮用户验收测试(UAT)",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "UAT",
+            "项目管理"
+          ],
+          "subtask_id": 198,
+          "deadline": "2025-10-31"
+        },
+        {
+          "subtask": "收集并记录UAT反馈问题",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "UAT",
+            "Jira"
+          ],
+          "subtask_id": 199,
+          "deadline": "2025-11-04"
+        },
+        {
+          "subtask": "修复UAT中发现的P0/P1级缺陷",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "Java",
+            "React",
+            "缺陷修复"
+          ],
+          "subtask_id": 200,
+          "deadline": "2025-11-11"
+        },
+        {
+          "subtask": "组织第二轮用户验收测试(UAT)",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "UAT",
+            "项目管理"
+          ],
+          "subtask_id": 201,
+          "deadline": "2025-11-19"
+        },
+        {
+          "subtask": "验证UAT缺陷修复情况",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "功能测试",
+            "回归测试"
+          ],
+          "subtask_id": 202,
+          "deadline": "2025-11-21"
+        },
+        {
+          "subtask": "回归测试核心功能模块",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "回归测试",
+            "自动化测试"
+          ],
+          "subtask_id": 203,
+          "deadline": "2025-11-17"
+        }
+      ]
+    },
+    {
+      "user_name": "孔娜",
+      "user_id": "palbnof4",
+      "team": "运营部",
+      "rank": 3,
+      "title": "数据分析师",
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "数据分析",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Excel高级功能",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "数据可视化",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为数据分析师（Rank 3），其Python和数据分析双strong的技能，使她成为分析复杂运营场景的专家。她可以构建数据模型来预测订单波动，或分析不同物流伙伴的履约表现，为系统的持续优化和智能决策提供深度洞察。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计API网关选型与策略",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "系统架构",
+            "API设计"
+          ],
+          "subtask_id": 204,
+          "deadline": "2025-03-28"
+        },
+        {
+          "subtask": "设计统一认证授权方案 (OAuth2/JWT)",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "系统架构",
+            "安全设计"
+          ],
+          "subtask_id": 205,
+          "deadline": "2025-03-24"
+        },
+        {
+          "subtask": "设计物流中心数据库表结构",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "MySQL",
+            "数据库设计"
+          ],
+          "subtask_id": 206,
+          "deadline": "2025-04-11"
+        },
+        {
+          "subtask": "撰写订单管理模块API定义",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "API设计",
+            "Swagger"
+          ],
+          "subtask_id": 207,
+          "deadline": "2025-04-30"
+        },
+        {
+          "subtask": "撰写仓储作业模块API定义",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "API设计",
+            "Swagger"
+          ],
+          "subtask_id": 208,
+          "deadline": "2025-05-06"
+        },
+        {
+          "subtask": "实现多仓库存查询接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 209,
+          "deadline": "2025-07-08"
+        },
+        {
+          "subtask": "实现安全库存阈值设置接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 210,
+          "deadline": "2025-07-18"
+        },
+        {
+          "subtask": "分析并优化JVM内存使用",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "Java",
+            "性能优化",
+            "JVM"
+          ],
+          "subtask_id": 211,
+          "deadline": "2025-10-27"
+        },
+        {
+          "subtask": "识别和优化慢查询SQL语句",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "MySQL",
+            "性能优化"
+          ],
+          "subtask_id": 212,
+          "deadline": "2025-10-17"
+        }
+      ]
+    },
+    {
+      "user_name": "邹明辉",
+      "user_id": "55utkryc",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "后端工程师",
+      "hard_skills": [
+        {
+          "skill": "Java",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Spring Boot",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "MySQL",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Docker",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为后端工程师（Rank 3），他的Java(strong)技能将为项目提供坚实的开发能力。他可以参与订单履约中心相关服务的开发，例如处理订单数据的接收和初步校验，为后续的智能分单环节做好数据准备，确保系统流程的顺畅。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计订单与仓储模块的集成测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "集成测试",
+            "API测试"
+          ],
+          "subtask_id": 213,
+          "deadline": "2025-09-30"
+        },
+        {
+          "subtask": "设计仓储与物流模块的集成测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "集成测试",
+            "API测试"
+          ],
+          "subtask_id": 214,
+          "deadline": "2025-10-14"
+        },
+        {
+          "subtask": "实现库存调整(出入库)接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 215,
+          "deadline": "2025-07-15"
+        },
+        {
+          "subtask": "实现库存流水记录功能",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 216,
+          "deadline": "2025-07-23"
+        },
+        {
+          "subtask": "实现库存占用与释放逻辑",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "Redis"
+          ],
+          "subtask_id": 217,
+          "deadline": "2025-07-28"
+        },
+        {
+          "subtask": "实现拣货任务生成接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 218,
+          "deadline": "2025-08-12"
+        },
+        {
+          "subtask": "实现拣货任务下发至手持终端接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "WebSocket"
+          ],
+          "subtask_id": 219,
+          "deadline": "2025-08-19"
+        },
+        {
+          "subtask": "实现扫描商品条码核对功能",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 220,
+          "deadline": "2025-08-21"
+        },
+        {
+          "subtask": "实现打包台复核商品接口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 221,
+          "deadline": "2025-08-26"
+        }
+      ]
+    },
+    {
+      "user_name": "梁宇轩",
+      "user_id": "nijxot58",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "算法工程师",
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "TensorFlow",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "scikit-learn",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Pandas",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为算法工程师（Rank 3），他的Python和TensorFlow技能能够与齐波形成互补，共同攻克智能履约算法的难题。他可以专注于某些特定场景的算法优化，如B2B大单与B2C小单的差异化处理，或多包裹订单的拆分策略，提升系统的智能化水平。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计系统部署架构图",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Azure",
+            "AWS",
+            "Docker",
+            "系统架构"
+          ],
+          "subtask_id": 222,
+          "deadline": "2025-04-04"
+        },
+        {
+          "subtask": "设计与第三方物流系统对接方案",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "系统架构",
+            "API设计"
+          ],
+          "subtask_id": 223,
+          "deadline": "2025-04-18"
+        },
+        {
+          "subtask": "撰写用户管理模块API定义",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "API设计",
+            "Swagger"
+          ],
+          "subtask_id": 224,
+          "deadline": "2025-04-24"
+        },
+        {
+          "subtask": "实现出库扫描与交接逻辑",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "subtask_id": 225,
+          "deadline": "2025-09-16"
+        },
+        {
+          "subtask": "编写前端库存查询组件的单元测试(Jest)",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "Jest"
+          ],
+          "subtask_id": 226,
+          "deadline": "2025-09-15"
+        },
+        {
+          "subtask": "开发前端异常订单处理页面",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "Ant Design"
+          ],
+          "subtask_id": 227,
+          "deadline": "2025-08-04"
+        },
+        {
+          "subtask": "开发前端波次管理页面",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "Ant Design"
+          ],
+          "subtask_id": 228,
+          "deadline": "2025-08-13"
+        },
+        {
+          "subtask": "开发前端拣货任务列表页（PC端）",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "Ant Design"
+          ],
+          "subtask_id": 229,
+          "deadline": "2025-08-18"
+        },
+        {
+          "subtask": "开发前端打包复核工作台页面",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "Ant Design"
+          ],
+          "subtask_id": 230,
+          "deadline": "2025-08-25"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_subtasks": 230,
+    "avg_subtasks_per_member": 8.85,
+    "phase_distribution": {
+      "Strategy & Planning": 31,
+      "Design & Architecture": 45,
+      "Development & Implementation": 90,
+      "Testing & Optimization": 35,
+      "Deployment & Launch": 25
+    },
+    "generation_method": "Topic-Driven Multi-stage",
+    "communication_style_adjusted": true
+  }
+}

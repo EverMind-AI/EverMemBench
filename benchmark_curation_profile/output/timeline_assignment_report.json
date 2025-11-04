@@ -1,15 +1,390 @@
 {
-  "generation_time": "2025-11-01T01:44:43.338051",
-  "total_projects": 2,
+  "generation_time": "2025-11-03T17:57:19.791021",
+  "total_projects": 60,
   "timeline_config": {
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
   },
   "projects": [
     {
-      "project_name": "园区人车安全通行系统",
-      "sub_topic_id": "SUB_001_001",
-      "parent_topic_id": "MAJOR_001",
+      "project_name": "营销自动化与线索培育平台",
+      "sub_topic_id": "SUB_014_001",
+      "parent_topic_id": "MAJOR_014",
+      "success": true,
+      "total_subtasks": 133,
+      "assigned_tasks": 133,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 133,
+        "assigned_tasks": 133
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 133,
+        "phase_breakdown": {
+          "前期（1-3月）": 36,
+          "中期（4-8月）": 43,
+          "后期（9-12月）": 54
+        }
+      }
+    },
+    {
+      "project_name": "供应链数字融资业务系统",
+      "sub_topic_id": "SUB_003_001",
+      "parent_topic_id": "MAJOR_003",
+      "success": true,
+      "total_subtasks": 132,
+      "assigned_tasks": 132,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 132,
+        "assigned_tasks": 132
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 132,
+        "phase_breakdown": {
+          "前期（1-5月）": 56,
+          "中期（5-9月）": 36,
+          "后期（10-12月）": 40
+        }
+      }
+    },
+    {
+      "project_name": "智慧仓配履约系统",
+      "sub_topic_id": "SUB_002_003",
+      "parent_topic_id": "MAJOR_002",
+      "success": true,
+      "total_subtasks": 230,
+      "assigned_tasks": 230,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 230,
+        "assigned_tasks": 230
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 230,
+        "phase_breakdown": {
+          "前期（1-3月）": 55,
+          "中期（4-8月）": 92,
+          "后期（9-12月）": 83
+        }
+      }
+    },
+    {
+      "project_name": "城市运行体征监测与可视化系统",
+      "sub_topic_id": "SUB_015_002",
+      "parent_topic_id": "MAJOR_015",
+      "success": true,
+      "total_subtasks": 167,
+      "assigned_tasks": 167,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 167,
+        "assigned_tasks": 167
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 167,
+        "phase_breakdown": {
+          "前期（1-3月）": 48,
+          "中期（4-8月）": 68,
+          "后期（9-12月）": 51
+        }
+      }
+    },
+    {
+      "project_name": "人力资源与薪酬管理系统",
+      "sub_topic_id": "SUB_020_003",
+      "parent_topic_id": "MAJOR_020",
+      "success": true,
+      "total_subtasks": 214,
+      "assigned_tasks": 214,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 214,
+        "assigned_tasks": 214
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 214,
+        "phase_breakdown": {
+          "前期（1-3月）": 43,
+          "中期（4-8月）": 86,
+          "后期（9-12月）": 85
+        }
+      }
+    },
+    {
+      "project_name": "应急事件模拟与预案推演系统",
+      "sub_topic_id": "SUB_015_003",
+      "parent_topic_id": "MAJOR_015",
+      "success": true,
+      "total_subtasks": 183,
+      "assigned_tasks": 183,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 183,
+        "assigned_tasks": 183
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 183,
+        "phase_breakdown": {
+          "前期（1-3月）": 48,
+          "中期（4-8月）": 74,
+          "后期（9-12月）": 61
+        }
+      }
+    },
+    {
+      "project_name": "会员与营销自动化系统",
+      "sub_topic_id": "SUB_002_002",
+      "parent_topic_id": "MAJOR_002",
+      "success": true,
+      "total_subtasks": 194,
+      "assigned_tasks": 194,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 194,
+        "assigned_tasks": 194
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 194,
+        "phase_breakdown": {
+          "前期（1-3月）": 48,
+          "中期（4-8月）": 68,
+          "后期（9-12月）": 78
+        }
+      }
+    },
+    {
+      "project_name": "环境监测与扬尘噪音控制系统",
+      "sub_topic_id": "SUB_009_003",
+      "parent_topic_id": "MAJOR_009",
+      "success": true,
+      "total_subtasks": 135,
+      "assigned_tasks": 135,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 135,
+        "assigned_tasks": 135
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 135,
+        "phase_breakdown": {
+          "前期（1-3月）": 27,
+          "中期（4-8月）": 48,
+          "后期（9-12月）": 60
+        }
+      }
+    },
+    {
+      "project_name": "全渠道交易前台系统",
+      "sub_topic_id": "SUB_002_001",
+      "parent_topic_id": "MAJOR_002",
+      "success": true,
+      "total_subtasks": 140,
+      "assigned_tasks": 140,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 140,
+        "assigned_tasks": 140
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 140,
+        "phase_breakdown": {
+          "前期（1-4月）": 61,
+          "中期（5-9月）": 35,
+          "后期（10-12月）": 44
+        }
+      }
+    },
+    {
+      "project_name": "实时在线诊疗服务系统",
+      "sub_topic_id": "SUB_005_001",
+      "parent_topic_id": "MAJOR_005",
+      "success": true,
+      "total_subtasks": 133,
+      "assigned_tasks": 133,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 133,
+        "assigned_tasks": 133
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 133,
+        "phase_breakdown": {
+          "前期（1-3月）": 40,
+          "中期（4-8月）": 48,
+          "后期（9-12月）": 45
+        }
+      }
+    },
+    {
+      "project_name": "沉浸式3D空间与虚拟形象引擎",
+      "sub_topic_id": "SUB_012_001",
+      "parent_topic_id": "MAJOR_012",
+      "success": true,
+      "total_subtasks": 185,
+      "assigned_tasks": 185,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 185,
+        "assigned_tasks": 185
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 185,
+        "phase_breakdown": {
+          "前期（1-3月）": 43,
+          "中期（4-8月）": 74,
+          "后期（9-12月）": 68
+        }
+      }
+    },
+    {
+      "project_name": "多媒体实时互动与直播系统",
+      "sub_topic_id": "SUB_012_002",
+      "parent_topic_id": "MAJOR_012",
+      "success": true,
+      "total_subtasks": 121,
+      "assigned_tasks": 121,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 121,
+        "assigned_tasks": 121
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 121,
+        "phase_breakdown": {
+          "前期（1-3月）": 23,
+          "中期（4-8月）": 42,
+          "后期（9-12月）": 56
+        }
+      }
+    },
+    {
+      "project_name": "应用部署与运维管理中心",
+      "sub_topic_id": "SUB_007_003",
+      "parent_topic_id": "MAJOR_007",
+      "success": true,
+      "total_subtasks": 119,
+      "assigned_tasks": 119,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 119,
+        "assigned_tasks": 119
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 119,
+        "phase_breakdown": {
+          "前期（1-3月）": 36,
+          "中期（4-8月）": 41,
+          "后期（9-12月）": 42
+        }
+      }
+    },
+    {
+      "project_name": "企业能耗监测与节能诊断系统",
+      "sub_topic_id": "SUB_004_001",
+      "parent_topic_id": "MAJOR_004",
+      "success": true,
+      "total_subtasks": 157,
+      "assigned_tasks": 157,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 157,
+        "assigned_tasks": 157
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 157,
+        "phase_breakdown": {
+          "前期（1-3月）": 39,
+          "中期（4-8月）": 60,
+          "后期（9-12月）": 58
+        }
+      }
+    },
+    {
+      "project_name": "供应链与商品管理后台",
+      "sub_topic_id": "SUB_010_001",
+      "parent_topic_id": "MAJOR_010",
+      "success": true,
+      "total_subtasks": 132,
+      "assigned_tasks": 132,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 132,
+        "assigned_tasks": 132
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 132,
+        "phase_breakdown": {
+          "前期（1-3月）": 40,
+          "中期（4-8月）": 49,
+          "后期（9-12月）": 43
+        }
+      }
+    },
+    {
+      "project_name": "电子签约与数字存证平台",
+      "sub_topic_id": "SUB_006_003",
+      "parent_topic_id": "MAJOR_006",
       "success": true,
       "total_subtasks": 124,
       "assigned_tasks": 124,
@@ -25,16 +400,791 @@
         "end_date": "2025-12-31",
         "total_tasks": 124,
         "phase_breakdown": {
-          "前期（1-3月）": 51,
-          "中期（4-8月）": 35,
+          "前期（1-3月）": 39,
+          "中期（4-8月）": 42,
+          "后期（9-12月）": 43
+        }
+      }
+    },
+    {
+      "project_name": "多平台商品与订单中台",
+      "sub_topic_id": "SUB_008_001",
+      "parent_topic_id": "MAJOR_008",
+      "success": true,
+      "total_subtasks": 134,
+      "assigned_tasks": 134,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 134,
+        "assigned_tasks": 134
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 134,
+        "phase_breakdown": {
+          "前期（1-3月）": 28,
+          "中期（4-8月）": 48,
+          "后期（9-12月）": 58
+        }
+      }
+    },
+    {
+      "project_name": "全球智能物流与仓储系统",
+      "sub_topic_id": "SUB_008_002",
+      "parent_topic_id": "MAJOR_008",
+      "success": true,
+      "total_subtasks": 135,
+      "assigned_tasks": 135,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 135,
+        "assigned_tasks": 135
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 135,
+        "phase_breakdown": {
+          "前期（1-3月）": 31,
+          "中期（4-8月）": 54,
+          "后期（9-12月）": 50
+        }
+      }
+    },
+    {
+      "project_name": "数据资产目录与分析门户",
+      "sub_topic_id": "SUB_011_002",
+      "parent_topic_id": "MAJOR_011",
+      "success": true,
+      "total_subtasks": 131,
+      "assigned_tasks": 131,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 131,
+        "assigned_tasks": 131
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 131,
+        "phase_breakdown": {
+          "前期（1-3月）": 37,
+          "中期（4-8月）": 55,
+          "后期（9-12月）": 39
+        }
+      }
+    },
+    {
+      "project_name": "统一数据服务（API）中心",
+      "sub_topic_id": "SUB_011_003",
+      "parent_topic_id": "MAJOR_011",
+      "success": true,
+      "total_subtasks": 176,
+      "assigned_tasks": 176,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 176,
+        "assigned_tasks": 176
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 176,
+        "phase_breakdown": {
+          "前期（1-5月）": 69,
+          "中期（6-9月）": 56,
+          "后期（10-12月）": 51
+        }
+      }
+    },
+    {
+      "project_name": "核心仓储管理子系统",
+      "sub_topic_id": "SUB_017_001",
+      "parent_topic_id": "MAJOR_017",
+      "success": true,
+      "total_subtasks": 139,
+      "assigned_tasks": 139,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 139,
+        "assigned_tasks": 139
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 139,
+        "phase_breakdown": {
+          "前期（1-3月）": 28,
+          "中期（4-8月）": 55,
+          "后期（9-12月）": 56
+        }
+      }
+    },
+    {
+      "project_name": "碳排放核算与资产管理平台",
+      "sub_topic_id": "SUB_004_002",
+      "parent_topic_id": "MAJOR_004",
+      "success": true,
+      "total_subtasks": 127,
+      "assigned_tasks": 127,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 127,
+        "assigned_tasks": 127
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 127,
+        "phase_breakdown": {
+          "前期（1-3月）": 26,
+          "中期（4-8月）": 49,
+          "后期（9-12月）": 52
+        }
+      }
+    },
+    {
+      "project_name": "AI视频安全行为识别系统",
+      "sub_topic_id": "SUB_009_002",
+      "parent_topic_id": "MAJOR_009",
+      "success": true,
+      "total_subtasks": 146,
+      "assigned_tasks": 146,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 146,
+        "assigned_tasks": 146
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 146,
+        "phase_breakdown": {
+          "前期（1-3月）": 40,
+          "中期（4-8月）": 59,
+          "后期（9-12月）": 47
+        }
+      }
+    },
+    {
+      "project_name": "自动化设备调度控制子系统",
+      "sub_topic_id": "SUB_017_002",
+      "parent_topic_id": "MAJOR_017",
+      "success": true,
+      "total_subtasks": 134,
+      "assigned_tasks": 134,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 134,
+        "assigned_tasks": 134
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 134,
+        "phase_breakdown": {
+          "前期（1-3月）": 36,
+          "中期（4-8月）": 48,
+          "后期（9-12月）": 50
+        }
+      }
+    },
+    {
+      "project_name": "可视化应用构建与编排引擎",
+      "sub_topic_id": "SUB_007_001",
+      "parent_topic_id": "MAJOR_007",
+      "success": true,
+      "total_subtasks": 161,
+      "assigned_tasks": 161,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 161,
+        "assigned_tasks": 161
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 161,
+        "phase_breakdown": {
+          "前期（1-3月）": 41,
+          "中期（4-8月）": 64,
+          "后期（9-12月）": 56
+        }
+      }
+    },
+    {
+      "project_name": "企业内容与学习路径平台",
+      "sub_topic_id": "SUB_018_001",
+      "parent_topic_id": "MAJOR_018",
+      "success": true,
+      "total_subtasks": 214,
+      "assigned_tasks": 214,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 214,
+        "assigned_tasks": 214
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 214,
+        "phase_breakdown": {
+          "前期（1-3月）": 62,
+          "中期（4-8月）": 84,
+          "后期（9-12月）": 68
+        }
+      }
+    },
+    {
+      "project_name": "智能投顾算法与策略引擎",
+      "sub_topic_id": "SUB_016_001",
+      "parent_topic_id": "MAJOR_016",
+      "success": true,
+      "total_subtasks": 188,
+      "assigned_tasks": 188,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 188,
+        "assigned_tasks": 188
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 188,
+        "phase_breakdown": {
+          "前期（1-3月）": 48,
+          "中期（4-8月）": 83,
+          "后期（9-12月）": 57
+        }
+      }
+    },
+    {
+      "project_name": "合同协同与履约管理平台",
+      "sub_topic_id": "SUB_006_002",
+      "parent_topic_id": "MAJOR_006",
+      "success": true,
+      "total_subtasks": 168,
+      "assigned_tasks": 168,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 168,
+        "assigned_tasks": 168
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 168,
+        "phase_breakdown": {
+          "前期（1-3月）": 55,
+          "中期（4-8月）": 67,
+          "后期（9-12月）": 46
+        }
+      }
+    },
+    {
+      "project_name": "金融市场数据与内容中台",
+      "sub_topic_id": "SUB_016_003",
+      "parent_topic_id": "MAJOR_016",
+      "success": true,
+      "total_subtasks": 121,
+      "assigned_tasks": 121,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 121,
+        "assigned_tasks": 121
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 121,
+        "phase_breakdown": {
+          "前期（1-3月）": 35,
+          "中期（4-8月）": 54,
+          "后期（9-12月）": 32
+        }
+      }
+    },
+    {
+      "project_name": "企业智能风控与征信平台",
+      "sub_topic_id": "SUB_003_002",
+      "parent_topic_id": "MAJOR_003",
+      "success": true,
+      "total_subtasks": 153,
+      "assigned_tasks": 153,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 153,
+        "assigned_tasks": 153
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 153,
+        "phase_breakdown": {
+          "前期（1-3月）": 48,
+          "中期（4-8月）": 68,
+          "后期（9-12月）": 37
+        }
+      }
+    },
+    {
+      "project_name": "人员与机械设备定位管理系统",
+      "sub_topic_id": "SUB_009_001",
+      "parent_topic_id": "MAJOR_009",
+      "success": true,
+      "total_subtasks": 127,
+      "assigned_tasks": 127,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 127,
+        "assigned_tasks": 127
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 127,
+        "phase_breakdown": {
+          "前期（1-3月）": 38,
+          "中期（4-8月）": 44,
+          "后期（9-12月）": 45
+        }
+      }
+    },
+    {
+      "project_name": "农田物联网监测与智能控制系统",
+      "sub_topic_id": "SUB_001_001",
+      "parent_topic_id": "MAJOR_001",
+      "success": true,
+      "total_subtasks": 134,
+      "assigned_tasks": 134,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 134,
+        "assigned_tasks": 134
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 134,
+        "phase_breakdown": {
+          "前期（1-3月）": 41,
+          "中期（4-8月）": 48,
+          "后期（9-12月）": 45
+        }
+      }
+    },
+    {
+      "project_name": "个人健康档案与慢病管理系统",
+      "sub_topic_id": "SUB_005_003",
+      "parent_topic_id": "MAJOR_005",
+      "success": true,
+      "total_subtasks": 155,
+      "assigned_tasks": 155,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 155,
+        "assigned_tasks": 155
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 155,
+        "phase_breakdown": {
+          "前期（1-3月）": 31,
+          "中期（4-8月）": 68,
+          "后期（9-12月）": 56
+        }
+      }
+    },
+    {
+      "project_name": "互动培训与知识社区平台",
+      "sub_topic_id": "SUB_018_002",
+      "parent_topic_id": "MAJOR_018",
+      "success": true,
+      "total_subtasks": 138,
+      "assigned_tasks": 138,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 138,
+        "assigned_tasks": 138
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 138,
+        "phase_breakdown": {
+          "前期（1-5月）": 53,
+          "中期（5-10月）": 39,
+          "后期（10-12月）": 46
+        }
+      }
+    },
+    {
+      "project_name": "用户财务诊断与规划应用",
+      "sub_topic_id": "SUB_016_002",
+      "parent_topic_id": "MAJOR_016",
+      "success": true,
+      "total_subtasks": 140,
+      "assigned_tasks": 140,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 140,
+        "assigned_tasks": 140
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 140,
+        "phase_breakdown": {
+          "前期（1-3月）": 31,
+          "中期（4-8月）": 62,
+          "后期（9-12月）": 47
+        }
+      }
+    },
+    {
+      "project_name": "销售流程与业绩管理系统",
+      "sub_topic_id": "SUB_014_002",
+      "parent_topic_id": "MAJOR_014",
+      "success": true,
+      "total_subtasks": 141,
+      "assigned_tasks": 141,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 141,
+        "assigned_tasks": 141
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 141,
+        "phase_breakdown": {
+          "前期（1-3月）": 34,
+          "中期（4-8月）": 60,
+          "后期（9-12月）": 47
+        }
+      }
+    },
+    {
+      "project_name": "联邦学习建模训练平台",
+      "sub_topic_id": "SUB_019_001",
+      "parent_topic_id": "MAJOR_019",
+      "success": true,
+      "total_subtasks": 135,
+      "assigned_tasks": 135,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 135,
+        "assigned_tasks": 135
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 135,
+        "phase_breakdown": {
+          "前期（1-3月）": 40,
+          "中期（4-8月）": 48,
+          "后期（9-12月）": 47
+        }
+      }
+    },
+    {
+      "project_name": "全渠道客户服务协同平台",
+      "sub_topic_id": "SUB_014_003",
+      "parent_topic_id": "MAJOR_014",
+      "success": true,
+      "total_subtasks": 141,
+      "assigned_tasks": 141,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 141,
+        "assigned_tasks": 141
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 141,
+        "phase_breakdown": {
+          "前期（1-3月）": 37,
+          "中期（4-8月）": 55,
+          "后期（9-12月）": 49
+        }
+      }
+    },
+    {
+      "project_name": "边缘应用与容器编排系统",
+      "sub_topic_id": "SUB_013_002",
+      "parent_topic_id": "MAJOR_013",
+      "success": true,
+      "total_subtasks": 0,
+      "assigned_tasks": 0,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 0,
+        "assigned_tasks": 0
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 0,
+        "phase_breakdown": {
+          "前期（1-3月）": 0,
+          "中期（4-8月）": 0,
+          "后期（9-12月）": 0
+        }
+      }
+    },
+    {
+      "project_name": "隐私计算安全节点系统",
+      "sub_topic_id": "SUB_019_003",
+      "parent_topic_id": "MAJOR_019",
+      "success": true,
+      "total_subtasks": 123,
+      "assigned_tasks": 123,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 123,
+        "assigned_tasks": 123
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 123,
+        "phase_breakdown": {
+          "前期（1-3月）": 42,
+          "中期（4-8月）": 43,
           "后期（9-12月）": 38
         }
       }
     },
     {
-      "project_name": "园区楼宇资产运维系统",
-      "sub_topic_id": "SUB_001_002",
+      "project_name": "多方安全联合分析系统",
+      "sub_topic_id": "SUB_019_002",
+      "parent_topic_id": "MAJOR_019",
+      "success": true,
+      "total_subtasks": 123,
+      "assigned_tasks": 123,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 123,
+        "assigned_tasks": 123
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 123,
+        "phase_breakdown": {
+          "前期（1-3月）": 32,
+          "中期（4-8月）": 53,
+          "后期（9-12月）": 38
+        }
+      }
+    },
+    {
+      "project_name": "农业生产大数据与遥感分析平台",
+      "sub_topic_id": "SUB_001_003",
       "parent_topic_id": "MAJOR_001",
+      "success": true,
+      "total_subtasks": 135,
+      "assigned_tasks": 135,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 135,
+        "assigned_tasks": 135
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 135,
+        "phase_breakdown": {
+          "前期（1-3月）": 59,
+          "中期（4-8月）": 38,
+          "后期（9-12月）": 38
+        }
+      }
+    },
+    {
+      "project_name": "供应链碳足迹协同管理系统",
+      "sub_topic_id": "SUB_004_003",
+      "parent_topic_id": "MAJOR_004",
+      "success": true,
+      "total_subtasks": 145,
+      "assigned_tasks": 145,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 145,
+        "assigned_tasks": 145
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 145,
+        "phase_breakdown": {
+          "前期（1-3月）": 30,
+          "中期（4-8月）": 60,
+          "后期（9-12月）": 55
+        }
+      }
+    },
+    {
+      "project_name": "智能物联健康监测系统",
+      "sub_topic_id": "SUB_005_002",
+      "parent_topic_id": "MAJOR_005",
+      "success": true,
+      "total_subtasks": 144,
+      "assigned_tasks": 144,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 144,
+        "assigned_tasks": 144
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 144,
+        "phase_breakdown": {
+          "前期（1-3月）": 23,
+          "中期（4-8月）": 55,
+          "后期（9-12月）": 66
+        }
+      }
+    },
+    {
+      "project_name": "电子合同与司法存证系统",
+      "sub_topic_id": "SUB_003_003",
+      "parent_topic_id": "MAJOR_003",
+      "success": true,
+      "total_subtasks": 124,
+      "assigned_tasks": 124,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 124,
+        "assigned_tasks": 124
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 124,
+        "phase_breakdown": {
+          "前期（1-3月）": 28,
+          "中期（4-8月）": 55,
+          "后期（9-12月）": 41
+        }
+      }
+    },
+    {
+      "project_name": "统一数据开发与治理平台",
+      "sub_topic_id": "SUB_011_001",
+      "parent_topic_id": "MAJOR_011",
+      "success": true,
+      "total_subtasks": 136,
+      "assigned_tasks": 136,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 136,
+        "assigned_tasks": 136
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 136,
+        "phase_breakdown": {
+          "前期（1-3月）": 33,
+          "中期（4-8月）": 48,
+          "后期（9-12月）": 55
+        }
+      }
+    },
+    {
+      "project_name": "营销自动化与本地化建站平台",
+      "sub_topic_id": "SUB_008_003",
+      "parent_topic_id": "MAJOR_008",
+      "success": true,
+      "total_subtasks": 134,
+      "assigned_tasks": 134,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 134,
+        "assigned_tasks": 134
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 134,
+        "phase_breakdown": {
+          "前期（1-3月）": 36,
+          "中期（4-8月）": 49,
+          "后期（9-12月）": 49
+        }
+      }
+    },
+    {
+      "project_name": "学习分析与人才画像系统",
+      "sub_topic_id": "SUB_018_003",
+      "parent_topic_id": "MAJOR_018",
       "success": true,
       "total_subtasks": 149,
       "assigned_tasks": 149,
@@ -50,16 +1200,316 @@
         "end_date": "2025-12-31",
         "total_tasks": 149,
         "phase_breakdown": {
-          "前期（1-3月）": 30,
-          "中期（4-8月）": 60,
+          "前期（1-3月）": 42,
+          "中期（4-8月）": 48,
           "后期（9-12月）": 59
+        }
+      }
+    },
+    {
+      "project_name": "团长协作与分佣系统",
+      "sub_topic_id": "SUB_010_002",
+      "parent_topic_id": "MAJOR_010",
+      "success": true,
+      "total_subtasks": 155,
+      "assigned_tasks": 155,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 155,
+        "assigned_tasks": 155
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 155,
+        "phase_breakdown": {
+          "前期（1-3月）": 42,
+          "中期（4-8月）": 64,
+          "后期（9-12月）": 49
+        }
+      }
+    },
+    {
+      "project_name": "会展管理与数据分析平台",
+      "sub_topic_id": "SUB_012_003",
+      "parent_topic_id": "MAJOR_012",
+      "success": true,
+      "total_subtasks": 110,
+      "assigned_tasks": 110,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 110,
+        "assigned_tasks": 110
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 110,
+        "phase_breakdown": {
+          "前期（1-3月）": 41,
+          "中期（4-8月）": 36,
+          "后期（9-12月）": 33
+        }
+      }
+    },
+    {
+      "project_name": "智能订单履约与拣选子系统",
+      "sub_topic_id": "SUB_017_003",
+      "parent_topic_id": "MAJOR_017",
+      "success": true,
+      "total_subtasks": 188,
+      "assigned_tasks": 188,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 188,
+        "assigned_tasks": 188
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 188,
+        "phase_breakdown": {
+          "前期（1-3月）": 55,
+          "中期（4-8月）": 77,
+          "后期（9-12月）": 56
+        }
+      }
+    },
+    {
+      "project_name": "城市信息模型(CIM)基础平台",
+      "sub_topic_id": "SUB_015_001",
+      "parent_topic_id": "MAJOR_015",
+      "success": true,
+      "total_subtasks": 118,
+      "assigned_tasks": 118,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 118,
+        "assigned_tasks": 118
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 118,
+        "phase_breakdown": {
+          "前期（1-3月）": 28,
+          "中期（4-8月）": 48,
+          "后期（9-12月）": 42
+        }
+      }
+    },
+    {
+      "project_name": "企业级集成与连接平台",
+      "sub_topic_id": "SUB_007_002",
+      "parent_topic_id": "MAJOR_007",
+      "success": true,
+      "total_subtasks": 138,
+      "assigned_tasks": 138,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 138,
+        "assigned_tasks": 138
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 138,
+        "phase_breakdown": {
+          "前期（1-3月）": 29,
+          "中期（4-8月）": 55,
+          "后期（9-12月）": 54
+        }
+      }
+    },
+    {
+      "project_name": "云端财务会计与核算系统",
+      "sub_topic_id": "SUB_020_002",
+      "parent_topic_id": "MAJOR_020",
+      "success": true,
+      "total_subtasks": 169,
+      "assigned_tasks": 169,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 169,
+        "assigned_tasks": 169
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 169,
+        "phase_breakdown": {
+          "前期（1-3月）": 48,
+          "中期（4-8月）": 68,
+          "后期（9-12月）": 53
+        }
+      }
+    },
+    {
+      "project_name": "AI合同智能审查引擎",
+      "sub_topic_id": "SUB_006_001",
+      "parent_topic_id": "MAJOR_006",
+      "success": true,
+      "total_subtasks": 112,
+      "assigned_tasks": 112,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 112,
+        "assigned_tasks": 112
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 112,
+        "phase_breakdown": {
+          "前期（1-3月）": 31,
+          "中期（4-8月）": 36,
+          "后期（9-12月）": 45
+        }
+      }
+    },
+    {
+      "project_name": "企业进销存与仓储系统",
+      "sub_topic_id": "SUB_020_001",
+      "parent_topic_id": "MAJOR_020",
+      "success": true,
+      "total_subtasks": 203,
+      "assigned_tasks": 203,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 203,
+        "assigned_tasks": 203
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 203,
+        "phase_breakdown": {
+          "前期（1-3月）": 64,
+          "中期（4-8月）": 82,
+          "后期（9-12月）": 57
+        }
+      }
+    },
+    {
+      "project_name": "用户端购物交易小程序",
+      "sub_topic_id": "SUB_010_003",
+      "parent_topic_id": "MAJOR_010",
+      "success": true,
+      "total_subtasks": 162,
+      "assigned_tasks": 162,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 162,
+        "assigned_tasks": 162
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 162,
+        "phase_breakdown": {
+          "前期（1-3月）": 34,
+          "中期（4-8月）": 58,
+          "后期（9-12月）": 70
+        }
+      }
+    },
+    {
+      "project_name": "边云数据协同与AI服务总线",
+      "sub_topic_id": "SUB_013_003",
+      "parent_topic_id": "MAJOR_013",
+      "success": true,
+      "total_subtasks": 149,
+      "assigned_tasks": 149,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 149,
+        "assigned_tasks": 149
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 149,
+        "phase_breakdown": {
+          "前期（1-3月）": 48,
+          "中期（4-8月）": 49,
+          "后期（9-12月）": 52
+        }
+      }
+    },
+    {
+      "project_name": "边缘节点与设备管理平台",
+      "sub_topic_id": "SUB_013_001",
+      "parent_topic_id": "MAJOR_013",
+      "success": true,
+      "total_subtasks": 167,
+      "assigned_tasks": 167,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 167,
+        "assigned_tasks": 167
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 167,
+        "phase_breakdown": {
+          "前期（1-3月）": 25,
+          "中期（4-8月）": 93,
+          "后期（9-12月）": 49
+        }
+      }
+    },
+    {
+      "project_name": "农产品质量安全溯源管理平台",
+      "sub_topic_id": "SUB_001_002",
+      "parent_topic_id": "MAJOR_001",
+      "success": true,
+      "total_subtasks": 167,
+      "assigned_tasks": 167,
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "total_subtasks": 167,
+        "assigned_tasks": 167
+      },
+      "timeline_summary": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-12-31",
+        "total_tasks": 167,
+        "phase_breakdown": {
+          "前期（1-3月）": 68,
+          "中期（4-8月）": 50,
+          "后期（9-12月）": 49
         }
       }
     }
   ],
   "statistics": {
-    "total_tasks_processed": 273,
-    "successful_projects": 2,
+    "total_tasks_processed": 8788,
+    "successful_projects": 60,
     "failed_projects": 0
   }
 }

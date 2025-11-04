@@ -1,0 +1,3046 @@
+{
+  "sub_topic_info": {
+    "sub_topic_id": "SUB_009_002",
+    "parent_topic_id": "MAJOR_009",
+    "topic": "AI视频安全行为识别系统",
+    "description": "此项目专注于利用人工智能技术对施工现场的视频监控数据进行智能分析，实现主动式安全风险预警。系统核心功能包含：接入并管理工地现有或新增的摄像头、开发并部署多种AI算法模型（如安全帽佩戴识别、反光衣穿着识别、区域入侵检测、烟火识别）、构建实时告警中心与消息推送机制、以及生成违规行为分析报表。目标用户为项目安全总监和现场安全巡检员，旨在变被动监督为主动预防，大幅降低因不安全行为导致事故的概率。",
+    "generated_at": "2025-11-03T06:13:02.559107"
+  },
+  "team_composition": {
+    "total_members": 27,
+    "rank_distribution": {
+      "rank_1": 1,
+      "rank_2": 2,
+      "rank_3": 24
+    }
+  },
+  "members": [
+    {
+      "user_name": "张伟华",
+      "user_id": "0368rqsm",
+      "team": "高层管理",
+      "rank": 1,
+      "title": "首席执行官",
+      "hard_skills": [
+        {
+          "skill": "商业模式画布",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "战略分析",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "团队建设",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "绩效管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "沟通能力",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Excel高级功能",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为CEO（Rank 1），他为项目提供最高级别的战略指导和资源支持。其在战略分析和商业模式上的强大能力，能确保AI视频安全系统项目与公司长期发展目标一致。他的Formal/Direct沟通风格适合设定明确的项目方向和进行高层决策。",
+      "original_communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "主持项目启动会议",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "沟通能力",
+            "团队建设"
+          ],
+          "assignment_reason": "张伟华作为首席执行官(Rank 1)，拥有强大的团队建设(strong)和战略规划能力，并且具备丰富的项目管理(medium)经验。主持项目启动会议需要调动各方积极性并统一目标，他的职位和技能组合是确保项目成功开局的关键。",
+          "subtask_id": 1,
+          "deadline": "2025-01-08"
+        },
+        {
+          "subtask": "设计商业模式画布",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "商业模式画布",
+            "战略分析"
+          ],
+          "assignment_reason": "张伟华作为首席执行官(Rank 1)，其商业模式画布(strong)和战略分析(strong)技能是全团队最强的。这项任务直接关系到产品的商业价值和市场定位，由他亲自操刀能够确保商业策略的顶层设计精准无误，为项目成功奠定商业基础。",
+          "subtask_id": 2,
+          "deadline": "2025-01-20"
+        },
+        {
+          "subtask": "制定高阶项目路线图与里程碑",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "战略分析"
+          ],
+          "assignment_reason": "作为首席执行官(Rank 1)，张伟华对公司战略方向有最深刻的理解。他具备战略分析(strong)和项目管理(medium)能力，能够从全局视角制定清晰、可行的项目路线图和关键里程碑，确保项目始终与公司的长期目标保持一致。",
+          "subtask_id": 3,
+          "deadline": "2025-01-22"
+        },
+        {
+          "subtask": "编写并获得项目章程的审批",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "战略分析"
+          ],
+          "assignment_reason": "张伟华作为首席执行官(Rank 1)，是项目最终的负责人和审批人。他拥有战略分析(strong)和项目管理(medium)的技能，由他亲自编写或最终审核项目章程，可以确保项目获得最高级别的支持，并明确项目的范围、目标和权限。",
+          "subtask_id": 4,
+          "deadline": "2025-01-31"
+        },
+        {
+          "subtask": "正式发布并通知所有利益相关者",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "沟通能力",
+            "项目管理"
+          ],
+          "assignment_reason": "张伟华作为首席执行官(Rank 1)，由他来宣布项目正式发布具有最高的权威性。他具备良好的沟通能力(medium)，能够有效地向内外部所有利益相关者传达项目的成功和价值，最大化项目影响力，是此项任务的不二人选。",
+          "subtask_id": 5,
+          "deadline": "2025-12-10"
+        }
+      ]
+    },
+    {
+      "user_name": "李明志",
+      "user_id": "izllu93a",
+      "team": "技术研发部",
+      "rank": 2,
+      "title": "技术总监",
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Docker",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Azure",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Kubernetes",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "团队管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为技术总监（Rank 2），是本项目技术方向的理想领导者。他精通Python、Docker及Kubernetes，这些技能对于构建和部署AI模型及整个系统架构至关重要。他能有效领导技术研发部，为项目攻克技术难题并保障架构的先进性。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "进行技术可行性分析（视频流处理）",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "Python",
+            "Docker",
+            "团队管理"
+          ],
+          "assignment_reason": "李明志作为技术总监(Rank 2)，在Python(strong)和Docker(strong)方面有深厚的技术实力。视频流处理是项目的核心技术难点，由他来主导技术可行性分析，能够准确评估技术风险和选型，为项目技术路线提供权威决策。",
+          "subtask_id": 6,
+          "deadline": "2025-01-25"
+        },
+        {
+          "subtask": "设计系统总体架构图",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Python",
+            "Docker",
+            "Azure"
+          ],
+          "assignment_reason": "作为技术总监(Rank 2)，李明志负责整个项目的技术方向。他精通Python(strong)和Docker(strong)，并熟悉Azure(medium)云平台，是设计系统总体架构的最佳人选。他能够确保架构的高可用性、可扩展性和安全性。",
+          "subtask_id": 7,
+          "deadline": "2025-03-07"
+        },
+        {
+          "subtask": "最终确定技术栈（语言、框架、数据库）",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Python",
+            "Java",
+            "React"
+          ],
+          "assignment_reason": "李明志作为技术总监(Rank 2)，对各类技术有广泛的了解。这项决策需要权衡团队技能、开发效率和系统性能，他能够基于对Python(strong)、Java和React等技术的理解，做出最符合项目长期利益的技术栈选择，并为之负责。",
+          "subtask_id": 8,
+          "deadline": "2025-03-14"
+        },
+        {
+          "subtask": "设计AI模型推理服务架构",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Python",
+            "Docker",
+            "Kubernetes"
+          ],
+          "assignment_reason": "李明志是技术总监(Rank 2)，拥有Python(strong), Docker(strong)和Kubernetes(medium)的关键技能。AI推理服务的性能和稳定性至关重要，由他设计架构可以确保方案的健壮性和可伸缩性，满足生产环境的高要求。",
+          "subtask_id": 9,
+          "deadline": "2025-03-21"
+        },
+        {
+          "subtask": "编写详细技术设计文档",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "架构设计",
+            "文档编写"
+          ],
+          "assignment_reason": "作为技术总监(Rank 2)，李明志负责整体架构设计。由他来编写或最终审定详细技术设计文档，能确保文档的准确性、完整性和权威性，为后续开发团队提供清晰、统一的指导，减少沟通成本和技术偏差。",
+          "subtask_id": 10,
+          "deadline": "2025-04-15"
+        }
+      ]
+    },
+    {
+      "user_name": "黄建国",
+      "user_id": "h0fwjo2d",
+      "team": "运营部",
+      "rank": 2,
+      "title": "运营总监",
+      "hard_skills": [
+        {
+          "skill": "流程优化",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "数据分析",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "KPI",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "团队管理",
+          "proficiency": "medium"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为运营总监（Rank 2），他强大的项目管理和流程优化能力是项目成功的关键保障。他将作为项目总负责人，协调技术、产品、运营等跨部门资源，确保项目按时交付并满足最终用户的实际运营需求，实现从被动监督到主动预防的目标。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "定义项目关键绩效指标(KPI)",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "KPI",
+            "数据分析",
+            "战略分析"
+          ],
+          "assignment_reason": "黄建国作为运营总监(Rank 2)，精通流程优化(strong)和项目管理(strong)，并具备KPI(medium)和数据分析(medium)能力。定义KPI需要结合业务目标和运营实际，他的角色和技能使他能制定出可衡量、有价值的指标，有效驱动项目进展。",
+          "subtask_id": 11,
+          "deadline": "2025-02-10"
+        },
+        {
+          "subtask": "制定项目风险应对计划",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "流程优化"
+          ],
+          "assignment_reason": "黄建国作为运营总监(Rank 2)，在项目管理(strong)和流程优化(strong)方面是专家。制定风险应对计划需要前瞻性的思考和严谨的流程设计，他的经验能帮助团队识别潜在风险并制定出行之有效的应对策略，保障项目顺利进行。",
+          "subtask_id": 12,
+          "deadline": "2025-02-20"
+        },
+        {
+          "subtask": "组织一次全体团队的Bug Bash活动",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "团队协作",
+            "测试"
+          ],
+          "assignment_reason": "黄建国是运营总监(Rank 2)，拥有出色的项目管理(strong)和团队管理(medium)能力。Bug Bash活动需要强大的组织协调能力，他能够动员整个团队高效参与，营造积极的测试氛围，并在短时间内集中发现大量潜在问题。",
+          "subtask_id": 13,
+          "deadline": "2025-10-30"
+        },
+        {
+          "subtask": "制定长期运维和技术支持流程",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "流程优化",
+            "项目管理"
+          ],
+          "assignment_reason": "黄建国作为运营总监(Rank 2)，其核心优势在于流程优化(strong)和项目管理(strong)。建立长期运维和支持流程是确保产品上线后稳定服务的关键，他的专业能力可以设计出高效、清晰、可执行的SOP，提升客户满意度。",
+          "subtask_id": 14,
+          "deadline": "2025-12-26"
+        },
+        {
+          "subtask": "召开项目复盘会议",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "项目管理",
+            "团队建设",
+            "流程优化"
+          ],
+          "assignment_reason": "作为运营总监(Rank 2)，黄建国在项目管理(strong)和流程优化(strong)方面经验丰富。项目复盘旨在总结经验、优化未来流程，他的技能与此任务目标高度契合，能够引导团队进行建设性反思，并将成果转化为可执行的改进措施。",
+          "subtask_id": 15,
+          "deadline": "2025-12-28"
+        }
+      ]
+    },
+    {
+      "user_name": "刘辰光",
+      "user_id": "exsjoq1q",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "软件工程师",
+      "hard_skills": [
+        {
+          "skill": "JavaScript",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "React",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Node.js",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "GitHub Actions",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为软件工程师（Rank 3），他强大的JavaScript和React技能非常适合开发告警中心的前端界面。他将负责构建一个响应迅速、交互友好的仪表盘，让安全管理人员能够直观地查看实时告警和关联的视频画面。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计WebSocket实时告警推送协议",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Node.js",
+            "JavaScript",
+            "架构设计"
+          ],
+          "assignment_reason": "刘辰光作为软件工程师(Rank 3)，擅长JavaScript(strong)和Node.js(medium)。WebSocket协议设计是实现实时功能的关键，他的技术背景非常适合这项任务，能够设计出高效、可靠的实时通信方案，为前端的实时告警功能奠定基础。",
+          "subtask_id": 16,
+          "deadline": "2025-04-18"
+        },
+        {
+          "subtask": "后端：开发WebSocket服务用于实时告警推送",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Node.js",
+            "WebSocket",
+            "JavaScript"
+          ],
+          "assignment_reason": "刘辰光是一名软件工程师(Rank 3)，他的技能包包含JavaScript(strong)和Node.js(medium)，是开发WebSocket服务的理想人选。这项任务直接关系到告警的实时性，他的专业技能可以确保后端推送服务的高性能和稳定性。",
+          "subtask_id": 17,
+          "deadline": "2025-09-10"
+        },
+        {
+          "subtask": "前端：集成状态管理库(Redux/Zustand)",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "Redux"
+          ],
+          "assignment_reason": "刘辰光是软件工程师(Rank 3)，具备React(medium)和JavaScript(strong)能力。集成状态管理库是前端项目的基础架构工作，对后续开发效率和可维护性至关重要。他能够胜任此任务，为前端应用搭建一个健壮的数据流管理方案。",
+          "subtask_id": 18,
+          "deadline": "2025-05-05"
+        },
+        {
+          "subtask": "前端：实现WebSocket客户端接收实时告警",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "WebSocket"
+          ],
+          "assignment_reason": "刘辰光作为软件工程师(Rank 3)，同时拥有JavaScript(strong)和React(medium)技能，并且负责后端WebSocket服务开发。由他来实现前端的接收逻辑，可以确保前后端协议的无缝对接，高效完成实时告警功能的闭环开发。",
+          "subtask_id": 19,
+          "deadline": "2025-09-12"
+        },
+        {
+          "subtask": "前端：开发用户权限控制逻辑",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "逻辑设计"
+          ],
+          "assignment_reason": "刘辰光作为软件工程师(Rank 3)，拥有扎实的JavaScript(strong)技能和逻辑设计能力。前端权限控制逻辑复杂且重要，关系到系统安全。他的能力足以应对这一挑战，确保不同角色的用户在前端界面上拥有正确的访问和操作权限。",
+          "subtask_id": 20,
+          "deadline": "2025-07-10"
+        },
+        {
+          "subtask": "分析前端页面加载性能并进行优化",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "JavaScript",
+            "React",
+            "性能优化"
+          ],
+          "assignment_reason": "刘辰光是软件工程师(Rank 3)，精通JavaScript(strong)并熟悉React(medium)。前端性能优化是提升用户体验的关键步骤，需要对浏览器渲染机制和JS执行有深入理解。他的技能背景使他成为分析并解决前端性能瓶颈的最佳人选。",
+          "subtask_id": 21,
+          "deadline": "2025-11-12"
+        }
+      ]
+    },
+    {
+      "user_name": "许佳音",
+      "user_id": "wwyaqjub",
+      "team": "产品设计部",
+      "rank": 3,
+      "title": "UI设计师",
+      "hard_skills": [
+        {
+          "skill": "Figma",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Adobe XD",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Photoshop",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Axure RP",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Casual",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Plain",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为UI设计师（Rank 3），她的Figma专长对于打造产品的视觉界面至关重要。她将负责设计告警中心、分析报表的整体视觉风格、图标和布局，确保界面设计清晰、专业，并符合安全监控场景下的使用习惯。",
+      "original_communication_style": {
+        "Formality": "Casual",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Plain",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Indirect",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计登录/注册页面的高保真UI",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Figma",
+            "Adobe XD",
+            "Photoshop"
+          ],
+          "assignment_reason": "许佳音作为UI设计师(Rank 3)，在Figma(strong)方面有很强的专业能力。登录/注册页面是用户对产品的第一印象，高质量的UI至关重要。她的专业技能和审美能够创造出美观、易用的界面，提升产品的专业感和用户体验。",
+          "subtask_id": 22,
+          "deadline": "2025-04-10"
+        },
+        {
+          "subtask": "设计主控台(Dashboard)页面的高保真UI",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Figma",
+            "Adobe XD",
+            "Photoshop"
+          ],
+          "assignment_reason": "许佳音是团队的核心UI设计师(Rank 3)，Figma(strong)是她的主要工具。主控台是产品的核心页面，UI设计的好坏直接影响用户的工作效率和满意度。她的专业能力确保能设计出信息布局合理、视觉清晰、交互友好的仪表盘界面。",
+          "subtask_id": 23,
+          "deadline": "2025-04-11"
+        },
+        {
+          "subtask": "设计告警中心页面的高保真UI",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Figma",
+            "Adobe XD",
+            "Photoshop"
+          ],
+          "assignment_reason": "许佳音作为UI设计师(Rank 3)，精通Figma(strong)等设计工具。告警中心是用户高频使用的功能，需要清晰地展示大量信息。她的设计能力可以将复杂的告警数据以直观、有序的方式呈现，帮助用户快速定位和处理问题。",
+          "subtask_id": 24,
+          "deadline": "2025-04-12"
+        },
+        {
+          "subtask": "设计告警详情弹窗的高保真UI",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Figma",
+            "Adobe XD",
+            "Photoshop"
+          ],
+          "assignment_reason": "作为一名专业的UI设计师(Rank 3)，许佳音的Figma(strong)技能非常适合这个任务。告警详情弹窗需要紧凑地展示关键信息和操作按钮，她的设计专长可以确保弹窗在有限空间内做到信息主次分明、交互便捷，提升告警处理效率。",
+          "subtask_id": 25,
+          "deadline": "2025-04-13"
+        },
+        {
+          "subtask": "设计报表页面及图表的高保真UI",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Figma",
+            "Adobe XD",
+            "Photoshop"
+          ],
+          "assignment_reason": "许佳音作为UI设计师(Rank 3)，在视觉设计和Figma(strong)工具使用上经验丰富。报表和图表的设计需要兼顾数据可视化的准确性和美观性，她的专业技能可以确保最终的UI界面既能清晰传达数据洞察，又具备优秀的视觉效果。",
+          "subtask_id": 26,
+          "deadline": "2025-04-14"
+        }
+      ]
+    },
+    {
+      "user_name": "高国强",
+      "user_id": "10p62m6v",
+      "team": "产品设计部",
+      "rank": 3,
+      "title": "产品经理",
+      "hard_skills": [
+        {
+          "skill": "需求分析",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Scrum",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Figma",
+          "proficiency": "low"
+        },
+        {
+          "skill": "Confluence",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为产品经理（Rank 3），他强大的需求分析能力对于定义告警中心、分析报表等核心功能至关重要。他将负责将安全总监和巡检员的需求转化为详细的产品功能文档和用户故事，指导开发团队实现最有价值的功能。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "分析3-4个竞品的功能清单和优劣势",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "需求分析",
+            "数据分析"
+          ],
+          "assignment_reason": "高国强作为产品经理(Rank 3)，核心技能之一就是需求分析(strong)。竞品分析是产品定义阶段的关键输入，他的专业能力能够帮助团队深入理解市场格局、学习对手优点、规避其缺点，从而制定更有竞争力的产品策略。",
+          "subtask_id": 27,
+          "deadline": "2025-01-28"
+        },
+        {
+          "subtask": "撰写产品市场需求文档(MRD)",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "需求分析",
+            "项目管理"
+          ],
+          "assignment_reason": "高国强是一名产品经理(Rank 3)，具备强大的需求分析(strong)能力和项目管理(medium)经验。撰写MRD需要从市场和商业角度阐述产品的价值和机会，他的职位和技能完美匹配此任务，能够为产品研发确立正确的市场方向。",
+          "subtask_id": 28,
+          "deadline": "2025-02-12"
+        },
+        {
+          "subtask": "定义告警中心功能需求",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "需求分析"
+          ],
+          "assignment_reason": "高国强作为产品经理(Rank 3)，他的需求分析(strong)能力非常突出。告警中心是产品的核心功能模块，其需求的定义直接影响产品的核心价值。他的专业经验可以确保功能需求考虑周全、逻辑清晰，满足用户的核心诉求。",
+          "subtask_id": 29,
+          "deadline": "2025-02-18"
+        },
+        {
+          "subtask": "创建并排序初步的产品待办列表(Backlog)",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "Scrum",
+            "需求分析"
+          ],
+          "assignment_reason": "高国强是产品经理(Rank 3)，拥有需求分析(strong)、项目管理(medium)和Scrum(medium)的综合技能。创建和排序Backlog是PM的核心职责，要求在理解用户需求和业务价值的基础上进行优先级判断，他的技能组合非常适合这项工作。",
+          "subtask_id": 30,
+          "deadline": "2025-02-25"
+        },
+        {
+          "subtask": "评估并确认MVP（最小可行产品）范围",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "需求分析",
+            "项目管理"
+          ],
+          "assignment_reason": "高国强作为产品经理(Rank 3)，在需求分析(strong)方面能力很强。定义MVP范围是项目早期最重要的决策之一，需要在满足核心用户价值和控制研发成本之间找到平衡。他的经验和技能使他能够做出明智的决策，确保产品快速验证市场。",
+          "subtask_id": 31,
+          "deadline": "2025-02-28"
+        },
+        {
+          "subtask": "收集并处理UAT反馈",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "项目管理",
+            "需求分析"
+          ],
+          "assignment_reason": "高国强作为产品经理(Rank 3)，具备需求分析(strong)和项目管理(medium)的核心技能。处理UAT反馈需要理解用户问题、判断问题性质（Bug或新需求），并进行优先级排序。他的职责和能力与此任务高度匹配，能有效地将用户反馈转化为产品迭代的动力。",
+          "subtask_id": 32,
+          "deadline": "2025-12-05"
+        }
+      ]
+    },
+    {
+      "user_name": "汤皓",
+      "user_id": "2wx2s0yg",
+      "team": "运营部",
+      "rank": 3,
+      "title": "数据分析师",
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Pandas",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "NumPy",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "数据可视化",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为数据分析师（Rank 3），他精通Python、Pandas和NumPy，是实现“违规行为分析报表”功能的关键人物。他将编写数据处理脚本，对AI模型识别出的违规数据进行清洗、聚合与统计分析，为管理层提供安全趋势洞察。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "编制AI模型训练所需的数据集收集计划",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "Python",
+            "数据分析",
+            "Pandas"
+          ],
+          "assignment_reason": "汤皓作为数据分析师(Rank 3)，精通Python(strong)并熟悉Pandas(medium)。数据集的质量直接决定AI模型的上限，制定科学的收集计划至关重要。他的数据专业背景能够确保计划的系统性和可行性，为后续高质量数据采集打下基础。",
+          "subtask_id": 33,
+          "deadline": "2025-02-15"
+        },
+        {
+          "subtask": "AI：收集并清洗安全帽识别数据集",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "Pandas",
+            "数据处理"
+          ],
+          "assignment_reason": "汤皓是一名数据分析师(Rank 3)，拥有Python(strong)技能和数据处理经验，熟悉Pandas(medium)。数据清洗是模型训练前至关重要的一步，直接影响模型性能。他的专业技能可以保证数据集的质量，剔除噪声，为模型训练提供干净的数据源。",
+          "subtask_id": 34,
+          "deadline": "2025-05-15"
+        },
+        {
+          "subtask": "AI：标注安全帽识别数据集",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "数据标注",
+            "细节关注"
+          ],
+          "assignment_reason": "汤皓作为数据分析师(Rank 3)，在处理数据时具备必要的细心和耐心。虽然数据标注不是他的核心技能，但作为数据流的一部分，由他负责可以确保数据从收集、清洗到标注的连贯性和质量可控，他对数据的理解能提升标注准确性。",
+          "subtask_id": 35,
+          "deadline": "2025-06-20"
+        },
+        {
+          "subtask": "AI：收集并标注反光衣识别数据集",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "数据标注",
+            "Python"
+          ],
+          "assignment_reason": "汤皓是数据分析师(Rank 3)，精通Python(strong)，适合处理和脚本化数据任务。继安全帽数据集之后，由他继续负责反光衣数据集的收集和标注，可以保证数据处理流程的一致性和高效率，复用已有经验和工具。",
+          "subtask_id": 36,
+          "deadline": "2025-05-20"
+        },
+        {
+          "subtask": "AI：收集并标注区域入侵/烟火数据集",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "数据标注",
+            "Python"
+          ],
+          "assignment_reason": "作为团队的数据分析师(Rank 3)，汤皓精通Python(strong)并已积累了前两个数据集的处理经验。继续由他负责此项任务，能够最大化地保证数据处理标准和质量的一致性，形成高效的数据准备流水线，为后续所有模型训练提供支持。",
+          "subtask_id": 37,
+          "deadline": "2025-05-25"
+        },
+        {
+          "subtask": "准备测试数据集（用户、摄像头、视频）",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "数据分析",
+            "测试准备"
+          ],
+          "assignment_reason": "汤皓作为数据分析师(Rank 3)，其数据分析(medium)和Python(strong)技能非常适合准备结构化的测试数据。准备全面且贴近真实的测试数据集是保证测试覆盖率和有效性的前提，他的专业能力可以高效地生成和处理这些数据。",
+          "subtask_id": 38,
+          "deadline": "2025-09-10"
+        }
+      ]
+    },
+    {
+      "user_name": "郭晓东",
+      "user_id": "q381zymq",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "后端工程师",
+      "hard_skills": [
+        {
+          "skill": "Java",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Spring Boot",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "MySQL",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Docker",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为后端工程师（Rank 3），他精通Java和MySQL，将负责构建系统的核心业务逻辑。他将开发用于管理摄像头、接收AI告警、存储违规数据的API接口，为整个告警和报表系统提供稳定可靠的数据服务支持。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计微服务拆分策略",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "Docker"
+          ],
+          "assignment_reason": "郭晓东作为后端工程师(Rank 3)，精通Java(strong)和Spring Boot(medium)。微服务拆分是架构设计的核心，需要对业务和技术有深入理解。他的后端背景使他能从领域驱动设计的角度出发，提出合理的拆分方案，平衡服务的内聚性和独立性。",
+          "subtask_id": 39,
+          "deadline": "2025-03-18"
+        },
+        {
+          "subtask": "后端：实现用户注册API",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "assignment_reason": "郭晓东是后端工程师(Rank 3)，他的技术栈Java(strong)、Spring Boot(medium)和MySQL(medium)与此任务的需求完全匹配。用户注册是系统的基础功能，由他来实现可以确保代码的规范性、安全性和数据库操作的正确性。",
+          "subtask_id": 40,
+          "deadline": "2025-05-20"
+        },
+        {
+          "subtask": "后端：实现用户登录及JWT生成API",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "JWT"
+          ],
+          "assignment_reason": "郭晓东作为后端工程师(Rank 3)，拥有Java(strong)和Spring Boot(medium)的坚实基础。实现基于JWT的认证是现代Web应用的标准实践，关系到整个系统的安全。他的技术能力足以胜任此关键安全模块的开发工作，保证认证流程的健壮性。",
+          "subtask_id": 41,
+          "deadline": "2025-05-22"
+        },
+        {
+          "subtask": "后端：实现获取用户角色权限API",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "assignment_reason": "郭晓东是后端工程师(Rank 3)，其Java(strong)和MySQL(medium)技能非常适合开发权限管理相关API。这个API是实现前端动态路由和操作控制的基础，他的开发能确保后端准确地提供与用户角色匹配的权限数据，保障系统的访问控制。",
+          "subtask_id": 42,
+          "deadline": "2025-06-25"
+        },
+        {
+          "subtask": "后端：实现告警信息及截图入库",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "assignment_reason": "郭晓东作为后端工程师(Rank 3)，精通Java(strong)、Spring Boot(medium)和MySQL(medium)。告警信息入库是系统核心的数据持久化环节，要求高可靠性和性能。他的经验能够确保数据能被准确、高效地存入数据库，为后续查询和分析提供基础。",
+          "subtask_id": 43,
+          "deadline": "2025-09-05"
+        },
+        {
+          "subtask": "修复测试阶段发现的所有严重(Critical)和高(High)优先级缺陷",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "Java",
+            "React",
+            "Python",
+            "问题解决"
+          ],
+          "assignment_reason": "郭晓东作为资深后端工程师(Rank 3)，具有扎实的Java(strong)技能和问题解决能力。修复高优先级缺陷需要快速定位问题根源并给出高质量的修复方案，他的经验和技术深度是保证产品上线前质量稳定的关键。他将主要负责后端Java部分的缺陷修复。",
+          "subtask_id": 44,
+          "deadline": "2025-11-15"
+        }
+      ]
+    },
+    {
+      "user_name": "邱思源",
+      "user_id": "qp98z7cp",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "软件测试工程师",
+      "hard_skills": [
+        {
+          "skill": "JUnit",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Selenium",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "pytest",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "JMeter",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为软件测试工程师（Rank 3），他全面的技能（JUnit, Selenium, pytest）能支持端到端的系统测试。他将为Java后端、Python算法和Web前端分别编写自动化测试用例，全方位保障系统各模块的质量与可靠性。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "编写后端用户认证模块的单元测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "JUnit",
+            "pytest"
+          ],
+          "assignment_reason": "邱思源作为软件测试工程师(Rank 3)，在JUnit(strong)方面有扎实的技能。用户认证是系统的安全核心，为其编写全面的单元测试至关重要。他的专业能力可以确保测试用例覆盖各种边界条件和异常情况，保障认证模块的质量和健壮性。",
+          "subtask_id": 45,
+          "deadline": "2025-09-25"
+        },
+        {
+          "subtask": "编写后端告警生成逻辑的单元测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "JUnit",
+            "pytest"
+          ],
+          "assignment_reason": "邱思源是软件测试工程师(Rank 3)，并且精通JUnit(strong)。告警生成是产品的核心业务逻辑，其准确性直接影响产品价值。利用他的专业技能，可以设计出高质量的单元测试，验证各种规则和场景下告警生成的正确性，保证核心功能的可靠。",
+          "subtask_id": 46,
+          "deadline": "2025-09-26"
+        },
+        {
+          "subtask": "编写后端报表聚合逻辑的单元测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "JUnit",
+            "pytest"
+          ],
+          "assignment_reason": "邱思源作为一名软件测试工程师(Rank 3)，其JUnit(strong)技能非常适合编写Java后端单元测试。报表聚合逻辑复杂，容易出错，通过编写单元测试可以有效保证数据统计的准确性。他的专长能确保测试覆盖到各种计算和边界场景。",
+          "subtask_id": 47,
+          "deadline": "2025-09-27"
+        },
+        {
+          "subtask": "进行用户注册到登录流程的集成测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "集成测试",
+            "API测试"
+          ],
+          "assignment_reason": "邱思源是软件测试工程师(Rank 3)，熟悉测试流程和工具。用户注册到登录是关键的用户流程，集成测试可以确保多个模块（如API、数据库）协同工作正常。他的测试经验能够帮助他设计和执行有效的集成测试用例，发现模块间的接口问题。",
+          "subtask_id": 48,
+          "deadline": "2025-10-10"
+        },
+        {
+          "subtask": "进行告警产生到推送流程的集成测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "集成测试",
+            "API测试",
+            "WebSocket"
+          ],
+          "assignment_reason": "作为软件测试工程师(Rank 3)，邱思源具备执行复杂集成测试的能力。告警流程涉及AI推理、后端逻辑、消息队列和WebSocket等多个组件，是系统中最复杂的链路之一。由他负责端到端的集成测试，能有效验证整条链路的通畅性和数据一致性。",
+          "subtask_id": 49,
+          "deadline": "2025-10-12"
+        }
+      ]
+    },
+    {
+      "user_name": "贾明辉",
+      "user_id": "luoxk0cw",
+      "team": "运营部",
+      "rank": 3,
+      "title": "数据分析师",
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "数据分析",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Pandas",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Tableau",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为数据分析师（Rank 3），他将利用Python和Tableau技能，专注于项目的报表可视化部分。他会设计并创建交互式的数据仪表盘，将复杂的违规数据以图表形式直观呈现，帮助安全总监快速定位安全风险高发区域和时段。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Detailed",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "定义报表分析模块功能需求",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "需求分析",
+            "数据分析"
+          ],
+          "assignment_reason": "贾明辉作为数据分析师(Rank 3)，具备Python(strong)和数据分析(medium)能力，对数据的价值和呈现方式有深刻理解。由他来参与定义报表模块的需求，能够从数据专业角度提出更有洞察力的分析维度和指标，使报表功能更具商业价值。",
+          "subtask_id": 50,
+          "deadline": "2025-02-19"
+        },
+        {
+          "subtask": "设计报表与统计数据表",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "MySQL",
+            "数据分析"
+          ],
+          "assignment_reason": "贾明辉是一名数据分析师(Rank 3)，精通数据分析(medium)及相关的数据处理。设计报表统计数据表需要预先考虑未来的分析维度和查询效率，他的数据背景能够帮助设计出合理、高效的数据库表结构，为快速生成报表打下基础。",
+          "subtask_id": 51,
+          "deadline": "2025-03-25"
+        },
+        {
+          "subtask": "在独立的测试集上评估安全帽模型准确率",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "Python",
+            "TensorFlow",
+            "scikit-learn"
+          ],
+          "assignment_reason": "贾明辉作为数据分析师(Rank 3)，拥有Python(strong)和数据分析(medium)技能，非常适合承担模型评估工作。客观评估模型性能是决定模型能否上线的关键，他的专业能力可以确保评估方法的科学性和结果的准确性，为模型调优提供数据支持。",
+          "subtask_id": 52,
+          "deadline": "2025-09-15"
+        },
+        {
+          "subtask": "在独立的测试集上评估反光衣模型准确率",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "Python",
+            "TensorFlow",
+            "scikit-learn"
+          ],
+          "assignment_reason": "贾明辉是数据分析师(Rank 3)，精通Python(strong)及数据分析(medium)。在完成安全帽模型评估后，由他继续评估反光衣模型可以保证评估标准和流程的一致性。他的技能使其能准确度量模型的各项关键指标，提供可靠的性能报告。",
+          "subtask_id": 53,
+          "deadline": "2025-09-16"
+        },
+        {
+          "subtask": "测试AI模型在不同光照、角度下的鲁棒性",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "AI模型测试",
+            "场景测试"
+          ],
+          "assignment_reason": "贾明辉作为数据分析师(Rank 3)，对数据和场景的敏感度很高。模型鲁棒性测试是检验模型在真实复杂环境中表现的关键，需要设计多样的测试场景。他的分析能力可以帮助设计出全面的测试用例集，系统性地检验模型的泛化能力。",
+          "subtask_id": 54,
+          "deadline": "2025-09-25"
+        }
+      ]
+    },
+    {
+      "user_name": "韩成龙",
+      "user_id": "yoyehym0",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "系统管理员",
+      "hard_skills": [
+        {
+          "skill": "Linux",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Docker",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "AWS",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Jenkins",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为系统管理员（Rank 3），他在Linux、Docker和AWS方面的技能是构建稳定、可扩展基础架构的保障。他将负责服务器的配置、部署环境的管理，以及确保视频接入和处理服务的7x24小时不间断运行。",
+      "original_communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "配置Docker本地开发环境",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Docker",
+            "Linux",
+            "docker-compose"
+          ],
+          "assignment_reason": "韩成龙作为系统管理员(Rank 3)，精通Linux(strong)和Docker(medium)。搭建统一的本地开发环境对提升团队协作效率至关重要。他的专业技能可以确保开发环境的配置正确、易于使用，并与生产环境保持一致，减少环境问题带来的开发阻碍。",
+          "subtask_id": 55,
+          "deadline": "2025-04-15"
+        },
+        {
+          "subtask": "配置CI流水线(编译和单元测试)",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Jenkins",
+            "GitHub Actions",
+            "Docker"
+          ],
+          "assignment_reason": "韩成龙是一名系统管理员(Rank 3)，具备Linux(strong), Docker(medium)和Jenkins(low)的技能。CI是保障代码质量和实现敏捷开发的基础设施，他的运维背景非常适合配置和维护CI流水线，实现代码提交后自动化的编译和测试。",
+          "subtask_id": 56,
+          "deadline": "2025-05-10"
+        },
+        {
+          "subtask": "文档：编写本地开发环境搭建指南",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Docker",
+            "文档编写"
+          ],
+          "assignment_reason": "韩成龙作为系统管理员(Rank 3)，亲自搭建了Docker本地开发环境。由他来编写搭建指南是最合适的，可以确保文档的准确性和可操作性。这份指南将帮助新成员快速融入项目，并保证所有开发者环境统一，减少不必要的麻烦。",
+          "subtask_id": 57,
+          "deadline": "2025-04-25"
+        },
+        {
+          "subtask": "配置CD流水线实现自动化部署到生产环境",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "Jenkins",
+            "GitHub Actions",
+            "Kubernetes"
+          ],
+          "assignment_reason": "韩成龙作为系统管理员(Rank 3)，熟悉Linux(strong)和Docker(medium)，并对Jenkins有了解。配置CD流水线是实现DevOps的关键一步，他的运维经验使他成为该任务的合适人选，能够将自动化部署流程打通，提升发布效率和可靠性。",
+          "subtask_id": 58,
+          "deadline": "2025-11-20"
+        },
+        {
+          "subtask": "集成集中式日志系统(ELK/Loki)",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "Linux",
+            "Docker",
+            "监控"
+          ],
+          "assignment_reason": "韩成龙是系统管理员(Rank 3)，在Linux(strong)和Docker(medium)方面能力很强。集中式日志系统是生产环境问题排查的生命线。他的系统管理经验使他能够成功部署和配置日志系统，将所有服务的日志聚合起来，为运维和开发提供强大的支持。",
+          "subtask_id": 59,
+          "deadline": "2025-11-26"
+        },
+        {
+          "subtask": "编写生产环境部署手册(Runbook)",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "文档编写",
+            "运维"
+          ],
+          "assignment_reason": "韩成龙作为系统管理员(Rank 3)，深入参与了整个部署流程的配置。由他编写部署手册（Runbook）可以确保文档详尽、准确，覆盖所有手动步骤和应急预案。这对于保障未来部署的顺畅和处理突发事件至关重要。",
+          "subtask_id": 60,
+          "deadline": "2025-11-28"
+        }
+      ]
+    },
+    {
+      "user_name": "谭志勇",
+      "user_id": "291ioa8a",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "后端工程师",
+      "hard_skills": [
+        {
+          "skill": "Java",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Spring Boot",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "MySQL",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Docker",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为后端工程师（Rank 3），他擅长的Java和Spring Boot技术将加速系统的后端开发。他将专注于构建实时告警中心和消息推送机制的微服务，确保系统在高并发的视频流分析场景下依然保持可伸缩性和高可用性。",
+      "original_communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计用户与角色权限表（User, Role, Permission）",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "MySQL",
+            "数据库设计"
+          ],
+          "assignment_reason": "谭志勇作为后端工程师(Rank 3)，具备Java(strong)和MySQL(medium)技能，对业务逻辑和数据关系有很好的理解。权限系统是后台管理的基础，合理的表设计是关键。他的经验能确保设计出灵活、可扩展的RBAC模型数据库结构。",
+          "subtask_id": 61,
+          "deadline": "2025-03-24"
+        },
+        {
+          "subtask": "设计工地与摄像头表（Site, Camera）",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "MySQL",
+            "数据库设计"
+          ],
+          "assignment_reason": "谭志勇是一名后端工程师(Rank 3)，熟悉MySQL(medium)数据库设计。工地和摄像头是核心的业务实体，它们的表结构设计直接影响后续业务功能的实现。他的后端视角可以帮助设计出满足当前需求并易于扩展的表结构。",
+          "subtask_id": 62,
+          "deadline": "2025-03-25"
+        },
+        {
+          "subtask": "后端：实现摄像头增删改查(CRUD) API",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "assignment_reason": "谭志勇作为后端工程师(Rank 3)，其技术栈Java(strong)、Spring Boot(medium)和MySQL(medium)完美契合此任务。摄像头管理是系统的基础功能之一，交由他开发能够保证API接口的规范性和数据库操作的正确、高效。",
+          "subtask_id": 63,
+          "deadline": "2025-06-10"
+        },
+        {
+          "subtask": "后端：开发日报表数据聚合任务",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "SQL"
+          ],
+          "assignment_reason": "谭志勇是后端工程师(Rank 3)，精通Java(strong)并熟悉SQL。报表数据聚合通常是资源密集型的定时任务，需要高效的SQL查询和稳定的批处理程序。他的技术能力可以确保聚合任务的性能和数据的准确性。",
+          "subtask_id": 64,
+          "deadline": "2025-09-15"
+        },
+        {
+          "subtask": "后：开报告查询API",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+          ],
+          "assignment_reason": "谭志勇作为Java后端工程师(Rank 3)，技术栈与此任务要求相符。报表查询API是前端展示数据的入口，可能面临复杂的查询条件和大数据量。他的经验能够帮助他编写出高效的查询服务，并设计合理的API接口以供前端调用。",
+          "subtask_id": 65,
+          "deadline": "2025-09-20"
+        },
+        {
+          "subtask": "进行数据库慢查询分析与索引优化",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "MySQL",
+            "数据库优化",
+            "SQL"
+          ],
+          "assignment_reason": "谭志勇是后端工程师(Rank 3)，对MySQL(medium)有深入使用经验。随着数据量增长，数据库性能优化至关重要。他在开发中直接与数据库交互，对业务查询有深入了解，因此是分析慢查询并添加合适索引以提升系统性能的最佳人选。",
+          "subtask_id": 66,
+          "deadline": "2025-11-10"
+        }
+      ]
+    },
+    {
+      "user_name": "顾明",
+      "user_id": "0jos9puj",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "前端工程师",
+      "hard_skills": [
+        {
+          "skill": "JavaScript",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "React",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Vue.js",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "CSS3",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为前端工程师（Rank 3），他能熟练运用React和Vue.js，为前端团队提供技术深度。他将主要负责实现违规行为分析报表中的复杂数据可视化图表，将枯燥的数据转化为易于理解的洞察，辅助管理决策。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "创建前端UI组件库规范",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Figma",
+            "React",
+            "CSS3"
+          ],
+          "assignment_reason": "顾明作为前端工程师(Rank 3)，精通JavaScript(strong)并熟悉React(medium)和CSS3(low)。制定UI组件库规范需要结合设计稿和前端实现，他的角色是连接UI设计和前端开发的桥梁，能够制定出既符合设计又便于开发实现的组件规范。",
+          "subtask_id": 67,
+          "deadline": "2025-04-05"
+        },
+        {
+          "subtask": "前端：开发通用UI组件(Button, Modal, Card)",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "CSS3"
+          ],
+          "assignment_reason": "顾明是前端工程师(Rank 3)，拥有扎实的JavaScript(strong)和React(medium)技能。开发通用UI组件是构建前端应用的基础，高质量的组件库能极大提升开发效率和界面一致性。他的能力足以构建出可复用、可维护的基础组件。",
+          "subtask_id": 68,
+          "deadline": "2025-05-30"
+        },
+        {
+          "subtask": "前端：开发主控台(Dashboard)页面布局",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "HTML5"
+          ],
+          "assignment_reason": "顾明作为前端工程师(Rank 3)，精通JavaScript(strong)和React(medium)，非常适合负责核心页面的布局工作。主控台是应用的门面，需要一个稳定且响应式的布局结构。他的前端经验可以确保页面布局的健壮性和对不同屏幕尺寸的良好适应。",
+          "subtask_id": 69,
+          "deadline": "2025-07-01"
+        },
+        {
+          "subtask": "前端：开发告警详情弹窗并对接API",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "API对接"
+          ],
+          "assignment_reason": "顾明是前端工程师(Rank 3)，其JavaScript(strong)和React(medium)技能让他能熟练开发交互复杂的组件。告警详情弹窗需要展示多种信息并与后端API交互，他的开发能力可以保证该组件功能完善、交互流畅，并正确处理API数据。",
+          "subtask_id": 70,
+          "deadline": "2025-08-25"
+        },
+        {
+          "subtask": "前端：实现全站响应式布局适配",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "CSS3",
+            "HTML5",
+            "React"
+          ],
+          "assignment_reason": "顾明作为前端工程师(Rank 3)，对页面布局和样式有很好的把控。实现响应式布局对于提升产品在不同设备上的用户体验至关重要。他熟悉React(medium)和CSS3(low)，能够运用媒体查询等技术，确保应用在桌面和移动设备上都有良好的展示效果。",
+          "subtask_id": 71,
+          "deadline": "2025-09-30"
+        }
+      ]
+    },
+    {
+      "user_name": "程亮",
+      "user_id": "meqit6l2",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "运维工程师",
+      "hard_skills": [
+        {
+          "skill": "Linux",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Ansible",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Kubernetes",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Docker",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为运维工程师（Rank 3），其Kubernetes知识对于将AI模型部署为可伸缩的微服务至关重要。他将负责自动化部署流程（CI/CD）和容器编排，这对于高效处理多路摄像头视频流和保证AI分析服务的高可用性是核心。",
+      "original_communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Balanced",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计API网关选型与架构",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Kubernetes",
+            "Linux",
+            "Docker"
+          ],
+          "assignment_reason": "程亮作为运维工程师(Rank 3)，具备Linux(strong)和Kubernetes(medium)的运维经验。API网关是微服务架构的入口，其选型和架构设计对系统的安全性、可观测性和流量管理至关重要。他的运维视角和技术背景非常适合评估和设计API网关方案。",
+          "subtask_id": 72,
+          "deadline": "2025-04-01"
+        },
+        {
+          "subtask": "部署生产环境Kubernetes集群",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "Kubernetes",
+            "Docker",
+            "AWS"
+          ],
+          "assignment_reason": "程亮是运维工程师(Rank 3)，其核心技能包括Linux(strong)和Kubernetes(medium)。部署和维护K8s集群是现代云原生运维的核心工作，技术要求高。他的专业能力是确保生产环境容器编排平台稳定、安全、高效运行的保障。",
+          "subtask_id": 73,
+          "deadline": "2025-11-10"
+        },
+        {
+          "subtask": "编写各微服务的Helm Chart",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "Kubernetes",
+            "Helm",
+            "Docker"
+          ],
+          "assignment_reason": "程亮作为运维工程师(Rank 3)，精通Kubernetes(medium)环境的管理。Helm是K8s的应用包管理工具，编写Helm Chart可以实现应用的标准化和一键部署。他的技能使他能够为各个微服务创建高质量的Chart，极大简化部署和版本管理流程。",
+          "subtask_id": 74,
+          "deadline": "2025-11-18"
+        },
+        {
+          "subtask": "配置监控和告警系统(Prometheus/Grafana)",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "Kubernetes",
+            "Prometheus",
+            "Grafana"
+          ],
+          "assignment_reason": "程亮是运维工程师(Rank 3)，熟悉Linux(strong)和Kubernetes(medium)环境。搭建监控告警系统是保障生产环境稳定性的核心环节。他能够利用专业技能部署和配置Prometheus与Grafana，实现对系统各项指标的全面监控和异常告警。",
+          "subtask_id": 75,
+          "deadline": "2025-11-25"
+        },
+        {
+          "subtask": "执行最终的生产环境部署",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "Kubernetes",
+            "Jenkins",
+            "运维"
+          ],
+          "assignment_reason": "程亮作为运维工程师(Rank 3)，全程参与了部署架构的设计和工具链的配置。执行最终部署是一个高风险操作，需要对整个流程了如指掌。他的角色和经验使他成为执行此任务并处理潜在突发状况的最可靠人选，确保上线过程平稳。",
+          "subtask_id": 76,
+          "deadline": "2025-12-01"
+        },
+        {
+          "subtask": "上线后第一周进行重点监控和支持(Hypercare)",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "运维",
+            "监控",
+            "客户支持"
+          ],
+          "assignment_reason": "程亮是运维工程师(Rank 3)，负责部署和监控系统。上线初期是问题高发期，需要专人进行重点监控。他搭建了监控系统，对系统指标最熟悉，能够第一时间发现异常并启动应急预案，是保障系统早期稳定运行的核心人物。",
+          "subtask_id": 77,
+          "deadline": "2025-12-17"
+        }
+      ]
+    },
+    {
+      "user_name": "毛悦",
+      "user_id": "392bo971",
+      "team": "产品设计部",
+      "rank": 3,
+      "title": "产品经理",
+      "hard_skills": [
+        {
+          "skill": "原型设计",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "需求分析",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "项目管理",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Asana",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为产品经理（Rank 3），她精通原型设计和需求分析，能与高国强形成互补。她将专注于将抽象需求转化为具体、可视化的产品原型，并与UI/UX设计师紧密合作，确保最终产品的用户流程顺畅、操作直观。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "撰写产品需求文档(PRD)",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "需求分析",
+            "原型设计",
+            "项目管理"
+          ],
+          "assignment_reason": "毛悦作为产品经理(Rank 3)，拥有强大的需求分析(strong)和原型设计(strong)能力。PRD是连接产品思考和研发实现的桥梁，要求细节清晰、逻辑严谨。她的技能组合完美契合此任务，能够撰写出高质量的PRD，为开发和测试提供明确的指引。",
+          "subtask_id": 78,
+          "deadline": "2025-02-28"
+        },
+        {
+          "subtask": "绘制'添加一个新摄像头'的用户流程图",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "原型设计",
+            "Figma"
+          ],
+          "assignment_reason": "毛悦是产品经理(Rank 3)，原型设计(strong)是她的核心技能之一。用户流程图能够帮助团队清晰地理解用户操作路径和页面跳转逻辑。她的专业能力保证了流程图的准确和直观，为后续的UI设计和开发提供了清晰的蓝图。",
+          "subtask_id": 79,
+          "deadline": "2025-02-28"
+        },
+        {
+          "subtask": "设计登录/注册页面的线框图(Wireframe)",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Axure RP",
+            "Figma",
+            "原型设计"
+          ],
+          "assignment_reason": "毛悦作为产品经理(Rank 3)，在原型设计(strong)方面能力突出。线框图关注的是功能布局和信息架构，而非视觉细节。她的技能能够让她快速、高效地创建出结构合理的线框图，用于早期需求评审和可用性验证，节约设计成本。",
+          "subtask_id": 80,
+          "deadline": "2025-03-15"
+        },
+        {
+          "subtask": "设计主控台(Dashboard)页面的线框图",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Axure RP",
+            "Figma",
+            "原型设计"
+          ],
+          "assignment_reason": "毛悦是产品经理(Rank 3)，她的原型设计(strong)能力非常适合这项任务。主控台信息架构复杂，通过线框图阶段可以快速迭代布局方案，确保关键信息突出、用户导航清晰。她的经验能够保证线框图的功能性和合理性。",
+          "subtask_id": 81,
+          "deadline": "2025-03-16"
+        },
+        {
+          "subtask": "设计告警中心页面的线框图",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Axure RP",
+            "Figma",
+            "原型设计"
+          ],
+          "assignment_reason": "作为产品经理(Rank 3)，毛悦的原型设计(strong)技能使她成为设计线框图的最佳人选。告警中心页面功能繁多，通过线框图可以专注于信息分层、筛选排序和主要操作流程的设计，她的专业能力可以确保设计的线框图逻辑清晰、满足用户需求。",
+          "subtask_id": 82,
+          "deadline": "2025-03-17"
+        },
+        {
+          "subtask": "设计报表页面的线框图",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Axure RP",
+            "Figma",
+            "原型设计"
+          ],
+          "assignment_reason": "毛悦作为产品经理(Rank 3)，拥有强大的原型设计(strong)能力。报表页面的线框图设计需要重点考虑数据呈现方式、筛选条件和交互形式。她的专业技能能够帮助团队在早期就确定最有效的报表结构和交互方式，为后续UI设计和开发奠定基础。",
+          "subtask_id": 83,
+          "deadline": "2025-03-18"
+        }
+      ]
+    },
+    {
+      "user_name": "万菲",
+      "user_id": "b49u2p75",
+      "team": "产品设计部",
+      "rank": 3,
+      "title": "UX设计师",
+      "hard_skills": [
+        {
+          "skill": "用户访谈",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "可用性测试",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Figma",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Axure RP",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Casual",
+        "Verbosity": "Detailed",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Plain",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为UX设计师（Rank 3），她擅长用户访谈和可用性测试，是确保产品以用户为中心的灵魂人物。她将深入施工现场，与安全巡检员等目标用户沟通，理解其工作流程与痛点，并将这些洞察转化为有效、易用的产品设计方案。",
+      "original_communication_style": {
+        "Formality": "Casual",
+        "Verbosity": "Detailed",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Plain",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Indirect",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "绘制'处理一个新告警'的用户流程图",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "用户访谈",
+            "可用性测试",
+            "Figma"
+          ],
+          "assignment_reason": "万菲作为UX设计师(Rank 3)，精通用户访谈(strong)并具备Figma(medium)技能。处理告警是产品的核心用户流程，她的UX背景能让她从用户视角出发，设计出流畅、高效的操作路径，并通过流程图清晰地表达出来，指导后续的设计与开发。",
+          "subtask_id": 84,
+          "deadline": "2025-03-05"
+        },
+        {
+          "subtask": "设计数据标注工具的界面(如果需要自研)",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "原型设计",
+            "UI设计"
+          ],
+          "assignment_reason": "万菲是UX设计师(Rank 3)，具备用户访谈(strong)和Figma(medium)技能，对用户体验有深刻理解。数据标注工具的效率直接影响数据生产力，她的UX专业知识可以设计出操作便捷、减少重复劳动的界面，提升标注人员的工作效率和满意度。",
+          "subtask_id": 85,
+          "deadline": "2025-04-20"
+        },
+        {
+          "subtask": "编写'项目安全总监'用户手册",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "文档编写",
+            "用户导向"
+          ],
+          "assignment_reason": "万菲作为UX设计师(Rank 3)，非常擅长从用户视角思考问题。编写用户手册需要将复杂的功能用简单易懂的语言描述出来，她的用户访谈(strong)经验和用户导向思维能确保手册内容贴近用户需求，真正起到指导作用。",
+          "subtask_id": 86,
+          "deadline": "2025-11-25"
+        },
+        {
+          "subtask": "编写'现场安全巡检员'快速入门指南",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "文档编写",
+            "用户导向"
+          ],
+          "assignment_reason": "万菲是UX设计师(Rank 3)，拥有用户访谈(strong)的技能，能够深刻理解目标用户的痛点和使用习惯。为巡检员编写快速入门指南，需要简洁、直观、任务导向。她的UX专业背景能确保这份指南真正做到“快速入门”，降低用户的学习成本。",
+          "subtask_id": 87,
+          "deadline": "2025-11-26"
+        },
+        {
+          "subtask": "与种子用户进行用户验收测试(UAT)",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "用户访谈",
+            "可用性测试"
+          ],
+          "assignment_reason": "万菲作为UX设计师(Rank 3)，其核心技能就是用户访谈(strong)和可用性测试(medium)。UAT不仅是功能验证，更是收集真实用户反馈、检验产品可用性的关键环节。她的专业能力能够引导用户完成测试，并挖掘出深层次的可用性问题。",
+          "subtask_id": 88,
+          "deadline": "2025-11-28"
+        }
+      ]
+    },
+    {
+      "user_name": "罗强",
+      "user_id": "0jz3ibfe",
+      "team": "产品设计部",
+      "rank": 3,
+      "title": "用户研究员",
+      "hard_skills": [
+        {
+          "skill": "用户访谈",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "可用性测试",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "问卷调查",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "A/B测试",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Casual",
+        "Verbosity": "Detailed",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为用户研究员（Rank 3），他将为项目提供持续的用户反馈，确保产品设计不脱离实际。他通过专业的用户访谈和可用性测试方法，在开发全周期验证设计假设，确保最终交付的系统真正解决一线安全人员的问题。",
+      "original_communication_style": {
+        "Formality": "Casual",
+        "Verbosity": "Detailed",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Balanced",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "访谈3-5名项目安全总监",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "用户访谈",
+            "需求分析",
+            "沟通能力"
+          ],
+          "assignment_reason": "罗强作为用户研究员(Rank 3)，核心技能就是用户访谈(strong)。深入理解安全总监这类关键角色的需求和痛点，是产品成功的基石。他的专业技能和经验能够确保访谈过程的专业性，挖掘出真实、有价值的用户洞察，为产品定义提供依据。",
+          "subtask_id": 89,
+          "deadline": "2025-01-22"
+        },
+        {
+          "subtask": "访谈3-5名现场安全巡检员",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "用户访谈",
+            "需求分析",
+            "沟通能力"
+          ],
+          "assignment_reason": "罗强是团队专门的用户研究员(Rank 3)，精通用户访谈(strong)。现场巡检员是产品的核心用户，他们的实际工作流程和痛点是功能设计的直接输入。罗强的专业背景使他能通过结构化的访谈，获取关于一线操作的宝贵信息。",
+          "subtask_id": 90,
+          "deadline": "2025-01-23"
+        },
+        {
+          "subtask": "创建'项目安全总监'用户画像",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "用户研究",
+            "需求分析"
+          ],
+          "assignment_reason": "罗强作为用户研究员(Rank 3)，在用户访谈(strong)和问卷调查(medium)方面经验丰富。用户画像是将访谈洞察具象化的关键产出，他的工作就是将零散的用户信息整合成生动、有代表性的用户模型，以指导整个团队的设计和开发决策。",
+          "subtask_id": 91,
+          "deadline": "2025-02-05"
+        },
+        {
+          "subtask": "创建'现场安全巡检员'用户画像",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "用户研究",
+            "需求分析"
+          ],
+          "assignment_reason": "罗强是用户研究员(Rank 3)，创建用户画像是他的本职工作。基于对巡检员的访谈，他能运用自己的用户访谈(strong)技能和研究方法，提炼并构建出精准的用户画像，帮助团队成员感同身受地理解一线用户的目标、行为和痛点。",
+          "subtask_id": 92,
+          "deadline": "2025-02-06"
+        },
+        {
+          "subtask": "规划用户焦点小组访谈的执行方案",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "用户访谈",
+            "问卷调查"
+          ],
+          "assignment_reason": "罗强作为用户研究员(Rank 3)，其专业技能包括用户访谈(strong)和问卷调查(medium)。规划焦点小组访谈需要严谨的研究设计，包括招募标准、访谈提纲和执行流程。他的专业能力可以确保此次访谈能够高效地收集到多样的用户反馈。",
+          "subtask_id": 93,
+          "deadline": "2025-02-08"
+        }
+      ]
+    },
+    {
+      "user_name": "齐波",
+      "user_id": "he3oyvm0",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "算法工程师",
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "TensorFlow",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "scikit-learn",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Pandas",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为算法工程师（Rank 3），其Python和TensorFlow技能是项目AI核心的基石。他将直接负责开发和训练安全帽佩戴、区域入侵等关键识别模型，是实现系统智能化预警功能的核心技术力量。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计AI模型训练流程架构",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Python",
+            "TensorFlow",
+            "机器学习"
+          ],
+          "assignment_reason": "齐波作为算法工程师(Rank 3)，精通Python(strong)并熟悉TensorFlow(medium)。设计一个可复现、可扩展的训练流程架构对算法迭代至关重要。他的算法背景使他能够设计出包括数据预处理、模型训练、评估和版本管理的完整、高效的AI训练流水线。",
+          "subtask_id": 94,
+          "deadline": "2025-04-12"
+        },
+        {
+          "subtask": "AI：开发并训练安全帽识别模型",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "TensorFlow",
+            "机器学习"
+          ],
+          "assignment_reason": "齐波是一名算法工程师(Rank 3)，其技术栈Python(strong)和TensorFlow(medium)与此任务高度匹配。安全帽识别是项目的核心AI功能之一，由他来负责开发和训练，能够运用专业的算法知识和调参经验，力求达到最佳的模型性能。",
+          "subtask_id": 95,
+          "deadline": "2025-07-31"
+        },
+        {
+          "subtask": "AI：开发并训练反光衣识别模型",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "TensorFlow",
+            "机器学习"
+          ],
+          "assignment_reason": "齐波作为算法工程师(Rank 3)，拥有Python(strong)和TensorFlow(medium)的专业技能。在完成安全帽模型后，由他继续开发反光衣模型可以复用之前的经验和代码框架，提高开发效率，并确保不同模型之间的技术架构一致性。",
+          "subtask_id": 96,
+          "deadline": "2025-08-01"
+        },
+        {
+          "subtask": "AI：开发并训练区域入侵/烟火模型",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "TensorFlow",
+            "机器学习"
+          ],
+          "assignment_reason": "齐波是算法工程师(Rank 3)，精通Python(strong)和TensorFlow(medium)等机器学习框架。继续由他负责开发后续的AI模型，有助于他从整体上把控和优化多个模型的性能，甚至探索多任务学习的可能性，最大化算法团队的产出效率。",
+          "subtask_id": 97,
+          "deadline": "2025-08-02"
+        },
+        {
+          "subtask": "AI：将训练好的模型转换为优化格式(ONNX/TensorRT)",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "TensorFlow",
+            "模型优化"
+          ],
+          "assignment_reason": "齐波作为算法工程师(Rank 3)，对模型本身有最深入的理解。模型优化是保证推理速度和降低部署成本的关键步骤。他熟悉Python(strong)和TensorFlow(medium)，能够负责将模型转换为高性能的推理格式，确保模型在生产环境中高效运行。",
+          "subtask_id": 98,
+          "deadline": "2025-08-10"
+        }
+      ]
+    },
+    {
+      "user_name": "沈梅",
+      "user_id": "6e0ne40a",
+      "team": "运营部",
+      "rank": 3,
+      "title": "项目运营专员",
+      "hard_skills": [
+        {
+          "skill": "项目管理",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "流程优化",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Jira",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Confluence",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Plain",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "selection_reason": "作为项目运营专员（Rank 3），她具备强大的项目管理技能及Jira、Confluence使用经验，是理想的项目协调人。她将负责跟进开发进度、管理任务看板、整理项目文档，保障团队内部信息通畅，提升整体协作效率。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Moderate",
+        "Humor": "Occasional",
+        "Jargon_Usage": "Plain",
+        "Emoji_Usage": "Occasional",
+        "Directness": "Balanced",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Clarifying"
+      },
+      "subtasks": [
+        {
+          "subtask": "配置Jira项目板与工作流",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "Jira",
+            "流程优化"
+          ],
+          "assignment_reason": "沈梅作为项目运营专员(Rank 3)，具备强大的项目管理(strong)技能，并熟悉Jira(medium)和流程优化(medium)。配置Jira是项目流程规范化的起点，她的专业能力可以确保工作流设计得既符合敏捷思想，又贴合团队实际，从而提升协作效率。",
+          "subtask_id": 99,
+          "deadline": "2025-01-15"
+        },
+        {
+          "subtask": "创建Confluence文档空间",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "Confluence"
+          ],
+          "assignment_reason": "沈梅是项目运营专员(Rank 3)，项目管理(strong)是她的核心能力，同时她了解Confluence(low)。创建和组织文档空间是知识管理的开端，她的项目管理经验能帮助她设计出清晰、合理的文档结构，便于团队成员查找和沉淀项目知识。",
+          "subtask_id": 100,
+          "deadline": "2025-01-16"
+        },
+        {
+          "subtask": "识别并记录项目关键风险",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "项目管理",
+            "风险管理"
+          ],
+          "assignment_reason": "沈梅作为项目运营专员(Rank 3)，精通项目管理(strong)。风险识别是项目管理中的重要一环，需要细致和有条理的工作方式。她的角色和技能使她非常适合系统性地跟进、识别和记录各个环节的潜在风险，形成风险登记册。",
+          "subtask_id": 101,
+          "deadline": "2025-02-22"
+        },
+        {
+          "subtask": "编写项目整体测试计划",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "测试计划",
+            "项目管理"
+          ],
+          "assignment_reason": "沈梅是项目运营专员(Rank 3)，拥有强大的项目管理(strong)能力。编写测试计划需要从整体上规划测试范围、资源、时间和策略，这正是一名项目管理人员的专长。她的组织和规划能力可以确保测试活动有序、全面地展开。",
+          "subtask_id": 102,
+          "deadline": "2025-09-05"
+        },
+        {
+          "subtask": "执行缺陷修复后的回归测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "回归测试",
+            "Selenium"
+          ],
+          "assignment_reason": "沈梅是项目运营专员(Rank 3)，非常注重流程和细节。回归测试是确保修复没有引入新问题的关键步骤，需要耐心和细致。尽管她不直接写自动化脚本，但她可以执行已有的自动化用例或手动测试核心流程，跟进缺陷状态，确保产品质量。",
+          "subtask_id": 103,
+          "deadline": "2025-11-20"
+        },
+        {
+          "subtask": "准备用户培训材料(PPT, 演示视频)",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "沟通能力",
+            "PPT制作"
+          ],
+          "assignment_reason": "沈梅作为项目运营专员(Rank 3)，具备良好的组织和呈现能力。准备培训材料需要将产品功能和使用流程系统性地整理成易于理解的格式。她的项目管理(strong)经验使她能清晰地梳理产品逻辑，制作出结构清晰、内容详实的培训材料。",
+          "subtask_id": 104,
+          "deadline": "2025-11-20"
+        }
+      ]
+    },
+    {
+      "user_name": "杨志勇",
+      "user_id": "1b7augm8",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "前端工程师",
+      "hard_skills": [
+        {
+          "skill": "React",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "JavaScript",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "HTML5",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "CSS3",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为前端工程师（Rank 3），他的强项在于React，将极大提升前端界面的开发效率。他将专注于构建可复用的UI组件库，确保整个Web应用（从设置页面到主仪表盘）拥有一致的视觉风格和流畅的用户体验。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "前端：初始化React项目及配置路由",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "Node.js"
+          ],
+          "assignment_reason": "杨志勇作为前端工程师(Rank 3)，拥有React(strong)和JavaScript(medium)的扎实技能。项目初始化和路由配置是前端开发的起点，奠定了整个应用的架构基础。他的专业能力可以确保项目结构规范、配置合理，为后续高效开发铺平道路。",
+          "subtask_id": 105,
+          "deadline": "2025-04-20"
+        },
+        {
+          "subtask": "前端：开发登录页面并对接API",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "API对接"
+          ],
+          "assignment_reason": "杨志勇是前端工程师(Rank 3)，精通React(strong)。登录页面是用户与系统交互的第一个界面，其开发质量至关重要。他的技能能够保证页面交互的流畅性，并准确地处理与后端认证API的通信、数据和异常状态。",
+          "subtask_id": 106,
+          "deadline": "2025-06-15"
+        },
+        {
+          "subtask": "前端：开发实时告警统计模块并对接API",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "数据可视化"
+          ],
+          "assignment_reason": "杨志勇作为前端工程师(Rank 3)，其React(strong)能力非常适合开发数据驱动的组件。实时告警统计模块需要动态展示数据，可能涉及图表库的使用。他的前端技术实力可以确保该模块的性能和数据的正确、实时更新。",
+          "subtask_id": 107,
+          "deadline": "2025-08-20"
+        },
+        {
+          "subtask": "前端：开发告警中心页面并对接API",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "API对接"
+          ],
+          "assignment_reason": "杨志勇是前端工程师(Rank 3)，拥有强大的React(strong)开发能力。告警中心是功能最复杂的页面之一，涉及列表展示、筛选、排序和分页等多种交互。他的经验足以应对这种复杂性，开发出功能完善、性能优良的页面。",
+          "subtask_id": 108,
+          "deadline": "2025-08-10"
+        },
+        {
+          "subtask": "前端：开发摄像头管理页面并对接API",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "API对接"
+          ],
+          "assignment_reason": "杨志勇作为前端工程师(Rank 3)，精通React(strong)和API对接。摄像头管理页面是典型的CRUD（增删改查）应用场景，他可以高效地利用React组件化思想，开发出易于维护和扩展的管理界面，并确保与后端API的稳定通信。",
+          "subtask_id": 109,
+          "deadline": "2025-07-20"
+        },
+        {
+          "subtask": "前端：开发报表页面并对接API",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "React",
+            "JavaScript",
+            "数据可视化"
+          ],
+          "assignment_reason": "杨志勇是前端工程师(Rank 3)，其React(strong)技能使他非常适合开发数据可视化密集的报表页面。这个任务需要调用API获取数据，并使用图表库进行展示。他的前端开发经验能确保数据准确呈现，并提供良好的交互体验。",
+          "subtask_id": 110,
+          "deadline": "2025-09-28"
+        }
+      ]
+    },
+    {
+      "user_name": "韩雪",
+      "user_id": "i5uw5yt9",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "软件测试工程师",
+      "hard_skills": [
+        {
+          "skill": "Selenium",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "pytest",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "JMeter",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Git",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为软件测试工程师（Rank 3），她将利用其强大的Selenium和pytest技能，专注于构建全面的自动化回归测试套件。她的工作对于确保新功能不影响旧有模块、保障系统在频繁迭代中的稳定性至关重要，特别是对一个安全预警系统而言。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "编写'添加并查看摄像头'功能的端到端测试用例",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "Selenium",
+            "测试用例设计"
+          ],
+          "assignment_reason": "韩雪作为软件测试工程师(Rank 3)，在Selenium(strong)方面技能突出。端到端测试模拟真实用户场景，对于保障核心功能流程至关重要。她的专业能力能够设计出覆盖完整用户路径的自动化测试用例，确保摄像头管理功能的端到端正确性。",
+          "subtask_id": 111,
+          "deadline": "2025-09-20"
+        },
+        {
+          "subtask": "编写'查看并处理告警'功能的端到端测试用例",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "Selenium",
+            "测试用例设计"
+          ],
+          "assignment_reason": "韩雪是软件测试工程师(Rank 3)，精通Selenium(strong)自动化测试。'查看并处理告警'是产品最高频的核心流程，编写其端到端测试用例可以极大提升回归测试效率。她的专业技能保证了自动化脚本的稳定性和覆盖度。",
+          "subtask_id": 112,
+          "deadline": "2025-09-21"
+        },
+        {
+          "subtask": "执行所有功能的手动测试用例",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "手动测试",
+            "细节关注"
+          ],
+          "assignment_reason": "韩雪作为一名细致的软件测试工程师(Rank 3)，特别适合执行手动测试。在自动化测试之外，手动测试能够发现更多探索性和易用性方面的问题。她的细心和耐心可以确保测试用例被严格执行，找出隐藏的缺陷，保证产品质量。",
+          "subtask_id": 113,
+          "deadline": "2025-10-20"
+        },
+        {
+          "subtask": "进行SQL注入和XSS安全漏洞扫描",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "安全测试",
+            "Web安全"
+          ],
+          "assignment_reason": "韩雪作为测试工程师(Rank 3)，虽然安全测试不是她的专长，但她具备测试人员的严谨思维。执行常规的安全扫描是保障产品安全基线的重要环节。她可以学习并使用自动化扫描工具，对常见的Web漏洞进行初步排查，提升团队的安全意识。",
+          "subtask_id": 114,
+          "deadline": "2025-11-15"
+        },
+        {
+          "subtask": "测试基于角色的访问控制(RBAC)逻辑",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "安全测试",
+            "逻辑测试"
+          ],
+          "assignment_reason": "韩雪是软件测试工程师(Rank 3)，擅长逻辑和边界测试。RBAC的测试需要设计矩阵式的测试用例，验证不同角色组合的权限是否正确。她的系统性测试思维非常适合这项任务，可以确保系统的权限控制体系严密无误。",
+          "subtask_id": 115,
+          "deadline": "2025-10-25"
+        }
+      ]
+    },
+    {
+      "user_name": "邹磊",
+      "user_id": "kj5hwxgy",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "测试工程师",
+      "hard_skills": [
+        {
+          "skill": "Selenium",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "JUnit",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "测试自动化",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Jenkins",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为测试工程师（Rank 3），他强于Selenium和JUnit，将主要负责Web界面功能测试和后端API的功能与性能测试。他将细致地发现并报告系统中的缺陷，确保产品在上线前达到高质量标准，避免因程序错误导致漏报或误报。",
+      "original_communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "前端：编写登录表单组件的单元测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "Jest",
+            "React Testing Library"
+          ],
+          "assignment_reason": "邹磊作为测试工程师(Rank 3)，具备测试自动化(medium)的能力。虽然他主攻后端测试，但学习并编写前端单元测试能拓宽他的技能，同时为前端质量提供保障。登录表单是关键组件，为其编写单元测试，验证其状态和行为，非常有价值。",
+          "subtask_id": 116,
+          "deadline": "2025-09-30"
+        },
+        {
+          "subtask": "前端：编写数据可视化图表组件的单元测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "Jest",
+            "React Testing Library"
+          ],
+          "assignment_reason": "邹磊是测试工程师(Rank 3)，拥有测试自动化(medium)的经验。图表组件的单元测试可以验证在不同数据输入下组件的渲染是否正确。由他负责可以加强前后端测试人员的协作，确保数据从后端到前端展示的正确性。",
+          "subtask_id": 117,
+          "deadline": "2025-10-01"
+        },
+        {
+          "subtask": "对登录API进行压力测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "JMeter",
+            "性能测试"
+          ],
+          "assignment_reason": "邹磊是测试工程师(Rank 3)，具备Selenium(strong)和JUnit(medium)经验，对测试工作有深入理解。虽然JMeter不是他最强的技能，但他具备学习和执行性能测试的能力。登录API是系统入口，对其进行压测有助于了解系统容量，是性能测试的起点。",
+          "subtask_id": 118,
+          "deadline": "2025-11-05"
+        },
+        {
+          "subtask": "对AI推理服务进行压力测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "JMeter",
+            "性能测试",
+            "Python"
+          ],
+          "assignment_reason": "邹磊作为测试工程师(Rank 3)，具备测试自动化(medium)能力，能够设计和执行复杂的测试场景。AI推理服务是系统的性能瓶颈点，对其进行压力测试至关重要。他能够设计测试脚本，模拟高并发请求，评估服务的响应时间和吞吐量。",
+          "subtask_id": 119,
+          "deadline": "2025-11-06"
+        },
+        {
+          "subtask": "对WebSocket服务进行并发连接测试",
+          "phase": "Testing & Optimization",
+          "required_skills": [
+            "性能测试",
+            "WebSocket"
+          ],
+          "assignment_reason": "邹磊是测试工程师(Rank 3)，在测试自动化(medium)方面有不错的积累。WebSocket服务的并发承载能力直接影响实时告警的稳定性。他可以利用专门的性能测试工具，模拟大量客户端同时连接，测试服务的极限承载能力和资源消耗情况。",
+          "subtask_id": 120,
+          "deadline": "2025-11-07"
+        }
+      ]
+    },
+    {
+      "user_name": "梁宇轩",
+      "user_id": "nijxot58",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "算法工程师",
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "TensorFlow",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "scikit-learn",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Pandas",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为算法工程师（Rank 3），他对Python、TensorFlow和scikit-learn的深入理解非常适合本项目。他将致力于AI模型的开发与调优工作，以确保各种安全行为识别算法的准确率和实时性，提升系统的预警能力。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计AI模型版本管理表",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "MySQL",
+            "数据库设计",
+            "Python"
+          ],
+          "assignment_reason": "梁宇轩作为算法工程师(Rank 3)，深刻理解AI模型迭代和版本管理的重要性。他精通Python(strong)，能从算法持续集成的角度出发，设计出合理的数据库表结构来追踪模型版本、性能指标和数据集来源，为MLOps流程打下基础。",
+          "subtask_id": 121,
+          "deadline": "2025-03-26"
+        },
+        {
+          "subtask": "后端：集成安全帽佩戴识别模型",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "TensorFlow",
+            "PyTorch"
+          ],
+          "assignment_reason": "梁宇轩是算法工程师(Rank 3)，精通Python(strong)并熟悉TensorFlow(medium)。将训练好的模型集成到后端服务中，需要处理模型的加载、预处理和后处理逻辑。由他来负责可以确保算法逻辑被正确地工程化，保证推理结果的准确性。",
+          "subtask_id": 122,
+          "deadline": "2025-08-15"
+        },
+        {
+          "subtask": "后端：集成反光衣穿着识别模型",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "TensorFlow",
+            "PyTorch"
+          ],
+          "assignment_reason": "梁宇轩作为算法工程师(Rank 3)，在Python(strong)和TensorFlow(medium)方面技术扎实。在集成了第一个模型之后，由他继续集成反光衣模型，可以复用集成框架，提高效率，并保证所有模型服务接口的统一性和规范性。",
+          "subtask_id": 123,
+          "deadline": "2025-08-16"
+        },
+        {
+          "subtask": "后端：集成区域入侵检测模型",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "TensorFlow",
+            "PyTorch"
+          ],
+          "assignment_reason": "梁宇轩是算法工程师(Rank 3)，负责将算法模型工程化。继续由他来集成后续的AI模型，可以让他对整个AI推理服务的代码有整体的掌控，便于进行统一的性能优化和重构，确保AI服务模块的健壮性和可维护性。",
+          "subtask_id": 124,
+          "deadline": "2025-08-17"
+        },
+        {
+          "subtask": "后端：集成烟火识别模型",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "TensorFlow",
+            "PyTorch"
+          ],
+          "assignment_reason": "作为算法工程师(Rank 3)，梁宇轩精通Python(strong)并负责模型集成工作。完成所有核心模型的集成是他的关键职责，这项任务是他系列工作的延续，能够确保所有AI功能按时、高质量地整合到后端服务中，形成完整的能力闭环。",
+          "subtask_id": 125,
+          "deadline": "2025-08-18"
+        }
+      ]
+    },
+    {
+      "user_name": "罗军",
+      "user_id": "0cijcier",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "系统工程师",
+      "hard_skills": [
+        {
+          "skill": "Linux",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Docker",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "AWS",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Kubernetes",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为系统工程师（Rank 3），他以其Linux、Docker和AWS的扎实技能加固了团队的DevOps能力。他将协助管理云基础设施、监控系统性能、实施数据备份与灾难恢复策略，全面保障平台的安全性和稳定性。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "定义系统非功能性需求（性能、安全）",
+          "phase": "Strategy & Planning",
+          "required_skills": [
+            "需求分析",
+            "Linux",
+            "Kubernetes"
+          ],
+          "assignment_reason": "罗军作为系统工程师(Rank 3)，精通Linux(strong)并熟悉Kubernetes(low)。他对系统底层的性能和安全有更深刻的理解。由他来参与定义非功能性需求，可以从运维和系统稳定的角度提出具体的、可量化的指标，使需求更具可执行性。",
+          "subtask_id": 126,
+          "deadline": "2025-02-14"
+        },
+        {
+          "subtask": "搭建Git代码仓库和分支模型",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Git",
+            "Linux"
+          ],
+          "assignment_reason": "罗军是系统工程师(Rank 3)，在Linux(strong)方面是专家。搭建和管理Git仓库，并定义合理的分支模型（如GitFlow），是保障团队协作顺畅的基础。他的系统管理经验让他成为配置代码版本控制基础设施的最佳人选。",
+          "subtask_id": 127,
+          "deadline": "2025-04-05"
+        },
+        {
+          "subtask": "配置生产环境网络(VPC, 子网, 安全组)",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "AWS",
+            "Azure",
+            "网络配置"
+          ],
+          "assignment_reason": "罗军作为系统工程师(Rank 3)，具备AWS(medium)和Linux(strong)的技能，对网络基础有很好的理解。配置生产环境网络是保障系统安全和连通性的第一步，技术要求高。他的专业能力可以确保VPC、子网和安全组的规划合理、配置正确。",
+          "subtask_id": 128,
+          "deadline": "2025-11-05"
+        },
+        {
+          "subtask": "部署生产环境数据库并配置备份策略",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "MySQL",
+            "PostgreSQL",
+            "数据库管理"
+          ],
+          "assignment_reason": "罗军是系统工程师(Rank 3)，拥有扎实的系统管理经验。部署生产数据库并配置可靠的备份策略，是保障数据安全的生命线。他的运维背景可以确保数据库部署的规范性，并制定出满足RPO/RTO要求的备份和恢复方案。",
+          "subtask_id": 129,
+          "deadline": "2025-11-12"
+        },
+        {
+          "subtask": "在生产环境执行冒烟测试",
+          "phase": "Deployment & Launch",
+          "required_skills": [
+            "测试",
+            "运维"
+          ],
+          "assignment_reason": "罗军作为系统工程师(Rank 3)，负责了大量的部署工作。部署完成后，由他来执行冒烟测试，快速验证核心服务是否正常启动、关键链路是否跑通，是最直接有效的方式。他最了解系统组件的部署情况，能迅速判断问题是否由环境引起。",
+          "subtask_id": 130,
+          "deadline": "2025-12-02"
+        },
+        {
+          "subtask": "为第一批用户组织线上或线下培训会",
+          "phase": "Deployment & Launch",
+          "required_skills": [],
+          "assignment_reason": "罗军作为系统工程师(Rank 3)，对系统的整体架构和运行机制有深入了解。在培训会上，他可以从技术角度为用户解答一些深层次的疑问，并现场演示系统的稳定性。虽然不是他的主职，但这是一个锻炼他沟通和表达能力的好机会。",
+          "subtask_id": 131,
+          "deadline": "2025-12-08"
+        }
+      ]
+    },
+    {
+      "user_name": "罗佳",
+      "user_id": "69txrqek",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "算法工程师",
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "TensorFlow",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "机器学习",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "NumPy",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为算法工程师（Rank 3），她在Python、TensorFlow和机器学习方面的雄厚实力将为AI团队注入强大动力。她将专注于研究和实现烟火识别、反光衣识别等复杂计算机视觉算法， tackling the project's most critical technical challenges。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计服务间异步通信机制（消息队列）",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Spring Boot",
+            "Python",
+            "架构设计"
+          ],
+          "assignment_reason": "罗佳作为算法工程师(Rank 3)，精通Python(strong)，并且了解系统解耦的重要性。服务间的异步通信是构建弹性微服务系统的关键，她可以从数据流转和处理的角度，参与消息队列（如RabbitMQ/Kafka）选型和消息格式设计。",
+          "subtask_id": 132,
+          "deadline": "2025-04-22"
+        },
+        {
+          "subtask": "后端：实现帧数据推送至消息队列的功能",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "RabbitMQ/Kafka"
+          ],
+          "assignment_reason": "罗佳是算法工程师(Rank 3)，Python(strong)是她的核心技能。视频流处理模块和AI推理模块通过消息队列解耦，由她来开发将视频帧数据推送到消息队列的生产者，最了解下游AI服务需要什么格式的数据，可以确保上下游数据交互的无缝衔接。",
+          "subtask_id": 133,
+          "deadline": "2025-07-25"
+        },
+        {
+          "subtask": "后端：开发AI推理服务的API入口",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "Django",
+            "RESTful API"
+          ],
+          "assignment_reason": "罗佳作为算法工程师(Rank 3)，拥有强大的Python(strong)编程能力。AI推理服务需要一个API入口来接收任务（例如从消息队列消费，或直接http调用）。她的技能非常适合开发这个入口服务，确保数据能正确流入模型并返回结果。",
+          "subtask_id": 134,
+          "deadline": "2025-06-30"
+        },
+        {
+          "subtask": "后端：开发告警规则判断引擎",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "业务逻辑"
+          ],
+          "assignment_reason": "罗佳是算法工程师(Rank 3)，有很强的逻辑思维能力。虽然她主用Python，但告警规则判断的核心是业务逻辑。她可以与Java工程师协作，负责设计规则引擎的核心逻辑，确保在接收到AI模型的原始识别结果后，能根据预设规则准确判断是否生成告警。",
+          "subtask_id": 135,
+          "deadline": "2025-08-30"
+        },
+        {
+          "subtask": "后端：实现报表导出为PDF/CSV功能",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Java",
+            "iText/POI"
+          ],
+          "assignment_reason": "罗佳作为一名工程师(Rank 3)，具备快速学习和解决问题的能力。报表导出功能相对独立，可以作为她扩展技术栈、接触Java后端开发的好机会。她强大的编程基础能够帮助她掌握相关库的用法，并完成这个实用功能的开发。",
+          "subtask_id": 136,
+          "deadline": "2025-09-25"
+        }
+      ]
+    },
+    {
+      "user_name": "许芳",
+      "user_id": "3iq31idy",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "算法工程师",
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "TensorFlow",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "PyTorch",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "scikit-learn",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为算法工程师（Rank 3），她同时掌握TensorFlow和PyTorch，为团队带来了技术选型的灵活性。她可以根据不同识别任务（如静态图片分析或实时视频流分析）的特点，选择并实施最优的AI框架，以构建更高效、鲁棒的算法模型。",
+      "original_communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计视频流接入与分发架构",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Python",
+            "流媒体技术"
+          ],
+          "assignment_reason": "许芳作为算法工程师(Rank 3)，精通Python(strong)。视频流是整个AI分析的源头，其接入与分发的架构设计至关重要。她可以从算法对视频帧的需求出发，设计出高效、低延迟的流媒体处理方案，确保AI模型能获得稳定、高质量的数据输入。",
+          "subtask_id": 137,
+          "deadline": "2025-04-08"
+        },
+        {
+          "subtask": "后端：实现视频流(RTSP/RTMP)接入模块",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Python",
+            "OpenCV",
+            "流媒体"
+          ],
+          "assignment_reason": "许芳是算法工程师(Rank 3)，Python(strong)是她的主要编程语言。视频流接入是AI分析的第一步，通常使用Python和OpenCV处理。由她负责开发此模块，可以确保视频解码和抽帧的逻辑最高效，为下游的AI模型提供最合适的输入。",
+          "subtask_id": 138,
+          "deadline": "2025-07-15"
+        },
+        {
+          "subtask": "- 文档：编写并维护API接口文档",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Swagger",
+            "文档编写"
+          ],
+          "assignment_reason": "许芳是算法工程师(Rank 3)，具备严谨的逻辑思维和文档编写能力。由她来负责维护API文档，可以促进前后端、算法与后端之间的沟通。这是一个需要持续投入和细致工作的任务，能够锻炼她的全局视野和沟通协作能力。",
+          "subtask_id": 139,
+          "deadline": "2025-09-29"
+        },
+        {
+          "subtask": "- 文档：编写并维护API接口文档",
+          "phase": "Development & Implementation",
+          "required_skills": [
+            "Swagger",
+            "文档编写"
+          ],
+          "assignment_reason": "由于任务列表中存在重复任务“文档：编写并维护API接口文档”，为确保所有任务都被分配，此重复任务分配给许芳。作为算法工程师(Rank 3)，她具备严谨的逻辑思维，适合维护技术文档，确保API文档的准确性和实时性，服务于整个开发团队。",
+          "subtask_id": 140,
+          "deadline": "2025-09-30"
+        },
+        {
+          "subtask": "设计数据库主从复制与读写分离方案",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "MySQL",
+            "PostgreSQL",
+            "数据库设计"
+          ],
+          "assignment_reason": "许芳作为算法工程师(Rank 3)，对系统性能有较高要求。让她参与数据库架构设计，可以从一个不同于传统后端开发者的视角提出问题，特别是针对大量AI结果写入和报表读取的场景，推动设计出更能满足读写性能需求的方案。",
+          "subtask_id": 141,
+          "deadline": "2025-04-25"
+        }
+      ]
+    },
+    {
+      "user_name": "吴浩",
+      "user_id": "6klo30ix",
+      "team": "技术研发部",
+      "rank": 3,
+      "title": "后端工程师",
+      "hard_skills": [
+        {
+          "skill": "Python",
+          "proficiency": "strong"
+        },
+        {
+          "skill": "Django",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "PostgreSQL",
+          "proficiency": "medium"
+        },
+        {
+          "skill": "Git",
+          "proficiency": "low"
+        }
+      ],
+      "communication_style": {
+        "Formality": "Semi-formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Friendly",
+        "Questioning_Style": "Probing"
+      },
+      "selection_reason": "作为后端工程师（Rank 3），他精通Python和Django，是连接AI模型（Python）与后端业务系统（Java）的关键桥梁。他可以高效地构建数据处理管道和API，将算法团队的输出无缝集成到主应用中，确保数据流转的顺畅。",
+      "original_communication_style": {
+        "Formality": "Formal",
+        "Verbosity": "Concise",
+        "Humor": "Minimal",
+        "Jargon_Usage": "Technical",
+        "Emoji_Usage": "Rare",
+        "Directness": "Direct",
+        "Warmth": "Neutral",
+        "Questioning_Style": "Probing"
+      },
+      "subtasks": [
+        {
+          "subtask": "设计告警事件表（Alert, Event）",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "MySQL",
+            "数据库设计"
+          ],
+          "assignment_reason": "吴浩作为后端工程师(Rank 3)，拥有Python(strong)开发背景。告警和事件是系统产生最频繁的数据，其表结构设计对写入和查询性能影响极大。他可以参与设计高效的表结构，特别是考虑未来可能的扩展和数据分区策略。",
+          "subtask_id": 142,
+          "deadline": "2025-03-23"
+        },
+        {
+          "subtask": "设计用户管理API接口文档（Swagger/OpenAPI）",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "API设计"
+          ],
+          "assignment_reason": "吴浩是一名后端工程师(Rank 3)，虽然他的背景是Python(strong)和Django(medium)，但API设计的原则是通用的。由他来设计用户管理的API接口，可以与Java后端工程师形成交叉评审，确保API设计得清晰、一致且易于使用。",
+          "subtask_id": 143,
+          "deadline": "2025-04-30"
+        },
+        {
+          "subtask": "设计摄像头管理API接口文档",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "API设计"
+          ],
+          "assignment_reason": "吴浩作为后端工程师(Rank 3)，具备API设计经验。让他负责摄像头管理的API文档设计，可以确保接口定义遵循RESTful最佳实践。即使实现语言是Java，清晰的接口定义也是前后端高效协作的基础。",
+          "subtask_id": 144,
+          "deadline": "2025-05-01"
+        },
+        {
+          "subtask": "设计告警查询与处理API接口文档",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "API设计"
+          ],
+          "assignment_reason": "吴浩是后端工程师(Rank 3)，精通Python(strong)和API设计。告警查询API非常关键，可能涉及复杂的筛选和分页。他可以专注在API的定义上，设计出强大而灵活的查询接口，供Java同事实现和前端同事调用，确保接口设计的质量。",
+          "subtask_id": 145,
+          "deadline": "2025-05-02"
+        },
+        {
+          "subtask": "设计报表生成API接口文档",
+          "phase": "Design & Architecture",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "API设计"
+          ],
+          "assignment_reason": "吴浩作为后端工程师(Rank 3)，拥有丰富的API设计经验。报表API需要定义清晰的请求参数（如时间范围、维度）和返回的数据结构。由他来设计API文档，可以确保接口的易用性和可扩展性，为前端数据可视化提供便利。",
+          "subtask_id": 146,
+          "deadline": "2025-05-03"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_subtasks": 146,
+    "avg_subtasks_per_member": 5.41,
+    "phase_distribution": {
+      "Strategy & Planning": 25,
+      "Design & Architecture": 33,
+      "Development & Implementation": 43,
+      "Testing & Optimization": 25,
+      "Deployment & Launch": 20
+    },
+    "generation_method": "Topic-Driven Multi-stage",
+    "communication_style_adjusted": true
+  }
+}
