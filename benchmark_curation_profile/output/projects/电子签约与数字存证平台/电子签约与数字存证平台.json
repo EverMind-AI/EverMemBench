@@ -582,7 +582,7 @@
           "deadline": "2025-04-20"
         },
         {
-          "subtask": "后端：搭建用户身份管理（IAM）服务框架",
+          "subtask": "搭建用户身份管理（IAM）服务框架",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -593,7 +593,7 @@
           "deadline": "2025-04-30"
         },
         {
-          "subtask": "后端：实现用户实名认证信息提交接口",
+          "subtask": "实现用户实名认证信息提交接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -664,7 +664,7 @@
           "deadline": "2025-03-20"
         },
         {
-          "subtask": "前端：搭建React项目框架与配置（Webpack, Babel）",
+          "subtask": "搭建React项目框架与配置（Webpack, Babel）",
           "phase": "Development & Implementation",
           "required_skills": [
             "JavaScript",
@@ -676,7 +676,7 @@
           "deadline": "2025-04-10"
         },
         {
-          "subtask": "前端：开发可复用的UI组件 - Input",
+          "subtask": "开发可复用的UI组件 - Input",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -687,7 +687,7 @@
           "deadline": "2025-05-20"
         },
         {
-          "subtask": "前端：实现注册页面UI与多步表单逻辑",
+          "subtask": "实现注册页面UI与多步表单逻辑",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -699,7 +699,7 @@
           "deadline": "2025-06-15"
         },
         {
-          "subtask": "前端：开发合同发起页面 - 文件上传模块",
+          "subtask": "开发合同发起页面 - 文件上传模块",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -711,7 +711,7 @@
           "deadline": "2025-07-25"
         },
         {
-          "subtask": "前端：开发用户个人中心页面",
+          "subtask": "开发用户个人中心页面",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -803,7 +803,7 @@
           "deadline": "2025-05-15"
         },
         {
-          "subtask": "前端：开发可复用的UI组件 - Button",
+          "subtask": "开发可复用的UI组件 - Button",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -814,7 +814,7 @@
           "deadline": "2025-05-25"
         },
         {
-          "subtask": "前端：开发可复用的UI组件 - Modal",
+          "subtask": "开发可复用的UI组件 - Modal",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1022,7 +1022,7 @@
           "deadline": "2025-03-31"
         },
         {
-          "subtask": "后端：实现基于手机/邮箱的用户注册接口",
+          "subtask": "实现基于手机/邮箱的用户注册接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -1034,7 +1034,7 @@
           "deadline": "2025-05-20"
         },
         {
-          "subtask": "后端：实现获取当前登录用户信息的接口",
+          "subtask": "实现获取当前登录用户信息的接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -1046,7 +1046,7 @@
           "deadline": "2025-06-10"
         },
         {
-          "subtask": "后端：实现提交签名/印章数据的接口",
+          "subtask": "实现提交签名/印章数据的接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -1058,7 +1058,7 @@
           "deadline": "2025-08-30"
         },
         {
-          "subtask": "后端：实现合同列表与状态查询接口",
+          "subtask": "实现合同列表与状态查询接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -1373,7 +1373,7 @@
           "deadline": "2025-03-31"
         },
         {
-          "subtask": "后端：实现基于JWT的用户登录认证接口",
+          "subtask": "实现基于JWT的用户登录认证接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -1385,7 +1385,7 @@
           "deadline": "2025-05-20"
         },
         {
-          "subtask": "后端：实现合同文件上传接口",
+          "subtask": "实现合同文件上传接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -1397,7 +1397,7 @@
           "deadline": "2025-07-15"
         },
         {
-          "subtask": "后端：实现在线签署室数据加载接口",
+          "subtask": "实现在线签署室数据加载接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -1469,7 +1469,7 @@
       },
       "subtasks": [
         {
-          "subtask": "前端：实现登录页面UI与表单逻辑",
+          "subtask": "实现登录页面UI与表单逻辑",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1481,7 +1481,7 @@
           "deadline": "2025-06-10"
         },
         {
-          "subtask": "前端：实现JWT令牌的本地存储与请求头注入",
+          "subtask": "实现JWT令牌的本地存储与请求头注入",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1493,7 +1493,7 @@
           "deadline": "2025-06-10"
         },
         {
-          "subtask": "前端：开发仪表盘页面，展示合同列表和状态",
+          "subtask": "开发仪表盘页面，展示合同列表和状态",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1505,7 +1505,7 @@
           "deadline": "2025-08-15"
         },
         {
-          "subtask": "前端：开发在线签署室页面 - PDF文档渲染",
+          "subtask": "开发在线签署室页面 - PDF文档渲染",
           "phase": "Development & Implementation",
           "required_skills": [
             "JavaScript",
@@ -1517,7 +1517,7 @@
           "deadline": "2025-09-10"
         },
         {
-          "subtask": "前端：实现全局路由管理和页面访问控制",
+          "subtask": "实现全局路由管理和页面访问控制",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1830,7 +1830,7 @@
           "deadline": "2025-02-12"
         },
         {
-          "subtask": "前端：开发在线签署室页面 - 手写签名/印章生成模块",
+          "subtask": "开发在线签署室页面 - 手写签名/印章生成模块",
           "phase": "Development & Implementation",
           "required_skills": [
             "JavaScript",
@@ -1842,7 +1842,7 @@
           "deadline": "2025-09-20"
         },
         {
-          "subtask": "前端：开发合同发起页面 - 签署区拖拽设置模块",
+          "subtask": "开发合同发起页面 - 签署区拖拽设置模块",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1947,7 +1947,7 @@
           "deadline": "2025-02-12"
         },
         {
-          "subtask": "后端：集成TSA服务，为已签署文档加盖时间戳",
+          "subtask": "集成TSA服务，为已签署文档加盖时间戳",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2179,7 +2179,7 @@
           "deadline": "2025-01-25"
         },
         {
-          "subtask": "前端：开发企业管理页面（成员管理、角色设置）",
+          "subtask": "开发企业管理页面（成员管理、角色设置）",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2190,7 +2190,7 @@
           "deadline": "2025-09-25"
         },
         {
-          "subtask": "前端：开发可复用的UI组件 - Table",
+          "subtask": "开发可复用的UI组件 - Table",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2212,7 +2212,7 @@
           "deadline": "2025-11-25"
         },
         {
-          "subtask": "后端：集成CA服务，为用户申请数字证书",
+          "subtask": "集成CA服务，为用户申请数字证书",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -2224,7 +2224,7 @@
           "deadline": "2025-09-30"
         },
         {
-          "subtask": "后端：实现第三方应用接入的API Key管理功能",
+          "subtask": "实现第三方应用接入的API Key管理功能",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -2328,7 +2328,7 @@
           "deadline": "2025-04-15"
         },
         {
-          "subtask": "后端：生成出证报告接口",
+          "subtask": "生成出证报告接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2423,7 +2423,7 @@
           "deadline": "2025-04-05"
         },
         {
-          "subtask": "后端：实现创建签约流程接口（设置签署方和顺序）",
+          "subtask": "实现创建签约流程接口（设置签署方和顺序）",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2435,7 +2435,7 @@
           "deadline": "2025-07-15"
         },
         {
-          "subtask": "后端：实现发送签约邀请通知（邮件/短信）的异步任务",
+          "subtask": "实现发送签约邀请通知（邮件/短信）的异步任务",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2447,7 +2447,7 @@
           "deadline": "2025-07-25"
         },
         {
-          "subtask": "后端：实现文件哈希计算与上链存证接口",
+          "subtask": "实现文件哈希计算与上链存证接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",

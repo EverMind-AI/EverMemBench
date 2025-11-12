@@ -2588,7 +2588,7 @@
           "deadline": "2025-12-15"
         },
         {
-          "subtask": "蔡英俊 - task - 设计分布式缓存策略(Redis)",
+          "subtask": "设计分布式缓存策略(Redis)",
           "phase": "Design & Architecture",
           "required_skills": [
             "系统架构",

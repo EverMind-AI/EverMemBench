@@ -569,7 +569,7 @@
           "deadline": "2025-05-06"
         },
         {
-          "subtask": "前端-搭建项目框架与配置",
+          "subtask": "搭建项目框架与配置",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -580,7 +580,7 @@
           "deadline": "2025-04-30"
         },
         {
-          "subtask": "前端-配置应用路由（React Router）",
+          "subtask": "配置应用路由（React Router）",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -590,7 +590,7 @@
           "deadline": "2025-05-09"
         },
         {
-          "subtask": "前端-开发通用UI组件-按钮",
+          "subtask": "开发通用UI组件-按钮",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -600,7 +600,7 @@
           "deadline": "2025-06-05"
         },
         {
-          "subtask": "前端-开发通用UI组件-数据表格",
+          "subtask": "开发通用UI组件-数据表格",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -610,7 +610,7 @@
           "deadline": "2025-07-04"
         },
         {
-          "subtask": "前端-开发登录页面UI与逻辑",
+          "subtask": "开发登录页面UI与逻辑",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -620,7 +620,7 @@
           "deadline": "2025-06-03"
         },
         {
-          "subtask": "前端-开发管理后台主布局",
+          "subtask": "开发管理后台主布局",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -630,7 +630,7 @@
           "deadline": "2025-06-12"
         },
         {
-          "subtask": "前端-开发批次管理页面",
+          "subtask": "开发批次管理页面",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1547,7 +1547,7 @@
       },
       "subtasks": [
         {
-          "subtask": "前端-实现状态管理（Redux/Context）",
+          "subtask": "实现状态管理（Redux/Context）",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1557,7 +1557,7 @@
           "deadline": "2025-05-15"
         },
         {
-          "subtask": "前端-封装API请求模块（Axios）",
+          "subtask": "封装API请求模块（Axios）",
           "phase": "Development & Implementation",
           "required_skills": [
             "JavaScript",
@@ -1567,7 +1567,7 @@
           "deadline": "2025-05-12"
         },
         {
-          "subtask": "前端-开发通用UI组件-表单输入框",
+          "subtask": "开发通用UI组件-表单输入框",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1577,7 +1577,7 @@
           "deadline": "2025-06-06"
         },
         {
-          "subtask": "前端-开发通用UI组件-模态框",
+          "subtask": "开发通用UI组件-模态框",
           "phase": "Development & Implementation",
           "required_skills": [
             "Vue.js",
@@ -1587,7 +1587,7 @@
           "deadline": "2025-06-27"
         },
         {
-          "subtask": "前端-开发注册页面UI与逻辑",
+          "subtask": "开发注册页面UI与逻辑",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1597,7 +1597,7 @@
           "deadline": "2025-05-30"
         },
         {
-          "subtask": "前端-开发仪表盘页面",
+          "subtask": "开发仪表盘页面",
           "phase": "Development & Implementation",
           "required_skills": [
             "Vue.js",
@@ -1607,7 +1607,7 @@
           "deadline": "2025-09-02"
         },
         {
-          "subtask": "前端-开发新建批次表单页面",
+          "subtask": "开发新建批次表单页面",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1617,7 +1617,7 @@
           "deadline": "2025-07-08"
         },
         {
-          "subtask": "前端-开发批次详情展示页面",
+          "subtask": "开发批次详情展示页面",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2429,7 +2429,7 @@
           "deadline": "2025-02-24"
         },
         {
-          "subtask": "前端-实现页面响应式布局",
+          "subtask": "实现页面响应式布局",
           "phase": "Development & Implementation",
           "required_skills": [
             "CSS3",
@@ -2655,7 +2655,7 @@
           "deadline": "2025-02-18"
         },
         {
-          "subtask": "前端-开发生产档案录入页面",
+          "subtask": "开发生产档案录入页面",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2665,7 +2665,7 @@
           "deadline": "2025-08-12"
         },
         {
-          "subtask": "前端-开发溯源码管理页面",
+          "subtask": "开发溯源码管理页面",
           "phase": "Development & Implementation",
           "required_skills": [
             "Vue.js",
@@ -2675,7 +2675,7 @@
           "deadline": "2025-09-10"
         },
         {
-          "subtask": "前端-开发用户个人中心页面",
+          "subtask": "开发用户个人中心页面",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2685,7 +2685,7 @@
           "deadline": "2025-09-15"
         },
         {
-          "subtask": "前端-开发消费者查询展示页",
+          "subtask": "开发消费者查询展示页",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2696,7 +2696,7 @@
           "deadline": "2025-09-19"
         },
         {
-          "subtask": "前端-实现表单统一校验逻辑",
+          "subtask": "实现表单统一校验逻辑",
           "phase": "Development & Implementation",
           "required_skills": [
             "JavaScript",

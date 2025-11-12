@@ -414,7 +414,7 @@
           "deadline": "2025-04-18"
         },
         {
-          "subtask": "后端：开发WebSocket服务用于实时告警推送",
+          "subtask": "开发WebSocket服务用于实时告警推送",
           "phase": "Development & Implementation",
           "required_skills": [
             "Node.js",
@@ -426,7 +426,7 @@
           "deadline": "2025-09-10"
         },
         {
-          "subtask": "前端：集成状态管理库(Redux/Zustand)",
+          "subtask": "集成状态管理库(Redux/Zustand)",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -438,7 +438,7 @@
           "deadline": "2025-05-05"
         },
         {
-          "subtask": "前端：实现WebSocket客户端接收实时告警",
+          "subtask": "实现WebSocket客户端接收实时告警",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -450,7 +450,7 @@
           "deadline": "2025-09-12"
         },
         {
-          "subtask": "前端：开发用户权限控制逻辑",
+          "subtask": "开发用户权限控制逻辑",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -760,7 +760,7 @@
           "deadline": "2025-02-15"
         },
         {
-          "subtask": "AI：收集并清洗安全帽识别数据集",
+          "subtask": "收集并清洗安全帽识别数据集",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -772,7 +772,7 @@
           "deadline": "2025-05-15"
         },
         {
-          "subtask": "AI：标注安全帽识别数据集",
+          "subtask": "标注安全帽识别数据集",
           "phase": "Development & Implementation",
           "required_skills": [
             "数据标注",
@@ -783,7 +783,7 @@
           "deadline": "2025-06-20"
         },
         {
-          "subtask": "AI：收集并标注反光衣识别数据集",
+          "subtask": "收集并标注反光衣识别数据集",
           "phase": "Development & Implementation",
           "required_skills": [
             "数据标注",
@@ -794,7 +794,7 @@
           "deadline": "2025-05-20"
         },
         {
-          "subtask": "AI：收集并标注区域入侵/烟火数据集",
+          "subtask": "收集并标注区域入侵/烟火数据集",
           "phase": "Development & Implementation",
           "required_skills": [
             "数据标注",
@@ -876,7 +876,7 @@
           "deadline": "2025-03-18"
         },
         {
-          "subtask": "后端：实现用户注册API",
+          "subtask": "实现用户注册API",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -888,7 +888,7 @@
           "deadline": "2025-05-20"
         },
         {
-          "subtask": "后端：实现用户登录及JWT生成API",
+          "subtask": "实现用户登录及JWT生成API",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -900,7 +900,7 @@
           "deadline": "2025-05-22"
         },
         {
-          "subtask": "后端：实现获取用户角色权限API",
+          "subtask": "实现获取用户角色权限API",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -912,7 +912,7 @@
           "deadline": "2025-06-25"
         },
         {
-          "subtask": "后端：实现告警信息及截图入库",
+          "subtask": "实现告警信息及截图入库",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -1334,7 +1334,7 @@
           "deadline": "2025-03-25"
         },
         {
-          "subtask": "后端：实现摄像头增删改查(CRUD) API",
+          "subtask": "实现摄像头增删改查(CRUD) API",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -1346,7 +1346,7 @@
           "deadline": "2025-06-10"
         },
         {
-          "subtask": "后端：开发日报表数据聚合任务",
+          "subtask": "开发日报表数据聚合任务",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -1442,7 +1442,7 @@
           "deadline": "2025-04-05"
         },
         {
-          "subtask": "前端：开发通用UI组件(Button, Modal, Card)",
+          "subtask": "开发通用UI组件(Button, Modal, Card)",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1454,7 +1454,7 @@
           "deadline": "2025-05-30"
         },
         {
-          "subtask": "前端：开发主控台(Dashboard)页面布局",
+          "subtask": "开发主控台(Dashboard)页面布局",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1466,7 +1466,7 @@
           "deadline": "2025-07-01"
         },
         {
-          "subtask": "前端：开发告警详情弹窗并对接API",
+          "subtask": "开发告警详情弹窗并对接API",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1478,7 +1478,7 @@
           "deadline": "2025-08-25"
         },
         {
-          "subtask": "前端：实现全站响应式布局适配",
+          "subtask": "实现全站响应式布局适配",
           "phase": "Development & Implementation",
           "required_skills": [
             "CSS3",
@@ -1998,7 +1998,7 @@
           "deadline": "2025-04-12"
         },
         {
-          "subtask": "AI：开发并训练安全帽识别模型",
+          "subtask": "开发并训练安全帽识别模型",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2010,7 +2010,7 @@
           "deadline": "2025-07-31"
         },
         {
-          "subtask": "AI：开发并训练反光衣识别模型",
+          "subtask": "开发并训练反光衣识别模型",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2022,7 +2022,7 @@
           "deadline": "2025-08-01"
         },
         {
-          "subtask": "AI：开发并训练区域入侵/烟火模型",
+          "subtask": "开发并训练区域入侵/烟火模型",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2034,7 +2034,7 @@
           "deadline": "2025-08-02"
         },
         {
-          "subtask": "AI：将训练好的模型转换为优化格式(ONNX/TensorRT)",
+          "subtask": "将训练好的模型转换为优化格式(ONNX/TensorRT)",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2209,7 +2209,7 @@
       },
       "subtasks": [
         {
-          "subtask": "前端：初始化React项目及配置路由",
+          "subtask": "初始化React项目及配置路由",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2221,7 +2221,7 @@
           "deadline": "2025-04-20"
         },
         {
-          "subtask": "前端：开发登录页面并对接API",
+          "subtask": "开发登录页面并对接API",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2233,7 +2233,7 @@
           "deadline": "2025-06-15"
         },
         {
-          "subtask": "前端：开发实时告警统计模块并对接API",
+          "subtask": "开发实时告警统计模块并对接API",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2245,7 +2245,7 @@
           "deadline": "2025-08-20"
         },
         {
-          "subtask": "前端：开发告警中心页面并对接API",
+          "subtask": "开发告警中心页面并对接API",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2257,7 +2257,7 @@
           "deadline": "2025-08-10"
         },
         {
-          "subtask": "前端：开发摄像头管理页面并对接API",
+          "subtask": "开发摄像头管理页面并对接API",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2269,7 +2269,7 @@
           "deadline": "2025-07-20"
         },
         {
-          "subtask": "前端：开发报表页面并对接API",
+          "subtask": "开发报表页面并对接API",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2432,7 +2432,7 @@
       },
       "subtasks": [
         {
-          "subtask": "前端：编写登录表单组件的单元测试",
+          "subtask": "编写登录表单组件的单元测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Jest",
@@ -2443,7 +2443,7 @@
           "deadline": "2025-09-30"
         },
         {
-          "subtask": "前端：编写数据可视化图表组件的单元测试",
+          "subtask": "编写数据可视化图表组件的单元测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Jest",
@@ -2548,7 +2548,7 @@
           "deadline": "2025-03-26"
         },
         {
-          "subtask": "后端：集成安全帽佩戴识别模型",
+          "subtask": "集成安全帽佩戴识别模型",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2560,7 +2560,7 @@
           "deadline": "2025-08-15"
         },
         {
-          "subtask": "后端：集成反光衣穿着识别模型",
+          "subtask": "集成反光衣穿着识别模型",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2572,7 +2572,7 @@
           "deadline": "2025-08-16"
         },
         {
-          "subtask": "后端：集成区域入侵检测模型",
+          "subtask": "集成区域入侵检测模型",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2584,7 +2584,7 @@
           "deadline": "2025-08-17"
         },
         {
-          "subtask": "后端：集成烟火识别模型",
+          "subtask": "集成烟火识别模型",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2770,7 +2770,7 @@
           "deadline": "2025-04-22"
         },
         {
-          "subtask": "后端：实现帧数据推送至消息队列的功能",
+          "subtask": "实现帧数据推送至消息队列的功能",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2781,7 +2781,7 @@
           "deadline": "2025-07-25"
         },
         {
-          "subtask": "后端：开发AI推理服务的API入口",
+          "subtask": "开发AI推理服务的API入口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2793,7 +2793,7 @@
           "deadline": "2025-06-30"
         },
         {
-          "subtask": "后端：开发告警规则判断引擎",
+          "subtask": "开发告警规则判断引擎",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -2805,7 +2805,7 @@
           "deadline": "2025-08-30"
         },
         {
-          "subtask": "后端：实现报表导出为PDF/CSV功能",
+          "subtask": "实现报表导出为PDF/CSV功能",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -2875,7 +2875,7 @@
           "deadline": "2025-04-08"
         },
         {
-          "subtask": "后端：实现视频流(RTSP/RTMP)接入模块",
+          "subtask": "实现视频流(RTSP/RTMP)接入模块",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2887,7 +2887,7 @@
           "deadline": "2025-07-15"
         },
         {
-          "subtask": "- 文档：编写并维护API接口文档",
+          "subtask": "编写并维护API接口文档",
           "phase": "Development & Implementation",
           "required_skills": [
             "Swagger",
@@ -2898,7 +2898,7 @@
           "deadline": "2025-09-29"
         },
         {
-          "subtask": "- 文档：编写并维护API接口文档",
+          "subtask": "编写并维护API接口文档",
           "phase": "Development & Implementation",
           "required_skills": [
             "Swagger",

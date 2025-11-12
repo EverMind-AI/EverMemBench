@@ -220,7 +220,7 @@
           "deadline": "2025-03-18"
         },
         {
-          "subtask": "技术选型：确定后端开发语言与框架",
+          "subtask": "确定后端开发语言与框架",
           "phase": "Design & Architecture",
           "required_skills": [
             "Python",
@@ -540,7 +540,7 @@
       },
       "subtasks": [
         {
-          "subtask": "后端：实现用户注册接口",
+          "subtask": "实现用户注册接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -551,7 +551,7 @@
           "deadline": "2025-05-15"
         },
         {
-          "subtask": "后端：实现用户角色与权限管理逻辑",
+          "subtask": "实现用户角色与权限管理逻辑",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -562,7 +562,7 @@
           "deadline": "2025-06-10"
         },
         {
-          "subtask": "后端：实现数据消费与入库服务",
+          "subtask": "实现数据消费与入库服务",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -573,7 +573,7 @@
           "deadline": "2025-07-10"
         },
         {
-          "subtask": "后端：实现查询传感器列表接口",
+          "subtask": "实现查询传感器列表接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -584,7 +584,7 @@
           "deadline": "2025-08-12"
         },
         {
-          "subtask": "后端：实现执行设备状态查询接口",
+          "subtask": "实现执行设备状态查询接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -595,7 +595,7 @@
           "deadline": "2025-08-30"
         },
         {
-          "subtask": "测试：编写数据解析服务的单元测试",
+          "subtask": "编写数据解析服务的单元测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "JUnit",
@@ -654,7 +654,7 @@
       },
       "subtasks": [
         {
-          "subtask": "技术选型：确定前端开发框架",
+          "subtask": "确定前端开发框架",
           "phase": "Design & Architecture",
           "required_skills": [
             "React",
@@ -665,7 +665,7 @@
           "deadline": "2025-03-05"
         },
         {
-          "subtask": "后端：实现实时数据推送服务(WebSocket)",
+          "subtask": "实现实时数据推送服务(WebSocket)",
           "phase": "Development & Implementation",
           "required_skills": [
             "Node.js",
@@ -676,7 +676,7 @@
           "deadline": "2025-07-15"
         },
         {
-          "subtask": "前端：实现全局状态管理(Redux/Context)",
+          "subtask": "实现全局状态管理(Redux/Context)",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -687,7 +687,7 @@
           "deadline": "2025-07-28"
         },
         {
-          "subtask": "测试：编写前端数据图表组件的单元测试",
+          "subtask": "编写前端数据图表组件的单元测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "React",
@@ -698,7 +698,7 @@
           "deadline": "2025-10-08"
         },
         {
-          "subtask": "测试：编写前端表单验证逻辑的单元测试",
+          "subtask": "编写前端表单验证逻辑的单元测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "React",
@@ -709,7 +709,7 @@
           "deadline": "2025-10-15"
         },
         {
-          "subtask": "优化：实现前端路由懒加载",
+          "subtask": "实现前端路由懒加载",
           "phase": "Testing & Optimization",
           "required_skills": [
             "React",
@@ -812,7 +812,7 @@
           "deadline": "2025-02-27"
         },
         {
-          "subtask": "上线：准备并制作用户培训材料（PPT/视频）",
+          "subtask": "准备并制作用户培训材料（PPT/视频）",
           "phase": "Deployment & Launch",
           "required_skills": [
             "人才培养",
@@ -926,7 +926,7 @@
           "deadline": "2025-04-18"
         },
         {
-          "subtask": "测试：进行移动端响应式布局测试",
+          "subtask": "进行移动端响应式布局测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "UI测试",
@@ -1033,7 +1033,7 @@
           "deadline": "2025-03-28"
         },
         {
-          "subtask": "文档：编写用户认证模块API文档",
+          "subtask": "编写用户认证模块API文档",
           "phase": "Development & Implementation",
           "required_skills": [
             "Confluence",
@@ -1044,7 +1044,7 @@
           "deadline": "2025-05-30"
         },
         {
-          "subtask": "文档：编写数据服务模块API文档",
+          "subtask": "编写数据服务模块API文档",
           "phase": "Development & Implementation",
           "required_skills": [
             "Confluence",
@@ -1103,7 +1103,7 @@
       },
       "subtasks": [
         {
-          "subtask": "后端：实现传感器数据解析与预处理",
+          "subtask": "实现传感器数据解析与预处理",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -1114,7 +1114,7 @@
           "deadline": "2025-06-30"
         },
         {
-          "subtask": "后端：实现历史数据查询接口（按时间范围）",
+          "subtask": "实现历史数据查询接口（按时间范围）",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -1125,7 +1125,7 @@
           "deadline": "2025-08-10"
         },
         {
-          "subtask": "算法：开发规则引擎核心匹配逻辑",
+          "subtask": "开发规则引擎核心匹配逻辑",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -1136,7 +1136,7 @@
           "deadline": "2025-08-25"
         },
         {
-          "subtask": "算法：开发数据异常值检测模型",
+          "subtask": "开发数据异常值检测模型",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -1147,7 +1147,7 @@
           "deadline": "2025-09-20"
         },
         {
-          "subtask": "算法：实现数据预测模型（如土壤湿度）",
+          "subtask": "实现数据预测模型（如土壤湿度）",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -1158,7 +1158,7 @@
           "deadline": "2025-10-12"
         },
         {
-          "subtask": "测试：编写规则引擎核心逻辑的单元测试",
+          "subtask": "编写规则引擎核心逻辑的单元测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "pytest",
@@ -1228,7 +1228,7 @@
           "deadline": "2025-04-15"
         },
         {
-          "subtask": "后端：实现用户登录接口(JWT生成)",
+          "subtask": "实现用户登录接口(JWT生成)",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -1250,7 +1250,7 @@
           "deadline": "2025-07-18"
         },
         {
-          "subtask": "后端：实现创建自动化规则接口",
+          "subtask": "实现创建自动化规则接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -1261,7 +1261,7 @@
           "deadline": "2025-09-05"
         },
         {
-          "subtask": "优化：分析慢查询SQL并添加数据库索引",
+          "subtask": "分析慢查询SQL并添加数据库索引",
           "phase": "Testing & Optimization",
           "required_skills": [
             "MySQL",
@@ -1272,7 +1272,7 @@
           "deadline": "2025-11-08"
         },
         {
-          "subtask": "部署：编写后端服务的Dockerfile",
+          "subtask": "编写后端服务的Dockerfile",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Docker",
@@ -1331,7 +1331,7 @@
       },
       "subtasks": [
         {
-          "subtask": "测试：编写用户认证模块的单元测试",
+          "subtask": "编写用户认证模块的单元测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "JUnit",
@@ -1342,7 +1342,7 @@
           "deadline": "2025-09-12"
         },
         {
-          "subtask": "测试：执行数据上报-存储-查询流程的集成测试",
+          "subtask": "执行数据上报-存储-查询流程的集成测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "JMeter",
@@ -1353,7 +1353,7 @@
           "deadline": "2025-10-20"
         },
         {
-          "subtask": "测试：执行规则创建-触发-设备控制的集成测试",
+          "subtask": "执行规则创建-触发-设备控制的集成测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "pytest",
@@ -1364,7 +1364,7 @@
           "deadline": "2025-10-25"
         },
         {
-          "subtask": "测试：对数据看板页面进行手动功能测试",
+          "subtask": "对数据看板页面进行手动功能测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "测试用例设计",
@@ -1375,7 +1375,7 @@
           "deadline": "2025-10-22"
         },
         {
-          "subtask": "测试：对数据接入接口进行压力测试",
+          "subtask": "对数据接入接口进行压力测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "JMeter",
@@ -1386,7 +1386,7 @@
           "deadline": "2025-11-12"
         },
         {
-          "subtask": "部署：执行部署后冒烟测试",
+          "subtask": "执行部署后冒烟测试",
           "phase": "Deployment & Launch",
           "required_skills": [
             "测试",
@@ -1478,7 +1478,7 @@
           "deadline": "2025-01-28"
         },
         {
-          "subtask": "上线：组织针对现场技术人员的实操培训",
+          "subtask": "组织针对现场技术人员的实操培训",
           "phase": "Deployment & Launch",
           "required_skills": [
             "人才培养",
@@ -1489,7 +1489,7 @@
           "deadline": "2025-12-22"
         },
         {
-          "subtask": "上线：上线后系统健康度持续监控",
+          "subtask": "上线后系统健康度持续监控",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Linux",
@@ -1570,7 +1570,7 @@
           "deadline": "2025-04-26"
         },
         {
-          "subtask": "文档：编写设备控制模块API文档",
+          "subtask": "编写设备控制模块API文档",
           "phase": "Development & Implementation",
           "required_skills": [
             "Confluence",
@@ -1581,7 +1581,7 @@
           "deadline": "2025-10-10"
         },
         {
-          "subtask": "上线：编写并终审用户操作手册",
+          "subtask": "编写并终审用户操作手册",
           "phase": "Deployment & Launch",
           "required_skills": [
             "文档编写",
@@ -1592,7 +1592,7 @@
           "deadline": "2025-11-30"
         },
         {
-          "subtask": "上线：组织针对农场管理者的线上/线下培训",
+          "subtask": "组织针对农场管理者的线上/线下培训",
           "phase": "Deployment & Launch",
           "required_skills": [
             "人才培养",
@@ -1662,7 +1662,7 @@
           "deadline": "2025-05-05"
         },
         {
-          "subtask": "部署：配置生产环境云资源（虚拟机/容器服务）",
+          "subtask": "配置生产环境云资源（虚拟机/容器服务）",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Azure",
@@ -1674,7 +1674,7 @@
           "deadline": "2025-11-20"
         },
         {
-          "subtask": "部署：配置生产环境监控告警系统（Prometheus/Grafana）",
+          "subtask": "配置生产环境监控告警系统（Prometheus/Grafana）",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Prometheus",
@@ -1686,7 +1686,7 @@
           "deadline": "2025-11-28"
         },
         {
-          "subtask": "部署：配置生产环境日志收集系统（ELK/Loki）",
+          "subtask": "配置生产环境日志收集系统（ELK/Loki）",
           "phase": "Deployment & Launch",
           "required_skills": [
             "ELK",
@@ -1697,7 +1697,7 @@
           "deadline": "2025-12-03"
         },
         {
-          "subtask": "部署：执行首次生产环境部署",
+          "subtask": "执行首次生产环境部署",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Ansible",
@@ -1708,7 +1708,7 @@
           "deadline": "2025-12-12"
         },
         {
-          "subtask": "上线：编写运维手册（O&M Guide）",
+          "subtask": "编写运维手册（O&M Guide）",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Linux",
@@ -1767,7 +1767,7 @@
       },
       "subtasks": [
         {
-          "subtask": "技术选型：确定数据库类型（SQL vs NoSQL）",
+          "subtask": "确定数据库类型（SQL vs NoSQL）",
           "phase": "Design & Architecture",
           "required_skills": [
             "MySQL",
@@ -1812,7 +1812,7 @@
           "deadline": "2025-07-25"
         },
         {
-          "subtask": "测试：审查并测试接口访问权限控制",
+          "subtask": "审查并测试接口访问权限控制",
           "phase": "Testing & Optimization",
           "required_skills": [
             "安全测试",
@@ -1871,7 +1871,7 @@
       },
       "subtasks": [
         {
-          "subtask": "部署：配置生产环境Kubernetes集群",
+          "subtask": "配置生产环境Kubernetes集群",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Kubernetes",
@@ -1882,7 +1882,7 @@
           "deadline": "2025-11-22"
         },
         {
-          "subtask": "部署：编写Kubernetes Deployment/Service Manifests",
+          "subtask": "编写Kubernetes Deployment/Service Manifests",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Kubernetes",
@@ -1893,7 +1893,7 @@
           "deadline": "2025-12-02"
         },
         {
-          "subtask": "部署：配置并加密生产环境变量和密钥",
+          "subtask": "配置并加密生产环境变量和密钥",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Kubernetes",
@@ -1904,7 +1904,7 @@
           "deadline": "2025-12-05"
         },
         {
-          "subtask": "部署：制定数据库备份与恢复策略",
+          "subtask": "制定数据库备份与恢复策略",
           "phase": "Deployment & Launch",
           "required_skills": [
             "MySQL",
@@ -1915,7 +1915,7 @@
           "deadline": "2025-12-08"
         },
         {
-          "subtask": "测试：进行SQL注入和XSS安全扫描",
+          "subtask": "进行SQL注入和XSS安全扫描",
           "phase": "Testing & Optimization",
           "required_skills": [
             "安全测试",
@@ -1985,7 +1985,7 @@
           "deadline": "2025-03-29"
         },
         {
-          "subtask": "测试：对规则编辑器进行手动探索性测试",
+          "subtask": "对规则编辑器进行手动探索性测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "测试用例设计",
@@ -1996,7 +1996,7 @@
           "deadline": "2025-10-30"
         },
         {
-          "subtask": "部署：配置生产环境数据库及主从同步",
+          "subtask": "配置生产环境数据库及主从同步",
           "phase": "Deployment & Launch",
           "required_skills": [
             "MySQL",
@@ -2008,7 +2008,7 @@
           "deadline": "2025-11-24"
         },
         {
-          "subtask": "测试：进行多浏览器兼容性测试（Chrome/Firefox/Edge）",
+          "subtask": "进行多浏览器兼容性测试（Chrome/Firefox/Edge）",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Selenium",
@@ -2019,7 +2019,7 @@
           "deadline": "2025-11-18"
         },
         {
-          "subtask": "部署：编写前端应用的Dockerfile（Nginx）",
+          "subtask": "编写前端应用的Dockerfile（Nginx）",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Docker",
@@ -2089,7 +2089,7 @@
           "deadline": "2025-04-24"
         },
         {
-          "subtask": "后端：实现MQTT/HTTP数据接入服务",
+          "subtask": "实现MQTT/HTTP数据接入服务",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2100,7 +2100,7 @@
           "deadline": "2025-06-20"
         },
         {
-          "subtask": "后端：实现新增/注册传感器接口",
+          "subtask": "实现新增/注册传感器接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2111,7 +2111,7 @@
           "deadline": "2025-07-05"
         },
         {
-          "subtask": "后端：实现查询/删除/更新规则接口",
+          "subtask": "实现查询/删除/更新规则接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2122,7 +2122,7 @@
           "deadline": "2025-09-30"
         },
         {
-          "subtask": "测试：对历史数据查询接口进行负载测试",
+          "subtask": "对历史数据查询接口进行负载测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "JMeter",
@@ -2236,7 +2236,7 @@
           "deadline": "2025-04-10"
         },
         {
-          "subtask": "上线：制定项目上线发布计划",
+          "subtask": "制定项目上线发布计划",
           "phase": "Deployment & Launch",
           "required_skills": [
             "项目管理",
@@ -2306,7 +2306,7 @@
           "deadline": "2025-04-15"
         },
         {
-          "subtask": "前端：实现登录页面UI及API对接",
+          "subtask": "实现登录页面UI及API对接",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2317,7 +2317,7 @@
           "deadline": "2025-05-28"
         },
         {
-          "subtask": "前端：设置应用路由和导航守卫",
+          "subtask": "设置应用路由和导航守卫",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2328,7 +2328,7 @@
           "deadline": "2025-06-15"
         },
         {
-          "subtask": "前端：开发可复用的数据图表组件（ECharts/D3）",
+          "subtask": "开发可复用的数据图表组件（ECharts/D3）",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2339,7 +2339,7 @@
           "deadline": "2025-08-05"
         },
         {
-          "subtask": "前端：对接WebSocket实现数据实时更新",
+          "subtask": "对接WebSocket实现数据实时更新",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2350,7 +2350,7 @@
           "deadline": "2025-08-20"
         },
         {
-          "subtask": "前端：开发规则编辑器（条件选择器）",
+          "subtask": "开发规则编辑器（条件选择器）",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2409,7 +2409,7 @@
       },
       "subtasks": [
         {
-          "subtask": "测试：执行用户注册-登录-登出流程的集成测试",
+          "subtask": "执行用户注册-登录-登出流程的集成测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Selenium",
@@ -2420,7 +2420,7 @@
           "deadline": "2025-10-18"
         },
         {
-          "subtask": "测试：开发用户登录流程的E2E自动化测试脚本",
+          "subtask": "开发用户登录流程的E2E自动化测试脚本",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Selenium",
@@ -2431,7 +2431,7 @@
           "deadline": "2025-10-28"
         },
         {
-          "subtask": "测试：开发创建并验证一条规则的E2E自动化测试脚本",
+          "subtask": "开发创建并验证一条规则的E2E自动化测试脚本",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Selenium",
@@ -2442,7 +2442,7 @@
           "deadline": "2025-11-03"
         },
         {
-          "subtask": "测试：进行多浏览器兼容性测试（Chrome/Firefox/Edge）",
+          "subtask": "进行多浏览器兼容性测试（Chrome/Firefox/Edge）",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Selenium",
@@ -2453,7 +2453,7 @@
           "deadline": "2025-11-18"
         },
         {
-          "subtask": "测试：对历史数据查询接口进行负载测试",
+          "subtask": "对历史数据查询接口进行负载测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "JMeter",
@@ -2545,7 +2545,7 @@
           "deadline": "2025-03-28"
         },
         {
-          "subtask": "测试：进行SQL注入和XSS安全扫描",
+          "subtask": "进行SQL注入和XSS安全扫描",
           "phase": "Testing & Optimization",
           "required_skills": [
             "安全测试",
@@ -2556,7 +2556,7 @@
           "deadline": "2025-11-10"
         },
         {
-          "subtask": "测试：审查并测试接口访问权限控制",
+          "subtask": "审查并测试接口访问权限控制",
           "phase": "Testing & Optimization",
           "required_skills": [
             "安全测试",
@@ -2659,7 +2659,7 @@
           "deadline": "2025-04-16"
         },
         {
-          "subtask": "后端：实现获取用户信息的接口",
+          "subtask": "实现获取用户信息的接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2670,7 +2670,7 @@
           "deadline": "2025-06-28"
         },
         {
-          "subtask": "后端：实现远程设备控制指令下发接口",
+          "subtask": "实现远程设备控制指令下发接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",

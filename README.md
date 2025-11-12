@@ -6,12 +6,22 @@
   </p>
 </div>
 
-## Project Description
+## 📖 Project Description
 EverMemBench is a benchmark designed to quantify and diagnose the memory systems of large language models. It introduces, for the first time, a three-tiered evaluation framework for memory systems consisting of: Factual Recall, Applied Memory, and Personalization Generalization.
 
 This layered approach enables researchers to go beyond traditional retrieval-style evaluations and conduct fine-grained diagnostics of model capabilities, precisely locating performance bottlenecks in information extraction, contextual reasoning, or style adaptation. By offering a reproducible and standardized testing framework, EverMemBench not only reveals the significant shortcomings of current state-of-the-art models in achieving deep personalization, but also provides clear guidance for targeted optimization of memory systems.
 
-## Benchmark Description
+## 🌟 Key Contributions
+1. **Progressive memory evaluation framework**: We partition memory-system capabilities into three hierarchical layers — **Factual Recall**, **Applied Memory**, and **Personalization Generalization** — establishing a clear progression from pure retrieval to context integration to persona-consistent generation, thereby facilitating precise identification of performance bottlenecks.
+
+2. **Realistic and diagnostic long-horizon multi-party chat dataset**: Grounded in real workplace communication scenarios, we construct a long-horizon corpus with a multi-role, multi-group, cross-context setting that explicitly models **temporal persona drift** and **community-switching effects**, enabling the assessment of memory robustness under concurrent topics and frequent context switches.
+
+3. **Unified quantification and standardized evaluation protocol**: We provide consistent task formulations and measurement interfaces across the three core dimensions, supporting **reproducible** and **comparable** cross-model evaluation while reducing experimental bias in comparisons across systems and models.
+
+4. **Systematic cross-model empirical analysis**: We comprehensively evaluate mainstream memory systems (e.g., MemOS, MemoryOS, Mem0, A-Mem) and state-of-the-art LLMs (e.g., GPT-4.5, GPT-4.1, Gemini-2.5-Pro), conducting **side-by-side comparisons** within a unified framework and revealing notable deficiencies in the memory capabilities of current advanced models.
+
+
+## 🗂️ Benchmark Description
 To systematically and reproducibly assess and diagnose LLM memory capabilities, we construct a long-horizon, multi-party group-chat dataset grounded in realistic workplace communication. The dataset centers on a “multi-role—multi-group—cross-context” communication setting, explicitly modeling the dynamism and context-dependence of individual profiles. In real work scenarios, a person’s behavior and communicative style may drift over time as conversations unfold; at the same time, the same individual may act differently across communities/teams due to role relations and power structures. For example, a department director may be more decisive and stern within a direct-report team chat, yet more restrained in a cross-department strategic group among peers. We embed such “time-varying” and “community-varying” personas and interaction patterns into the data construction process to faithfully reflect the complex and common communication ecology of enterprises.
 
 Benefiting from this design, the dataset supports fine-grained and diagnostic evaluation of model memory systems under conditions of long conversations, concurrent topics, and frequent context switches. We summarize memory capability assessment along three core dimensions:
@@ -26,16 +36,16 @@ Benefiting from this design, the dataset supports fine-grained and diagnostic ev
 ![主图](./figures/main.png)
 
 
-## Benchmark Data
+## 📊 Benchmark Data
 Coming Soon...
 
 
-## Benchmark Curation Pipeline
+## 🏗️ Benchmark Curation Pipeline
 Coming Soon...
 
 
-## Performance on EverMemBench
-Coming Soon...
+## 📈 Performance on EverMemBench
+Based on EverMemBench, we conducted a comprehensive evaluation of mainstream memory systems (e.g., MemOS, MemoryOS, Mem0, A-Mem) and state-of-the-art LLMs (e.g., GPT-4.5, GPT-4.1, Gemini-2.5-Pro), performing standardized measurements and cross-model comparisons across three core dimensions.
 
 
 <!-- ## 目录结构

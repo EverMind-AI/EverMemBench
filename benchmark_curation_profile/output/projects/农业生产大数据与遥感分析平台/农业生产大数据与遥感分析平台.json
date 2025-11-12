@@ -74,7 +74,7 @@
       },
       "subtasks": [
         {
-          "subtask": "定义项目商业目标与核心KPI (Strategy & Planning)",
+          "subtask": "定义项目商业目标与核心KPI",
           "phase": "Strategy & Planning",
           "required_skills": [
             "商业模式画布",
@@ -86,7 +86,7 @@
           "deadline": "2025-01-20"
         },
         {
-          "subtask": "对3名农业专家进行深度访谈 (Strategy & Planning)",
+          "subtask": "对3名农业专家进行深度访谈",
           "phase": "Strategy & Planning",
           "required_skills": [
             "用户访谈",
@@ -97,7 +97,7 @@
           "deadline": "2025-02-10"
         },
         {
-          "subtask": "创建项目风险登记册并制定应对策略 (Strategy & Planning)",
+          "subtask": "创建项目风险登记册并制定应对策略",
           "phase": "Strategy & Planning",
           "required_skills": [
             "项目管理",
@@ -108,7 +108,7 @@
           "deadline": "2025-02-15"
         },
         {
-          "subtask": "研究农业数据相关的法律与隐私合规要求 (Strategy & Planning)",
+          "subtask": "研究农业数据相关的法律与隐私合规要求",
           "phase": "Strategy & Planning",
           "required_skills": [
             "战略分析",
@@ -119,7 +119,7 @@
           "deadline": "2025-02-20"
         },
         {
-          "subtask": "组织项目回顾会（Retrospective），总结经验教训 (Deployment & Launch)",
+          "subtask": "组织项目回顾会（Retrospective），总结经验教训",
           "phase": "Deployment & Launch",
           "required_skills": [
             "项目管理",
@@ -186,7 +186,7 @@
       },
       "subtasks": [
         {
-          "subtask": "选择主要云服务提供商（Azure/AWS）并评估其服务 (Design & Architecture)",
+          "subtask": "选择主要云服务提供商（Azure/AWS）并评估其服务",
           "phase": "Design & Architecture",
           "required_skills": [
             "Azure",
@@ -198,7 +198,7 @@
           "deadline": "2025-02-28"
         },
         {
-          "subtask": "设计系统整体分层架构图（表示层、业务层、数据层） (Design & Architecture)",
+          "subtask": "设计系统整体分层架构图（表示层、业务层、数据层）",
           "phase": "Design & Architecture",
           "required_skills": [
             "Python",
@@ -210,7 +210,7 @@
           "deadline": "2025-03-10"
         },
         {
-          "subtask": "设计微服务拆分方案（如用户服务、数据服务、模型服务） (Design & Architecture)",
+          "subtask": "设计微服务拆分方案（如用户服务、数据服务、模型服务）",
           "phase": "Design & Architecture",
           "required_skills": [
             "Spring Boot",
@@ -222,7 +222,7 @@
           "deadline": "2025-03-20"
         },
         {
-          "subtask": "选定后端主要技术栈（Python/Django 或 Java/Spring Boot） (Design & Architecture)",
+          "subtask": "选定后端主要技术栈（Python/Django 或 Java/Spring Boot）",
           "phase": "Design & Architecture",
           "required_skills": [
             "Python",
@@ -234,7 +234,7 @@
           "deadline": "2025-03-05"
         },
         {
-          "subtask": "选定前端主要技术栈（React/Vue）及状态管理方案 (Design & Architecture)",
+          "subtask": "选定前端主要技术栈（React/Vue）及状态管理方案",
           "phase": "Design & Architecture",
           "required_skills": [
             "React",
@@ -246,7 +246,7 @@
           "deadline": "2025-03-05"
         },
         {
-          "subtask": "选定算法开发与服务技术栈（TensorFlow/PyTorch, TF Serving） (Design & Architecture)",
+          "subtask": "选定算法开发与服务技术栈（TensorFlow/PyTorch, TF Serving）",
           "phase": "Design & Architecture",
           "required_skills": [
             "TensorFlow",
@@ -310,7 +310,7 @@
       },
       "subtasks": [
         {
-          "subtask": "分析主要竞品的功能、定价与市场策略 (Strategy & Planning)",
+          "subtask": "分析主要竞品的功能、定价与市场策略",
           "phase": "Strategy & Planning",
           "required_skills": [
             "数据分析",
@@ -321,7 +321,7 @@
           "deadline": "2025-02-18"
         },
         {
-          "subtask": "制定项目总体路线图（Roadmap）与关键里程碑 (Strategy & Planning)",
+          "subtask": "制定项目总体路线图（Roadmap）与关键里程碑",
           "phase": "Strategy & Planning",
           "required_skills": [
             "项目管理",
@@ -332,7 +332,7 @@
           "deadline": "2025-03-01"
         },
         {
-          "subtask": "准备并主持项目启动会（Kick-off Meeting） (Strategy & Planning)",
+          "subtask": "准备并主持项目启动会（Kick-off Meeting）",
           "phase": "Strategy & Planning",
           "required_skills": [
             "项目管理",
@@ -343,7 +343,7 @@
           "deadline": "2025-03-15"
         },
         {
-          "subtask": "编写详细的测试策略与测试计划文档 (Design & Architecture)",
+          "subtask": "编写详细的测试策略与测试计划文档",
           "phase": "Design & Architecture",
           "required_skills": [
             "JUnit",
@@ -355,7 +355,7 @@
           "deadline": "2025-05-20"
         },
         {
-          "subtask": "对UAT和测试阶段发现的Bug进行分级和修复 (Testing & Optimization)",
+          "subtask": "对UAT和测试阶段发现的Bug进行分级和修复",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Jira",
@@ -367,7 +367,7 @@
           "deadline": "2025-11-30"
         },
         {
-          "subtask": "建立生产支持的紧急响应（On-Call）排班表 (Deployment & Launch)",
+          "subtask": "建立生产支持的紧急响应（On-Call）排班表",
           "phase": "Deployment & Launch",
           "required_skills": [
             "团队管理",
@@ -426,7 +426,7 @@
       },
       "subtasks": [
         {
-          "subtask": "设计API网关选型与架构方案（如Kong, Spring Cloud Gateway） (Design & Architecture)",
+          "subtask": "设计API网关选型与架构方案（如Kong, Spring Cloud Gateway）",
           "phase": "Design & Architecture",
           "required_skills": [
             "Kubernetes",
@@ -437,7 +437,7 @@
           "deadline": "2025-04-10"
         },
         {
-          "subtask": "实现用户注册API接口 (Development & Implementation)",
+          "subtask": "实现用户注册API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -449,7 +449,7 @@
           "deadline": "2025-05-15"
         },
         {
-          "subtask": "实现用户登录及JWT生成API接口 (Development & Implementation)",
+          "subtask": "实现用户登录及JWT生成API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -461,7 +461,7 @@
           "deadline": "2025-05-25"
         },
         {
-          "subtask": "实现用户个人资料的CRUD API接口 (Development & Implementation)",
+          "subtask": "实现用户个人资料的CRUD API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -473,7 +473,7 @@
           "deadline": "2025-06-10"
         },
         {
-          "subtask": "实现无人机遥感影像上传的API接口 (Development & Implementation)",
+          "subtask": "实现无人机遥感影像上传的API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -484,7 +484,7 @@
           "deadline": "2025-07-15"
         },
         {
-          "subtask": "开发用于查询分析结果（如长势、产量）的API接口 (Development & Implementation)",
+          "subtask": "开发用于查询分析结果（如长势、产量）的API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -544,7 +544,7 @@
       },
       "subtasks": [
         {
-          "subtask": "设计服务间通信协议（RESTful API vs gRPC） (Design & Architecture)",
+          "subtask": "设计服务间通信协议（RESTful API vs gRPC）",
           "phase": "Design & Architecture",
           "required_skills": [
             "Python",
@@ -556,7 +556,7 @@
           "deadline": "2025-03-25"
         },
         {
-          "subtask": "初始化React项目并配置路由和状态管理 (Development & Implementation)",
+          "subtask": "初始化React项目并配置路由和状态管理",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -568,7 +568,7 @@
           "deadline": "2025-04-30"
         },
         {
-          "subtask": "开发注册页面UI并对接注册API (Development & Implementation)",
+          "subtask": "开发注册页面UI并对接注册API",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -579,7 +579,7 @@
           "deadline": "2025-06-05"
         },
         {
-          "subtask": "开发仪表盘“关键指标”小组件 (Development & Implementation)",
+          "subtask": "开发仪表盘“关键指标”小组件",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -590,7 +590,7 @@
           "deadline": "2025-08-10"
         },
         {
-          "subtask": "为前端登录表单组件编写单元测试 (Testing & Optimization)",
+          "subtask": "为前端登录表单组件编写单元测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "JavaScript",
@@ -601,7 +601,7 @@
           "deadline": "2025-09-15"
         },
         {
-          "subtask": "为前端状态管理（Redux/Zustand）编写单元测试 (Testing & Optimization)",
+          "subtask": "为前端状态管理（Redux/Zustand）编写单元测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "JavaScript",
@@ -660,7 +660,7 @@
       },
       "subtasks": [
         {
-          "subtask": "设计平台视觉风格指南（颜色、字体、图标） (Design & Architecture)",
+          "subtask": "设计平台视觉风格指南（颜色、字体、图标）",
           "phase": "Design & Architecture",
           "required_skills": [
             "Figma",
@@ -671,7 +671,7 @@
           "deadline": "2025-03-20"
         },
         {
-          "subtask": "设计“决策支持仪表盘”的高保真UI稿 (Design & Architecture)",
+          "subtask": "设计“决策支持仪表盘”的高保真UI稿",
           "phase": "Design & Architecture",
           "required_skills": [
             "Figma",
@@ -682,7 +682,7 @@
           "deadline": "2025-04-15"
         },
         {
-          "subtask": "设计“遥感影像地图”交互界面的高保真UI稿 (Design & Architecture)",
+          "subtask": "设计“遥感影像地图”交互界面的高保真UI稿",
           "phase": "Design & Architecture",
           "required_skills": [
             "Figma",
@@ -693,7 +693,7 @@
           "deadline": "2025-04-25"
         },
         {
-          "subtask": "设计登录/注册页面的高保真UI稿 (Design & Architecture)",
+          "subtask": "设计登录/注册页面的高保真UI稿",
           "phase": "Design & Architecture",
           "required_skills": [
             "Figma",
@@ -704,7 +704,7 @@
           "deadline": "2025-04-05"
         },
         {
-          "subtask": "设计数据可视化图表（线图、柱状图）的视觉规范 (Design & Architecture)",
+          "subtask": "设计数据可视化图表（线图、柱状图）的视觉规范",
           "phase": "Design & Architecture",
           "required_skills": [
             "数据可视化",
@@ -715,7 +715,7 @@
           "deadline": "2025-04-20"
         },
         {
-          "subtask": "创建可复用的UI组件库（如按钮、表单、弹窗） (Design & Architecture)",
+          "subtask": "创建可复用的UI组件库（如按钮、表单、弹窗）",
           "phase": "Design & Architecture",
           "required_skills": [
             "Figma",
@@ -778,7 +778,7 @@
       },
       "subtasks": [
         {
-          "subtask": "整理平台所需数据源清单（物联网、遥感、气象） (Strategy & Planning)",
+          "subtask": "整理平台所需数据源清单（物联网、遥感、气象）",
           "phase": "Strategy & Planning",
           "required_skills": [
             "需求分析",
@@ -789,7 +789,7 @@
           "deadline": "2025-01-30"
         },
         {
-          "subtask": "使用MoSCoW方法制定功能优先级矩阵 (Strategy & Planning)",
+          "subtask": "使用MoSCoW方法制定功能优先级矩阵",
           "phase": "Strategy & Planning",
           "required_skills": [
             "项目管理",
@@ -800,7 +800,7 @@
           "deadline": "2025-03-20"
         },
         {
-          "subtask": "编写用户认证（Auth）模块的API接口文档（Swagger/OpenAPI） (Design & Architecture)",
+          "subtask": "编写用户认证（Auth）模块的API接口文档（Swagger/OpenAPI）",
           "phase": "Design & Architecture",
           "required_skills": [
             "需求分析",
@@ -811,7 +811,7 @@
           "deadline": "2025-04-25"
         },
         {
-          "subtask": "编写数据接入（Ingestion）模块的API接口文档 (Design & Architecture)",
+          "subtask": "编写数据接入（Ingestion）模块的API接口文档",
           "phase": "Design & Architecture",
           "required_skills": [
             "需求分析",
@@ -822,7 +822,7 @@
           "deadline": "2025-05-15"
         },
         {
-          "subtask": "编写数据查询（Query）模块的API接口文档 (Design & Architecture)",
+          "subtask": "编写数据查询（Query）模块的API接口文档",
           "phase": "Design & Architecture",
           "required_skills": [
             "需求分析",
@@ -833,7 +833,7 @@
           "deadline": "2025-05-25"
         },
         {
-          "subtask": "编写面向农场管理者的用户使用手册 (Deployment & Launch)",
+          "subtask": "编写面向农场管理者的用户使用手册",
           "phase": "Deployment & Launch",
           "required_skills": [
             "需求分析",
@@ -892,7 +892,7 @@
       },
       "subtasks": [
         {
-          "subtask": "为后端公共方法编写单元测试 (Testing & Optimization)",
+          "subtask": "为后端公共方法编写单元测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "JUnit",
@@ -903,7 +903,7 @@
           "deadline": "2025-09-10"
         },
         {
-          "subtask": "为用户认证服务编写单元测试 (Testing & Optimization)",
+          "subtask": "为用户认证服务编写单元测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "JUnit",
@@ -914,7 +914,7 @@
           "deadline": "2025-09-18"
         },
         {
-          "subtask": "编写用户注册到登录的端到端集成测试 (Testing & Optimization)",
+          "subtask": "编写用户注册到登录的端到端集成测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Selenium",
@@ -926,7 +926,7 @@
           "deadline": "2025-09-25"
         },
         {
-          "subtask": "配置后端代码覆盖率报告生成 (Testing & Optimization)",
+          "subtask": "配置后端代码覆盖率报告生成",
           "phase": "Testing & Optimization",
           "required_skills": [
             "JUnit",
@@ -937,7 +937,7 @@
           "deadline": "2025-09-30"
         },
         {
-          "subtask": "使用JMeter对登录API进行负载测试 (Testing & Optimization)",
+          "subtask": "使用JMeter对登录API进行负载测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "JMeter",
@@ -948,7 +948,7 @@
           "deadline": "2025-11-10"
         },
         {
-          "subtask": "执行手动渗透测试，检查SQL注入和XSS漏洞 (Testing & Optimization)",
+          "subtask": "执行手动渗透测试，检查SQL注入和XSS漏洞",
           "phase": "Testing & Optimization",
           "required_skills": [
             "安全测试",
@@ -1008,7 +1008,7 @@
       },
       "subtasks": [
         {
-          "subtask": "设计日志收集与监控告警架构方案（ELK/Prometheus） (Design & Architecture)",
+          "subtask": "设计日志收集与监控告警架构方案（ELK/Prometheus）",
           "phase": "Design & Architecture",
           "required_skills": [
             "Linux",
@@ -1020,7 +1020,7 @@
           "deadline": "2025-04-10"
         },
         {
-          "subtask": "设计系统备份与灾难恢复策略 (Design & Architecture)",
+          "subtask": "设计系统备份与灾难恢复策略",
           "phase": "Design & Architecture",
           "required_skills": [
             "Linux",
@@ -1032,7 +1032,7 @@
           "deadline": "2025-04-15"
         },
         {
-          "subtask": "在云平台上配置VPC、子网及安全组 (Development & Implementation)",
+          "subtask": "在云平台上配置VPC、子网及安全组",
           "phase": "Development & Implementation",
           "required_skills": [
             "Azure",
@@ -1044,7 +1044,7 @@
           "deadline": "2025-04-20"
         },
         {
-          "subtask": "部署对象存储（S3/Blob）用于存放影像文件 (Development & Implementation)",
+          "subtask": "部署对象存储（S3/Blob）用于存放影像文件",
           "phase": "Development & Implementation",
           "required_skills": [
             "AWS",
@@ -1056,7 +1056,7 @@
           "deadline": "2025-04-28"
         },
         {
-          "subtask": "更新DNS配置，将域名指向新上线的平台 (Deployment & Launch)",
+          "subtask": "更新DNS配置，将域名指向新上线的平台",
           "phase": "Deployment & Launch",
           "required_skills": [
             "系统管理员",
@@ -1068,7 +1068,7 @@
           "deadline": "2025-12-14"
         },
         {
-          "subtask": "编写面向系统管理员的运维手册 (Deployment & Launch)",
+          "subtask": "编写面向系统管理员的运维手册",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Linux",
@@ -1128,7 +1128,7 @@
       },
       "subtasks": [
         {
-          "subtask": "设计消息队列架构（如RabbitMQ）用于异步任务处理 (Design & Architecture)",
+          "subtask": "设计消息队列架构（如RabbitMQ）用于异步任务处理",
           "phase": "Design & Architecture",
           "required_skills": [
             "Ansible",
@@ -1139,7 +1139,7 @@
           "deadline": "2025-04-18"
         },
         {
-          "subtask": "部署Kubernetes集群（如AKS、EKS） (Development & Implementation)",
+          "subtask": "部署Kubernetes集群（如AKS、EKS）",
           "phase": "Development & Implementation",
           "required_skills": [
             "Kubernetes",
@@ -1151,7 +1151,7 @@
           "deadline": "2025-05-15"
         },
         {
-          "subtask": "部署RabbitMQ消息队列服务 (Development & Implementation)",
+          "subtask": "部署RabbitMQ消息队列服务",
           "phase": "Development & Implementation",
           "required_skills": [
             "Docker",
@@ -1162,7 +1162,7 @@
           "deadline": "2025-05-25"
         },
         {
-          "subtask": "最终确定生产环境的Kubernetes部署和服务配置（YAML） (Deployment & Launch)",
+          "subtask": "最终确定生产环境的Kubernetes部署和服务配置（YAML）",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Kubernetes",
@@ -1174,7 +1174,7 @@
           "deadline": "2025-11-30"
         },
         {
-          "subtask": "在Prometheus中配置生产环境监控指标和告警规则 (Deployment & Launch)",
+          "subtask": "在Prometheus中配置生产环境监控指标和告警规则",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Kubernetes",
@@ -1185,7 +1185,7 @@
           "deadline": "2025-12-10"
         },
         {
-          "subtask": "执行最终的生产环境部署 (Deployment & Launch)",
+          "subtask": "执行最终的生产环境部署",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Kubernetes",
@@ -1245,7 +1245,7 @@
       },
       "subtasks": [
         {
-          "subtask": "定义目标用户群体画像：农业专家 (Strategy & Planning)",
+          "subtask": "定义目标用户群体画像：农业专家",
           "phase": "Strategy & Planning",
           "required_skills": [
             "用户访谈",
@@ -1256,7 +1256,7 @@
           "deadline": "2025-01-25"
         },
         {
-          "subtask": "对5名高级农场管理者进行深度访谈 (Strategy & Planning)",
+          "subtask": "对5名高级农场管理者进行深度访谈",
           "phase": "Strategy & Planning",
           "required_skills": [
             "用户访谈",
@@ -1267,7 +1267,7 @@
           "deadline": "2025-02-15"
         },
         {
-          "subtask": "创建“首次用户引导”流程的用户流图 (Design & Architecture)",
+          "subtask": "创建“首次用户引导”流程的用户流图",
           "phase": "Design & Architecture",
           "required_skills": [
             "用户访谈",
@@ -1278,7 +1278,7 @@
           "deadline": "2025-04-10"
         },
         {
-          "subtask": "绘制“决策支持仪表盘”的低保真线框图 (Design & Architecture)",
+          "subtask": "绘制“决策支持仪表盘”的低保真线框图",
           "phase": "Design & Architecture",
           "required_skills": [
             "Figma",
@@ -1289,7 +1289,7 @@
           "deadline": "2025-03-28"
         },
         {
-          "subtask": "针对线框图进行可用性走查测试 (Design & Architecture)",
+          "subtask": "针对线框图进行可用性走查测试",
           "phase": "Design & Architecture",
           "required_skills": [
             "可用性测试",
@@ -1300,7 +1300,7 @@
           "deadline": "2025-04-05"
         },
         {
-          "subtask": "组织并执行面向小范围用户的UAT测试 (Testing & Optimization)",
+          "subtask": "组织并执行面向小范围用户的UAT测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "可用性测试",
@@ -1359,7 +1359,7 @@
       },
       "subtasks": [
         {
-          "subtask": "设计数据仓库的Schema（用于存储原始物联网数据） (Design & Architecture)",
+          "subtask": "设计数据仓库的Schema（用于存储原始物联网数据）",
           "phase": "Design & Architecture",
           "required_skills": [
             "SQL",
@@ -1371,7 +1371,7 @@
           "deadline": "2025-04-20"
         },
         {
-          "subtask": "设计分析型数据库的Schema（用于存储处理后的特征数据） (Design & Architecture)",
+          "subtask": "设计分析型数据库的Schema（用于存储处理后的特征数据）",
           "phase": "Design & Architecture",
           "required_skills": [
             "SQL",
@@ -1383,7 +1383,7 @@
           "deadline": "2025-05-10"
         },
         {
-          "subtask": "设计数据预处理流程（针对遥感影像） (Design & Architecture)",
+          "subtask": "设计数据预处理流程（针对遥感影像）",
           "phase": "Design & Architecture",
           "required_skills": [
             "Python",
@@ -1395,7 +1395,7 @@
           "deadline": "2025-05-20"
         },
         {
-          "subtask": "开发ETL任务用于清洗和转换传感器数据 (Development & Implementation)",
+          "subtask": "开发ETL任务用于清洗和转换传感器数据",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -1407,7 +1407,7 @@
           "deadline": "2025-07-20"
         },
         {
-          "subtask": "验证作物生长模型的预测准确率 (Testing & Optimization)",
+          "subtask": "验证作物生长模型的预测准确率",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Python",
@@ -1419,7 +1419,7 @@
           "deadline": "2025-10-30"
         },
         {
-          "subtask": "编写并演练生产环境的初始数据迁移脚本 (Deployment & Launch)",
+          "subtask": "编写并演练生产环境的初始数据迁移脚本",
           "phase": "Deployment & Launch",
           "required_skills": [
             "SQL",
@@ -1479,7 +1479,7 @@
       },
       "subtasks": [
         {
-          "subtask": "定义目标用户群体画像：农场管理者 (Strategy & Planning)",
+          "subtask": "定义目标用户群体画像：农场管理者",
           "phase": "Strategy & Planning",
           "required_skills": [
             "用户访谈",
@@ -1490,7 +1490,7 @@
           "deadline": "2025-01-26"
         },
         {
-          "subtask": "定义目标用户群体画像：政府监管部门 (Strategy & Planning)",
+          "subtask": "定义目标用户群体画像：政府监管部门",
           "phase": "Strategy & Planning",
           "required_skills": [
             "用户研究",
@@ -1501,7 +1501,7 @@
           "deadline": "2025-01-27"
         },
         {
-          "subtask": "转录并分析所有用户访谈记录 (Strategy & Planning)",
+          "subtask": "转录并分析所有用户访谈记录",
           "phase": "Strategy & Planning",
           "required_skills": [
             "用户研究",
@@ -1512,7 +1512,7 @@
           "deadline": "2025-02-25"
         },
         {
-          "subtask": "编制并分发产品需求定量调研问卷 (Strategy & Planning)",
+          "subtask": "编制并分发产品需求定量调研问卷",
           "phase": "Strategy & Planning",
           "required_skills": [
             "问卷调查",
@@ -1523,7 +1523,7 @@
           "deadline": "2025-02-28"
         },
         {
-          "subtask": "绘制“遥感影像地图”的低保真线框图 (Design & Architecture)",
+          "subtask": "绘制“遥感影像地图”的低保真线框图",
           "phase": "Design & Architecture",
           "required_skills": [
             "Figma",
@@ -1534,7 +1534,7 @@
           "deadline": "2025-04-01"
         },
         {
-          "subtask": "绘制“产量预测报告”页面的低保真线框图 (Design & Architecture)",
+          "subtask": "绘制“产量预测报告”页面的低保真线框图",
           "phase": "Design & Architecture",
           "required_skills": [
             "Figma",
@@ -1593,7 +1593,7 @@
       },
       "subtasks": [
         {
-          "subtask": "配置项目管理工具（如Jira）的工作流和看板 (Strategy & Planning)",
+          "subtask": "配置项目管理工具（如Jira）的工作流和看板",
           "phase": "Strategy & Planning",
           "required_skills": [
             "Jira",
@@ -1604,7 +1604,7 @@
           "deadline": "2025-03-20"
         },
         {
-          "subtask": "设计缓存策略与技术选型（如Redis） (Design & Architecture)",
+          "subtask": "设计缓存策略与技术选型（如Redis）",
           "phase": "Design & Architecture",
           "required_skills": [
             "MySQL",
@@ -1615,7 +1615,7 @@
           "deadline": "2025-04-22"
         },
         {
-          "subtask": "设计CI/CD流水线工作流图 (Design & Architecture)",
+          "subtask": "设计CI/CD流水线工作流图",
           "phase": "Design & Architecture",
           "required_skills": [
             "Docker",
@@ -1627,7 +1627,7 @@
           "deadline": "2025-04-28"
         },
         {
-          "subtask": "审查API接口的权限控制逻辑 (Testing & Optimization)",
+          "subtask": "审查API接口的权限控制逻辑",
           "phase": "Testing & Optimization",
           "required_skills": [
             "安全测试",
@@ -1638,7 +1638,7 @@
           "deadline": "2025-10-20"
         },
         {
-          "subtask": "编写详细的生产环境部署操作手册（Runbook） (Deployment & Launch)",
+          "subtask": "编写详细的生产环境部署操作手册（Runbook）",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Confluence",
@@ -1650,7 +1650,7 @@
           "deadline": "2025-11-28"
         },
         {
-          "subtask": "准备并对首批用户进行产品使用培训 (Deployment & Launch)",
+          "subtask": "准备并对首批用户进行产品使用培训",
           "phase": "Deployment & Launch",
           "required_skills": [
             "项目管理",
@@ -1709,7 +1709,7 @@
       },
       "subtasks": [
         {
-          "subtask": "开发可复用的按钮（Button）UI组件 (Development & Implementation)",
+          "subtask": "开发可复用的按钮（Button）UI组件",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1721,7 +1721,7 @@
           "deadline": "2025-05-20"
         },
         {
-          "subtask": "开发可复用的表单输入（Input）UI组件 (Development & Implementation)",
+          "subtask": "开发可复用的表单输入（Input）UI组件",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1733,7 +1733,7 @@
           "deadline": "2025-05-28"
         },
         {
-          "subtask": "开发主控台整体布局组件（含页头、侧边栏） (Development & Implementation)",
+          "subtask": "开发主控台整体布局组件（含页头、侧边栏）",
           "phase": "Development & Implementation",
           "required_skills": [
             "JavaScript",
@@ -1745,7 +1745,7 @@
           "deadline": "2025-06-15"
         },
         {
-          "subtask": "集成图表库并开发“作物长势”曲线图组件 (Development & Implementation)",
+          "subtask": "集成图表库并开发“作物长势”曲线图组件",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1756,7 +1756,7 @@
           "deadline": "2025-08-20"
         },
         {
-          "subtask": "集成地图库并开发地块边界展示功能 (Development & Implementation)",
+          "subtask": "集成地图库并开发地块边界展示功能",
           "phase": "Development & Implementation",
           "required_skills": [
             "JavaScript",
@@ -1767,7 +1767,7 @@
           "deadline": "2025-08-30"
         },
         {
-          "subtask": "开发带排序和分页功能的数据表格组件 (Development & Implementation)",
+          "subtask": "开发带排序和分页功能的数据表格组件",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1826,7 +1826,7 @@
       },
       "subtasks": [
         {
-          "subtask": "设计应用数据库的用户（User）及租户（Tenant）表结构 (Design & Architecture)",
+          "subtask": "设计应用数据库的用户（User）及租户（Tenant）表结构",
           "phase": "Design & Architecture",
           "required_skills": [
             "MySQL",
@@ -1838,7 +1838,7 @@
           "deadline": "2025-03-25"
         },
         {
-          "subtask": "设计应用数据库的农场（Farm）及地块（Field）表结构 (Design & Architecture)",
+          "subtask": "设计应用数据库的农场（Farm）及地块（Field）表结构",
           "phase": "Design & Architecture",
           "required_skills": [
             "MySQL",
@@ -1850,7 +1850,7 @@
           "deadline": "2025-03-28"
         },
         {
-          "subtask": "设计应用数据库的设备（Device）及传感器（Sensor）表结构 (Design & Architecture)",
+          "subtask": "设计应用数据库的设备（Device）及传感器（Sensor）表结构",
           "phase": "Design & Architecture",
           "required_skills": [
             "MySQL",
@@ -1861,7 +1861,7 @@
           "deadline": "2025-04-05"
         },
         {
-          "subtask": "设计RBAC权限模型的角色（Role）与权限（Permission）表结构 (Design & Architecture)",
+          "subtask": "设计RBAC权限模型的角色（Role）与权限（Permission）表结构",
           "phase": "Design & Architecture",
           "required_skills": [
             "MySQL",
@@ -1872,7 +1872,7 @@
           "deadline": "2025-04-10"
         },
         {
-          "subtask": "为NDVI计算模块编写单元测试 (Testing & Optimization)",
+          "subtask": "为NDVI计算模块编写单元测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "pytest",
@@ -1883,7 +1883,7 @@
           "deadline": "2025-09-22"
         },
         {
-          "subtask": "分析并优化数据库慢查询 (Testing & Optimization)",
+          "subtask": "分析并优化数据库慢查询",
           "phase": "Testing & Optimization",
           "required_skills": [
             "MySQL",
@@ -1943,7 +1943,7 @@
       },
       "subtasks": [
         {
-          "subtask": "创建“作物长势监测”的用户旅程图 (Strategy & Planning)",
+          "subtask": "创建“作物长势监测”的用户旅程图",
           "phase": "Strategy & Planning",
           "required_skills": [
             "用户访谈",
@@ -1954,7 +1954,7 @@
           "deadline": "2025-02-28"
         },
         {
-          "subtask": "创建“病虫害预警处理”的用户旅程图 (Strategy & Planning)",
+          "subtask": "创建“病虫害预警处理”的用户旅程图",
           "phase": "Strategy & Planning",
           "required_skills": [
             "用户访谈",
@@ -1965,7 +1965,7 @@
           "deadline": "2025-03-05"
         },
         {
-          "subtask": "根据用户研究编写V1.0产品需求文档（PRD） (Strategy & Planning)",
+          "subtask": "根据用户研究编写V1.0产品需求文档（PRD）",
           "phase": "Strategy & Planning",
           "required_skills": [
             "需求分析",
@@ -1976,7 +1976,7 @@
           "deadline": "2025-03-31"
         },
         {
-          "subtask": "设计特征工程方案（针对病虫害预测模型） (Design & Architecture)",
+          "subtask": "设计特征工程方案（针对病虫害预测模型）",
           "phase": "Design & Architecture",
           "required_skills": [
             "机器学习",
@@ -1988,7 +1988,7 @@
           "deadline": "2025-05-30"
         },
         {
-          "subtask": "选定并设计各机器学习模型的评估指标（如准确率、F1分数） (Design & Architecture)",
+          "subtask": "选定并设计各机器学习模型的评估指标（如准确率、F1分数）",
           "phase": "Design & Architecture",
           "required_skills": [
             "机器学习",
@@ -1999,7 +1999,7 @@
           "deadline": "2025-06-10"
         },
         {
-          "subtask": "进行跨浏览器兼容性测试（Chrome, Firefox, Edge） (Testing & Optimization)",
+          "subtask": "进行跨浏览器兼容性测试（Chrome, Firefox, Edge）",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Selenium",
@@ -2058,7 +2058,7 @@
       },
       "subtasks": [
         {
-          "subtask": "编写数据上传到结果查询的端到端集成测试 (Testing & Optimization)",
+          "subtask": "编写数据上传到结果查询的端到端集成测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Selenium",
@@ -2069,7 +2069,7 @@
           "deadline": "2025-10-15"
         },
         {
-          "subtask": "使用Selenium编写“查看仪表盘”的E2E测试脚本 (Testing & Optimization)",
+          "subtask": "使用Selenium编写“查看仪表盘”的E2E测试脚本",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Selenium",
@@ -2081,7 +2081,7 @@
           "deadline": "2025-10-25"
         },
         {
-          "subtask": "使用Selenium编写“地图交互”的E2E测试脚本 (Testing & Optimization)",
+          "subtask": "使用Selenium编写“地图交互”的E2E测试脚本",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Selenium",
@@ -2093,7 +2093,7 @@
           "deadline": "2025-10-30"
         },
         {
-          "subtask": "使用JMeter对数据查询API进行压力测试 (Testing & Optimization)",
+          "subtask": "使用JMeter对数据查询API进行压力测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "JMeter",
@@ -2104,7 +2104,7 @@
           "deadline": "2025-11-12"
         },
         {
-          "subtask": "执行最终的生产环境部署后冒烟测试 (Deployment & Launch)",
+          "subtask": "执行最终的生产环境部署后冒烟测试",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Selenium",
@@ -2116,7 +2116,7 @@
           "deadline": "2025-12-16"
         },
         {
-          "subtask": "上线后对生产环境进行48小时的重点监控 (Deployment & Launch)",
+          "subtask": "上线后对生产环境进行48小时的重点监控",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Linux",
@@ -2175,7 +2175,7 @@
       },
       "subtasks": [
         {
-          "subtask": "分析调研问卷数据并输出优先级报告 (Strategy & Planning)",
+          "subtask": "分析调研问卷数据并输出优先级报告",
           "phase": "Strategy & Planning",
           "required_skills": [
             "数据分析",
@@ -2186,7 +2186,7 @@
           "deadline": "2025-03-18"
         },
         {
-          "subtask": "设计遥感影像元数据（Metadata）表结构 (Design & Architecture)",
+          "subtask": "设计遥感影像元数据（Metadata）表结构",
           "phase": "Design & Architecture",
           "required_skills": [
             "PostgreSQL",
@@ -2197,7 +2197,7 @@
           "deadline": "2025-04-12"
         },
         {
-          "subtask": "开发影像处理任务用于几何校正和色彩归一化 (Development & Implementation)",
+          "subtask": "开发影像处理任务用于几何校正和色彩归一化",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2209,7 +2209,7 @@
           "deadline": "2025-08-15"
         },
         {
-          "subtask": "实现产量预测的回归模型（如XGBoost） (Development & Implementation)",
+          "subtask": "实现产量预测的回归模型（如XGBoost）",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2221,7 +2221,7 @@
           "deadline": "2025-09-20"
         },
         {
-          "subtask": "验证病虫害识别模型的精确率和召回率 (Testing & Optimization)",
+          "subtask": "验证病虫害识别模型的精确率和召回率",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Python",
@@ -2233,7 +2233,7 @@
           "deadline": "2025-11-01"
         },
         {
-          "subtask": "在生产环境执行部署后冒烟测试 (Deployment & Launch)",
+          "subtask": "在生产环境执行部署后冒烟测试",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Selenium",
@@ -2293,7 +2293,7 @@
       },
       "subtasks": [
         {
-          "subtask": "数据处理管道架构（Ingest-Process-Store-Analyze） (Design & Architecture)",
+          "subtask": "数据处理管道架构（Ingest-Process-Store-Analyze）",
           "phase": "Design & Architecture",
           "required_skills": [
             "Python",
@@ -2305,7 +2305,7 @@
           "deadline": "2025-04-30"
         },
         {
-          "subtask": "开发特征提取任务用于计算NDVI等植被指数 (Development & Implementation)",
+          "subtask": "开发特征提取任务用于计算NDVI等植被指数",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2317,7 +2317,7 @@
           "deadline": "2025-08-25"
         },
         {
-          "subtask": "实现作物长势预测的时间序列模型（如LSTM） (Development & Implementation)",
+          "subtask": "实现作物长势预测的时间序列模型（如LSTM）",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2329,7 +2329,7 @@
           "deadline": "2025-09-30"
         },
         {
-          "subtask": "实现病虫害识别的图像分类模型（如CNN） (Development & Implementation)",
+          "subtask": "实现病虫害识别的图像分类模型（如CNN）",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2341,7 +2341,7 @@
           "deadline": "2025-10-10"
         },
         {
-          "subtask": "开发用于触发模型推理的API接口 (Development & Implementation)",
+          "subtask": "开发用于触发模型推理的API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2353,7 +2353,7 @@
           "deadline": "2025-10-25"
         },
         {
-          "subtask": "创建用于生产环境密码和密钥的Kubernetes Secrets (Deployment & Launch)",
+          "subtask": "创建用于生产环境密码和密钥的Kubernetes Secrets",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Kubernetes",
@@ -2412,7 +2412,7 @@
       },
       "subtasks": [
         {
-          "subtask": "实现基于RBAC的API权限校验中间件 (Development & Implementation)",
+          "subtask": "实现基于RBAC的API权限校验中间件",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2424,7 +2424,7 @@
           "deadline": "2025-06-20"
         },
         {
-          "subtask": "实现农场和地块管理的CRUD API接口 (Development & Implementation)",
+          "subtask": "实现农场和地块管理的CRUD API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2436,7 +2436,7 @@
           "deadline": "2025-07-10"
         },
         {
-          "subtask": "实现物联网设备数据上传的API接口 (Development & Implementation)",
+          "subtask": "实现物联网设备数据上传的API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2447,7 +2447,7 @@
           "deadline": "2025-07-25"
         },
         {
-          "subtask": "配置CI流水线自动构建和推送Docker镜像 (Development & Implementation)",
+          "subtask": "配置CI流水线自动构建和推送Docker镜像",
           "phase": "Development & Implementation",
           "required_skills": [
             "Jenkins",
@@ -2459,7 +2459,7 @@
           "deadline": "2025-06-30"
         },
         {
-          "subtask": "配置生产环境的集中式日志收集（如ELK Stack） (Deployment & Launch)",
+          "subtask": "配置生产环境的集中式日志收集（如ELK Stack）",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Linux",
@@ -2471,7 +2471,7 @@
           "deadline": "2025-12-08"
         },
         {
-          "subtask": "建立生产支持的紧急响应（On-Call）排班表 (Deployment & Launch)",
+          "subtask": "建立生产支持的紧急响应（On-Call）排班表",
           "phase": "Deployment & Launch",
           "required_skills": [
             "团队管理",
@@ -2530,7 +2530,7 @@
       },
       "subtasks": [
         {
-          "subtask": "在开发环境中部署Docker Compose。 (Development & Implementation)",
+          "subtask": "在开发环境中部署Docker Compose。",
           "phase": "Development & Implementation",
           "required_skills": [
             "Docker",
@@ -2541,7 +2541,7 @@
           "deadline": "2025-04-20"
         },
         {
-          "subtask": "部署PostgreSQL数据库实例并配置 (Development & Implementation)",
+          "subtask": "部署PostgreSQL数据库实例并配置",
           "phase": "Development & Implementation",
           "required_skills": [
             "PostgreSQL",
@@ -2552,7 +2552,7 @@
           "deadline": "2025-04-25"
         },
         {
-          "subtask": "实现密码重置API接口 (Development & Implementation)",
+          "subtask": "实现密码重置API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2564,7 +2564,7 @@
           "deadline": "2025-06-25"
         },
         {
-          "subtask": "初始化Git代码库并配置分支策略 (Development & Implementation)",
+          "subtask": "初始化Git代码库并配置分支策略",
           "phase": "Development & Implementation",
           "required_skills": [
             "Git",
@@ -2575,7 +2575,7 @@
           "deadline": "2025-04-15"
         },
         {
-          "subtask": "配置生产环境数据库的备份和恢复策略 (Deployment & Launch)",
+          "subtask": "配置生产环境数据库的备份和恢复策略",
           "phase": "Deployment & Launch",
           "required_skills": [
             "PostgreSQL",
@@ -2635,7 +2635,7 @@
       },
       "subtasks": [
         {
-          "subtask": "搭建开发环境的Docker Compose配置 (Development & Implementation)",
+          "subtask": "搭建开发环境的Docker Compose配置",
           "phase": "Development & Implementation",
           "required_skills": [
             "Docker",
@@ -2646,7 +2646,7 @@
           "deadline": "2025-04-21"
         },
         {
-          "subtask": "实现密码重置API接口 (Development & Implementation)",
+          "subtask": "实现密码重置API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2658,7 +2658,7 @@
           "deadline": "2025-06-26"
         },
         {
-          "subtask": "实现基于RBAC的API权限校验中间件 (Development & Implementation)",
+          "subtask": "实现基于RBAC的API权限校验中间件",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2670,7 +2670,7 @@
           "deadline": "2025-06-22"
         },
         {
-          "subtask": "实现农场和地块管理的CRUD API接口 (Development & Implementation)",
+          "subtask": "实现农场和地块管理的CRUD API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2682,7 +2682,7 @@
           "deadline": "2025-07-11"
         },
         {
-          "subtask": "实现物联网设备数据上传的API接口 (Development & Implementation)",
+          "subtask": "实现物联网设备数据上传的API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",

@@ -581,7 +581,7 @@
           "deadline": "2025-05-10"
         },
         {
-          "subtask": "后端: 实现用户登录API接口(含JWT生成)",
+          "subtask": "实现用户登录API接口(含JWT生成)",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -594,7 +594,7 @@
           "deadline": "2025-05-28"
         },
         {
-          "subtask": "后端: 实现更新供应商基本信息的API接口",
+          "subtask": "实现更新供应商基本信息的API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -607,7 +607,7 @@
           "deadline": "2025-07-05"
         },
         {
-          "subtask": "后端: 实现保存数据填报草稿的API接口",
+          "subtask": "实现保存数据填报草稿的API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -681,7 +681,7 @@
       },
       "subtasks": [
         {
-          "subtask": "前端: 搭建React项目骨架并配置路由",
+          "subtask": "搭建React项目骨架并配置路由",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -693,7 +693,7 @@
           "deadline": "2025-05-05"
         },
         {
-          "subtask": "前端: 配置Redux/Zustand等状态管理方案",
+          "subtask": "配置Redux/Zustand等状态管理方案",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -705,7 +705,7 @@
           "deadline": "2025-05-12"
         },
         {
-          "subtask": "前端: 封装统一的API请求函数(Axios实例)",
+          "subtask": "封装统一的API请求函数(Axios实例)",
           "phase": "Development & Implementation",
           "required_skills": [
             "JavaScript",
@@ -717,7 +717,7 @@
           "deadline": "2025-05-16"
         },
         {
-          "subtask": "前端: 开发供应商注册页面并对接API",
+          "subtask": "开发供应商注册页面并对接API",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -729,7 +729,7 @@
           "deadline": "2025-06-12"
         },
         {
-          "subtask": "前端: 开发数据可视化图表组件(折线图, 柱状图)",
+          "subtask": "开发数据可视化图表组件(折线图, 柱状图)",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1170,7 +1170,7 @@
           "deadline": "2025-05-05"
         },
         {
-          "subtask": "后端: 实现碳排放计算的核心逻辑函数",
+          "subtask": "实现碳排放计算的核心逻辑函数",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -1182,7 +1182,7 @@
           "deadline": "2025-08-15"
         },
         {
-          "subtask": "后端: 实现获取排放趋势图数据的API接口",
+          "subtask": "实现获取排放趋势图数据的API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -1620,7 +1620,7 @@
       },
       "subtasks": [
         {
-          "subtask": "前端: 开发可复用的基础UI组件(Button, Input)",
+          "subtask": "开发可复用的基础UI组件(Button, Input)",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1632,7 +1632,7 @@
           "deadline": "2025-05-23"
         },
         {
-          "subtask": "前端: 开发忘记密码页面及流程",
+          "subtask": "开发忘记密码页面及流程",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1644,7 +1644,7 @@
           "deadline": "2025-06-15"
         },
         {
-          "subtask": "前端: 开发数据收集任务列表页面",
+          "subtask": "开发数据收集任务列表页面",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1656,7 +1656,7 @@
           "deadline": "2025-08-20"
         },
         {
-          "subtask": "前端: 开发供应商列表页面并实现筛选与分页",
+          "subtask": "开发供应商列表页面并实现筛选与分页",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -1668,7 +1668,7 @@
           "deadline": "2025-07-15"
         },
         {
-          "subtask": "前端: 实现基于角色的前端路由与组件权限控制",
+          "subtask": "实现基于角色的前端路由与组件权限控制",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2105,7 +2105,7 @@
           "deadline": "2025-04-29"
         },
         {
-          "subtask": "后端: 实现获取主看板汇总数据的API接口",
+          "subtask": "实现获取主看板汇总数据的API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2117,7 +2117,7 @@
           "deadline": "2025-08-25"
         },
         {
-          "subtask": "后端: 实现获取供应商排名数据的API接口",
+          "subtask": "实现获取供应商排名数据的API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2129,7 +2129,7 @@
           "deadline": "2025-09-05"
         },
         {
-          "subtask": "后端: 实现发送/接收实时消息的WebSocket服务",
+          "subtask": "实现发送/接收实时消息的WebSocket服务",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2141,7 +2141,7 @@
           "deadline": "2025-09-20"
         },
         {
-          "subtask": "后端: 实现获取历史消息记录的API接口",
+          "subtask": "实现获取历史消息记录的API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2236,7 +2236,7 @@
           "deadline": "2025-05-15"
         },
         {
-          "subtask": "后端: 实现触发异步计算任务的逻辑",
+          "subtask": "实现触发异步计算任务的逻辑",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2318,7 +2318,7 @@
       },
       "subtasks": [
         {
-          "subtask": "前端: 开发登录页面并对接API",
+          "subtask": "开发登录页面并对接API",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2330,7 +2330,7 @@
           "deadline": "2025-06-10"
         },
         {
-          "subtask": "前端: 开发应用主布局(Header, Sidebar, Content)",
+          "subtask": "开发应用主布局(Header, Sidebar, Content)",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2342,7 +2342,7 @@
           "deadline": "2025-05-30"
         },
         {
-          "subtask": "前端: 开发供应商信息管理页面",
+          "subtask": "开发供应商信息管理页面",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2354,7 +2354,7 @@
           "deadline": "2025-07-20"
         },
         {
-          "subtask": "前端: 开发供应商碳表现详情页面",
+          "subtask": "开发供应商碳表现详情页面",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2605,7 +2605,7 @@
           "deadline": "2025-04-29"
         },
         {
-          "subtask": "前端: 开发动态表单渲染组件",
+          "subtask": "开发动态表单渲染组件",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2805,7 +2805,7 @@
           "deadline": "2025-05-15"
         },
         {
-          "subtask": "后端: 实现查询供应商列表的API接口(含分页和筛选)",
+          "subtask": "实现查询供应商列表的API接口(含分页和筛选)",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2817,7 +2817,7 @@
           "deadline": "2025-06-30"
         },
         {
-          "subtask": "前端: 开发企业端主看板页面",
+          "subtask": "开发企业端主看板页面",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2829,7 +2829,7 @@
           "deadline": "2025-09-20"
         },
         {
-          "subtask": "前端: 开发实时聊天组件并对接WebSocket",
+          "subtask": "开发实时聊天组件并对接WebSocket",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2900,7 +2900,7 @@
           "deadline": "2025-05-15"
         },
         {
-          "subtask": "后端: 实现用户注册API接口",
+          "subtask": "实现用户注册API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2913,7 +2913,7 @@
           "deadline": "2025-05-28"
         },
         {
-          "subtask": "后端: 实现获取当前用户信息的API接口",
+          "subtask": "实现获取当前用户信息的API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2926,7 +2926,7 @@
           "deadline": "2025-06-05"
         },
         {
-          "subtask": "后端: 实现邀请新供应商的API接口",
+          "subtask": "实现邀请新供应商的API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2939,7 +2939,7 @@
           "deadline": "2025-06-20"
         },
         {
-          "subtask": "后端: 实现供应商文档上传的API接口",
+          "subtask": "实现供应商文档上传的API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2952,7 +2952,7 @@
           "deadline": "2025-07-10"
         },
         {
-          "subtask": "后端: 实现获取数据收集模板详情的API接口",
+          "subtask": "实现获取数据收集模板详情的API接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",

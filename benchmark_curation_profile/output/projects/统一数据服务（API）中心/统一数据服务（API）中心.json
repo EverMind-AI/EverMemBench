@@ -74,7 +74,7 @@
       },
       "subtasks": [
         {
-          "subtask": "组织项目启动会议，对齐目标和范围 (Strategy & Planning)",
+          "subtask": "组织项目启动会议，对齐目标和范围",
           "phase": "Strategy & Planning",
           "required_skills": [
             "项目管理",
@@ -86,7 +86,7 @@
           "deadline": "2025-01-15"
         },
         {
-          "subtask": "定义项目核心目标与关键绩效指标(KPI) (Strategy & Planning)",
+          "subtask": "定义项目核心目标与关键绩效指标(KPI)",
           "phase": "Strategy & Planning",
           "required_skills": [
             "战略分析",
@@ -98,7 +98,7 @@
           "deadline": "2025-01-25"
         },
         {
-          "subtask": "绘制项目商业模式画布 (Strategy & Planning)",
+          "subtask": "绘制项目商业模式画布",
           "phase": "Strategy & Planning",
           "required_skills": [
             "商业模式画布",
@@ -109,7 +109,7 @@
           "deadline": "2025-01-31"
         },
         {
-          "subtask": "完成项目章程并获得正式批准 (Strategy & Planning)",
+          "subtask": "完成项目章程并获得正式批准",
           "phase": "Strategy & Planning",
           "required_skills": [
             "项目管理",
@@ -121,7 +121,7 @@
           "deadline": "2025-03-14"
         },
         {
-          "subtask": "组织面向首批内部用户的上线培训会 (Deployment & Launch)",
+          "subtask": "组织面向首批内部用户的上线培训会",
           "phase": "Deployment & Launch",
           "required_skills": [
             "沟通能力",
@@ -132,7 +132,7 @@
           "deadline": "2025-12-18"
         },
         {
-          "subtask": "组织项目复盘会议，总结经验教训 (Deployment & Launch)",
+          "subtask": "组织项目复盘会议，总结经验教训",
           "phase": "Deployment & Launch",
           "required_skills": [
             "项目管理",
@@ -200,7 +200,7 @@
       },
       "subtasks": [
         {
-          "subtask": "评估项目技术可行性与挑战 (Strategy & Planning)",
+          "subtask": "评估项目技术可行性与挑战",
           "phase": "Strategy & Planning",
           "required_skills": [
             "Python",
@@ -212,7 +212,7 @@
           "deadline": "2025-02-10"
         },
         {
-          "subtask": "确定整体技术栈（语言、框架、数据库） (Design & Architecture)",
+          "subtask": "确定整体技术栈（语言、框架、数据库）",
           "phase": "Design & Architecture",
           "required_skills": [
             "Java",
@@ -224,7 +224,7 @@
           "deadline": "2025-03-15"
         },
         {
-          "subtask": "设计系统整体微服务架构图 (Design & Architecture)",
+          "subtask": "设计系统整体微服务架构图",
           "phase": "Design & Architecture",
           "required_skills": [
             "Docker",
@@ -236,7 +236,7 @@
           "deadline": "2025-03-31"
         },
         {
-          "subtask": "设计API网关核心技术架构 (Design & Architecture)",
+          "subtask": "设计API网关核心技术架构",
           "phase": "Design & Architecture",
           "required_skills": [
             "Python",
@@ -248,7 +248,7 @@
           "deadline": "2025-04-10"
         },
         {
-          "subtask": "设计服务注册与发现机制方案 (Design & Architecture)",
+          "subtask": "设计服务注册与发现机制方案",
           "phase": "Design & Architecture",
           "required_skills": [
             "Kubernetes",
@@ -260,7 +260,7 @@
           "deadline": "2025-04-20"
         },
         {
-          "subtask": "设计统一身份认证（AuthN）与鉴权（AuthZ）方案 (Design & Architecture)",
+          "subtask": "设计统一身份认证（AuthN）与鉴权（AuthZ）方案",
           "phase": "Design & Architecture",
           "required_skills": [
             "安全架构",
@@ -272,7 +272,7 @@
           "deadline": "2025-04-25"
         },
         {
-          "subtask": "设计流量控制策略（限流、熔断、降级） (Design & Architecture)",
+          "subtask": "设计流量控制策略（限流、熔断、降级）",
           "phase": "Design & Architecture",
           "required_skills": [
             "高可用架构",
@@ -283,7 +283,7 @@
           "deadline": "2025-04-30"
         },
         {
-          "subtask": "设计高可用部署架构（如K8s多副本、跨可用区） (Design & Architecture)",
+          "subtask": "设计高可用部署架构（如K8s多副本、跨可用区）",
           "phase": "Design & Architecture",
           "required_skills": [
             "Kubernetes",
@@ -295,7 +295,7 @@
           "deadline": "2025-05-10"
         },
         {
-          "subtask": "分析网关性能瓶颈（CPU、内存、IO） (Testing & Optimization)",
+          "subtask": "分析网关性能瓶颈（CPU、内存、IO）",
           "phase": "Testing & Optimization",
           "required_skills": [
             "性能分析",
@@ -359,7 +359,7 @@
       },
       "subtasks": [
         {
-          "subtask": "调研业界主流API网关竞品（如Kong, Apigee） (Strategy & Planning)",
+          "subtask": "调研业界主流API网关竞品（如Kong, Apigee）",
           "phase": "Strategy & Planning",
           "required_skills": [
             "需求分析",
@@ -370,7 +370,7 @@
           "deadline": "2025-02-10"
         },
         {
-          "subtask": "定义API发布者（数据提供方）用户画像 (Strategy & Planning)",
+          "subtask": "定义API发布者（数据提供方）用户画像",
           "phase": "Strategy & Planning",
           "required_skills": [
             "用户访谈",
@@ -382,7 +382,7 @@
           "deadline": "2025-02-28"
         },
         {
-          "subtask": "定义API消费者（应用开发者）用户画像 (Strategy & Planning)",
+          "subtask": "定义API消费者（应用开发者）用户画像",
           "phase": "Strategy & Planning",
           "required_skills": [
             "用户访谈",
@@ -394,7 +394,7 @@
           "deadline": "2025-02-28"
         },
         {
-          "subtask": "设计管理后台整体信息架构和用户流程图 (Design & Architecture)",
+          "subtask": "设计管理后台整体信息架构和用户流程图",
           "phase": "Design & Architecture",
           "required_skills": [
             "UX设计",
@@ -406,7 +406,7 @@
           "deadline": "2025-04-15"
         },
         {
-          "subtask": "设计开发者门户整体信息架构和用户流程图 (Design & Architecture)",
+          "subtask": "设计开发者门户整体信息架构和用户流程图",
           "phase": "Design & Architecture",
           "required_skills": [
             "UX设计",
@@ -418,7 +418,7 @@
           "deadline": "2025-04-15"
         },
         {
-          "subtask": "设计系统的通用UI组件库和设计规范（Design System） (Design & Architecture)",
+          "subtask": "设计系统的通用UI组件库和设计规范（Design System）",
           "phase": "Design & Architecture",
           "required_skills": [
             "UI设计",
@@ -430,7 +430,7 @@
           "deadline": "2025-04-30"
         },
         {
-          "subtask": "根据可用性测试反馈迭代UI/UX设计 (Design & Architecture)",
+          "subtask": "根据可用性测试反馈迭代UI/UX设计",
           "phase": "Design & Architecture",
           "required_skills": [
             "UX设计",
@@ -441,7 +441,7 @@
           "deadline": "2025-05-25"
         },
         {
-          "subtask": "编写UI设计规范和标注图交付给开发 (Design & Architecture)",
+          "subtask": "编写UI设计规范和标注图交付给开发",
           "phase": "Design & Architecture",
           "required_skills": [
             "Figma",
@@ -453,7 +453,7 @@
           "deadline": "2025-05-31"
         },
         {
-          "subtask": "组织面向内部小范围用户的验收测试（UAT） (Testing & Optimization)",
+          "subtask": "组织面向内部小范围用户的验收测试（UAT）",
           "phase": "Testing & Optimization",
           "required_skills": [
             "用户访谈",
@@ -516,7 +516,7 @@
       },
       "subtasks": [
         {
-          "subtask": "梳理公司内部现有数据资产清单 (Strategy & Planning)",
+          "subtask": "梳理公司内部现有数据资产清单",
           "phase": "Strategy & Planning",
           "required_skills": [
             "数据分析",
@@ -528,7 +528,7 @@
           "deadline": "2025-02-22"
         },
         {
-          "subtask": "制定项目整体里程碑与交付计划 (Strategy & Planning)",
+          "subtask": "制定项目整体里程碑与交付计划",
           "phase": "Strategy & Planning",
           "required_skills": [
             "项目管理",
@@ -540,7 +540,7 @@
           "deadline": "2025-03-20"
         },
         {
-          "subtask": "识别项目潜在风险并制定应对预案 (Strategy & Planning)",
+          "subtask": "识别项目潜在风险并制定应对预案",
           "phase": "Strategy & Planning",
           "required_skills": [
             "项目管理",
@@ -551,7 +551,7 @@
           "deadline": "2025-03-05"
         },
         {
-          "subtask": "搭建项目协作工具（Jira/Confluence） (Strategy & Planning)",
+          "subtask": "搭建项目协作工具（Jira/Confluence）",
           "phase": "Strategy & Planning",
           "required_skills": [
             "项目管理",
@@ -563,7 +563,7 @@
           "deadline": "2025-01-31"
         },
         {
-          "subtask": "确定项目周会、日报等沟通机制 (Strategy & Planning)",
+          "subtask": "确定项目周会、日报等沟通机制",
           "phase": "Strategy & Planning",
           "required_skills": [
             "项目管理",
@@ -575,7 +575,7 @@
           "deadline": "2025-01-22"
         },
         {
-          "subtask": "估算项目初步资源投入和时间成本 (Strategy & Planning)",
+          "subtask": "估算项目初步资源投入和时间成本",
           "phase": "Strategy & Planning",
           "required_skills": [
             "项目管理",
@@ -586,7 +586,7 @@
           "deadline": "2025-02-27"
         },
         {
-          "subtask": "在预生产环境（Staging）执行完整的部署演练 (Deployment & Launch)",
+          "subtask": "在预生产环境（Staging）执行完整的部署演练",
           "phase": "Deployment & Launch",
           "required_skills": [
             "流程优化",
@@ -597,7 +597,7 @@
           "deadline": "2025-12-03"
         },
         {
-          "subtask": "迁移并上线首批试点API和服务 (Deployment & Launch)",
+          "subtask": "迁移并上线首批试点API和服务",
           "phase": "Deployment & Launch",
           "required_skills": [
             "项目管理",
@@ -656,7 +656,7 @@
       },
       "subtasks": [
         {
-          "subtask": "设计数据库ER图（实体关系图） (Design & Architecture)",
+          "subtask": "设计数据库ER图（实体关系图）",
           "phase": "Design & Architecture",
           "required_skills": [
             "MySQL",
@@ -668,7 +668,7 @@
           "deadline": "2025-04-10"
         },
         {
-          "subtask": "设计用户（开发者/管理员）与角色权限表结构 (Design & Architecture)",
+          "subtask": "设计用户（开发者/管理员）与角色权限表结构",
           "phase": "Design & Architecture",
           "required_skills": [
             "MySQL",
@@ -679,7 +679,7 @@
           "deadline": "2025-04-22"
         },
         {
-          "subtask": "搭建管理后台服务基础框架（Spring Boot） (Development & Implementation)",
+          "subtask": "搭建管理后台服务基础框架（Spring Boot）",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -691,7 +691,7 @@
           "deadline": "2025-06-05"
         },
         {
-          "subtask": "实现RBAC用户权限模块-用户管理接口 (Development & Implementation)",
+          "subtask": "实现RBAC用户权限模块-用户管理接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -703,7 +703,7 @@
           "deadline": "2025-06-20"
         },
         {
-          "subtask": "实现RBAC用户权限模块-角色与权限管理接口 (Development & Implementation)",
+          "subtask": "实现RBAC用户权限模块-角色与权限管理接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -715,7 +715,7 @@
           "deadline": "2025-06-30"
         },
         {
-          "subtask": "实现系统操作日志记录的AOP切面 (Development & Implementation)",
+          "subtask": "实现系统操作日志记录的AOP切面",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -727,7 +727,7 @@
           "deadline": "2025-07-28"
         },
         {
-          "subtask": "编写管理后台-用户权限模块单元测试 (Development & Implementation)",
+          "subtask": "编写管理后台-用户权限模块单元测试",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -739,7 +739,7 @@
           "deadline": "2025-07-15"
         },
         {
-          "subtask": "进行SQL注入漏洞扫描与手动测试 (Testing & Optimization)",
+          "subtask": "进行SQL注入漏洞扫描与手动测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "安全测试",
@@ -798,7 +798,7 @@
       },
       "subtasks": [
         {
-          "subtask": "搭建开发者门户服务基础框架（Node.js/Express） (Development & Implementation)",
+          "subtask": "搭建开发者门户服务基础框架（Node.js/Express）",
           "phase": "Development & Implementation",
           "required_skills": [
             "Node.js",
@@ -810,7 +810,7 @@
           "deadline": "2025-06-10"
         },
         {
-          "subtask": "实现开发者账户注册与登录接口 (Development & Implementation)",
+          "subtask": "实现开发者账户注册与登录接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Node.js",
@@ -822,7 +822,7 @@
           "deadline": "2025-06-25"
         },
         {
-          "subtask": "实现开发者个人信息管理接口 (Development & Implementation)",
+          "subtask": "实现开发者个人信息管理接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Node.js",
@@ -833,7 +833,7 @@
           "deadline": "2025-07-05"
         },
         {
-          "subtask": "实现应用（App）创建与信息管理接口 (Development & Implementation)",
+          "subtask": "实现应用（App）创建与信息管理接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Node.js",
@@ -844,7 +844,7 @@
           "deadline": "2025-07-15"
         },
         {
-          "subtask": "实现API订阅与取消订阅接口 (Development & Implementation)",
+          "subtask": "实现API订阅与取消订阅接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Node.js",
@@ -856,7 +856,7 @@
           "deadline": "2025-08-10"
         },
         {
-          "subtask": "编写开发者门户-账户管理模块单元测试 (Development & Implementation)",
+          "subtask": "编写开发者门户-账户管理模块单元测试",
           "phase": "Development & Implementation",
           "required_skills": [
             "JavaScript",
@@ -867,7 +867,7 @@
           "deadline": "2025-08-28"
         },
         {
-          "subtask": "为开发者门户服务编写Dockerfile (Development & Implementation)",
+          "subtask": "为开发者门户服务编写Dockerfile",
           "phase": "Development & Implementation",
           "required_skills": [
             "Docker",
@@ -878,7 +878,7 @@
           "deadline": "2025-09-12"
         },
         {
-          "subtask": "开发门户开发者注册/登录页面UI与逻辑 (Development & Implementation)",
+          "subtask": "开发门户开发者注册/登录页面UI与逻辑",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -938,7 +938,7 @@
       },
       "subtasks": [
         {
-          "subtask": "完成管理后台-登录页高保真UI设计 (Design & Architecture)",
+          "subtask": "完成管理后台-登录页高保真UI设计",
           "phase": "Design & Architecture",
           "required_skills": [
             "UI设计",
@@ -950,7 +950,7 @@
           "deadline": "2025-05-15"
         },
         {
-          "subtask": "完成管理后台-主界面布局高保真UI设计 (Design & Architecture)",
+          "subtask": "完成管理后台-主界面布局高保真UI设计",
           "phase": "Design & Architecture",
           "required_skills": [
             "UI设计",
@@ -962,7 +962,7 @@
           "deadline": "2025-05-25"
         },
         {
-          "subtask": "完成管理后台-API列表页高保真UI设计 (Design & Architecture)",
+          "subtask": "完成管理后台-API列表页高保真UI设计",
           "phase": "Design & Architecture",
           "required_skills": [
             "UI设计",
@@ -973,7 +973,7 @@
           "deadline": "2025-05-28"
         },
         {
-          "subtask": "完成管理后台-API创建/编辑页高保真UI设计 (Design & Architecture)",
+          "subtask": "完成管理后台-API创建/编辑页高保真UI设计",
           "phase": "Design & Architecture",
           "required_skills": [
             "UI设计",
@@ -984,7 +984,7 @@
           "deadline": "2025-05-30"
         },
         {
-          "subtask": "完成管理后台-API监控仪表盘高保真UI设计 (Design & Architecture)",
+          "subtask": "完成管理后台-API监控仪表盘高保真UI设计",
           "phase": "Design & Architecture",
           "required_skills": [
             "UI设计",
@@ -996,7 +996,7 @@
           "deadline": "2025-05-30"
         },
         {
-          "subtask": "完成开发者门户-首页高保真UI设计 (Design & Architecture)",
+          "subtask": "完成开发者门户-首页高保真UI设计",
           "phase": "Design & Architecture",
           "required_skills": [
             "UI设计",
@@ -1007,7 +1007,7 @@
           "deadline": "2025-05-25"
         },
         {
-          "subtask": "完成开发者门户-API市场页高保真UI设计 (Design & Architecture)",
+          "subtask": "完成开发者门户-API市场页高保真UI设计",
           "phase": "Design & Architecture",
           "required_skills": [
             "UI设计",
@@ -1018,7 +1018,7 @@
           "deadline": "2025-05-28"
         },
         {
-          "subtask": "完成开发者门户-API详情页高保真UI设计 (Design & Architecture)",
+          "subtask": "完成开发者门户-API详情页高保真UI设计",
           "phase": "Design & Architecture",
           "required_skills": [
             "UI设计",
@@ -1081,7 +1081,7 @@
       },
       "subtasks": [
         {
-          "subtask": "访谈内部数据提供方（业务部门） (Strategy & Planning)",
+          "subtask": "访谈内部数据提供方（业务部门）",
           "phase": "Strategy & Planning",
           "required_skills": [
             "用户访谈",
@@ -1093,7 +1093,7 @@
           "deadline": "2025-02-20"
         },
         {
-          "subtask": "访谈内部数据消费方（前端应用开发者） (Strategy & Planning)",
+          "subtask": "访谈内部数据消费方（前端应用开发者）",
           "phase": "Strategy & Planning",
           "required_skills": [
             "用户访谈",
@@ -1105,7 +1105,7 @@
           "deadline": "2025-02-20"
         },
         {
-          "subtask": "组织API消费者焦点小组讨论会 (Strategy & Planning)",
+          "subtask": "组织API消费者焦点小组讨论会",
           "phase": "Strategy & Planning",
           "required_skills": [
             "用户访谈",
@@ -1117,7 +1117,7 @@
           "deadline": "2025-02-28"
         },
         {
-          "subtask": "提炼管理后台核心功能列表（Feature List） (Strategy & Planning)",
+          "subtask": "提炼管理后台核心功能列表（Feature List）",
           "phase": "Strategy & Planning",
           "required_skills": [
             "需求分析",
@@ -1129,7 +1129,7 @@
           "deadline": "2025-03-10"
         },
         {
-          "subtask": "提炼开发者门户核心功能列表（Feature List） (Strategy & Planning)",
+          "subtask": "提炼开发者门户核心功能列表（Feature List）",
           "phase": "Strategy & Planning",
           "required_skills": [
             "需求分析",
@@ -1141,7 +1141,7 @@
           "deadline": "2025-03-10"
         },
         {
-          "subtask": "编制V1.0产品需求文档（PRD）初稿 (Strategy & Planning)",
+          "subtask": "编制V1.0产品需求文档（PRD）初稿",
           "phase": "Strategy & Planning",
           "required_skills": [
             "需求分析",
@@ -1153,7 +1153,7 @@
           "deadline": "2025-03-28"
         },
         {
-          "subtask": "使用MoSCoW方法确定需求优先级 (Strategy & Planning)",
+          "subtask": "使用MoSCoW方法确定需求优先级",
           "phase": "Strategy & Planning",
           "required_skills": [
             "项目管理",
@@ -1165,7 +1165,7 @@
           "deadline": "2025-03-14"
         },
         {
-          "subtask": "进行前端UI在主流浏览器上的兼容性测试 (Testing & Optimization)",
+          "subtask": "进行前端UI在主流浏览器上的兼容性测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "兼容性测试",
@@ -1224,7 +1224,7 @@
       },
       "subtasks": [
         {
-          "subtask": "配置CI流水线集成自动化单元测试 (Development & Implementation)",
+          "subtask": "配置CI流水线集成自动化单元测试",
           "phase": "Development & Implementation",
           "required_skills": [
             "JUnit",
@@ -1236,7 +1236,7 @@
           "deadline": "2025-09-28"
         },
         {
-          "subtask": "编写管理后台测试用例-API生命周期管理 (Testing & Optimization)",
+          "subtask": "编写管理后台测试用例-API生命周期管理",
           "phase": "Testing & Optimization",
           "required_skills": [
             "测试用例设计",
@@ -1247,7 +1247,7 @@
           "deadline": "2025-10-10"
         },
         {
-          "subtask": "编写管理后台测试用例-用户权限（RBAC） (Testing & Optimization)",
+          "subtask": "编写管理后台测试用例-用户权限（RBAC）",
           "phase": "Testing & Optimization",
           "required_skills": [
             "测试用例设计",
@@ -1258,7 +1258,7 @@
           "deadline": "2025-10-20"
         },
         {
-          "subtask": "编写API网关测试用例-动态路由与插件链 (Testing & Optimization)",
+          "subtask": "编写API网关测试用例-动态路由与插件链",
           "phase": "Testing & Optimization",
           "required_skills": [
             "测试用例设计",
@@ -1269,7 +1269,7 @@
           "deadline": "2025-10-25"
         },
         {
-          "subtask": "执行第一轮API网关接口集成测试 (Testing & Optimization)",
+          "subtask": "执行第一轮API网关接口集成测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "接口测试",
@@ -1280,7 +1280,7 @@
           "deadline": "2025-10-15"
         },
         {
-          "subtask": "提交、分类并指派发现的所有缺陷（Bug） (Testing & Optimization)",
+          "subtask": "提交、分类并指派发现的所有缺陷（Bug）",
           "phase": "Testing & Optimization",
           "required_skills": [
             "缺陷管理",
@@ -1292,7 +1292,7 @@
           "deadline": "2025-10-30"
         },
         {
-          "subtask": "进行水平权限绕过漏洞测试（例如A用户操作B用户数据） (Testing & Optimization)",
+          "subtask": "进行水平权限绕过漏洞测试（例如A用户操作B用户数据）",
           "phase": "Testing & Optimization",
           "required_skills": [
             "安全测试",
@@ -1303,7 +1303,7 @@
           "deadline": "2025-10-28"
         },
         {
-          "subtask": "对系统使用的所有第三方依赖库进行安全漏洞扫描 (Testing & Optimization)",
+          "subtask": "对系统使用的所有第三方依赖库进行安全漏洞扫描",
           "phase": "Testing & Optimization",
           "required_skills": [
             "安全测试",
@@ -1362,7 +1362,7 @@
       },
       "subtasks": [
         {
-          "subtask": "设计CI/CD（持续集成/持续部署）流程 (Design & Architecture)",
+          "subtask": "设计CI/CD（持续集成/持续部署）流程",
           "phase": "Design & Architecture",
           "required_skills": [
             "Jenkins",
@@ -1374,7 +1374,7 @@
           "deadline": "2025-03-20"
         },
         {
-          "subtask": "搭建开发环境的Kubernetes集群 (Development & Implementation)",
+          "subtask": "搭建开发环境的Kubernetes集群",
           "phase": "Development & Implementation",
           "required_skills": [
             "Kubernetes",
@@ -1386,7 +1386,7 @@
           "deadline": "2025-06-12"
         },
         {
-          "subtask": "配置项目Git仓库及分支管理策略（Git Flow） (Development & Implementation)",
+          "subtask": "配置项目Git仓库及分支管理策略（Git Flow）",
           "phase": "Development & Implementation",
           "required_skills": [
             "Git",
@@ -1397,7 +1397,7 @@
           "deadline": "2025-06-01"
         },
         {
-          "subtask": "配置Jenkins/GitHub Actions实现自动化构建 (Development & Implementation)",
+          "subtask": "配置Jenkins/GitHub Actions实现自动化构建",
           "phase": "Development & Implementation",
           "required_skills": [
             "Jenkins",
@@ -1409,7 +1409,7 @@
           "deadline": "2025-07-18"
         },
         {
-          "subtask": "配置CI流水线实现Docker镜像自动构建与推送 (Development & Implementation)",
+          "subtask": "配置CI流水线实现Docker镜像自动构建与推送",
           "phase": "Development & Implementation",
           "required_skills": [
             "Docker",
@@ -1421,7 +1421,7 @@
           "deadline": "2025-08-01"
         },
         {
-          "subtask": "准备生产环境服务器、网络、域名等基础设施 (Deployment & Launch)",
+          "subtask": "准备生产环境服务器、网络、域名等基础设施",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Linux",
@@ -1433,7 +1433,7 @@
           "deadline": "2025-11-20"
         },
         {
-          "subtask": "安装并配置生产环境数据库和中间件（Redis等） (Deployment & Launch)",
+          "subtask": "安装并配置生产环境数据库和中间件（Redis等）",
           "phase": "Deployment & Launch",
           "required_skills": [
             "MySQL",
@@ -1445,7 +1445,7 @@
           "deadline": "2025-11-25"
         },
         {
-          "subtask": "在生产环境部署监控（Prometheus）与告警（Alertmanager）系统 (Deployment & Launch)",
+          "subtask": "在生产环境部署监控（Prometheus）与告警（Alertmanager）系统",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Prometheus",
@@ -1505,7 +1505,7 @@
       },
       "subtasks": [
         {
-          "subtask": "设计日志收集、监控与告警技术方案 (Design & Architecture)",
+          "subtask": "设计日志收集、监控与告警技术方案",
           "phase": "Design & Architecture",
           "required_skills": [
             "Linux",
@@ -1517,7 +1517,7 @@
           "deadline": "2025-03-25"
         },
         {
-          "subtask": "构建Java微服务基础Docker镜像 (Development & Implementation)",
+          "subtask": "构建Java微服务基础Docker镜像",
           "phase": "Development & Implementation",
           "required_skills": [
             "Docker",
@@ -1529,7 +1529,7 @@
           "deadline": "2025-06-15"
         },
         {
-          "subtask": "构建Python微服务基础Docker镜像 (Development & Implementation)",
+          "subtask": "构建Python微服务基础Docker镜像",
           "phase": "Development & Implementation",
           "required_skills": [
             "Docker",
@@ -1541,7 +1541,7 @@
           "deadline": "2025-06-20"
         },
         {
-          "subtask": "构建前端应用Nginx基础Docker镜像 (Development & Implementation)",
+          "subtask": "构建前端应用Nginx基础Docker镜像",
           "phase": "Development & Implementation",
           "required_skills": [
             "Docker",
@@ -1553,7 +1553,7 @@
           "deadline": "2025-06-28"
         },
         {
-          "subtask": "编写生产环境部署脚本（Ansible/Kubernetes YAML） (Deployment & Launch)",
+          "subtask": "编写生产环境部署脚本（Ansible/Kubernetes YAML）",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Ansible",
@@ -1565,7 +1565,7 @@
           "deadline": "2025-11-30"
         },
         {
-          "subtask": "配置生产环境的持续部署（CD）流水线 (Deployment & Launch)",
+          "subtask": "配置生产环境的持续部署（CD）流水线",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Jenkins",
@@ -1577,7 +1577,7 @@
           "deadline": "2025-12-05"
         },
         {
-          "subtask": "执行首次生产环境部署 (Deployment & Launch)",
+          "subtask": "执行首次生产环境部署",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Kubernetes",
@@ -1589,7 +1589,7 @@
           "deadline": "2025-12-10"
         },
         {
-          "subtask": "编写《系统运维手册》和《应急预案》 (Deployment & Launch)",
+          "subtask": "编写《系统运维手册》和《应急预案》",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Linux",
@@ -1649,7 +1649,7 @@
       },
       "subtasks": [
         {
-          "subtask": "编写竞品功能优缺点分析报告 (Strategy & Planning)",
+          "subtask": "编写竞品功能优缺点分析报告",
           "phase": "Strategy & Planning",
           "required_skills": [
             "数据分析",
@@ -1661,7 +1661,7 @@
           "deadline": "2025-02-25"
         },
         {
-          "subtask": "组织API发布者焦点小组讨论会 (Strategy & Planning)",
+          "subtask": "组织API发布者焦点小组讨论会",
           "phase": "Strategy & Planning",
           "required_skills": [
             "用户访谈",
@@ -1673,7 +1673,7 @@
           "deadline": "2025-02-28"
         },
         {
-          "subtask": "提炼API网关核心功能列表（Feature List） (Strategy & Planning)",
+          "subtask": "提炼API网关核心功能列表（Feature List）",
           "phase": "Strategy & Planning",
           "required_skills": [
             "需求分析",
@@ -1685,7 +1685,7 @@
           "deadline": "2025-03-10"
         },
         {
-          "subtask": "绘制管理后台-API列表页线框图 (Design & Architecture)",
+          "subtask": "绘制管理后台-API列表页线框图",
           "phase": "Design & Architecture",
           "required_skills": [
             "UX设计",
@@ -1697,7 +1697,7 @@
           "deadline": "2025-04-28"
         },
         {
-          "subtask": "绘制管理后台-API创建/编辑流程线框图 (Design & Architecture)",
+          "subtask": "绘制管理后台-API创建/编辑流程线框图",
           "phase": "Design & Architecture",
           "required_skills": [
             "UX设计",
@@ -1709,7 +1709,7 @@
           "deadline": "2025-04-30"
         },
         {
-          "subtask": "绘制开发者门户-API市场页线框图 (Design & Architecture)",
+          "subtask": "绘制开发者门户-API市场页线框图",
           "phase": "Design & Architecture",
           "required_skills": [
             "UX设计",
@@ -1721,7 +1721,7 @@
           "deadline": "2025-04-28"
         },
         {
-          "subtask": "绘制开发者门户-我的应用管理页线框图 (Design & Architecture)",
+          "subtask": "绘制开发者门户-我的应用管理页线框图",
           "phase": "Design & Architecture",
           "required_skills": [
             "UX设计",
@@ -1733,7 +1733,7 @@
           "deadline": "2025-04-30"
         },
         {
-          "subtask": "进行前端页面在不同分辨率下的响应式布局测试 (Testing & Optimization)",
+          "subtask": "进行前端页面在不同分辨率下的响应式布局测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "响应式设计",
@@ -1792,7 +1792,7 @@
       },
       "subtasks": [
         {
-          "subtask": "设计并分发项目需求调研问卷 (Strategy & Planning)",
+          "subtask": "设计并分发项目需求调研问卷",
           "phase": "Strategy & Planning",
           "required_skills": [
             "问卷调查",
@@ -1804,7 +1804,7 @@
           "deadline": "2025-02-15"
         },
         {
-          "subtask": "绘制管理后台-API监控仪表盘线框图 (Design & Architecture)",
+          "subtask": "绘制管理后台-API监控仪表盘线框图",
           "phase": "Design & Architecture",
           "required_skills": [
             "UX设计",
@@ -1816,7 +1816,7 @@
           "deadline": "2025-04-30"
         },
         {
-          "subtask": "绘制开发者门户-API详情页线框图 (Design & Architecture)",
+          "subtask": "绘制开发者门户-API详情页线框图",
           "phase": "Design & Architecture",
           "required_skills": [
             "UX设计",
@@ -1828,7 +1828,7 @@
           "deadline": "2025-04-30"
         },
         {
-          "subtask": "完成开发者门户-用户中心高保真UI设计 (Design & Architecture)",
+          "subtask": "完成开发者门户-用户中心高保真UI设计",
           "phase": "Design & Architecture",
           "required_skills": [
             "UI设计",
@@ -1839,7 +1839,7 @@
           "deadline": "2025-05-30"
         },
         {
-          "subtask": "创建关键流程的可点击交互原型 (Design & Architecture)",
+          "subtask": "创建关键流程的可点击交互原型",
           "phase": "Design & Architecture",
           "required_skills": [
             "Figma",
@@ -1851,7 +1851,7 @@
           "deadline": "2025-05-08"
         },
         {
-          "subtask": "组织原型可用性测试并收集反馈 (Design & Architecture)",
+          "subtask": "组织原型可用性测试并收集反馈",
           "phase": "Design & Architecture",
           "required_skills": [
             "可用性测试",
@@ -1863,7 +1863,7 @@
           "deadline": "2025-05-18"
         },
         {
-          "subtask": "编写开发者门户测试用例-用户注册与应用管理 (Testing & Optimization)",
+          "subtask": "编写开发者门户测试用例-用户注册与应用管理",
           "phase": "Testing & Optimization",
           "required_skills": [
             "测试用例设计",
@@ -1874,7 +1874,7 @@
           "deadline": "2025-10-20"
         },
         {
-          "subtask": "编写开发者门户测试用例-API发现与订阅 (Testing & Optimization)",
+          "subtask": "编写开发者门户测试用例-API发现与订阅",
           "phase": "Testing & Optimization",
           "required_skills": [
             "测试用例设计",
@@ -1929,7 +1929,7 @@
       },
       "subtasks": [
         {
-          "subtask": "制定项目发布和内部推广初步策略 (Strategy & Planning)",
+          "subtask": "制定项目发布和内部推广初步策略",
           "phase": "Strategy & Planning",
           "required_skills": [
             "社交媒体运营",
@@ -1941,7 +1941,7 @@
           "deadline": "2025-03-21"
         },
         {
-          "subtask": "设计统一配置中心方案（用于动态下发配置） (Design & Architecture)",
+          "subtask": "设计统一配置中心方案（用于动态下发配置）",
           "phase": "Design & Architecture",
           "required_skills": [
             "技术架构",
@@ -1952,7 +1952,7 @@
           "deadline": "2025-04-05"
         },
         {
-          "subtask": "设计分布式缓存方案 (Design & Architecture)",
+          "subtask": "设计分布式缓存方案",
           "phase": "Design & Architecture",
           "required_skills": [
             "Redis",
@@ -1964,7 +1964,7 @@
           "deadline": "2025-04-12"
         },
         {
-          "subtask": "开发后台登录页面UI及认证逻辑 (Development & Implementation)",
+          "subtask": "开发后台登录页面UI及认证逻辑",
           "phase": "Development & Implementation",
           "required_skills": [],
           "assignment_reason": "为了实现工作量平衡并促进团队成员技能拓展，将此前端开发任务的一部分（如UI文本内容的撰写和校对）分配给内容运营(Rank 3)颜丽。她擅长文案撰写(strong)，可以确保页面上的所有提示和标签都清晰、准确、专业。",
@@ -1972,7 +1972,7 @@
           "deadline": "2025-06-30"
         },
         {
-          "subtask": "编写最终版《API发布者用户手册》 (Deployment & Launch)",
+          "subtask": "编写最终版《API发布者用户手册》",
           "phase": "Deployment & Launch",
           "required_skills": [
             "文案撰写",
@@ -1983,7 +1983,7 @@
           "deadline": "2025-12-08"
         },
         {
-          "subtask": "编写最终版《API消费者开发者指南》 (Deployment & Launch)",
+          "subtask": "编写最终版《API消费者开发者指南》",
           "phase": "Deployment & Launch",
           "required_skills": [
             "文案撰写",
@@ -1994,7 +1994,7 @@
           "deadline": "2025-12-08"
         },
         {
-          "subtask": "撰写产品正式上线内部公告 (Deployment & Launch)",
+          "subtask": "撰写产品正式上线内部公告",
           "phase": "Deployment & Launch",
           "required_skills": [
             "文案撰写",
@@ -2005,7 +2005,7 @@
           "deadline": "2025-12-11"
         },
         {
-          "subtask": "建立用户反馈渠道并快速响应迭代 (Deployment & Launch)",
+          "subtask": "建立用户反馈渠道并快速响应迭代",
           "phase": "Deployment & Launch",
           "required_skills": [
             "项目管理",
@@ -2064,7 +2064,7 @@
       },
       "subtasks": [
         {
-          "subtask": "分析所有调研数据并输出洞察报告 (Strategy & Planning)",
+          "subtask": "分析所有调研数据并输出洞察报告",
           "phase": "Strategy & Planning",
           "required_skills": [
             "数据分析",
@@ -2076,7 +2076,7 @@
           "deadline": "2025-03-05"
         },
         {
-          "subtask": "设计API调用日志与监控数据表结构 (Design & Architecture)",
+          "subtask": "设计API调用日志与监控数据表结构",
           "phase": "Design & Architecture",
           "required_skills": [
             "数据库设计",
@@ -2087,7 +2087,7 @@
           "deadline": "2025-04-26"
         },
         {
-          "subtask": "实现网关动态路由核心逻辑 (Development & Implementation)",
+          "subtask": "实现网关动态路由核心逻辑",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2098,7 +2098,7 @@
           "deadline": "2025-07-10"
         },
         {
-          "subtask": "开发网关的后端服务熔断插件 (Development & Implementation)",
+          "subtask": "开发网关的后端服务熔断插件",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2109,7 +2109,7 @@
           "deadline": "2025-08-30"
         },
         {
-          "subtask": "实现网关自身监控指标暴露（Prometheus格式） (Development & Implementation)",
+          "subtask": "实现网关自身监控指标暴露（Prometheus格式）",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -2120,7 +2120,7 @@
           "deadline": "2025-09-10"
         },
         {
-          "subtask": "开发可复用的ECharts图表组件（用于展示QPS/Latency） (Development & Implementation)",
+          "subtask": "开发可复用的ECharts图表组件（用于展示QPS/Latency）",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2132,7 +2132,7 @@
           "deadline": "2025-07-30"
         },
         {
-          "subtask": "分析并优化前端页面加载性能（First Contentful Paint） (Testing & Optimization)",
+          "subtask": "分析并优化前端页面加载性能（First Contentful Paint）",
           "phase": "Testing & Optimization",
           "required_skills": [
             "前端性能优化",
@@ -2144,7 +2144,7 @@
           "deadline": "2025-11-10"
         },
         {
-          "subtask": "搭建并配置上线后核心数据监控看板（Grafana） (Deployment & Launch)",
+          "subtask": "搭建并配置上线后核心数据监控看板（Grafana）",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Grafana",
@@ -2204,7 +2204,7 @@
       },
       "subtasks": [
         {
-          "subtask": "制定灰度发布策略（按用户或按API） (Deployment & Launch)",
+          "subtask": "制定灰度发布策略（按用户或按API）",
           "phase": "Deployment & Launch",
           "required_skills": [
             "项目管理",
@@ -2215,7 +2215,7 @@
           "deadline": "2025-11-29"
         },
         {
-          "subtask": "向首批试点用户开放平台访问权限 (Deployment & Launch)",
+          "subtask": "向首批试点用户开放平台访问权限",
           "phase": "Deployment & Launch",
           "required_skills": [
             "项目运营",
@@ -2226,7 +2226,7 @@
           "deadline": "2025-12-13"
         },
         {
-          "subtask": "撰写产品正式上线内部公告 (Deployment & Launch)",
+          "subtask": "撰写产品正式上线内部公告",
           "phase": "Deployment & Launch",
           "required_skills": [
             "文案撰写",
@@ -2237,7 +2237,7 @@
           "deadline": "2025-12-11"
         },
         {
-          "subtask": "搭建并配置上线后核心数据监控看板（Grafana） (Deployment & Launch)",
+          "subtask": "搭建并配置上线后核心数据监控看板（Grafana）",
           "phase": "Deployment & Launch",
           "required_skills": [
             "Grafana",
@@ -2249,7 +2249,7 @@
           "deadline": "2025-12-16"
         },
         {
-          "subtask": "组织项目复盘会议，总结经验教训 (Deployment & Launch)",
+          "subtask": "组织项目复盘会议，总结经验教训",
           "phase": "Deployment & Launch",
           "required_skills": [
             "项目管理",
@@ -2261,7 +2261,7 @@
           "deadline": "2025-12-26"
         },
         {
-          "subtask": "设计并分发项目需求调研问卷 (Strategy & Planning)",
+          "subtask": "设计并分发项目需求调研问卷",
           "phase": "Strategy & Planning",
           "required_skills": [
             "问卷调查",
@@ -2273,7 +2273,7 @@
           "deadline": "2025-02-15"
         },
         {
-          "subtask": "绘制开发者门户-我的应用管理页线框图 (Design & Architecture)",
+          "subtask": "绘制开发者门户-我的应用管理页线框图",
           "phase": "Design & Architecture",
           "required_skills": [
             "UX设计",
@@ -2285,7 +2285,7 @@
           "deadline": "2025-04-30"
         },
         {
-          "subtask": "创建关键流程的可点击交互原型 (Design & Architecture)",
+          "subtask": "创建关键流程的可点击交互原型",
           "phase": "Design & Architecture",
           "required_skills": [
             "Figma",
@@ -2345,7 +2345,7 @@
       },
       "subtasks": [
         {
-          "subtask": "制定项目发布和内部推广初步策略 (Strategy & Planning)",
+          "subtask": "制定项目发布和内部推广初步策略",
           "phase": "Strategy & Planning",
           "required_skills": [
             "社交媒体运营",
@@ -2357,7 +2357,7 @@
           "deadline": "2025-03-21"
         },
         {
-          "subtask": "配置项目Git仓库及分支管理策略（Git Flow） (Development & Implementation)",
+          "subtask": "配置项目Git仓库及分支管理策略（Git Flow）",
           "phase": "Development & Implementation",
           "required_skills": [
             "Git",
@@ -2368,7 +2368,7 @@
           "deadline": "2025-06-01"
         },
         {
-          "subtask": "配置CI流水线集成代码质量扫描（SonarQube） (Development & Implementation)",
+          "subtask": "配置CI流水线集成代码质量扫描（SonarQube）",
           "phase": "Development & Implementation",
           "required_skills": [
             "代码规范",
@@ -2379,7 +2379,7 @@
           "deadline": "2025-09-30"
         },
         {
-          "subtask": "对数据库进行慢查询分析并优化索引 (Testing & Optimization)",
+          "subtask": "对数据库进行慢查询分析并优化索引",
           "phase": "Testing & Optimization",
           "required_skills": [
             "MySQL",
@@ -2391,7 +2391,7 @@
           "deadline": "2025-11-14"
         },
         {
-          "subtask": "制定灰度发布策略（按用户或按API） (Deployment & Launch)",
+          "subtask": "制定灰度发布策略（按用户或按API）",
           "phase": "Deployment & Launch",
           "required_skills": [
             "项目管理",
@@ -2402,7 +2402,7 @@
           "deadline": "2025-11-29"
         },
         {
-          "subtask": "向首批试点用户开放平台访问权限 (Deployment & Launch)",
+          "subtask": "向首批试点用户开放平台访问权限",
           "phase": "Deployment & Launch",
           "required_skills": [
             "项目运营",
@@ -2413,7 +2413,7 @@
           "deadline": "2025-12-13"
         },
         {
-          "subtask": "建立用户反馈渠道并快速响应迭代 (Deployment & Launch)",
+          "subtask": "建立用户反馈渠道并快速响应迭代",
           "phase": "Deployment & Launch",
           "required_skills": [
             "项目管理",
@@ -2424,7 +2424,7 @@
           "deadline": "2025-12-20"
         },
         {
-          "subtask": "撰写产品正式上线内部公告 (Deployment & Launch)",
+          "subtask": "撰写产品正式上线内部公告",
           "phase": "Deployment & Launch",
           "required_skills": [
             "文案撰写",
@@ -2483,7 +2483,7 @@
       },
       "subtasks": [
         {
-          "subtask": "搭建管理后台前端项目框架（React） (Development & Implementation)",
+          "subtask": "搭建管理后台前端项目框架（React）",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2495,7 +2495,7 @@
           "deadline": "2025-06-10"
         },
         {
-          "subtask": "开发后台通用布局组件（页头、侧边栏、面包屑） (Development & Implementation)",
+          "subtask": "开发后台通用布局组件（页头、侧边栏、面包屑）",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2507,7 +2507,7 @@
           "deadline": "2025-06-25"
         },
         {
-          "subtask": "开发后台API管理列表页面（含搜索、分页） (Development & Implementation)",
+          "subtask": "开发后台API管理列表页面（含搜索、分页）",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2518,7 +2518,7 @@
           "deadline": "2025-07-15"
         },
         {
-          "subtask": "开发后台API创建向导-策略配置步骤UI与逻辑 (Development & Implementation)",
+          "subtask": "开发后台API创建向导-策略配置步骤UI与逻辑",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2530,7 +2530,7 @@
           "deadline": "2025-08-10"
         },
         {
-          "subtask": "实现后台API创建/编辑向导的整体表单状态管理 (Development & Implementation)",
+          "subtask": "实现后台API创建/编辑向导的整体表单状态管理",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2541,7 +2541,7 @@
           "deadline": "2025-08-20"
         },
         {
-          "subtask": "开发后台API监控仪表盘页面UI (Development & Implementation)",
+          "subtask": "开发后台API监控仪表盘页面UI",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2553,7 +2553,7 @@
           "deadline": "2025-08-30"
         },
         {
-          "subtask": "对接后台API列表查询与管理接口 (Development & Implementation)",
+          "subtask": "对接后台API列表查询与管理接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2565,7 +2565,7 @@
           "deadline": "2025-09-20"
         },
         {
-          "subtask": "对接后台API监控数据接口并渲染图表 (Development & Implementation)",
+          "subtask": "对接后台API监控数据接口并渲染图表",
           "phase": "Development & Implementation",
           "required_skills": [
             "React",
@@ -2625,7 +2625,7 @@
       },
       "subtasks": [
         {
-          "subtask": "设计API元数据相关表结构（API信息、版本） (Design & Architecture)",
+          "subtask": "设计API元数据相关表结构（API信息、版本）",
           "phase": "Design & Architecture",
           "required_skills": [
             "MySQL",
@@ -2636,7 +2636,7 @@
           "deadline": "2025-04-22"
         },
         {
-          "subtask": "编写管理后台RESTful API接口规范（Swagger/OpenAPI） (Design & Architecture)",
+          "subtask": "编写管理后台RESTful API接口规范（Swagger/OpenAPI）",
           "phase": "Design & Architecture",
           "required_skills": [
             "API设计",
@@ -2648,7 +2648,7 @@
           "deadline": "2025-05-15"
         },
         {
-          "subtask": "实现API分组管理CRUD接口 (Development & Implementation)",
+          "subtask": "实现API分组管理CRUD接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -2660,7 +2660,7 @@
           "deadline": "2025-06-30"
         },
         {
-          "subtask": "实现API注册与基础信息配置接口 (Development & Implementation)",
+          "subtask": "实现API注册与基础信息配置接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -2672,7 +2672,7 @@
           "deadline": "2025-07-10"
         },
         {
-          "subtask": "实现API后端服务与策略配置接口 (Development & Implementation)",
+          "subtask": "实现API后端服务与策略配置接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -2684,7 +2684,7 @@
           "deadline": "2025-07-25"
         },
         {
-          "subtask": "实现API调用日志查询接口 (Development & Implementation)",
+          "subtask": "实现API调用日志查询接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -2696,7 +2696,7 @@
           "deadline": "2025-08-25"
         },
         {
-          "subtask": "编写管理后台-API管理核心逻辑单元测试 (Development & Implementation)",
+          "subtask": "编写管理后台-API管理核心逻辑单元测试",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -2708,7 +2708,7 @@
           "deadline": "2025-08-15"
         },
         {
-          "subtask": "为管理后台服务编写Dockerfile (Development & Implementation)",
+          "subtask": "为管理后台服务编写Dockerfile",
           "phase": "Development & Implementation",
           "required_skills": [
             "Docker",
@@ -2767,7 +2767,7 @@
       },
       "subtasks": [
         {
-          "subtask": "执行第一轮管理后台功能冒烟测试 (Testing & Optimization)",
+          "subtask": "执行第一轮管理后台功能冒烟测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "功能测试",
@@ -2778,7 +2778,7 @@
           "deadline": "2025-10-08"
         },
         {
-          "subtask": "执行第一轮开发者门户功能回归测试 (Testing & Optimization)",
+          "subtask": "执行第一轮开发者门户功能回归测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "功能测试",
@@ -2789,7 +2789,7 @@
           "deadline": "2025-11-05"
         },
         {
-          "subtask": "回归验证所有已修复的缺陷 (Testing & Optimization)",
+          "subtask": "回归验证所有已修复的缺陷",
           "phase": "Testing & Optimization",
           "required_skills": [
             "功能测试",
@@ -2800,7 +2800,7 @@
           "deadline": "2025-11-20"
         },
         {
-          "subtask": "制定API网关性能测试方案 (Testing & Optimization)",
+          "subtask": "制定API网关性能测试方案",
           "phase": "Testing & Optimization",
           "required_skills": [
             "性能测试",
@@ -2811,7 +2811,7 @@
           "deadline": "2025-10-10"
         },
         {
-          "subtask": "使用JMeter/k6编写API网关高并发场景性能测试脚本 (Testing & Optimization)",
+          "subtask": "使用JMeter/k6编写API网关高并发场景性能测试脚本",
           "phase": "Testing & Optimization",
           "required_skills": [
             "JMeter",
@@ -2822,7 +2822,7 @@
           "deadline": "2025-10-22"
         },
         {
-          "subtask": "执行API网关基准性能测试（Baseline） (Testing & Optimization)",
+          "subtask": "执行API网关基准性能测试（Baseline）",
           "phase": "Testing & Optimization",
           "required_skills": [
             "性能测试",
@@ -2833,7 +2833,7 @@
           "deadline": "2025-10-31"
         },
         {
-          "subtask": "执行优化后的性能对比测试 (Testing & Optimization)",
+          "subtask": "执行优化后的性能对比测试",
           "phase": "Testing & Optimization",
           "required_skills": [
             "性能测试",
@@ -2844,7 +2844,7 @@
           "deadline": "2025-11-22"
         },
         {
-          "subtask": "在部署后对生产系统进行全面的健康检查 (Deployment & Launch)",
+          "subtask": "在部署后对生产系统进行全面的健康检查",
           "phase": "Testing & Optimization",
           "required_skills": [
             "功能测试",
@@ -2903,7 +2903,7 @@
       },
       "subtasks": [
         {
-          "subtask": "设计API策略配置相关表结构（鉴权、限流） (Design & Architecture)",
+          "subtask": "设计API策略配置相关表结构（鉴权、限流）",
           "phase": "Design & Architecture",
           "required_skills": [
             "MySQL",
@@ -2914,7 +2914,7 @@
           "deadline": "2025-04-25"
         },
         {
-          "subtask": "设计应用（App）与API订阅关系表结构 (Design & Architecture)",
+          "subtask": "设计应用（App）与API订阅关系表结构",
           "phase": "Design & Architecture",
           "required_skills": [
             "MySQL",
@@ -2925,7 +2925,7 @@
           "deadline": "2025-04-30"
         },
         {
-          "subtask": "实现API发布、下线、版本管理接口 (Development & Implementation)",
+          "subtask": "实现API发布、下线、版本管理接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -2937,7 +2937,7 @@
           "deadline": "2025-08-05"
         },
         {
-          "subtask": "实现API配置动态推送至配置中心的功能 (Development & Implementation)",
+          "subtask": "实现API配置动态推送至配置中心的功能",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -2949,7 +2949,7 @@
           "deadline": "2025-08-18"
         },
         {
-          "subtask": "实现API监控统计数据查询接口 (Development & Implementation)",
+          "subtask": "实现API监控统计数据查询接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Java",
@@ -2961,7 +2961,7 @@
           "deadline": "2025-09-05"
         },
         {
-          "subtask": "实现查询用户已订阅API列表的接口 (Development & Implementation)",
+          "subtask": "实现查询用户已订阅API列表的接口",
           "phase": "Development & Implementation",
           "required_skills": [
             "Node.js",
@@ -2973,7 +2973,7 @@
           "deadline": "2025-08-25"
         },
         {
-          "subtask": "修复在安全测试中发现的高、中危漏洞 (Testing & Optimization)",
+          "subtask": "修复在安全测试中发现的高、中危漏洞",
           "phase": "Testing & Optimization",
           "required_skills": [
             "Java",
@@ -2985,7 +2985,7 @@
           "deadline": "2025-11-18"
         },
         {
-          "subtask": "编写数据库初始化（DDL）和数据迁移（DML）脚本 (Deployment & Launch)",
+          "subtask": "编写数据库初始化（DDL）和数据迁移（DML）脚本",
           "phase": "Deployment & Launch",
           "required_skills": [
             "SQL",
@@ -3044,7 +3044,7 @@
       },
       "subtasks": [
         {
-          "subtask": "设计数据库ER图（实体关系图） (Design & Architecture)",
+          "subtask": "设计数据库ER图（实体关系图）",
           "phase": "Design & Architecture",
           "required_skills": [
             "MySQL",
@@ -3056,7 +3056,7 @@
           "deadline": "2025-04-10"
         },
         {
-          "subtask": "编写开发者门户RESTful API接口规范（Swagger/OpenAPI） (Design & Architecture)",
+          "subtask": "编写开发者门户RESTful API接口规范（Swagger/OpenAPI）",
           "phase": "Design & Architecture",
           "required_skills": [
             "API设计",
@@ -3068,7 +3068,7 @@
           "deadline": "2025-05-15"
         },
         {
-          "subtask": "搭建API网关项目基础框架 (Development & Implementation)",
+          "subtask": "搭建API网关项目基础框架",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -3080,7 +3080,7 @@
           "deadline": "2025-06-05"
         },
         {
-          "subtask": "开发网关的JWT身份认证插件 (Development & Implementation)",
+          "subtask": "开发网关的JWT身份认证插件",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -3092,7 +3092,7 @@
           "deadline": "2025-07-20"
         },
         {
-          "subtask": "开发网关的AppKey/Secret认证插件 (Development & Implementation)",
+          "subtask": "开发网关的AppKey/Secret认证插件",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -3104,7 +3104,7 @@
           "deadline": "2025-07-30"
         },
         {
-          "subtask": "开发网关的IP黑白名单过滤插件 (Development & Implementation)",
+          "subtask": "开发网关的IP黑白名单过滤插件",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -3115,7 +3115,7 @@
           "deadline": "2025-08-12"
         },
         {
-          "subtask": "开发网关的API级别限流插件 (Development & Implementation)",
+          "subtask": "开发网关的API级别限流插件",
           "phase": "Development & Implementation",
           "required_skills": [
             "Python",
@@ -3127,7 +3127,7 @@
           "deadline": "2025-08-22"
         },
         {
-          "subtask": "为API网关服务编写Dockerfile (Development & Implementation)",
+          "subtask": "为API网关服务编写Dockerfile",
           "phase": "Development & Implementation",
           "required_skills": [
             "Docker",
