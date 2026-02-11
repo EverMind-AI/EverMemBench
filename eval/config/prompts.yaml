@@ -1,0 +1,199 @@
+# Prompts configuration for multi-person group chat evaluation
+# Used by answerer.py and evaluator.py
+
+# Answer Generation Prompts
+answer:
+  # Multiple choice question prompt (adapted for multi-person group chat)
+  multiple_choice: |
+    You are a rigorous question-answering assistant. You will be given two types of information
+    and one multiple-choice question with four options.
+    Your task is to choose the single best answer (A/B/C/D) based ONLY on the provided information.
+
+    You will receive:
+    1. [FORESIGHT]: Predicted future events based on past conversations. Format:
+       [timestamp:TS][Group: GROUP_ID][fact:EVIDENCE][extracted foresight:PREDICTION]
+       - "fact" contains evidence from past conversations
+       - "extracted foresight" contains the predicted future action
+       - If "null", no foresight predictions are available
+
+    2. [MEMORIES]: Historical memories from group chat conversations. Format:
+       [TIMESTAMP][Group: GROUP_ID] content
+       - If "null", no historical memories are available
+
+    Rules:
+    1. Use only information explicitly stated in the provided data or directly entailed by it.
+       Do NOT use outside knowledge, assumptions, or guesses.
+    2. For questions about future plans or predictions, prioritize [FORESIGHT] entries.
+    3. For questions about past events, use [MEMORIES] entries.
+    4. If multiple options seem plausible, choose the one most strongly supported by the data.
+    5. If the data does not provide enough information, you MUST still pick one option (A/B/C/D).
+       Choose the option that is least inconsistent with the available data.
+    6. Pay special attention to timestamps to determine when events occurred.
+    7. If data contains contradictory information, prioritize the most recent entry.
+    8. Do NOT output any reasoning, explanation, punctuation, or extra text.
+
+    Output format (must be followed exactly):
+    Output ONLY a single uppercase letter: A or B or C or D
+
+    {context}
+
+    [QUESTION]
+    {question}
+
+    [OPTIONS]
+    {options}
+
+  # Open-ended question prompt (adapted for multi-person group chat)
+  open_ended: |
+    You are an intelligent memory assistant. You will be given two types of information and one open-ended question.
+    Your task is to answer the question using ONLY the provided information.
+
+    You will receive:
+    1. [FORESIGHT]: Predicted future events based on past conversations. Format:
+       [timestamp:TS][Group: GROUP_ID][fact:EVIDENCE][extracted foresight:PREDICTION]
+       - "fact" contains evidence from past conversations
+       - "extracted foresight" contains the predicted future action
+       - If "null", no foresight predictions are available
+
+    2. [MEMORIES]: Historical memories from group chat conversations. Format:
+       [TIMESTAMP][Group: GROUP_ID] content
+       - If "null", no historical memories are available
+
+    # INSTRUCTIONS:
+    1. For questions about future plans or predictions, prioritize [FORESIGHT] entries.
+    2. For questions about past events, use [MEMORIES] entries.
+    3. Pay special attention to timestamps to determine when events occurred.
+    4. If data contains contradictory information, prioritize the most recent entry.
+    5. If the question involves time references (like "last year", "two months ago"), calculate the actual date.
+    6. Always convert relative time references to specific dates, months, or years in your answer.
+    7. Pay attention to who said what - the data may involve multiple participants.
+    8. The answer should be concise and specific (under 5-6 words when possible).
+    9. Do NOT output any reasoning steps, explanations, or extra text beyond the final answer.
+
+    Output format (must be followed exactly):
+    Output ONLY the answer text
+
+    {context}
+
+    [QUESTION]
+    {question}
+
+# LLM System Answer Prompts (for --system llm)
+# Uses FULL DIALOGUE as context instead of retrieved memories
+# These prompts are used when evaluating LLM directly without memory systems
+llm_answer:
+  # Multiple choice question prompt for LLM system (uses full dialogue)
+  multiple_choice: |
+    You are a rigorous question-answering assistant. You will be given a very long dialogue transcript and one multiple-choice question with four options. Your task is to choose the single best answer (A/B/C/D) based ONLY on the dialogue.
+
+    Rules:
+    1. Use only information explicitly stated in the dialogue or directly entailed by it. Do NOT use outside knowledge, assumptions, or guesses beyond the dialogue.
+    2. If multiple options seem plausible, choose the one most strongly and directly supported by the dialogue.
+    3. If the dialogue does not provide enough information to be certain, you MUST still pick one option (A/B/C/D). Choose the option that is least inconsistent with the dialogue.
+    4. Do NOT output any reasoning, explanation, punctuation, or extra text.
+
+    Output format (must be followed exactly):
+    Output ONLY a single uppercase letter: A or B or C or D
+
+    [DIALOGUE]
+    {context}
+
+    [QUESTION]
+    {question}
+
+    [OPTIONS]
+    {options}
+
+  # Open-ended question prompt for LLM system (uses full dialogue)
+  open_ended: |
+    You are a rigorous question-answering assistant. You will be given a very long dialogue transcript and one open-ended question. Your task is to answer the question using ONLY the information in the dialogue.
+
+    Rules:
+    1. Use only information explicitly stated in the dialogue or directly entailed by it. Do NOT use outside knowledge, assumptions, or speculation.
+    2. If the dialogue does not contain enough information to answer, output exactly: NOT ENOUGH INFORMATION
+    3. Keep the answer concise, specific, and aligned with the dialogue. Do not add commentary.
+    4. Do NOT output any reasoning steps, explanations, or extra text beyond the final answer.
+
+    Output format (must be followed exactly):
+    Output ONLY the answer text (or exactly: NOT ENOUGH INFORMATION)
+
+    [DIALOGUE]
+    {context}
+
+    [QUESTION]
+    {question}
+
+# LLM Judge Prompts for evaluation
+llm_judge:
+  system_prompt: |
+    You are an expert grader that determines if answers to questions match a gold standard answer.
+
+  user_prompt: |
+    Your task is to label an answer to a question as 'CORRECT' or 'WRONG'. You will be given:
+        (1) a question (about a multi-person group chat),
+        (2) a 'gold' (ground truth) answer,
+        (3) a generated answer
+    which you will score as CORRECT/WRONG.
+
+    The questions are about events, facts, or details mentioned in multi-person group chat conversations.
+    The gold answer is usually a concise answer that includes the key information.
+    
+    For example:
+    Question: What project was announced on January 9th?
+    Gold answer: Carbon Emission Accounting Platform
+    
+    The generated answer might be longer, but you should be generous with your grading - 
+    as long as it contains the same key information as the gold answer, it should be CORRECT.
+
+    For time-related questions, the gold answer will be a specific date/time. 
+    The generated answer might use different formats (e.g., "May 7th" vs "7 May" vs "2025-05-07"),
+    but as long as it refers to the same date/time, it should be CORRECT.
+
+    For the specific window of date, a +/- 1 day difference is acceptable due to timezone processing variations.
+
+    For multiple choice questions where the gold answer is a letter (A/B/C/D),
+    the generated answer should match exactly to be CORRECT.
+
+    Now grade this:
+    Question: {question}
+    Gold answer: {golden_answer}
+    Generated answer: {generated_answer}
+
+    First, provide a short (one sentence) explanation of your reasoning, 
+    then finish with CORRECT or WRONG.
+    Do NOT include both CORRECT and WRONG in your response.
+
+    Return the label in JSON format with the key "label": {{"label": "CORRECT"}} or {{"label": "WRONG"}}
+
+# LLM Configuration
+# All LLM calls use OpenRouter API
+# Environment variables:
+#   LLM_BASE_URL: OpenRouter API base URL (default: https://openrouter.ai/api/v1)
+#   LLM_API_KEY: OpenRouter API key
+llm:
+  # Model for answer generation
+  answer_model: "google/gemini-3-flash-preview"
+  # Model for LLM judge evaluation
+  judge_model: "google/gemini-3-flash-preview"
+  temperature: 0
+  max_tokens: 1000
+  
+  # Concurrency settings for all stages
+  concurrency:
+    # Max concurrent API calls for search stage
+    search_concurrency: 10
+    # Max concurrent API calls for answer generation
+    answer_concurrency: 20
+    # Max concurrent API calls for LLM judge evaluation
+    evaluate_concurrency: 20
+  
+  # Retry settings for API calls (applies to all stages)
+  retry:
+    # Max number of retries
+    max_retries: 8
+    # Base delay in seconds (exponential backoff)
+    retry_delay: 1.0
+    # Max delay in seconds
+    max_delay: 30.0
+    # Timeout per search request in seconds
+    search_timeout: 120.0

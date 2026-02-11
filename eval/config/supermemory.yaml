@@ -1,0 +1,21 @@
+# Supermemory Configuration for Multi-Person Group Chat Evaluation
+#
+# Environment variables:
+# - SUPERMEMORY_API_KEY: Supermemory API key (required)
+#
+# Note: Supermemory doesn't support metadata timestamp,
+# so timestamp is included as prefix in content:
+# [2025-01-09T09:32:15][Group: X][Speaker: Y]content
+
+name: "supermemory"
+version: "1.0"
+description: "Supermemory adapter for multi-person group chat evaluation"
+
+# API Configuration
+api_key: "${SUPERMEMORY_API_KEY}"
+
+# Batch Configuration
+# Messages are joined with newlines and sent as single content
+batch_size: 20           # Messages per API call
+max_retries: 5           # Retry count for failed requests
+
