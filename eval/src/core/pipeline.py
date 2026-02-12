@@ -649,7 +649,7 @@ class Pipeline:
     
     async def _run_evaluate_stage(
         self,
-        answer_results: List[AnswerResult],
+        answer_results: Union[List[AnswerResult], List[LightAnswerResult]],
         **kwargs
     ) -> EvaluationResult:
         """
