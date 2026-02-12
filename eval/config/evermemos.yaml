@@ -24,15 +24,4 @@ requests_per_second: 20
 max_retries: 5
 add_interval: 0.0
 
-# Memory type configuration
-# Supported types: episodic_memory, foresight
-# Can be a single type or list for combined retrieval
-# For foresight queries, retrieve_method should be "vector"
-memory_types:
-  - foresight
-
-# Search method: "keyword", "vector", "hybrid", "agentic"
-# Note: foresight requires "vector" method
-retrieve_method: "hybrid"
-
 

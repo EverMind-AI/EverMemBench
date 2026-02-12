@@ -289,15 +289,6 @@ Examples:
         help="Override base URL for memory system (e.g., http://0.0.0.0:19004 for evermemos local)"
     )
 
-    parser.add_argument(
-        "--memory-types",
-        type=str,
-        nargs="+",
-        default=None,
-        help="Memory types to search (e.g., episodic_memory foresight). "
-             "Overrides config file setting. Supported: episodic_memory, foresight"
-    )
-
     return parser.parse_args()
 
 
@@ -369,15 +360,6 @@ async def main():
                 console.print("Please set LLM_API_KEY in your .env file (OpenRouter API key)", style="dim")
                 sys.exit(1)
         
-        # Determine memory_types (CLI overrides config)
-        memory_types = args.memory_types
-        if memory_types is None:
-            # Load from system config if not specified via CLI
-            config_path = get_config_path(f"{args.system}.yaml")
-            if config_path.exists():
-                sys_config = load_yaml(str(config_path))
-                memory_types = sys_config.get("memory_types", ["episodic_memory"])
-
         # Run pipeline
         results = await pipeline.run(
             dataset=dataset,
@@ -389,7 +371,6 @@ async def main():
             qa_path=args.qa,
             top_k=args.top_k,
             qa_limit=args.qa_limit,
-            memory_types=memory_types,
         )
         
         # Exit with appropriate code
