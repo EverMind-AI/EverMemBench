@@ -304,14 +304,14 @@ async def main():
             timestamp = int(time.time())
             user_id = f"groupchat_{dataset_num}_{args.system}_{timestamp}"
         
-        # Create output directory
-        output_dir = Path(args.output_dir)
+        # Create output directory: {base_output_dir}/{system}/
+        output_dir = Path(args.output_dir) / args.system
         output_dir.mkdir(parents=True, exist_ok=True)
-        
+
         # Create adapter
         adapter = create_adapter(args.system, output_dir, base_url=args.base_url)
-        
-        # Create pipeline (include system_name for result file naming)
+
+        # Create pipeline
         pipeline = Pipeline(adapter, output_dir, system_name=args.system)
         
         # Determine smoke test settings

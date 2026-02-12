@@ -51,9 +51,8 @@ class Pipeline:
         self.adapter = adapter
         self.system_name = system_name
         
-        # Create system-specific output directory
-        base_output_dir = Path(output_dir) if output_dir else Path(".")
-        self.output_dir = base_output_dir / system_name
+        # Use output directory as-is (CLI already appends system subdirectory)
+        self.output_dir = Path(output_dir) if output_dir else Path(".")
         self.output_dir.mkdir(parents=True, exist_ok=True)
         
         self.console = get_console()

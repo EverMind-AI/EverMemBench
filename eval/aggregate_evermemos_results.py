@@ -7,7 +7,8 @@ Calculates accuracy by question_id categories (major/minor).
 
 Usage:
     python eval/aggregate_evermemos_results.py
-    python eval/aggregate_evermemos_results.py --output eval/results/evermemos/aggregated_results.json
+    python eval/aggregate_evermemos_results.py --system mem0
+    python eval/aggregate_evermemos_results.py --results-dir eval/results/evermemos -o report.json
 """
 
 import json
@@ -232,13 +233,19 @@ def print_results(batch_stats: Dict[str, Any], formatted: Dict[str, Any], overal
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Aggregate evaluation results from multiple evermemos batches"
+        description="Aggregate evaluation results from multiple batches"
+    )
+    parser.add_argument(
+        "--system",
+        type=str,
+        default="evermemos",
+        help="Memory system name, used to derive default results-dir (default: evermemos)"
     )
     parser.add_argument(
         "--results-dir",
         type=str,
-        default="eval/results/evermemos",
-        help="Directory containing evaluation_results_*.json files (default: eval/results/evermemos)"
+        default=None,
+        help="Directory containing evaluation_results_*.json files (default: eval/results/{system})"
     )
     parser.add_argument(
         "-o", "--output",
@@ -254,7 +261,8 @@ def main():
 
     args = parser.parse_args()
 
-    results_dir = Path(args.results_dir)
+    # Derive results_dir from --system if not explicitly provided
+    results_dir = Path(args.results_dir) if args.results_dir else Path(f"eval/results/{args.system}")
     if not results_dir.exists():
         print(f"Error: Results directory not found - {results_dir}")
         return 1
