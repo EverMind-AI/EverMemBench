@@ -90,7 +90,7 @@ def create_adapter(system_name: str, output_dir: Path, base_url: str = None):
     Create adapter for specified system.
 
     Args:
-        system_name: System name (memos, mem0, memobase, zep)
+        system_name: System name (memos, mem0, memobase, evermemos, zep, llm)
         output_dir: Output directory
         base_url: Optional base URL override for memory system
 
@@ -165,25 +165,25 @@ Supported Systems:
 
 Examples:
     # Smoke test with first day
-    python -m eval.cli --dataset dataset/004/dialogue_en.json --system memos --smoke
+    python -m eval.cli --dataset dataset/004/dialogue.json --system memos --smoke
 
     # Add all days
-    python -m eval.cli --dataset dataset/004/dialogue_en.json --system mem0 --stages add
+    python -m eval.cli --dataset dataset/004/dialogue.json --system mem0 --stages add
 
     # Custom user ID
-    python -m eval.cli --dataset dataset/004/dialogue_en.json --system zep --user-id my_test_user
+    python -m eval.cli --dataset dataset/004/dialogue.json --system zep --user-id my_test_user
 
     # Full evaluation pipeline
-    python -m eval.cli --dataset dataset/004/dialogue_en.json --qa dataset/004/qa.json \\
+    python -m eval.cli --dataset dataset/004/dialogue.json --qa dataset/004/qa_004.json \\
         --system mem0 --user-id 004 --stages search answer evaluate --top-k 10
     
     # EverMemOS local deployment (specify port via --base-url)
-    python -m eval.cli --dataset dataset/004/dialogue_en.json --system evermemos \\
+    python -m eval.cli --dataset dataset/004/dialogue.json --system evermemos \\
         --user-id 004 --base-url http://0.0.0.0:19004 --stages add
     
     # Test all systems
     for sys in memos mem0 memobase zep evermemos; do
-        python -m eval.cli --dataset dataset/004/dialogue_en.json --system $sys --smoke
+        python -m eval.cli --dataset dataset/004/dialogue.json --system $sys --smoke
     done
         """
     )
@@ -192,7 +192,7 @@ Examples:
     parser.add_argument(
         "--dataset",
         type=str,
-        help="Path to dataset JSON file (e.g., dataset/004/dialogue_en.json)"
+        help="Path to dataset JSON file (e.g., dataset/004/dialogue.json)"
     )
     
     parser.add_argument(
