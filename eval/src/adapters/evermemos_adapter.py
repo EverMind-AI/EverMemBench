@@ -273,7 +273,7 @@ class EverMemosAdapter(BaseAdapter):
             memory_strings.append(formatted)
 
         # Build context
-        context = self._format_search_context(user_id, memory_strings)
+        context = self._format_search_context(memory_strings)
 
         duration_ms = (time.time() - start_time) * 1000
 
@@ -404,14 +404,12 @@ class EverMemosAdapter(BaseAdapter):
 
     def _format_search_context(
         self,
-        user_id: str,
         memories: List[str]
     ) -> str:
         """
         Format retrieved memories into context string for LLM.
 
         Args:
-            user_id: User identifier
             memories: List of memory strings
 
         Returns:
