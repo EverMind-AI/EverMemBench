@@ -16,9 +16,9 @@ To preserve multi-person group chat information we map:
 - create_time: message timestamp (ISO 8601)
 - message_id: global counter (msg_00001, msg_00002, ...)
 
-Batching rule:
-- We still iterate day->group and never mix across day/group.
-- Within each group/day, we send messages sequentially (with optional add_interval delay).
+Processing:
+- Iterate day->group, never mix across day/group.
+- Within each group/day, send messages sequentially (with optional add_interval delay).
 """
 
 import asyncio
@@ -27,10 +27,10 @@ from datetime import timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+import time
+
 import aiohttp
 from aiolimiter import AsyncLimiter
-
-import time
 
 from eval.src.adapters.base import BaseAdapter
 from eval.src.core.data_models import Dataset, GroupChatMessage, AddResult, SearchResult

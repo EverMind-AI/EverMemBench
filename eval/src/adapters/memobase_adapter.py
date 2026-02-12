@@ -16,13 +16,11 @@ from datetime import timezone, datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from rich.console import Console
-
 import time
 
 from eval.src.adapters.base import BaseAdapter
-from eval.src.core.data_models import Dataset, GroupChatDay, GroupChatMessage, AddResult, SearchResult
-from eval.src.utils.logger import get_console, print_success, print_error, print_warning
+from eval.src.core.data_models import Dataset, GroupChatMessage, AddResult, SearchResult
+from eval.src.utils.logger import get_console, print_success, print_warning
 
 
 class MemobaseAdapter(BaseAdapter):

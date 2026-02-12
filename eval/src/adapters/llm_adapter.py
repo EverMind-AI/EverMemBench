@@ -12,12 +12,11 @@ Key differences from memory adapters:
 Usage:
     python -m eval.cli --system llm --dataset ... --qa ... --stages answer evaluate
 """
-import json
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from eval.src.adapters.base import BaseAdapter
-from eval.src.core.data_models import Dataset, GroupChatDay, GroupChatMessage, AddResult, SearchResult
+from eval.src.core.data_models import Dataset, AddResult, SearchResult
 from eval.src.utils.logger import get_console, print_success
 
 

@@ -10,15 +10,14 @@ from datetime import timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+import time
+
 import aiohttp
 from aiolimiter import AsyncLimiter
-from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
 
 from eval.src.adapters.base import BaseAdapter
-from eval.src.core.data_models import Dataset, GroupChatDay, GroupChatMessage, AddResult, SearchResult
-from eval.src.utils.logger import get_console, print_success, print_error, print_warning
-
-import time
+from eval.src.core.data_models import Dataset, GroupChatMessage, AddResult, SearchResult
+from eval.src.utils.logger import get_console, print_success, print_warning
 
 
 class MemosAdapter(BaseAdapter):
@@ -317,7 +316,6 @@ class MemosAdapter(BaseAdapter):
         start_time = time.time()
 
         session = await self._get_session()
-        # Correct endpoint: /search/memory
         url = f"{self.api_url}/search/memory"
 
         # Read search params from config, allow kwargs override
@@ -327,7 +325,6 @@ class MemosAdapter(BaseAdapter):
             self.search_config.get("preference_limit_number", 6)
         )
 
-        # Correct payload format based on Postman screenshot
         payload = {
             "query": query,
             "user_id": user_id,

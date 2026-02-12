@@ -1,7 +1,7 @@
 """
 CLI entry point for multi-person group chat evaluation.
 
-Supported systems: memos, mem0, memobase, evermemos, zep
+Supported systems: memos, mem0, memobase, evermemos, zep, llm
 
 Stages:
     add      - Ingest conversation data into memory system
@@ -11,18 +11,18 @@ Stages:
 
 Usage:
     # Smoke test - add first day only
-    python -m eval.cli --dataset dataset/004/dialogue_en.json --system memos --smoke --smoke-days 1
+    python -m eval.cli --dataset dataset/004/dialogue.json --system memos --smoke --smoke-days 1
 
     # Add all days
-    python -m eval.cli --dataset dataset/004/dialogue_en.json --system memos --stages add
-    
+    python -m eval.cli --dataset dataset/004/dialogue.json --system memos --stages add
+
     # Full pipeline: search -> answer -> evaluate
-    python -m eval.cli --dataset dataset/004/dialogue_en.json --qa dataset/004/qa.json \
+    python -m eval.cli --dataset dataset/004/dialogue.json --qa dataset/004/qa_004.json \
         --system mem0 --user-id 004 --stages search answer evaluate
-    
+
     # Test all systems
-    for sys in memos mem0 memobase zep; do
-        python -m eval.cli --dataset dataset/004/dialogue_en.json --system $sys --smoke
+    for sys in memos mem0 memobase zep evermemos; do
+        python -m eval.cli --dataset dataset/004/dialogue.json --system $sys --smoke
     done
 """
 import asyncio
@@ -43,7 +43,7 @@ load_dotenv()
 from eval.src.core.loaders import load_groupchat_dataset
 from eval.src.core.pipeline import Pipeline
 from eval.src.utils.config import load_yaml, get_config_path
-from eval.src.utils.logger import get_console, print_error, print_warning
+from eval.src.utils.logger import get_console, print_error
 
 
 # Supported systems and their required environment variables

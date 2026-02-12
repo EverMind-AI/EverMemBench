@@ -22,7 +22,7 @@ from eval.src.core.data_models import (
 )
 from typing import Union
 from eval.src.adapters.base import BaseAdapter
-from eval.src.utils.logger import get_console, print_header, print_success
+from eval.src.utils.logger import get_console, print_header
 from eval.src.utils.config import load_yaml, get_config_path
 
 

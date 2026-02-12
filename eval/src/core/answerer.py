@@ -15,6 +15,7 @@ Features:
 """
 import asyncio
 import os
+import re
 import time
 import random
 from typing import Dict, Any, List, Optional, Tuple
@@ -419,7 +420,6 @@ class Answerer:
         
         # Find first occurrence of A/B/C/D (but not in common words like "CANNOT", "ANSWER")
         # Look for patterns like "A.", "A)", "A:", "Answer: A", or standalone A/B/C/D
-        import re
         
         # Pattern 1: Letter followed by delimiter (most reliable)
         match = re.search(r'\b([ABCD])[.):,\s]', response)
