@@ -230,20 +230,17 @@ class EverMemosAdapter(BaseAdapter):
         **kwargs
     ) -> SearchResult:
         """
-        Search memories in EverMemOS.
+        Search episodic memories in EverMemOS.
 
-        Supports multiple memory types (episodic_memory, foresight).
-        Uses GET /api/v1/memories/search with JSON body (like Elasticsearch).
+        Uses GET /api/v1/memories/search with JSON body.
         Searches all groups for the given user.
 
         Args:
             query: Search query (usually question text)
             user_id: User ID for EverMemOS
-            top_k: Number of memories to retrieve per memory type
+            top_k: Number of memories to retrieve
             **kwargs: Additional parameters:
-                - memory_types: List of types, e.g., ["episodic_memory", "foresight"]
-                - retrieve_method: "keyword", "vector", "hybrid", "agentic" (default: "vector")
-                - current_time: ISO 8601 timestamp for foresight queries
+                - retrieve_method: "keyword", "vector", "hybrid", "agentic" (default: "hybrid")
 
         Returns:
             SearchResult with retrieved memories and formatted context
@@ -251,144 +248,35 @@ class EverMemosAdapter(BaseAdapter):
         start_time = time.time()
 
         session = await self._get_session()
-
-        # Get memory types - support both list and single string
-        memory_types = kwargs.get("memory_types", ["episodic_memory"])
-        if isinstance(memory_types, str):
-            memory_types = [memory_types]
-
         retrieve_method = kwargs.get("retrieve_method", "hybrid")
-        current_time = kwargs.get("current_time")
 
-        all_raw_memories = []
+        raw_memories = await self._search_episodic(
+            session, query, top_k, retrieve_method
+        )
 
-        # Process each memory type separately
-        for memory_type in memory_types:
-            if memory_type == "foresight":
-                memories = await self._search_foresight(
-                    session, query, top_k, current_time, retrieve_method
-                )
-            else:
-                memories = await self._search_episodic(
-                    session, query, top_k, retrieve_method, memory_type
-                )
-            all_raw_memories.extend(memories)
-
-        # Format memories based on type
-        all_memory_strings = []
-        for mem in all_raw_memories:
+        # Format memories
+        memory_strings = []
+        for mem in raw_memories:
             formatted = self._format_memory(mem)
-            all_memory_strings.append(formatted)
+            memory_strings.append(formatted)
 
-        # Build context with type-aware formatting
-        context = self._format_search_context_multi_type(user_id, all_memory_strings, memory_types)
+        # Build context
+        context = self._format_search_context(user_id, memory_strings)
 
         duration_ms = (time.time() - start_time) * 1000
 
         return SearchResult(
             question_id=kwargs.get("question_id", ""),
             query=query,
-            retrieved_memories=all_memory_strings,
+            retrieved_memories=memory_strings,
             context=context,
             search_duration_ms=duration_ms,
             metadata={
                 "user_id": user_id,
-                "memory_types": memory_types,
                 "retrieve_method": retrieve_method,
-                "total_memories": len(all_raw_memories),
+                "total_memories": len(raw_memories),
             }
         )
-
-    async def _search_foresight(
-        self,
-        session: aiohttp.ClientSession,
-        query: str,
-        top_k: int,
-        current_time: Optional[str],
-        retrieve_method: str = "vector"
-    ) -> List[Dict[str, Any]]:
-        """
-        Search foresight memories with current_time parameter.
-
-        Args:
-            session: aiohttp session
-            query: Search query
-            top_k: Number of results to retrieve
-            current_time: ISO 8601 timestamp for temporal context
-            retrieve_method: Search method (must be "vector" for foresight)
-
-        Returns:
-            List of foresight memory dicts with: memory_type, timestamp, group_id, foresight, evidence
-        """
-        url = f"{self.base_url}/api/v1/memories/search"
-
-        payload = {
-            "memory_types": ["foresight"],
-            "query": query,
-            "retrieve_method": "vector",  # Foresight requires vector search
-            "top_k": 5,
-            "user_id": "",
-            "include_metadata": False,
-            "radius": 0,
-        }
-
-        # Add current_time for foresight queries
-        if current_time:
-            payload["current_time"] = current_time
-
-        memories = []
-
-        for attempt in range(self.max_retries):
-            try:
-                async with self.rate_limiter:
-                    async with session.request("GET", url, json=payload) as resp:
-                        if resp.status == 200:
-                            result = await resp.json()
-
-                            if result.get("status") != "ok":
-                                self.console.print(
-                                    f"      ⚠️  Foresight search API returned non-ok status: {result.get('status')}",
-                                    style="yellow"
-                                )
-
-                            memories_list = result.get("result", {}).get("memories", [])
-
-                            for group_memories in memories_list:
-                                if isinstance(group_memories, dict):
-                                    for group_id, mem_list in group_memories.items():
-                                        for mem in mem_list:
-                                            if isinstance(mem, dict) and mem.get("memory_type") == "foresight":
-                                                memories.append({
-                                                    "memory_type": "foresight",
-                                                    "timestamp": mem.get("timestamp", ""),
-                                                    "group_id": group_id,
-                                                    "foresight": mem.get("foresight", ""),
-                                                    "evidence": mem.get("evidence", ""),
-                                                })
-                        elif resp.status == 404:
-                            self.console.print(
-                                f"      ⚠️  Foresight memories not found",
-                                style="yellow"
-                            )
-                        else:
-                            text = await resp.text()
-                            self.console.print(
-                                f"      ⚠️  Foresight search error: HTTP {resp.status}: {text[:200]}",
-                                style="yellow"
-                            )
-                break
-            except Exception as e:
-                if attempt < self.max_retries - 1:
-                    wait_time = 2 ** attempt
-                    self.console.print(
-                        f"      ⚠️  Foresight search retry {attempt + 1}/{self.max_retries} in {wait_time}s: {e}",
-                        style="yellow"
-                    )
-                    await asyncio.sleep(wait_time)
-                else:
-                    raise
-
-        return memories
 
     async def _search_episodic(
         self,
@@ -396,7 +284,6 @@ class EverMemosAdapter(BaseAdapter):
         query: str,
         top_k: int,
         retrieve_method: str,
-        memory_type: str = "episodic_memory"
     ) -> List[Dict[str, Any]]:
         """
         Search episodic memories.
@@ -406,15 +293,14 @@ class EverMemosAdapter(BaseAdapter):
             query: Search query
             top_k: Number of results to retrieve
             retrieve_method: Search method ("keyword", "vector", "hybrid", "agentic")
-            memory_type: Memory type to search (default: "episodic_memory")
 
         Returns:
-            List of episodic memory dicts with: memory_type, timestamp, group_id, content
+            List of episodic memory dicts with: timestamp, group_id, content
         """
         url = f"{self.base_url}/api/v1/memories/search"
 
         payload = {
-            "memory_types": [memory_type],
+            "memory_types": ["episodic_memory"],
             "query": query,
             "retrieve_method": retrieve_method,
             "top_k": 5,
@@ -433,7 +319,7 @@ class EverMemosAdapter(BaseAdapter):
 
                             if result.get("status") != "ok":
                                 self.console.print(
-                                    f"      ⚠️  Episodic search API returned non-ok status: {result.get('status')}",
+                                    f"      ⚠️  Search API returned non-ok status: {result.get('status')}",
                                     style="yellow"
                                 )
 
@@ -444,8 +330,7 @@ class EverMemosAdapter(BaseAdapter):
                                     for group_id, mem_list in group_memories.items():
                                         for mem in mem_list:
                                             if isinstance(mem, dict):
-                                                mem_type = mem.get("memory_type", "")
-                                                if mem_type != memory_type:
+                                                if mem.get("memory_type", "") != "episodic_memory":
                                                     continue
 
                                                 timestamp = mem.get("timestamp", "")
@@ -457,20 +342,19 @@ class EverMemosAdapter(BaseAdapter):
                                                 content = episode or summary or subject
                                                 if content:
                                                     memories.append({
-                                                        "memory_type": memory_type,
                                                         "timestamp": timestamp,
                                                         "group_id": group_id,
                                                         "content": content,
                                                     })
                         elif resp.status == 404:
                             self.console.print(
-                                f"      ⚠️  Episodic memories not found",
+                                f"      ⚠️  Memories not found",
                                 style="yellow"
                             )
                         else:
                             text = await resp.text()
                             self.console.print(
-                                f"      ⚠️  Episodic search error: HTTP {resp.status}: {text[:200]}",
+                                f"      ⚠️  Search error: HTTP {resp.status}: {text[:200]}",
                                 style="yellow"
                             )
                 break
@@ -478,7 +362,7 @@ class EverMemosAdapter(BaseAdapter):
                 if attempt < self.max_retries - 1:
                     wait_time = 2 ** attempt
                     self.console.print(
-                        f"      ⚠️  Episodic search retry {attempt + 1}/{self.max_retries} in {wait_time}s: {e}",
+                        f"      ⚠️  Search retry {attempt + 1}/{self.max_retries} in {wait_time}s: {e}",
                         style="yellow"
                     )
                     await asyncio.sleep(wait_time)
@@ -489,75 +373,22 @@ class EverMemosAdapter(BaseAdapter):
 
     def _format_memory(self, mem: Dict[str, Any]) -> str:
         """
-        Format a single memory based on its type.
+        Format a single episodic memory.
 
         Args:
-            mem: Memory dict with type-specific fields
+            mem: Memory dict with timestamp, group_id, content
 
         Returns:
             Formatted memory string
         """
-        memory_type = mem.get("memory_type", "")
-
-        if memory_type == "foresight":
-            # Format: [timestamp:X][Group: Y][fact:Z][extracted foresight:W]
-            timestamp = mem.get("timestamp", "")
-            group_id = mem.get("group_id", "")
-            evidence = mem.get("evidence", "")
-            foresight = mem.get("foresight", "")
-            return f"[timestamp:{timestamp}][Group: {group_id}][fact:{evidence}][extracted foresight:{foresight}]"
-        else:
-            # Episodic memory format: [{timestamp}][Group: {group_id}] {content}
-            content = mem.get("content", "")
-            timestamp = mem.get("timestamp", "")
-            group_id = mem.get("group_id", "")
-            if timestamp and group_id:
-                return f"[{timestamp}][Group: {group_id}] {content}"
-            elif timestamp:
-                return f"[{timestamp}] {content}"
-            return content
-
-    def _format_search_context_multi_type(
-        self,
-        user_id: str,
-        memories: List[str],
-        memory_types: List[str]
-    ) -> str:
-        """
-        Format context with type-aware sections.
-
-        Args:
-            user_id: User identifier
-            memories: List of formatted memory strings
-            memory_types: List of memory types that were searched
-
-        Returns:
-            Formatted context string with sections for each memory type
-        """
-        # Separate memories by type based on format
-        # Foresight memories start with "[timestamp:" while episodic use "[" followed by date
-        episodic_memories = [m for m in memories if not m.startswith("[timestamp:")]
-        foresight_memories = [m for m in memories if m.startswith("[timestamp:")]
-
-        sections = []
-
-        # Foresight section comes FIRST (before episodic), use "null" if empty
-
-
-        # Episodic/Historical memories section, use "null" if empty
-        if episodic_memories:
-            episodic_text = "\n".join(f"- {mem}" for mem in episodic_memories)
-            sections.append(f"[MEMORIES]\n{episodic_text}")
-        else:
-            sections.append("[MEMORIES]\nnull")
-
-        if foresight_memories:
-            foresight_text = "\n".join(f"- {mem}" for mem in foresight_memories)
-            sections.append(f"[FORESIGHT]\n{foresight_text}")
-        else:
-            sections.append("[FORESIGHT]\nnull")
-
-        return f"Memories for user {user_id}:\n\n" + "\n\n".join(sections)
+        content = mem.get("content", "")
+        timestamp = mem.get("timestamp", "")
+        group_id = mem.get("group_id", "")
+        if timestamp and group_id:
+            return f"[{timestamp}][Group: {group_id}] {content}"
+        elif timestamp:
+            return f"[{timestamp}] {content}"
+        return content
 
     def _format_search_context(
         self,
@@ -566,22 +397,18 @@ class EverMemosAdapter(BaseAdapter):
     ) -> str:
         """
         Format retrieved memories into context string for LLM.
-        (Legacy method for backward compatibility)
 
         Args:
             user_id: User identifier
             memories: List of memory strings
 
         Returns:
-            Formatted context string
+            Formatted context string with [MEMORIES] section
         """
         if not memories:
-            return "(No memories retrieved)"
+            return "[MEMORIES]\nnull"
 
         memory_text = "\n".join(f"- {mem}" for mem in memories)
-
-        return f"""Memories for user {user_id}:
-
-{memory_text}"""
+        return f"[MEMORIES]\n{memory_text}"
 
 
