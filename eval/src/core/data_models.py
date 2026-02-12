@@ -158,7 +158,6 @@ class QAItem:
         question_type: "multiple_choice" or "open_ended"
         options: List of options for multiple choice (e.g., ["A. Option1", "B. Option2"])
         correct_option: Correct option letter for multiple choice (e.g., "A")
-        current_time: ISO 8601 timestamp for foresight queries (e.g., "2025-09-17T00:00:00Z")
         metadata: Additional fields
     """
     question_id: str
@@ -167,7 +166,6 @@ class QAItem:
     question_type: str  # "multiple_choice" or "open_ended"
     options: Optional[List[str]] = None
     correct_option: Optional[str] = None
-    current_time: Optional[str] = None
     metadata: Dict[str, Any] = field(default_factory=dict)
 
 

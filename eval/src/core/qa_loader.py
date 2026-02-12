@@ -115,7 +115,6 @@ def _parse_qars_item(q: Dict[str, Any], idx: int) -> QAItem:
         "A": "答案",
         "task_id": "T001",  // ignored
         "options": {"A": "选项A", "B": "选项B", ...} or null,
-        "current_time": "2025-09-17T00:00:00Z"  // optional, for foresight queries
     }
 
     Args:
@@ -156,9 +155,6 @@ def _parse_qars_item(q: Dict[str, Any], idx: int) -> QAItem:
         options = None
         correct_option = None
 
-    # Extract current_time if present (for foresight queries)
-    current_time = q.get("current_time", None)
-
     return QAItem(
         question_id=question_id,
         question=question,
@@ -166,7 +162,6 @@ def _parse_qars_item(q: Dict[str, Any], idx: int) -> QAItem:
         question_type=question_type,
         options=options,
         correct_option=correct_option,
-        current_time=current_time,
         metadata={},
     )
 
