@@ -464,7 +464,7 @@ class Mem0Adapter(BaseAdapter):
         """
         if not memory_details:
             return "(No memories retrieved)"
-        
+
         lines = []
         for item in memory_details:
             timestamp = item.get("timestamp", "")
@@ -476,8 +476,6 @@ class Mem0Adapter(BaseAdapter):
                 lines.append(f"- [Group: {group_id}] [Day: {day_of_week}] [User: {user}] {timestamp}: {memory}")
             else:
                 lines.append(f"- [Group: {group_id}][User: {user}] {memory}")
-        
-        return f"""Memories:
 
-{chr(10).join(lines)}"""
+        return "\n".join(lines)
 

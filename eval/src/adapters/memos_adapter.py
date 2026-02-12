@@ -405,11 +405,12 @@ class MemosAdapter(BaseAdapter):
         Returns:
             Formatted context string
         """
+        if not memories and not pref_string:
+            return "(No memories retrieved)"
+
         memory_text = "\n".join(f"- {mem}" for mem in memories if mem)
         if pref_string:
             memory_text += f"\n{pref_string}"
-        
-        return f"""Memories:
 
-{memory_text}"""
+        return memory_text
 

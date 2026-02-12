@@ -416,9 +416,8 @@ class EverMemosAdapter(BaseAdapter):
             Formatted context string with [MEMORIES] section
         """
         if not memories:
-            return "[MEMORIES]\nnull"
+            return "(No memories retrieved)"
 
-        memory_text = "\n".join(f"- {mem}" for mem in memories)
-        return f"[MEMORIES]\n{memory_text}"
+        return "\n".join(f"- {mem}" for mem in memories)
 
 
