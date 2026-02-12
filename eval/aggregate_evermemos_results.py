@@ -160,12 +160,12 @@ def format_category_results(stats: Dict[str, Any]) -> Dict[str, Any]:
     return formatted
 
 
-def print_results(batch_stats: Dict[str, Any], formatted: Dict[str, Any], overall: Dict[str, Any]):
+def print_results(batch_stats: Dict[str, Any], formatted: Dict[str, Any], overall: Dict[str, Any], system_name: str = "evermemos"):
     """
     Print aggregated results in a formatted way.
     """
     print("\n" + "=" * 70)
-    print("📊 EverMemos Evaluation Results - Aggregated from 5 Batches")
+    print(f"📊 {system_name} Evaluation Results - Aggregated from 5 Batches")
     print("=" * 70)
 
     # Per-batch summary
@@ -311,7 +311,7 @@ def main():
 
     # Print results
     if not args.quiet:
-        print_results(batch_stats, formatted, overall)
+        print_results(batch_stats, formatted, overall, system_name=args.system)
 
     # Build output data
     output_data = {
