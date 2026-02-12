@@ -104,6 +104,8 @@ def create_adapter(system_name: str, output_dir: Path, base_url: str = None):
             os.environ["EVERMEMOS_BASE_URL"] = base_url
         elif system_name == "memobase":
             os.environ["MEMOBASE_BASE_URL"] = base_url
+        elif system_name == "memos":
+            os.environ["MEMOS_BASE_URL"] = base_url
 
     # Validate environment variables first
     if not validate_env_vars(system_name):
@@ -123,8 +125,13 @@ def create_adapter(system_name: str, output_dir: Path, base_url: str = None):
     config = load_yaml(str(config_path))
 
     # Apply base_url override if provided
+    # Adapters use different config keys: api_url (memos), project_url (memobase), base_url (evermemos)
     if base_url:
         config["base_url"] = base_url
+        if system_name == "memos":
+            config["api_url"] = base_url
+        elif system_name == "memobase":
+            config["project_url"] = base_url
 
     # Create adapter based on system
     if system_name == "memos":

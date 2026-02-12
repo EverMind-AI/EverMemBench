@@ -253,8 +253,6 @@ class MemobaseAdapter(BaseAdapter):
                         error_msg = f"[{day.date}][{group_name}] Batch {batch_idx + 1} failed: {e}"
                         total_errors.append(error_msg)
                         self.console.print(f"      ❌ {error_msg}", style="red")
-            
-            # Note: No manual flush needed - Memobase insert() is synchronous per official docs
         
         # Summary
         success = len(total_errors) == 0
