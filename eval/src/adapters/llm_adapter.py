@@ -38,7 +38,7 @@ class LLMAdapter(BaseAdapter):
         Initialize LLM adapter.
         
         Args:
-            config: Configuration dictionary from llm.yaml
+            config: Configuration dictionary (minimal, no system-specific yaml)
             output_dir: Output directory for results
         """
         super().__init__(config, output_dir)

@@ -50,13 +50,20 @@ class Pipeline:
         """
         self.adapter = adapter
         self.system_name = system_name
-        
+
         # Use output directory as-is (CLI already appends system subdirectory)
         self.output_dir = Path(output_dir) if output_dir else Path(".")
         self.output_dir.mkdir(parents=True, exist_ok=True)
-        
+
         self.console = get_console()
-        
+
+        # Load pipeline config once
+        try:
+            pipeline_config_path = get_config_path("pipeline.yaml")
+            self.pipeline_config = load_yaml(str(pipeline_config_path))
+        except Exception:
+            self.pipeline_config = {}
+
         # Lazy-loaded components
         self._answerer = None
         self._evaluator = None
@@ -232,16 +239,9 @@ class Pipeline:
         self.console.print(f"{'='*60}", style="bold blue")
         self.console.print(f"Questions: {len(qa_items)}")
         self.console.print(f"Top K: {top_k if top_k is not None else '(from config)'}")
-        
-        # Load config from pipeline.yaml
-        try:
-            pipeline_config_path = get_config_path("pipeline.yaml")
-            pipeline_config = load_yaml(str(pipeline_config_path))
-        except Exception:
-            pipeline_config = {}
 
-        search_config = pipeline_config.get("search", {})
-        retry_config = pipeline_config.get("retry", {})
+        search_config = self.pipeline_config.get("search", {})
+        retry_config = self.pipeline_config.get("retry", {})
 
         # Concurrency settings
         search_concurrency = search_config.get("concurrency", 3)
@@ -519,12 +519,7 @@ class Pipeline:
         search_results.clear()
         
         # Get concurrency settings from pipeline.yaml
-        try:
-            pipeline_config_path = get_config_path("pipeline.yaml")
-            pipeline_config = load_yaml(str(pipeline_config_path))
-        except Exception:
-            pipeline_config = {}
-        concurrency = pipeline_config.get("answer", {}).get("concurrency", 10)
+        concurrency = self.pipeline_config.get("answer", {}).get("concurrency", 1)
         
         semaphore = asyncio.Semaphore(concurrency)
         
@@ -633,8 +628,8 @@ class Pipeline:
             first_qa: First QA item
             first_sr: First search result
         """
-        # Load warmup config from adapter's own config (llm.yaml for LLM system)
-        warmup_config = self.adapter.config.get("warmup", {})
+        # Load warmup config from pipeline.yaml
+        warmup_config = self.pipeline_config.get("warmup", {})
         warmup_enabled = warmup_config.get("enabled", True)
         warmup_delay = warmup_config.get("delay_seconds", 5)
         
