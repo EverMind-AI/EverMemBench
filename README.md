@@ -12,7 +12,7 @@ A comprehensive evaluation framework for multi-person group chat datasets, suppo
 ## Features
 
 - **Multi-person group chat support**: Handles datasets with multiple speakers across multiple groups and days
-- **5 Memory Systems**: Memos, Mem0, Memobase, EverMemOS, Zep (Graph API)
+- **5 Memory Systems**: Memos, Mem0, Memobase, EverMemOS, Zep
 - **LLM Long-Context Evaluation**: Direct LLM evaluation using full dialogue as context
 - **Full Evaluation Pipeline**: Add → Search → Answer → Evaluate
 - **Two Question Types**: Multiple choice (direct comparison) and open-ended (LLM judge)
@@ -50,7 +50,7 @@ A comprehensive evaluation framework for multi-person group chat datasets, suppo
 | **Mem0** | Native `timestamp` (Unix, per-batch) | `run_id="${user_id}_${groupId}"`, `name=<Speaker>` | `MEM0_API_KEY` |
 | **Memobase** | Native `created_at` | `[Group: X][Speaker: Y]content`, `alias=<Speaker>` | `MEMOBASE_BASE_URL`, `MEMOBASE_API_TOKEN` |
 | **EverMemOS** | Native `create_time` | `sender=<Speaker>`, `group_id=${user_id}_${groupId}` | `EVERMEMOS_BASE_URL`, `EVERMEMOS_API_KEY` |
-| **Zep** | Graph `created_at` | `[Group: X][Speaker: Y]content` | `ZEP_API_KEY` |
+| **Zep** | Native `created_at` | `[Group: X][Speaker: Y]content` | `ZEP_API_KEY` |
 
 ### LLM System
 
@@ -111,51 +111,24 @@ tools/
 **Requires Python >= 3.11**.
 
 ```bash
-# Core dependencies
-pip install aiohttp aiolimiter rich pyyaml python-dotenv openai
-
-# System-specific SDKs
-pip install mem0ai           # For Mem0
-pip install memobase         # For Memobase (requires Python >= 3.11)
-pip install zep-cloud        # For Zep
+pip install -r requirements.txt
 ```
 
 ## Configuration
 
 ### Environment Variables
 
-Create a `.env` file in the project root:
+Copy the template and fill in your API keys:
 
 ```bash
-# ===== Memory Systems =====
-
-# Memos
-MEMOS_API_KEY=Token mpg-your-key-here
-MEMOS_BASE_URL=https://memos.memtensor.cn/api/openmem/v1
-
-# Mem0
-MEM0_API_KEY=your-mem0-api-key
-
-# Memobase
-MEMOBASE_BASE_URL=https://api.memobase.dev
-MEMOBASE_API_TOKEN=your-memobase-token
-
-# EverMemOS
-EVERMEMOS_BASE_URL=https://api.evermind.ai
-EVERMEMOS_API_KEY=your-evermemos-api-key
-
-# Zep
-ZEP_API_KEY=your-zep-api-key
-
-# ===== LLM (OpenRouter) =====
-LLM_BASE_URL=https://openrouter.ai/api/v1
-LLM_API_KEY=your-openrouter-api-key
+cp env.template .env
 ```
+
+The LLM variables (OpenRouter) are required for answer generation and evaluation across all systems. Memory system variables only need to be configured for the systems you intend to use. See `env.template` for details.
 
 ### Pipeline Configuration
 
-Pipeline settings (answer/evaluate/search/retry/debug) are in `eval/config/pipeline.yaml`.
-Each stage has its own model, provider, and concurrency settings.
+Pipeline settings are in `eval/config/pipeline.yaml`.
 
 ```yaml
 # eval/config/pipeline.yaml
@@ -202,21 +175,36 @@ warmup:
 
 ### System Search Configuration
 
-Each memory system config has a `search:` section for system-specific search parameters:
+Each memory system has its own config file (`eval/config/{system}.yaml`) with a `search:` section for system-specific search parameters. CLI `--top-k` overrides the config `top_k` when provided.
 
 ```yaml
-# eval/config/evermemos.yaml
+# eval/config/memos.yaml
+search:
+  top_k: 10                        # Number of memories to retrieve
+  preference_limit_number: 6        # Number of preference memories
+
+# eval/config/mem0.yaml
 search:
   top_k: 10
-  retrieve_method: "hybrid"
+  group_ids: ["1", "2", "3"]       # Group IDs to search across
 
 # eval/config/memobase.yaml
 search:
-  max_token_size: 1000
-  event_similarity_threshold: 0.2
-```
+  max_token_size: 3000              # Max token size for search results
+  event_similarity_threshold: 0.2   # Similarity threshold for event matching
 
-CLI `--top-k` overrides the config default when provided.
+# eval/config/evermemos.yaml
+search:
+  top_k: 10
+  retrieve_method: "hybrid"         # Retrieval method: hybrid/semantic/keyword
+
+# eval/config/zep.yaml
+search:
+  top_k: 10
+  reranker_edges: "cross_encoder"   # Edge reranking strategy
+  reranker_nodes: "rrf"             # Node reranking strategy
+  max_query_length: 400             # Max query length for search
+```
 
 ### Prompt Templates
 
@@ -238,21 +226,108 @@ llm_judge:
 
 ### Memory Systems Evaluation
 
+Memory systems follow a two-phase workflow: **Add** (ingest data), then **Search → Answer → Evaluate** (run evaluation).
+
+#### Memos
+
 ```bash
-# Step 1: Add conversations into memory system
+# Add
+python -m eval.cli \
+    --dataset dataset/004/dialogue.json \
+    --system memos \
+    --user-id 004 \
+    --stages add
+
+# Search -> Answer -> Evaluate
+python -m eval.cli \
+    --dataset dataset/004/dialogue.json \
+    --qa dataset/004/qa_004.json \
+    --system memos \
+    --user-id 004 \
+    --stages search answer evaluate \
+    --top-k 10
+```
+
+#### Mem0
+
+```bash
+# Add
 python -m eval.cli \
     --dataset dataset/004/dialogue.json \
     --system mem0 \
     --user-id 004 \
     --stages add
 
-# Step 2: Wait for memory system to finish processing (indexing, embedding, etc.)
-
-# Step 3: Search -> Answer -> Evaluate
+# Search -> Answer -> Evaluate
 python -m eval.cli \
     --dataset dataset/004/dialogue.json \
     --qa dataset/004/qa_004.json \
     --system mem0 \
+    --user-id 004 \
+    --stages search answer evaluate \
+    --top-k 10
+```
+
+#### Memobase
+
+```bash
+# Add
+python -m eval.cli \
+    --dataset dataset/004/dialogue.json \
+    --system memobase \
+    --user-id 004 \
+    --stages add
+
+# Search -> Answer -> Evaluate
+python -m eval.cli \
+    --dataset dataset/004/dialogue.json \
+    --qa dataset/004/qa_004.json \
+    --system memobase \
+    --user-id 004 \
+    --stages search answer evaluate
+```
+
+#### EverMemOS
+
+EverMemOS requires **separate data isolation per batch** (user ID):
+- **Cloud service**: Create a new memspace for each batch via the EverMemOS dashboard, then use the corresponding `--base-url`.
+- **Local deployment**: Start a separate service instance per batch, each on its own port (e.g., port `19004` for user `004`, port `19005` for user `005`). API key is not required for local deployment.
+
+```bash
+# Add (local deployment, port per batch)
+python -m eval.cli \
+    --dataset dataset/004/dialogue.json \
+    --system evermemos \
+    --user-id 004 \
+    --stages add \
+    --base-url http://0.0.0.0:19004
+
+# Search -> Answer -> Evaluate
+python -m eval.cli \
+    --dataset dataset/004/dialogue.json \
+    --qa dataset/004/qa_004.json \
+    --system evermemos \
+    --user-id 004 \
+    --stages search answer evaluate \
+    --top-k 10 \
+    --base-url http://0.0.0.0:19004
+```
+
+#### Zep
+
+```bash
+# Add
+python -m eval.cli \
+    --dataset dataset/004/dialogue.json \
+    --system zep \
+    --user-id 004 \
+    --stages add
+
+# Search -> Answer -> Evaluate
+python -m eval.cli \
+    --dataset dataset/004/dialogue.json \
+    --qa dataset/004/qa_004.json \
+    --system zep \
     --user-id 004 \
     --stages search answer evaluate \
     --top-k 10

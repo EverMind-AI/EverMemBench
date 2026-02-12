@@ -7,6 +7,6 @@ PyYAML>=6.0
 rich>=13.0
 
 # Memory system SDKs (install as needed)
-pip install mem0ai       # For Mem0
-pip install memobase     # For Memobase
-pip install zep-cloud    # For Zep
+mem0ai       # For Mem0
+memobase     # For Memobase
+zep-cloud    # For Zep
