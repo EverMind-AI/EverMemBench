@@ -70,7 +70,7 @@ class Pipeline:
     
     async def run(
         self,
-        dataset: Dataset,
+        dataset: Optional[Dataset],
         user_id: str,
         stages: Optional[List[str]] = None,
         smoke_days: Optional[int] = None,
@@ -102,14 +102,15 @@ class Pipeline:
             stages = ["add"]
         
         print_header("Multi-Person Group Chat Evaluation Pipeline")
-        self.console.print(f"Dataset: {dataset.name}")
+        if dataset is not None:
+            self.console.print(f"Dataset: {dataset.name}")
+            self.console.print(f"Total Days: {dataset.total_days}")
+            self.console.print(f"Total Messages: {dataset.total_messages}")
         self.console.print(f"User ID: {user_id}")
         self.console.print(f"Stages: {stages}")
-        self.console.print(f"Total Days: {dataset.total_days}")
-        self.console.print(f"Total Messages: {dataset.total_messages}")
         
         # Apply smoke date filter (takes precedence over smoke_days)
-        if smoke_date:
+        if smoke_date and dataset is not None:
             day = dataset.get_day(smoke_date)
             if day is None:
                 raise ValueError(f"Smoke date not found in dataset: {smoke_date}")
@@ -122,7 +123,7 @@ class Pipeline:
             self.console.print(f"   Subset: {dataset.total_days} days, {dataset.total_messages} messages")
 
         # Apply smoke test limit
-        if smoke_days is not None and smoke_days > 0:
+        if smoke_days is not None and smoke_days > 0 and dataset is not None:
             dataset = dataset.get_days_subset(smoke_days)
             self.console.print(f"\n[yellow]🧪 Smoke Test Mode: {smoke_days} day(s)[/yellow]")
             self.console.print(f"   Subset: {dataset.total_days} days, {dataset.total_messages} messages")
