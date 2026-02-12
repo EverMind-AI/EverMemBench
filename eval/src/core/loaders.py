@@ -31,7 +31,7 @@ def load_groupchat_dataset(
     Load a multi-person group chat dataset from JSON file.
     
     Args:
-        file_path: Path to the JSON file (e.g., dataset/004/dialogue_en.json)
+        file_path: Path to the JSON file (e.g., dataset/004/dialogue.json)
         dataset_name: Optional name for the dataset (defaults to file stem)
         max_days: Optional limit on number of days to load
         
@@ -49,7 +49,7 @@ def load_groupchat_dataset(
     
     # Determine dataset name
     if dataset_name is None:
-        # Extract from path: dataset/004/dialogue_en.json -> groupchat_004
+        # Extract from path: dataset/004/dialogue.json -> groupchat_004
         parent_name = file_path.parent.name
         dataset_name = f"groupchat_{parent_name}"
     

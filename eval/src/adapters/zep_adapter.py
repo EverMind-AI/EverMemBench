@@ -64,7 +64,7 @@ class ZepAdapter(BaseAdapter):
         
         self.client = AsyncZep(api_key=api_key)
         
-        # Batch configuration (Zep graph.add is per-message, but we can batch the async calls)
+        # Zep graph.add is per-message; batch_size controls concurrent group processing
         self.batch_size = config.get("batch_size", 10)
         self.max_retries = config.get("max_retries", 5)
         self.add_interval = config.get("add_interval", 0.1)  # Interval between messages

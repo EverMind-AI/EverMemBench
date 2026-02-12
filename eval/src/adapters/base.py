@@ -16,10 +16,7 @@ class BaseAdapter(ABC):
     
     All adapters must implement:
     - add(): Ingest conversation data into the memory system
-    
-    Future stages (to be implemented):
-    - search(): Retrieve relevant memories
-    - answer(): Generate answers based on retrieved memories
+    - search(): Retrieve relevant memories for QA questions
     """
     
     def __init__(self, config: Dict[str, Any], output_dir: Optional[Path] = None):
