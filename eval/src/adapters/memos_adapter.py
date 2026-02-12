@@ -359,7 +359,6 @@ class MemosAdapter(BaseAdapter):
                         
                         # Format context for LLM
                         context = self._format_search_context(
-                            user_id=user_id,
                             memories=all_memories,
                             pref_string=""
                         )
@@ -390,18 +389,16 @@ class MemosAdapter(BaseAdapter):
     
     def _format_search_context(
         self,
-        user_id: str,
         memories: List[str],
         pref_string: str = ""
     ) -> str:
         """
         Format retrieved memories into context string for LLM.
-        
+
         Args:
-            user_id: User identifier
             memories: List of memory strings
             pref_string: Preference string from API
-            
+
         Returns:
             Formatted context string
         """
