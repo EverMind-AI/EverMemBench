@@ -108,19 +108,24 @@ def create_adapter(system_name: str, output_dir: Path, base_url: str = None):
     # Validate environment variables first
     if not validate_env_vars(system_name):
         raise ValueError(f"Missing required environment variables for {system_name}")
-    
-    # Load system config
+
+    # LLM system has no system-specific yaml; all config comes from pipeline.yaml
+    if system_name == "llm":
+        from eval.src.adapters.llm_adapter import LLMAdapter
+        return LLMAdapter({"name": "llm"}, output_dir)
+
+    # Load system config for memory system adapters
     config_path = get_config_path(f"{system_name}.yaml")
-    
+
     if not config_path.exists():
         raise FileNotFoundError(f"Config not found: {config_path}")
-    
+
     config = load_yaml(str(config_path))
-    
+
     # Apply base_url override if provided
     if base_url:
         config["base_url"] = base_url
-    
+
     # Create adapter based on system
     if system_name == "memos":
         from eval.src.adapters.memos_adapter import MemosAdapter
@@ -137,9 +142,6 @@ def create_adapter(system_name: str, output_dir: Path, base_url: str = None):
     elif system_name == "zep":
         from eval.src.adapters.zep_adapter import ZepAdapter
         return ZepAdapter(config, output_dir)
-    elif system_name == "llm":
-        from eval.src.adapters.llm_adapter import LLMAdapter
-        return LLMAdapter(config, output_dir)
     else:
         supported = ", ".join(SUPPORTED_SYSTEMS.keys())
         raise ValueError(f"Unknown system: {system_name}. Supported: {supported}")
@@ -292,20 +294,51 @@ async def main():
     console = get_console()
     
     try:
-        # Load dataset
-        dataset = load_groupchat_dataset(args.dataset)
-        
+        # Handle LLM system stage requirements
+        # LLM answer needs dialogue loaded (add) and formatted (search)
+        # LLM evaluate-only can work from saved answer results
+        if args.system == "llm":
+            if "answer" in args.stages:
+                if "add" not in args.stages:
+                    args.stages = ["add"] + args.stages
+                if "search" not in args.stages:
+                    idx = min(
+                        args.stages.index("answer") if "answer" in args.stages else len(args.stages),
+                        args.stages.index("evaluate") if "evaluate" in args.stages else len(args.stages)
+                    )
+                    args.stages.insert(idx, "search")
+                console.print("\n[yellow]ℹ️  LLM system: using full dialogue as context (no memory retrieval)[/yellow]")
+
+        # Validate --dataset for stages that need it
+        if "add" in args.stages and not args.dataset:
+            print_error("--dataset argument required for add stage")
+            sys.exit(1)
+
+        # Load dataset only when needed
+        dataset = None
+        if args.dataset:
+            dataset = load_groupchat_dataset(args.dataset)
+
         # Generate user_id if not provided
         user_id = args.user_id
         if user_id is None:
-            # Format: groupchat_{dataset_num}_{system}_{timestamp}
             import time
-            dataset_num = Path(args.dataset).parent.name
+            if args.dataset:
+                dataset_num = Path(args.dataset).parent.name
+            else:
+                dataset_num = "unknown"
             timestamp = int(time.time())
             user_id = f"groupchat_{dataset_num}_{args.system}_{timestamp}"
-        
-        # Create output directory: {base_output_dir}/{system}/
-        output_dir = Path(args.output_dir) / args.system
+
+        # Create output directory
+        # Memory systems: {base}/{system}/
+        # LLM system:     {base}/llm/{answer_model}/
+        if args.system == "llm":
+            pipeline_cfg = load_yaml(str(get_config_path("pipeline.yaml")))
+            answer_model = pipeline_cfg.get("answer", {}).get("model", "unknown")
+            output_dir = Path(args.output_dir) / "llm" / answer_model
+        else:
+            output_dir = Path(args.output_dir) / args.system
         output_dir.mkdir(parents=True, exist_ok=True)
 
         # Create adapter
@@ -313,7 +346,7 @@ async def main():
 
         # Create pipeline
         pipeline = Pipeline(adapter, output_dir, system_name=args.system)
-        
+
         # Determine smoke test settings
         smoke_days = None
         smoke_date = None
@@ -323,37 +356,20 @@ async def main():
                 smoke_days = None
             else:
                 smoke_days = args.smoke_days
-        
-        # Handle LLM system stage requirements
-        # LLM system needs add (to load dialogue) and search (to format context) stages
-        # even though they are no-ops (no actual memory system involved)
-        if args.system == "llm":
-            if "answer" in args.stages or "evaluate" in args.stages:
-                # Ensure add and search are included for LLM system
-                if "add" not in args.stages:
-                    args.stages = ["add"] + args.stages
-                if "search" not in args.stages:
-                    # Insert search before answer/evaluate
-                    idx = min(
-                        args.stages.index("answer") if "answer" in args.stages else len(args.stages),
-                        args.stages.index("evaluate") if "evaluate" in args.stages else len(args.stages)
-                    )
-                    args.stages.insert(idx, "search")
-                console.print("\n[yellow]ℹ️  LLM system: using full dialogue as context (no memory retrieval)[/yellow]")
-        
+
         # Validate QA path for search/answer/evaluate stages
         if any(s in args.stages for s in ["search", "answer", "evaluate"]):
             if not args.qa:
                 print_error("--qa argument required for search/answer/evaluate stages")
                 sys.exit(1)
-        
+
         # Validate LLM API key for answer/evaluate stages
         if any(s in args.stages for s in ["answer", "evaluate"]):
             if not os.environ.get("LLM_API_KEY"):
                 print_error("LLM_API_KEY environment variable required for answer/evaluate stages")
                 console.print("Please set LLM_API_KEY in your .env file (OpenRouter API key)", style="dim")
                 sys.exit(1)
-        
+
         # Run pipeline
         results = await pipeline.run(
             dataset=dataset,
