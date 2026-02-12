@@ -80,9 +80,11 @@ class Evaluator:
         if not api_key:
             raise ValueError("LLM API key required. Set LLM_API_KEY env var or provide in config.")
 
+        api_timeout = evaluate_config.get("timeout", 300)
         self.client = AsyncOpenAI(
             api_key=api_key,
-            base_url=base_url
+            base_url=base_url,
+            timeout=api_timeout
         )
 
         # Model configuration
