@@ -3,11 +3,13 @@ Logging utilities.
 
 Provides Rich console for beautiful output.
 """
+from typing import Optional
+
 from rich.console import Console
 
 
 # Global console instance
-_console: Console = None
+_console: Optional[Console] = None
 
 
 def get_console() -> Console:

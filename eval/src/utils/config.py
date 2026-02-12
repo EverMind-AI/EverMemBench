@@ -40,7 +40,7 @@ def load_yaml(file_path: str) -> Dict[str, Any]:
     # Substitute environment variables
     content = _substitute_env_vars(content)
     
-    return yaml.safe_load(content)
+    return yaml.safe_load(content) or {}
 
 
 def _substitute_env_vars(content: str) -> str:
