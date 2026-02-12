@@ -38,6 +38,7 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional
 
 from eval.src.core.data_models import QAItem
+from eval.src.utils.logger import get_console
 
 
 def load_qa(qa_path: str, limit: Optional[int] = None) -> List[QAItem]:
@@ -90,7 +91,7 @@ def load_qa(qa_path: str, limit: Optional[int] = None) -> List[QAItem]:
         )
     
     # Apply limit if specified
-    if limit:
+    if limit is not None:
         questions_raw = questions_raw[:limit]
     
     qa_items = []
@@ -98,7 +99,8 @@ def load_qa(qa_path: str, limit: Optional[int] = None) -> List[QAItem]:
         qa_item = parser(q, idx)
         qa_items.append(qa_item)
     
-    print(f"Loaded {len(qa_items)} QA items from {qa_path}")
+    console = get_console()
+    console.print(f"Loaded {len(qa_items)} QA items from {qa_path}")
     _print_qa_summary(qa_items)
     
     return qa_items
@@ -126,11 +128,11 @@ def _parse_qars_item(q: Dict[str, Any], idx: int) -> QAItem:
     """
     # Required fields (using qars format keys)
     question = q.get("Q")
-    if not question:
+    if question is None:
         raise ValueError(f"Question {idx}: missing 'Q' field")
 
     answer = q.get("A")
-    if not answer:
+    if answer is None:
         raise ValueError(f"Question {idx}: missing 'A' field")
 
     # Question ID
@@ -188,11 +190,11 @@ def _parse_legacy_item(q: Dict[str, Any], idx: int) -> QAItem:
     """
     # Required fields
     question = q.get("question")
-    if not question:
+    if question is None:
         raise ValueError(f"Question {idx}: missing 'question' field")
-    
+
     answer = q.get("answer")
-    if not answer:
+    if answer is None:
         raise ValueError(f"Question {idx}: missing 'answer' field")
     
     # Question ID (auto-generate if missing)
@@ -270,9 +272,10 @@ def _infer_correct_option(answer: str, options: List[str]) -> str:
 
 def _print_qa_summary(qa_items: List[QAItem]) -> None:
     """Print summary of loaded QA items."""
+    console = get_console()
     mc_count = sum(1 for q in qa_items if q.question_type == "multiple_choice")
     oe_count = sum(1 for q in qa_items if q.question_type == "open_ended")
-    
-    print(f"   Multiple choice: {mc_count}")
-    print(f"   Open-ended: {oe_count}")
+
+    console.print(f"   Multiple choice: {mc_count}")
+    console.print(f"   Open-ended: {oe_count}")
 
