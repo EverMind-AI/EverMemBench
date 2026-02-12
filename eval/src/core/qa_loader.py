@@ -12,10 +12,10 @@ Format 1 (eval_sub_topic format):
   "qars": [
     {
       "id": "F_SH_Top004_001",
-      "Q": "问题内容",
-      "A": "答案",
+      "Q": "question text",
+      "A": "answer text",
       "task_id": "T001",  // ignored
-      "options": {"A": "选项A", "B": "选项B", "C": "选项C", "D": "选项D"}  // null for open-ended
+      "options": {"A": "option A", "B": "option B", "C": "option C", "D": "option D"}  // null for open-ended
     }
   ]
 }
@@ -25,10 +25,10 @@ Format 2 (legacy format):
   "questions": [
     {
       "question_id": "004_mc_001",
-      "question": "问题",
-      "options": ["A. 选项", ...],
+      "question": "question text",
+      "options": ["A. option", ...],
       "correct_option": "A",
-      "answer": "答案"
+      "answer": "answer text"
     }
   ]
 }
@@ -113,10 +113,10 @@ def _parse_qars_item(q: Dict[str, Any], idx: int) -> QAItem:
     Format:
     {
         "id": "F_SH_Top004_001",
-        "Q": "问题内容",
-        "A": "答案",
+        "Q": "question text",
+        "A": "answer text",
         "task_id": "T001",  // ignored
-        "options": {"A": "选项A", "B": "选项B", ...} or null,
+        "options": {"A": "option A", "B": "option B", ...} or null,
     }
 
     Args:
@@ -145,7 +145,7 @@ def _parse_qars_item(q: Dict[str, Any], idx: int) -> QAItem:
     if options_raw and isinstance(options_raw, dict) and len(options_raw) > 0:
         # Multiple choice: options is a dict with A/B/C/D keys
         question_type = "multiple_choice"
-        # Convert dict to list format: ["A. 选项内容", "B. 选项内容", ...]
+        # Convert dict to list format: ["A. option text", "B. option text", ...]
         options = []
         for key in sorted(options_raw.keys()):
             options.append(f"{key}. {options_raw[key]}")
@@ -175,10 +175,10 @@ def _parse_legacy_item(q: Dict[str, Any], idx: int) -> QAItem:
     Format:
     {
         "question_id": "004_mc_001",
-        "question": "问题",
-        "options": ["A. 选项", ...],  // optional
+        "question": "question text",
+        "options": ["A. option", ...],  // optional
         "correct_option": "A",  // optional
-        "answer": "答案"
+        "answer": "answer text"
     }
     
     Args:
