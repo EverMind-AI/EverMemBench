@@ -3,7 +3,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2602.01313-b31b1b.svg)](https://arxiv.org/pdf/2602.01313)
 [![Dataset](https://img.shields.io/badge/🤗%20Dataset-EverMemBench--Dynamic-yellow)](https://huggingface.co/datasets/EverMind-AI/EverMemBench-Dynamic)
 
-A comprehensive evaluation framework for multi-person group chat datasets, supporting **Memory Systems** (Memos, Mem0, Memobase, EverMemOS, Supermemory, Zep) and **LLM Long-Context Evaluation**.
+A comprehensive evaluation framework for multi-person group chat datasets, supporting **Memory Systems** (Memos, Mem0, Memobase, EverMemOS, Zep) and **LLM Long-Context Evaluation**.
 
 📄 **Paper**: [EverMemBench: A Comprehensive Benchmark for Long-Term Memory in Conversational AI](https://arxiv.org/pdf/2602.01313)
 
@@ -12,7 +12,7 @@ A comprehensive evaluation framework for multi-person group chat datasets, suppo
 ## Features
 
 - **Multi-person group chat support**: Handles datasets with multiple speakers across multiple groups and days
-- **6 Memory Systems**: Memos, Mem0, Memobase, EverMemOS, Supermemory, Zep (Graph API)
+- **5 Memory Systems**: Memos, Mem0, Memobase, EverMemOS, Zep (Graph API)
 - **LLM Long-Context Evaluation**: Direct LLM evaluation using full dialogue as context
 - **Full Evaluation Pipeline**: Add → Search → Answer → Evaluate
 - **Two Question Types**: Multiple choice (direct comparison) and open-ended (LLM judge)
@@ -50,7 +50,6 @@ A comprehensive evaluation framework for multi-person group chat datasets, suppo
 | **Mem0** | Native `timestamp` (Unix, per-batch) | `run_id="${user_id}_${groupId}"`, `name=<Speaker>` | `MEM0_API_KEY` |
 | **Memobase** | Native `created_at` | `[Group: X][Speaker: Y]content`, `alias=<Speaker>` | `MEMOBASE_BASE_URL`, `MEMOBASE_API_TOKEN` |
 | **EverMemOS** | Native `create_time` | `sender=<Speaker>`, `group_id=${user_id}_${groupId}` | `EVERMEMOS_BASE_URL`, `EVERMEMOS_API_KEY` |
-| **Supermemory** | Prefix | `[timestamp][Group: X][Speaker: Y]content` | `SUPERMEMORY_API_KEY` |
 | **Zep** | Graph `created_at` | `[Group: X][Speaker: Y]content` | `ZEP_API_KEY` |
 
 ### LLM System
@@ -79,7 +78,6 @@ eval/
 │   ├── mem0.yaml            # Mem0 configuration
 │   ├── memobase.yaml        # Memobase configuration
 │   ├── evermemos.yaml       # EverMemOS configuration
-│   ├── supermemory.yaml     # Supermemory configuration
 │   ├── zep.yaml             # Zep configuration
 │   ├── llm.yaml             # LLM system configuration (model/provider/warmup/concurrency/retry)
 │   └── prompts.yaml         # LLM prompts for answer/evaluate
@@ -97,7 +95,6 @@ eval/
 │   │   ├── mem0_adapter.py  # Mem0 implementation
 │   │   ├── memobase_adapter.py   # Memobase implementation
 │   │   ├── evermemos_adapter.py  # EverMemOS implementation
-│   │   ├── supermemory_adapter.py # Supermemory implementation
 │   │   ├── zep_adapter.py   # Zep Graph API implementation
 │   │   └── llm_adapter.py   # LLM system adapter (full dialogue as context)
 │   └── utils/
@@ -116,7 +113,6 @@ pip install aiohttp aiolimiter rich pyyaml python-dotenv openai
 # System-specific SDKs
 pip install mem0ai           # For Mem0
 pip install memobase         # For Memobase
-pip install supermemory      # For Supermemory
 pip install zep-cloud        # For Zep
 ```
 
@@ -143,9 +139,6 @@ MEMOBASE_API_TOKEN=your-memobase-token
 # EverMemOS (EverMind)
 EVERMEMOS_BASE_URL=https://api.evermind.ai
 EVERMEMOS_API_KEY=your-evermemos-api-key
-
-# Supermemory
-SUPERMEMORY_API_KEY=your-supermemory-api-key
 
 # Zep
 ZEP_API_KEY=your-zep-api-key
@@ -297,7 +290,7 @@ python -m eval.cli \
 | Option | Description | Default |
 |--------|-------------|---------|
 | `--dataset` | Path to dataset JSON file | Required |
-| `--system` | System (memos/mem0/memobase/evermemos/supermemory/zep/llm) | Required |
+| `--system` | System (memos/mem0/memobase/evermemos/zep/llm) | Required |
 | `--stages` | Stages to run: add, search, answer, evaluate | `["add"]` |
 | `--qa` | Path to QA JSON file (required for search/answer/evaluate) | - |
 | `--user-id` | User ID for memory system | Auto-generated |
@@ -659,7 +652,7 @@ Please set LLM_API_KEY in your .env file (OpenRouter API key)
 ### Module Not Found
 
 ```bash
-pip install mem0ai memobase supermemory zep-cloud openai
+pip install mem0ai memobase zep-cloud openai
 ```
 
 ### Context Too Long (LLM System)

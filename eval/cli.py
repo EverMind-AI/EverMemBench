@@ -1,7 +1,7 @@
 """
 CLI entry point for multi-person group chat evaluation.
 
-Supported systems: memos, mem0, memobase, evermemos, supermemory, zep
+Supported systems: memos, mem0, memobase, evermemos, zep
 
 Stages:
     add      - Ingest conversation data into memory system
@@ -21,7 +21,7 @@ Usage:
         --system mem0 --user-id 004 --stages search answer evaluate
     
     # Test all systems
-    for sys in memos mem0 memobase supermemory zep; do
+    for sys in memos mem0 memobase zep; do
         python -m eval.cli --dataset dataset/004/dialogue_en.json --system $sys --smoke
     done
 """
@@ -52,7 +52,6 @@ SUPPORTED_SYSTEMS = {
     "mem0": ["MEM0_API_KEY"],
     "memobase": ["MEMOBASE_BASE_URL", "MEMOBASE_API_TOKEN"],
     "evermemos": ["EVERMEMOS_BASE_URL"],  # API key optional for local deployment
-    "supermemory": ["SUPERMEMORY_API_KEY"],
     "zep": ["ZEP_API_KEY"],
     "llm": [],  # LLM system uses LLM_API_KEY (validated separately for answer/evaluate)
 }
@@ -91,7 +90,7 @@ def create_adapter(system_name: str, output_dir: Path, base_url: str = None):
     Create adapter for specified system.
 
     Args:
-        system_name: System name (memos, mem0, memobase, supermemory, zep)
+        system_name: System name (memos, mem0, memobase, zep)
         output_dir: Output directory
         base_url: Optional base URL override for memory system
 
@@ -135,9 +134,6 @@ def create_adapter(system_name: str, output_dir: Path, base_url: str = None):
     elif system_name == "evermemos":
         from eval.src.adapters.evermemos_adapter import EverMemosAdapter
         return EverMemosAdapter(config, output_dir)
-    elif system_name == "supermemory":
-        from eval.src.adapters.supermemory_adapter import SupermemoryAdapter
-        return SupermemoryAdapter(config, output_dir)
     elif system_name == "zep":
         from eval.src.adapters.zep_adapter import ZepAdapter
         return ZepAdapter(config, output_dir)
@@ -162,7 +158,6 @@ Supported Systems:
     mem0        - Mem0 memory system (env: MEM0_API_KEY)
     memobase    - Memobase memory system (env: MEMOBASE_PROJECT_URL, MEMOBASE_API_KEY)
     evermemos   - EverMemOS memory system (env: EVERMEMOS_BASE_URL, EVERMEMOS_API_KEY)
-    supermemory - Supermemory memory system (env: SUPERMEMORY_API_KEY)
     zep         - Zep Graph memory system (env: ZEP_API_KEY)
     llm         - Direct LLM evaluation using full dialogue (env: LLM_API_KEY)
 
@@ -185,7 +180,7 @@ Examples:
         --user-id 004 --base-url http://0.0.0.0:19004 --stages add
     
     # Test all systems
-    for sys in memos mem0 memobase supermemory zep evermemos; do
+    for sys in memos mem0 memobase zep evermemos; do
         python -m eval.cli --dataset dataset/004/dialogue_en.json --system $sys --smoke
     done
         """
