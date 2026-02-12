@@ -14,6 +14,7 @@ Features:
 - Support for LLM system (full dialogue) vs memory system prompts
 """
 import asyncio
+import os
 import time
 import random
 from typing import Dict, Any, List, Optional, Tuple
@@ -38,21 +39,25 @@ class Answerer:
     - LLM system mode: Uses llm_answer prompts with full dialogue as context
     """
     
-    def __init__(self, config: Optional[Dict[str, Any]] = None, system_name: str = "default"):
+    def __init__(
+        self,
+        config: Optional[Dict[str, Any]] = None,
+        system_name: str = "default",
+    ):
         """
         Initialize answerer with LLM configuration.
-        
+
         Args:
-            config: Optional config dict. If not provided, loads from prompts.yaml
+            config: Optional config dict. If not provided, loads from llm.yaml
             system_name: System name ("llm" uses special prompts, others use standard)
         """
         self.console = get_console()
         self.system_name = system_name
-        
+
         # Load prompts config
         prompts_path = get_config_path("prompts.yaml")
         self.prompts_config = load_yaml(str(prompts_path))
-        
+
         # Get prompts based on system type
         # For "llm" system, use llm_answer prompts (full dialogue)
         # For memory systems, use standard answer prompts
@@ -62,67 +67,62 @@ class Answerer:
         else:
             self.mc_prompt = self.prompts_config.get("answer", {}).get("multiple_choice", "")
             self.oe_prompt = self.prompts_config.get("answer", {}).get("open_ended", "")
-        
-        # For LLM system, load config from llm.yaml; otherwise use prompts.yaml
-        import os
-        if system_name == "llm":
-            try:
-                llm_config_path = get_config_path("llm.yaml")
-                llm_yaml_config = load_yaml(str(llm_config_path))
-                llm_config = llm_yaml_config.get("llm", {})
-            except Exception:
-                llm_config = config or self.prompts_config.get("llm", {})
-        else:
-            llm_config = config or self.prompts_config.get("llm", {})
-        
+
+        # Resolve LLM config with a consistent priority order.
+        try:
+            llm_config_path = get_config_path("llm.yaml")
+            llm_yaml_config = load_yaml(str(llm_config_path))
+            base_llm_config = llm_yaml_config.get("llm", {})
+        except Exception:
+            base_llm_config = {}
+
+        llm_config = config or base_llm_config
+
         # OpenRouter configuration via environment variables
         api_key = llm_config.get("api_key") or os.environ.get("LLM_API_KEY")
         base_url = llm_config.get("base_url") or os.environ.get("LLM_BASE_URL", "https://openrouter.ai/api/v1")
-        
+
         if not api_key:
             raise ValueError("LLM API key required. Set LLM_API_KEY env var or provide in config.")
-        
+
         # Set timeout for long context processing (3MB+ dialogue requires longer time)
-        api_timeout = llm_config.get("timeout", 300)  # Default 5 minutes for long context
+        api_timeout = llm_config.get("timeout", 300)
         self.client = AsyncOpenAI(
             api_key=api_key,
             base_url=base_url,
             timeout=api_timeout
         )
-        
-        # Model configuration
-        # For LLM system: use model from llm.yaml
-        # For memory systems: use answer_model from prompts.yaml
+
+        # Model configuration - use answer_model for all systems
         if system_name == "llm":
-            self.model = llm_config.get("model", "gpt-4.1-mini")
+            self.model = llm_config.get("answer_model", "openai/gpt-4.1-mini")
         else:
             self.model = llm_config.get("answer_model", "openai/gpt-4.1-nano")
-        
+
         self.temperature = llm_config.get("temperature", 0)
         self.max_tokens = llm_config.get("max_tokens", 1000)
-        
+
         # Provider configuration for OpenRouter (CRITICAL for cache hits)
-        # This ensures all requests go to the same provider backend
-        self.provider_config = llm_config.get("provider", None)
-        
-        # Concurrency settings - check both llm.yaml format and prompts.yaml format
-        if system_name == "llm":
-            try:
-                llm_config_path = get_config_path("llm.yaml")
-                llm_yaml_config = load_yaml(str(llm_config_path))
-                concurrency_config = llm_yaml_config.get("concurrency", {})
-            except Exception:
-                concurrency_config = llm_config.get("concurrency", {})
+        if system_name == "llm" and "answer_provider" in llm_config:
+            self.provider_config = llm_config.get("answer_provider", None)
         else:
+            self.provider_config = llm_config.get("provider", None)
+
+        # Concurrency settings (shared across all systems)
+        try:
+            llm_config_path = get_config_path("llm.yaml")
+            llm_yaml_config = load_yaml(str(llm_config_path))
+            concurrency_config = llm_yaml_config.get("concurrency", {})
+        except Exception:
             concurrency_config = llm_config.get("concurrency", {})
         self.concurrency = concurrency_config.get("answer_concurrency", 10)
-        
+
         # Retry settings
         retry_config = llm_config.get("retry", {})
         self.max_retries = retry_config.get("max_retries", 3)
         self.retry_delay = retry_config.get("retry_delay", 1.0)
         self.max_delay = retry_config.get("max_delay", 30.0)
-        
+
         # Debug settings - load from llm.yaml
         if system_name == "llm":
             try:
@@ -134,11 +134,11 @@ class Answerer:
         else:
             debug_config = {}
         self.show_usage = debug_config.get("show_usage", False)
-        
+
         # Cache hit tracking
         self.cache_hits = 0
         self.total_requests = 0
-        
+
         print(f"✅ Answerer initialized")
         print(f"   Base URL: {base_url}")
         print(f"   Model: {self.model}")

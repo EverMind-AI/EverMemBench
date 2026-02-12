@@ -13,6 +13,7 @@ Features:
 """
 import asyncio
 import json
+import os
 import random
 from typing import Dict, Any, List, Optional, Union
 
@@ -39,79 +40,76 @@ class Evaluator:
     def __init__(self, config: Optional[Dict[str, Any]] = None, num_runs: int = 1, system_name: str = "default"):
         """
         Initialize evaluator.
-        
+
         Args:
-            config: Optional config dict. If not provided, loads from prompts.yaml
+            config: Optional config dict. If not provided, loads from llm.yaml
             num_runs: Number of LLM judge runs for open-ended evaluation
             system_name: System name ("llm" uses llm.yaml config, others use prompts.yaml)
         """
         self.console = get_console()
         self.num_runs = num_runs
         self.system_name = system_name
-        
+
         # Load prompts config
         prompts_path = get_config_path("prompts.yaml")
         self.prompts_config = load_yaml(str(prompts_path))
-        
+
         # Get LLM judge prompts
         judge_config = self.prompts_config.get("llm_judge", {})
         self.judge_system_prompt = judge_config.get("system_prompt", "")
         self.judge_user_prompt = judge_config.get("user_prompt", "")
-        
-        # For LLM system, load config from llm.yaml; otherwise use prompts.yaml
-        import os
-        if system_name == "llm":
-            try:
-                llm_config_path = get_config_path("llm.yaml")
-                llm_yaml_config = load_yaml(str(llm_config_path))
-                llm_config = llm_yaml_config.get("llm", {})
-            except Exception:
-                llm_config = config or self.prompts_config.get("llm", {})
-        else:
-            llm_config = config or self.prompts_config.get("llm", {})
-        
+
+        # Resolve LLM config with a consistent priority order.
+        try:
+            llm_config_path = get_config_path("llm.yaml")
+            llm_yaml_config = load_yaml(str(llm_config_path))
+            base_llm_config = llm_yaml_config.get("llm", {})
+        except Exception:
+            base_llm_config = {}
+
+        llm_config = config or base_llm_config
+
         # OpenRouter configuration via environment variables
         api_key = llm_config.get("api_key") or os.environ.get("LLM_API_KEY")
         base_url = llm_config.get("base_url") or os.environ.get("LLM_BASE_URL", "https://openrouter.ai/api/v1")
-        
+
         if not api_key:
             raise ValueError("LLM API key required. Set LLM_API_KEY env var or provide in config.")
-        
+
         self.client = AsyncOpenAI(
             api_key=api_key,
             base_url=base_url
         )
-        
-        # Model configuration
-        # For LLM system: use model from llm.yaml
-        # For memory systems: use judge_model from prompts.yaml
+
+        # Model configuration - use judge_model for evaluation across systems.
         if system_name == "llm":
-            self.model = llm_config.get("model", "gpt-4.1-mini")
+            self.model = llm_config.get("judge_model") or base_llm_config.get(
+                "judge_model", "openai/gpt-4.1-mini"
+            )
         else:
             self.model = llm_config.get("judge_model", "openai/gpt-4.1-nano")
-        
+
         # Provider configuration for OpenRouter (CRITICAL for cache hits)
-        # This ensures all requests go to the same provider backend
-        self.provider_config = llm_config.get("provider", None)
-        
-        # Concurrency settings - check both llm.yaml format and prompts.yaml format
-        if system_name == "llm":
-            try:
-                llm_config_path = get_config_path("llm.yaml")
-                llm_yaml_config = load_yaml(str(llm_config_path))
-                concurrency_config = llm_yaml_config.get("concurrency", {})
-            except Exception:
-                concurrency_config = llm_config.get("concurrency", {})
+        if "judge_provider" in llm_config:
+            self.provider_config = llm_config.get("judge_provider", None)
         else:
+            self.provider_config = llm_config.get("provider", None)
+
+        # Concurrency settings (shared across all systems)
+        try:
+            llm_config_path = get_config_path("llm.yaml")
+            llm_yaml_config = load_yaml(str(llm_config_path))
+            concurrency_config = llm_yaml_config.get("concurrency", {})
+        except Exception:
             concurrency_config = llm_config.get("concurrency", {})
         self.concurrency = concurrency_config.get("evaluate_concurrency", 10)
-        
+
         # Retry settings
         retry_config = llm_config.get("retry", {})
         self.max_retries = retry_config.get("max_retries", 3)
         self.retry_delay = retry_config.get("retry_delay", 1.0)
         self.max_delay = retry_config.get("max_delay", 30.0)
-        
+
         print(f"✅ Evaluator initialized")
         print(f"   Base URL: {base_url}")
         print(f"   Model: {self.model}")
