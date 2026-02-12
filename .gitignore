@@ -43,3 +43,6 @@ results/
 # Archives
 *.tar
 *.zip
+
+# dataset
+dataset/
