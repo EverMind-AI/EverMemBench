@@ -234,15 +234,19 @@ class Pipeline:
         self.console.print(f"Questions: {len(qa_items)}")
         self.console.print(f"Top K: {top_k}")
         
-        # Load config for concurrency and retry settings
-        prompts_path = get_config_path("prompts.yaml")
-        prompts_config = load_yaml(str(prompts_path))
-        llm_config = prompts_config.get("llm", {})
-        
+        # Load config for concurrency and retry settings from llm.yaml
+        try:
+            llm_config_path = get_config_path("llm.yaml")
+            llm_yaml_config = load_yaml(str(llm_config_path))
+            llm_config = llm_yaml_config.get("llm", {})
+            concurrency_config = llm_yaml_config.get("concurrency", {})
+        except Exception:
+            llm_config = {}
+            concurrency_config = {}
+
         # Concurrency settings
-        concurrency_config = llm_config.get("concurrency", {})
         search_concurrency = concurrency_config.get("search_concurrency", 3)
-        
+
         # Retry settings
         retry_config = llm_config.get("retry", {})
         max_retries = retry_config.get("max_retries", 3)
@@ -277,7 +281,6 @@ class Pipeline:
                                 user_id=user_id,
                                 top_k=top_k,
                                 question_id=qa.question_id,
-                                current_time=qa.current_time,  # For foresight queries
                                 **kwargs
                             ),
                             timeout=search_timeout
@@ -517,11 +520,13 @@ class Pipeline:
         # Clear original search_results to free memory
         search_results.clear()
         
-        # Get concurrency settings
-        prompts_path = get_config_path("prompts.yaml")
-        prompts_config = load_yaml(str(prompts_path))
-        llm_config = prompts_config.get("llm", {})
-        concurrency_config = llm_config.get("concurrency", {})
+        # Get concurrency settings from llm.yaml
+        try:
+            llm_config_path = get_config_path("llm.yaml")
+            llm_yaml_config = load_yaml(str(llm_config_path))
+            concurrency_config = llm_yaml_config.get("concurrency", {})
+        except Exception:
+            concurrency_config = {}
         concurrency = concurrency_config.get("answer_concurrency", 10)
         
         semaphore = asyncio.Semaphore(concurrency)
