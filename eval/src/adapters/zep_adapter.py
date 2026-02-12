@@ -76,9 +76,9 @@ class ZepAdapter(BaseAdapter):
         
         self.console = get_console()
         
-        print(f"✅ ZepAdapter initialized")
-        print(f"   Batch Size: {self.batch_size}")
-        print(f"   Add Interval: {self.add_interval}s")
+        self.console.print("✅ ZepAdapter initialized", style="bold green")
+        self.console.print(f"   Batch Size: {self.batch_size}")
+        self.console.print(f"   Add Interval: {self.add_interval}s")
     
     async def add(
         self,

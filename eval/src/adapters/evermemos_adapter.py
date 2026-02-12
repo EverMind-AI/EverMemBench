@@ -86,9 +86,9 @@ class EverMemosAdapter(BaseAdapter):
         # Global message counter
         self._message_counter = 0
 
-        print("✅ EverMemosAdapter initialized")
-        print(f"   Base URL: {self.base_url}")
-        print(f"   Rate Limit: {rps} req/s")
+        self.console.print("✅ EverMemosAdapter initialized", style="bold green")
+        self.console.print(f"   Base URL: {self.base_url}")
+        self.console.print(f"   Rate Limit: {rps} req/s")
 
     async def _get_session(self) -> aiohttp.ClientSession:
         if self._session is None or self._session.closed:

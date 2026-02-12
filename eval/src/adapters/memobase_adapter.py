@@ -86,10 +86,10 @@ class MemobaseAdapter(BaseAdapter):
         # User mapping file to store user_id -> memobase_uuid mapping
         self.user_mapping_file = self.output_dir / "memobase_users.json"
         
-        print(f"✅ MemobaseAdapter initialized")
-        print(f"   Project URL: {project_url}")
-        print(f"   Batch Size: {self.batch_size}")
-        print(f"   Batch Delay: {self.batch_delay}s")
+        self.console.print("✅ MemobaseAdapter initialized", style="bold green")
+        self.console.print(f"   Project URL: {project_url}")
+        self.console.print(f"   Batch Size: {self.batch_size}")
+        self.console.print(f"   Batch Delay: {self.batch_delay}s")
     
     def _save_user_mapping(self, original_id: str, memobase_uuid: str):
         """Save user_id -> memobase_uuid mapping to file."""

@@ -101,16 +101,16 @@ class Evaluator:
         self.retry_delay = retry_config.get("retry_delay", 1.0)
         self.max_delay = retry_config.get("max_delay", 30.0)
 
-        print(f"✅ Evaluator initialized")
-        print(f"   Base URL: {base_url}")
-        print(f"   Model: {self.model}")
+        self.console.print("✅ Evaluator initialized", style="bold green")
+        self.console.print(f"   Base URL: {base_url}")
+        self.console.print(f"   Model: {self.model}")
         if self.provider_config:
             provider_order = self.provider_config.get("order", [])
             allow_fallbacks = self.provider_config.get("allow_fallbacks", True)
-            print(f"   Provider: {provider_order} (fallbacks: {allow_fallbacks})")
-        print(f"   Concurrency: {self.concurrency}")
-        print(f"   Max Retries: {self.max_retries}")
-        print(f"   Num Runs (OE): {self.num_runs}")
+            self.console.print(f"   Provider: {provider_order} (fallbacks: {allow_fallbacks})")
+        self.console.print(f"   Concurrency: {self.concurrency}")
+        self.console.print(f"   Max Retries: {self.max_retries}")
+        self.console.print(f"   Num Runs (OE): {self.num_runs}")
     
     async def evaluate(
         self,

@@ -122,18 +122,18 @@ class Answerer:
         self.cache_hits = 0
         self.total_requests = 0
 
-        print(f"✅ Answerer initialized")
-        print(f"   Base URL: {base_url}")
-        print(f"   Model: {self.model}")
+        self.console.print("✅ Answerer initialized", style="bold green")
+        self.console.print(f"   Base URL: {base_url}")
+        self.console.print(f"   Model: {self.model}")
         if self.provider_config:
             provider_order = self.provider_config.get("order", [])
             allow_fallbacks = self.provider_config.get("allow_fallbacks", True)
-            print(f"   Provider: {provider_order} (fallbacks: {allow_fallbacks})")
-        print(f"   System: {system_name}")
-        print(f"   Concurrency: {self.concurrency}")
-        print(f"   Max Retries: {self.max_retries}")
+            self.console.print(f"   Provider: {provider_order} (fallbacks: {allow_fallbacks})")
+        self.console.print(f"   System: {system_name}")
+        self.console.print(f"   Concurrency: {self.concurrency}")
+        self.console.print(f"   Max Retries: {self.max_retries}")
         if self.show_usage:
-            print(f"   Debug: show_usage enabled")
+            self.console.print(f"   Debug: show_usage enabled")
     
     async def generate_answer(
         self,

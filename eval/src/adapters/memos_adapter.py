@@ -79,10 +79,10 @@ class MemosAdapter(BaseAdapter):
         
         self.console = get_console()
         
-        print(f"✅ MemosAdapter initialized")
-        print(f"   API URL: {self.api_url}")
-        print(f"   Batch Size: {self.batch_size}")
-        print(f"   Rate Limit: {requests_per_second} req/s")
+        self.console.print("✅ MemosAdapter initialized", style="bold green")
+        self.console.print(f"   API URL: {self.api_url}")
+        self.console.print(f"   Batch Size: {self.batch_size}")
+        self.console.print(f"   Rate Limit: {requests_per_second} req/s")
     
     async def _get_session(self) -> aiohttp.ClientSession:
         """Get or create aiohttp session."""

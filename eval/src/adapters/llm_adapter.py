@@ -49,8 +49,8 @@ class LLMAdapter(BaseAdapter):
         self._dialogue_data: Optional[Dataset] = None
         self._dialogue_context: Optional[str] = None
         
-        print(f"✅ LLMAdapter initialized")
-        print(f"   Mode: Full dialogue as context (no memory system)")
+        self.console.print("✅ LLMAdapter initialized", style="bold green")
+        self.console.print("   Mode: Full dialogue as context (no memory system)")
     
     async def add(
         self,

@@ -81,11 +81,11 @@ class Mem0Adapter(BaseAdapter):
         
         self.console = get_console()
         
-        print(f"✅ Mem0Adapter initialized")
-        print(f"   Batch Size: {self.batch_size}")
-        print(f"   Add Interval: {self.add_interval}s")
-        print(f"   Enable Graph (add): {self.enable_graph_add}")
-        print(f"   Enable Graph (search): {self.enable_graph_search}")
+        self.console.print("✅ Mem0Adapter initialized", style="bold green")
+        self.console.print(f"   Batch Size: {self.batch_size}")
+        self.console.print(f"   Add Interval: {self.add_interval}s")
+        self.console.print(f"   Enable Graph (add): {self.enable_graph_add}")
+        self.console.print(f"   Enable Graph (search): {self.enable_graph_search}")
     
     async def add(
         self,
