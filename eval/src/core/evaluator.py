@@ -222,32 +222,77 @@ class Evaluator:
     def _evaluate_mc(self, result: AnswerResultType) -> bool:
         """
         Evaluate multiple choice answer.
-        
+
         Direct comparison of generated answer letter with correct option.
-        
+        Uses robust multi-pattern parsing (same logic as answerer._parse_mc_answer)
+        to correctly extract the answer letter from LLM responses.
+
         Args:
             result: Answer result to evaluate (AnswerResult or LightAnswerResult)
-            
+
         Returns:
             True if correct, False otherwise
         """
-        generated = result.generated_answer.strip().upper()
-        
-        # Get correct option from QAItem (stored in search_result metadata or golden_answer)
+        generated = result.generated_answer.strip()
+
+        # Handle failure markers — always incorrect
+        if generated.startswith("[") and generated.endswith("]"):
+            return False
+
+        # Get correct option from golden_answer
         golden = result.golden_answer.strip().upper()
-        
+
         # Extract first letter if golden is like "A. Option text"
         if len(golden) > 1 and golden[0] in "ABCD" and golden[1] in ".):":
             golden = golden[0]
-        
-        # Extract first letter from generated
-        if len(generated) > 0:
-            for char in generated:
-                if char in "ABCD":
-                    generated = char
-                    break
-        
+
+        # Parse generated answer using robust multi-pattern extraction
+        generated = self._parse_mc_answer(generated)
+
         return generated == golden
+
+    @staticmethod
+    def _parse_mc_answer(response: str) -> str:
+        """
+        Parse multiple choice answer from LLM response.
+
+        Uses multi-pattern regex extraction to robustly find the answer letter,
+        avoiding false matches from common words like "ACCORDING", "CANNOT", etc.
+
+        Args:
+            response: Raw LLM response
+
+        Returns:
+            Single uppercase letter (A/B/C/D) or the original response if unparseable
+        """
+        import re
+
+        response = response.strip().upper()
+
+        if not response:
+            return ""
+
+        # Direct single letter
+        if len(response) == 1 and response in "ABCD":
+            return response
+
+        # Pattern 1: Letter followed by delimiter (most reliable)
+        match = re.search(r'\b([ABCD])[.):,\s]', response)
+        if match:
+            return match.group(1)
+
+        # Pattern 2: "answer is X" or "choose X"
+        match = re.search(r'(?:answer|choice|option|select)[:\s]+([ABCD])\b', response, re.IGNORECASE)
+        if match:
+            return match.group(1).upper()
+
+        # Pattern 3: Standalone letter at start or end (not part of a word)
+        if response[0] in "ABCD" and (len(response) == 1 or not response[1].isalpha()):
+            return response[0]
+        if response[-1] in "ABCD" and (len(response) == 1 or not response[-2].isalpha()):
+            return response[-1]
+
+        return response
     
     async def _evaluate_oe_batch_with_progress(
         self,
