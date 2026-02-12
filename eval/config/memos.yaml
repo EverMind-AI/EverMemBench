@@ -22,3 +22,11 @@ max_retries: 5           # Retry count for failed requests
 # Memos limit: 10 requests/second
 requests_per_second: 10
 
+# Search Configuration
+search:
+  top_k: 10
+  preference_limit_number: 6
+
+# HTTP
+http_timeout: 60
+

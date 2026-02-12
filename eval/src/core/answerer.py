@@ -48,7 +48,7 @@ class Answerer:
         Initialize answerer with LLM configuration.
 
         Args:
-            config: Optional config dict. If not provided, loads from llm.yaml
+            config: Optional config dict. If not provided, loads from pipeline.yaml
             system_name: System name ("llm" uses special prompts, others use standard)
         """
         self.console = get_console()
@@ -68,71 +68,54 @@ class Answerer:
             self.mc_prompt = self.prompts_config.get("answer", {}).get("multiple_choice", "")
             self.oe_prompt = self.prompts_config.get("answer", {}).get("open_ended", "")
 
-        # Resolve LLM config with a consistent priority order.
+        # Load pipeline config (answer section)
         try:
-            llm_config_path = get_config_path("llm.yaml")
-            llm_yaml_config = load_yaml(str(llm_config_path))
-            base_llm_config = llm_yaml_config.get("llm", {})
+            pipeline_config_path = get_config_path("pipeline.yaml")
+            pipeline_config = load_yaml(str(pipeline_config_path))
         except Exception:
-            base_llm_config = {}
+            pipeline_config = {}
 
-        llm_config = config or base_llm_config
+        answer_config = pipeline_config.get("answer", {})
+        retry_config = pipeline_config.get("retry", {})
+        debug_config = pipeline_config.get("debug", {})
+
+        # Allow explicit config param to override pipeline.yaml
+        if config:
+            answer_config = {**answer_config, **config}
 
         # OpenRouter configuration via environment variables
-        api_key = llm_config.get("api_key") or os.environ.get("LLM_API_KEY")
-        base_url = llm_config.get("base_url") or os.environ.get("LLM_BASE_URL", "https://openrouter.ai/api/v1")
+        api_key = answer_config.get("api_key") or os.environ.get("LLM_API_KEY")
+        base_url = answer_config.get("base_url") or os.environ.get("LLM_BASE_URL", "https://openrouter.ai/api/v1")
 
         if not api_key:
             raise ValueError("LLM API key required. Set LLM_API_KEY env var or provide in config.")
 
         # Set timeout for long context processing (3MB+ dialogue requires longer time)
-        api_timeout = llm_config.get("timeout", 300)
+        api_timeout = answer_config.get("timeout", 300)
         self.client = AsyncOpenAI(
             api_key=api_key,
             base_url=base_url,
             timeout=api_timeout
         )
 
-        # Model configuration - use answer_model for all systems
-        if system_name == "llm":
-            self.model = llm_config.get("answer_model", "openai/gpt-4.1-mini")
-        else:
-            self.model = llm_config.get("answer_model", "openai/gpt-4.1-nano")
+        # Model configuration
+        self.model = answer_config.get("model", "openai/gpt-4.1-mini")
 
-        self.temperature = llm_config.get("temperature", 0)
-        self.max_tokens = llm_config.get("max_tokens", 1000)
+        self.temperature = answer_config.get("temperature", 0)
+        self.max_tokens = answer_config.get("max_tokens", 1000)
 
         # Provider configuration for OpenRouter (CRITICAL for cache hits)
-        if system_name == "llm" and "answer_provider" in llm_config:
-            self.provider_config = llm_config.get("answer_provider", None)
-        else:
-            self.provider_config = llm_config.get("provider", None)
+        self.provider_config = answer_config.get("provider", None)
 
-        # Concurrency settings (shared across all systems)
-        try:
-            llm_config_path = get_config_path("llm.yaml")
-            llm_yaml_config = load_yaml(str(llm_config_path))
-            concurrency_config = llm_yaml_config.get("concurrency", {})
-        except Exception:
-            concurrency_config = llm_config.get("concurrency", {})
-        self.concurrency = concurrency_config.get("answer_concurrency", 10)
+        # Concurrency settings
+        self.concurrency = answer_config.get("concurrency", 10)
 
         # Retry settings
-        retry_config = llm_config.get("retry", {})
         self.max_retries = retry_config.get("max_retries", 3)
         self.retry_delay = retry_config.get("retry_delay", 1.0)
         self.max_delay = retry_config.get("max_delay", 30.0)
 
-        # Debug settings - load from llm.yaml
-        if system_name == "llm":
-            try:
-                llm_config_path = get_config_path("llm.yaml")
-                llm_yaml_config = load_yaml(str(llm_config_path))
-                debug_config = llm_yaml_config.get("debug", {})
-            except Exception:
-                debug_config = {}
-        else:
-            debug_config = {}
+        # Debug settings
         self.show_usage = debug_config.get("show_usage", False)
 
         # Cache hit tracking

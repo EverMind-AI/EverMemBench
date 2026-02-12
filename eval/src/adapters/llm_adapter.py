@@ -49,9 +49,6 @@ class LLMAdapter(BaseAdapter):
         self._dialogue_data: Optional[Dataset] = None
         self._dialogue_context: Optional[str] = None
         
-        # Config from llm.yaml
-        self.llm_config = config.get("llm", {})
-        
         print(f"✅ LLMAdapter initialized")
         print(f"   Mode: Full dialogue as context (no memory system)")
     

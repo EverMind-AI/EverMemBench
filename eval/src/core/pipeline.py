@@ -70,12 +70,12 @@ class Pipeline:
         smoke_days: Optional[int] = None,
         smoke_date: Optional[str] = None,
         qa_path: Optional[str] = None,
-        top_k: int = 10,
+        top_k: Optional[int] = None,
         **kwargs
     ) -> Dict[str, Any]:
         """
         Run pipeline stages.
-        
+
         Args:
             dataset: Dataset to process
             user_id: User ID for memory system
@@ -83,9 +83,9 @@ class Pipeline:
             smoke_days: Limit to first N days for smoke test
             smoke_date: Run smoke test for a specific date (YYYY-MM-DD)
             qa_path: Path to QA JSON file (required for search/answer/evaluate)
-            top_k: Number of memories to retrieve for search
+            top_k: Number of memories to retrieve for search (None = use adapter config default)
             **kwargs: Additional parameters
-            
+
         Returns:
             Dict with stage results
         """
@@ -213,18 +213,18 @@ class Pipeline:
         self,
         qa_items: List[QAItem],
         user_id: str,
-        top_k: int,
+        top_k: Optional[int],
         **kwargs
     ) -> List[SearchResult]:
         """
         Execute Search stage with concurrency, retry, and progress display.
-        
+
         Args:
             qa_items: List of QA items to search for
             user_id: User ID for memory system
-            top_k: Number of memories to retrieve
+            top_k: Number of memories to retrieve (None = use adapter config default)
             **kwargs: Additional parameters
-            
+
         Returns:
             List of SearchResult objects
         """
@@ -232,27 +232,26 @@ class Pipeline:
         self.console.print("Stage: Search", style="bold blue")
         self.console.print(f"{'='*60}", style="bold blue")
         self.console.print(f"Questions: {len(qa_items)}")
-        self.console.print(f"Top K: {top_k}")
+        self.console.print(f"Top K: {top_k if top_k is not None else '(from config)'}")
         
-        # Load config for concurrency and retry settings from llm.yaml
+        # Load config from pipeline.yaml
         try:
-            llm_config_path = get_config_path("llm.yaml")
-            llm_yaml_config = load_yaml(str(llm_config_path))
-            llm_config = llm_yaml_config.get("llm", {})
-            concurrency_config = llm_yaml_config.get("concurrency", {})
+            pipeline_config_path = get_config_path("pipeline.yaml")
+            pipeline_config = load_yaml(str(pipeline_config_path))
         except Exception:
-            llm_config = {}
-            concurrency_config = {}
+            pipeline_config = {}
+
+        search_config = pipeline_config.get("search", {})
+        retry_config = pipeline_config.get("retry", {})
 
         # Concurrency settings
-        search_concurrency = concurrency_config.get("search_concurrency", 3)
+        search_concurrency = search_config.get("concurrency", 3)
 
         # Retry settings
-        retry_config = llm_config.get("retry", {})
         max_retries = retry_config.get("max_retries", 3)
         retry_delay = retry_config.get("retry_delay", 1.0)
         max_delay = retry_config.get("max_delay", 30.0)
-        search_timeout = retry_config.get("search_timeout", 120.0)
+        search_timeout = search_config.get("timeout", 120.0)
         
         self.console.print(f"   Concurrency: {search_concurrency}")
         self.console.print(f"   Max Retries: {max_retries}")
@@ -520,14 +519,13 @@ class Pipeline:
         # Clear original search_results to free memory
         search_results.clear()
         
-        # Get concurrency settings from llm.yaml
+        # Get concurrency settings from pipeline.yaml
         try:
-            llm_config_path = get_config_path("llm.yaml")
-            llm_yaml_config = load_yaml(str(llm_config_path))
-            concurrency_config = llm_yaml_config.get("concurrency", {})
+            pipeline_config_path = get_config_path("pipeline.yaml")
+            pipeline_config = load_yaml(str(pipeline_config_path))
         except Exception:
-            concurrency_config = {}
-        concurrency = concurrency_config.get("answer_concurrency", 10)
+            pipeline_config = {}
+        concurrency = pipeline_config.get("answer", {}).get("concurrency", 10)
         
         semaphore = asyncio.Semaphore(concurrency)
         
@@ -636,17 +634,10 @@ class Pipeline:
             first_qa: First QA item
             first_sr: First search result
         """
-        # Load warmup config from llm.yaml
-        try:
-            llm_config_path = get_config_path("llm.yaml")
-            llm_config = load_yaml(str(llm_config_path))
-            warmup_config = llm_config.get("warmup", {})
-            warmup_enabled = warmup_config.get("enabled", True)
-            warmup_delay = warmup_config.get("delay_seconds", 5)
-        except Exception:
-            # Default values if config not found
-            warmup_enabled = True
-            warmup_delay = 5
+        # Load warmup config from adapter's own config (llm.yaml for LLM system)
+        warmup_config = self.adapter.config.get("warmup", {})
+        warmup_enabled = warmup_config.get("enabled", True)
+        warmup_delay = warmup_config.get("delay_seconds", 5)
         
         if not warmup_enabled:
             return

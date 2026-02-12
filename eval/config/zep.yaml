@@ -21,3 +21,10 @@ batch_size: 20          # Messages per batch (async)
 max_retries: 5           # Retry count for failed requests
 add_interval: 0.1        # Interval between messages (seconds)
 
+# Search Configuration
+search:
+  top_k: 10
+  reranker_edges: "cross_encoder"
+  reranker_nodes: "rrf"
+  max_query_length: 400
+

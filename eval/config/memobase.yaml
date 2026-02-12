@@ -18,3 +18,8 @@ batch_size: 30           # Messages per batch (ChatBlob)
 batch_delay: 2.0         # Seconds to wait between batches (avoid rate limiting)
 max_retries: 5           # Retry count for failed requests
 
+# Search Configuration
+search:
+  max_token_size: 3000
+  event_similarity_threshold: 0.2
+

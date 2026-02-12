@@ -74,13 +74,14 @@ A comprehensive evaluation framework for multi-person group chat datasets, suppo
 eval/
 ├── cli.py                    # CLI entry point
 ├── config/
-│   ├── memos.yaml           # Memos configuration
-│   ├── mem0.yaml            # Mem0 configuration
-│   ├── memobase.yaml        # Memobase configuration
-│   ├── evermemos.yaml       # EverMemOS configuration
-│   ├── zep.yaml             # Zep configuration
-│   ├── llm.yaml             # LLM system configuration (model/provider/warmup/concurrency/retry)
-│   └── prompts.yaml         # LLM prompts for answer/evaluate
+│   ├── pipeline.yaml        # Pipeline settings (answer/evaluate/search/retry/debug)
+│   ├── prompts.yaml         # LLM prompts for answer/evaluate
+│   ├── llm.yaml             # LLM adapter config (name + warmup only)
+│   ├── memos.yaml           # Memos configuration (connection + add + search)
+│   ├── mem0.yaml            # Mem0 configuration (connection + add + search)
+│   ├── memobase.yaml        # Memobase configuration (connection + add + search)
+│   ├── evermemos.yaml       # EverMemOS configuration (connection + add + search)
+│   └── zep.yaml             # Zep configuration (connection + add + search)
 ├── src/
 │   ├── core/
 │   │   ├── data_models.py   # Data classes (QAItem, SearchResult, etc.)
@@ -148,44 +149,83 @@ LLM_BASE_URL=https://openrouter.ai/api/v1
 LLM_API_KEY=your-openrouter-api-key
 ```
 
-### LLM Configuration
+### Pipeline Configuration
 
-LLM **runtime settings** (model/provider routing, warmup, concurrency, retry) are in `eval/config/llm.yaml`.
-LLM **prompt templates** are in `eval/config/prompts.yaml`.
+Pipeline settings (answer/evaluate/search/retry/debug) are in `eval/config/pipeline.yaml`.
+Each stage has its own model, provider, and concurrency settings.
 
 ```yaml
-# eval/config/llm.yaml (runtime settings)
-llm:
-  model: "google/gemini-3-flash-preview"  # OpenRouter model ID
+# eval/config/pipeline.yaml
+
+# Answer generation (answerer.py)
+answer:
+  model: "openai/gpt-4.1-mini"
   provider:
-    order: ["google-vertex"]              # lock provider to ensure cache hits
+    order: ["google-ai-studio"]
     allow_fallbacks: false
   temperature: 0
   max_tokens: 1000
+  timeout: 300
+  concurrency: 1
 
-# Warmup Configuration (for LLM system)
-warmup:
-  enabled: true
-  delay_seconds: 5              # Wait after first request
+# LLM judge evaluation (evaluator.py)
+evaluate:
+  model: "openai/gpt-4.1-nano"
+  provider:
+    order: ["google-ai-studio"]
+    allow_fallbacks: false
+  concurrency: 20
 
-# Concurrency Configuration
-concurrency:
-  answer_concurrency: 3         # Lower concurrency = better cache hits
-  evaluate_concurrency: 20
+# Search stage (pipeline.py)
+search:
+  concurrency: 3
+  timeout: 120
 
-# Retry Configuration
+# Retry (shared)
 retry:
-  max_retries: 3
+  max_retries: 20
   retry_delay: 1.0
-  max_delay: 30.0
+  max_delay: 300
 
-# Debug Configuration
+# Debug
 debug:
-  show_usage: true              # Show token usage and cache details
+  show_usage: true
 ```
 
+### System Search Configuration
+
+Each memory system config has a `search:` section for system-specific search parameters:
+
 ```yaml
-# eval/config/prompts.yaml (prompt templates)
+# eval/config/evermemos.yaml
+search:
+  top_k: 10
+  retrieve_method: "hybrid"
+
+# eval/config/memobase.yaml
+search:
+  max_token_size: 1000
+  event_similarity_threshold: 0.2
+```
+
+CLI `--top-k` overrides the config default when provided.
+
+### LLM Adapter Configuration
+
+LLM adapter config (for `--system llm`) is in `eval/config/llm.yaml` (name + warmup only).
+
+```yaml
+# eval/config/llm.yaml
+name: "llm"
+warmup:
+  enabled: true
+  delay_seconds: 15
+```
+
+### Prompt Templates
+
+```yaml
+# eval/config/prompts.yaml
 llm_answer:
   multiple_choice: |
     ...
@@ -294,7 +334,7 @@ python -m eval.cli \
 | `--stages` | Stages to run: add, search, answer, evaluate | `["add"]` |
 | `--qa` | Path to QA JSON file (required for search/answer/evaluate) | - |
 | `--user-id` | User ID for memory system | Auto-generated |
-| `--top-k` | Number of memories to retrieve | 10 |
+| `--top-k` | Number of memories to retrieve | From system config |
 | `--output-dir` | Results output directory | `eval/results` |
 | `--smoke` | Enable smoke test mode | False |
 | `--smoke-days` | Days to process in smoke test | 1 |
@@ -370,17 +410,18 @@ The LLM system uses **memory-efficient processing** to handle large dialogues:
 **Why it matters**: OpenRouter aggregates multiple providers. Without explicit provider config, your requests may be routed to different backends, **breaking cache entirely**.
 
 ```yaml
-llm:
-  model: "google/gemini-3-flash-preview"
+# eval/config/pipeline.yaml
+answer:
+  model: "openai/gpt-4.1-mini"
 
   # CRITICAL: Lock requests to a single provider
   provider:
     order:
-      - "google-vertex"       # Or other OpenRouter provider IDs
+      - "google-ai-studio"    # Or other OpenRouter provider IDs
     allow_fallbacks: false    # Prevent automatic routing to other providers
 ```
 
-> Provider 的可选值以 OpenRouter 文档为准；这里用 `google-vertex` 作为示例。
+> Provider 的可选值以 OpenRouter 文档为准；这里用 `google-ai-studio` 作为示例。
 
 #### 2. Warmup Phase
 
@@ -415,8 +456,9 @@ Cache: 2/3 ━━━━━━━━━━━━━━━━━━━━━━━
 Lower concurrency can improve cache hit stability:
 
 ```yaml
-concurrency:
-  answer_concurrency: 3    # Lower = more cache hits, slower overall
+# eval/config/pipeline.yaml
+answer:
+  concurrency: 3    # Lower = more cache hits, slower overall
 ```
 
 ### LLM System Architecture
@@ -672,23 +714,22 @@ python -m eval.cli --system llm ... --smoke --smoke-date 2025-01-09
 
 If cache hits are 0%, check:
 
-1. **Provider not configured**: Most common issue! Add explicit `provider.order` in `llm.yaml`
-2. **Warmup disabled**: Ensure `warmup.enabled: true`
-3. **High concurrency**: Reduce `answer_concurrency` to 1-3
+1. **Provider not configured**: Most common issue! Add explicit `provider.order` in `pipeline.yaml` answer section
+2. **Warmup disabled**: Ensure `warmup.enabled: true` in `llm.yaml`
+3. **High concurrency**: Reduce `answer.concurrency` to 1-3
 
 ```yaml
-# Fix for 0% cache hits
-llm:
+# Fix for 0% cache hits (eval/config/pipeline.yaml)
+answer:
   provider:
     order: ["google-vertex"]  # Lock to single provider!
     allow_fallbacks: false
+  concurrency: 3              # Lower = better cache hits
 
+# Warmup (eval/config/llm.yaml)
 warmup:
   enabled: true
-  delay_seconds: 5
-
-concurrency:
-  answer_concurrency: 3          # Lower = better cache hits
+  delay_seconds: 15
 ```
 
 ### Low Cache Hit Rate - <50% (LLM System)
@@ -699,7 +740,7 @@ If cache hits are low but not zero:
 2. **Concurrent request timing**: Requests may start before cache propagates
 3. **Model string mismatch**: Ensure exact same model string everywhere
 
-Enable debug mode to see actual cache data:
+Enable debug mode to see actual cache data in `pipeline.yaml`:
 ```yaml
 debug:
   show_usage: true

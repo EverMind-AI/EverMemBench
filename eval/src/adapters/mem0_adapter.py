@@ -75,6 +75,9 @@ class Mem0Adapter(BaseAdapter):
         # Keep defaults False for backwards compatibility.
         self.enable_graph_add = bool(config.get("enable_graph_add", False))
         self.enable_graph_search = bool(config.get("enable_graph_search", False))
+
+        # Search configuration
+        self.search_config = config.get("search", {})
         
         self.console = get_console()
         
@@ -368,12 +371,18 @@ class Mem0Adapter(BaseAdapter):
             SearchResult with retrieved memories and formatted context
         """
         start_time = time.time()
-        
+
+        # Read search params from config, allow kwargs override
+        effective_top_k = top_k if top_k is not None else self.search_config.get("top_k", 10)
+
         # Build run_id filter based on user_id and group_ids
         run_ids = kwargs.get("run_ids")
         if not run_ids:
             # Default: search groups 1, 2, 3 for the user_id
-            group_ids = kwargs.get("group_ids", ["1", "2", "3"])
+            group_ids = kwargs.get(
+                "group_ids",
+                self.search_config.get("group_ids", ["1", "2", "3"])
+            )
             run_ids = [f"{user_id}_{gid}" for gid in group_ids]
         
         # Construct filters for Mem0 search
@@ -388,7 +397,7 @@ class Mem0Adapter(BaseAdapter):
             try:
                 results = await self.client.search(
                     query=query,
-                    top_k=top_k,
+                    top_k=effective_top_k,
                     filters=filters,
                     version="v2",
                     enable_graph=self.enable_graph_search,

@@ -1,77 +1,11 @@
-# LLM System Configuration for Multi-Person Group Chat Evaluation
-#
-# Unlike memory systems (memos, mem0, etc.), the LLM system uses
-# the FULL DIALOGUE as context instead of retrieved memories.
-# This is for direct LLM evaluation without memory systems.
-#
-# Environment variables:
-# - LLM_BASE_URL: OpenRouter API base URL (default: https://openrouter.ai/api/v1)
-# - LLM_API_KEY: OpenRouter API key (required)
+# LLM System Adapter Configuration
+# Used only when --system llm (full dialogue as context, no memory retrieval)
 
 name: "llm"
 version: "1.0"
 description: "Direct LLM evaluation using full dialogue as context"
 
-# LLM Model Configuration
-# Model and Provider are configured SEPARATELY to ensure cache hits.
-#
-# IMPORTANT: OpenRouter routes requests to different providers if not specified.
-# To guarantee cache hits, you MUST configure the provider explicitly.
-# See: https://openrouter.ai/docs/provider-routing
-llm:
-  # Model ID (OpenRouter format: provider/model-name)
-  # Examples: 
-  #   - google/gemini-2.0-flash-001
-  #   - google/gemini-2.5-flash-preview-05-20
-  #   - openai/gpt-4.1-mini
-  #   - anthropic/claude-3-5-sonnet
-  model: "google/gemini-2.5-flash"
-  
-  # Provider Routing Configuration (CRITICAL for cache hits)
-  # This ensures all requests go to the same provider backend.
-  # Without this, OpenRouter may route to different providers, breaking cache.
-  #
-  # Common providers (case-sensitive, must match OpenRouter identifiers):
-  #   - "Google AI Studio"  (for Gemini models via Google AI Studio)
-  #   - "Vertex AI"         (for Gemini models via Google Cloud Vertex AI)
-  #   - "OpenAI"            (for GPT models)
-  #   - "Anthropic"         (for Claude models)
-  #   - "Azure"             (for Azure OpenAI models)
-  #   - "AWS Bedrock"       (for models via AWS Bedrock)
-  #
-  # You can specify multiple providers in order of preference.
-  # Example: ["Google AI Studio", "Vertex AI"] - try Google AI Studio first
-  provider:
-    order:
-      - "google-ai-studio"    # Primary provider
-    allow_fallbacks: false    # IMPORTANT: Set to false to ensure cache consistency
-  
-  # Generation parameters
-  temperature: 0              # Use 0 for deterministic outputs
-  max_tokens: 1000
-  
-  # API timeout in seconds (long context like 3MB dialogue needs more time)
-  timeout: 300                # 5 minutes - increase for very long contexts
-
-  retry:
-    max_retries: 20
-    retry_delay: 1.0            # Initial retry delay in seconds
-    max_delay: 300
-
-# Warmup Configuration
-# First request warms up the cache, then wait before sending more requests.
-# This improves cache hit rate for subsequent requests with same prefix.
+# Cache warmup (sends first request, waits, then batch processes)
 warmup:
   enabled: true
-  delay_seconds: 15            # Wait 5s after first request for cache to warm up
-
-# Concurrency Configuration
-# Control parallel API calls for answer and evaluate stages
-concurrency:
-  answer_concurrency: 1      # Concurrent calls during answer generation
-  evaluate_concurrency: 20    # Concurrent calls during LLM judge evaluation
-
-# Debug Configuration
-# Enable to see detailed cache information from API responses
-debug:
-  show_usage: true            # Show token usage and cache details for each request
+  delay_seconds: 15

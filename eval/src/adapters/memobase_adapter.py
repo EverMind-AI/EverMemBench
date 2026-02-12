@@ -77,6 +77,9 @@ class MemobaseAdapter(BaseAdapter):
         self.batch_size = config.get("batch_size", 20)
         self.batch_delay = config.get("batch_delay", 2.0)  # Delay between batches
         self.max_retries = config.get("max_retries", 5)
+
+        # Search configuration
+        self.search_config = config.get("search", {})
         
         self.console = get_console()
         
@@ -399,9 +402,16 @@ class MemobaseAdapter(BaseAdapter):
             SearchResult with retrieved memories and formatted context
         """
         start_time = time.time()
-        
-        max_token_size = kwargs.get("max_token_size", 1000)
-        event_similarity_threshold = kwargs.get("event_similarity_threshold", 0.2)
+
+        # Read search params from config, allow kwargs override
+        max_token_size = kwargs.get(
+            "max_token_size",
+            self.search_config.get("max_token_size", 1000)
+        )
+        event_similarity_threshold = kwargs.get(
+            "event_similarity_threshold",
+            self.search_config.get("event_similarity_threshold", 0.2)
+        )
         
         # Look up actual Memobase UUID from mapping or by searching users
         memobase_uuid = kwargs.get("memobase_user_id")

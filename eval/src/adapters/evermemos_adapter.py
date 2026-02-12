@@ -74,6 +74,12 @@ class EverMemosAdapter(BaseAdapter):
         rps = config.get("requests_per_second", 5)
         self.rate_limiter = AsyncLimiter(max_rate=rps, time_period=1.0)
 
+        # Search configuration
+        self.search_config = config.get("search", {})
+
+        # HTTP configuration
+        self.http_timeout = config.get("http_timeout", 60)
+
         self._session: Optional[aiohttp.ClientSession] = None
         self.console = get_console()
         
@@ -86,7 +92,7 @@ class EverMemosAdapter(BaseAdapter):
 
     async def _get_session(self) -> aiohttp.ClientSession:
         if self._session is None or self._session.closed:
-            timeout = aiohttp.ClientTimeout(total=60)
+            timeout = aiohttp.ClientTimeout(total=self.http_timeout)
             self._session = aiohttp.ClientSession(headers=self.headers, timeout=timeout)
         return self._session
 
@@ -248,10 +254,16 @@ class EverMemosAdapter(BaseAdapter):
         start_time = time.time()
 
         session = await self._get_session()
-        retrieve_method = kwargs.get("retrieve_method", "hybrid")
+
+        # Read search params from config, allow kwargs override
+        effective_top_k = top_k if top_k is not None else self.search_config.get("top_k", 10)
+        retrieve_method = kwargs.get(
+            "retrieve_method",
+            self.search_config.get("retrieve_method", "hybrid")
+        )
 
         raw_memories = await self._search_episodic(
-            session, query, top_k, retrieve_method
+            session, query, effective_top_k, retrieve_method
         )
 
         # Format memories
@@ -303,7 +315,7 @@ class EverMemosAdapter(BaseAdapter):
             "memory_types": ["episodic_memory"],
             "query": query,
             "retrieve_method": retrieve_method,
-            "top_k": 5,
+            "top_k": top_k,
             "user_id": "",
             "include_metadata": False,
         }

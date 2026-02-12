@@ -70,6 +70,9 @@ class ZepAdapter(BaseAdapter):
         self.batch_size = config.get("batch_size", 10)
         self.max_retries = config.get("max_retries", 5)
         self.add_interval = config.get("add_interval", 0.1)  # Interval between messages
+
+        # Search configuration
+        self.search_config = config.get("search", {})
         
         self.console = get_console()
         
@@ -277,13 +280,19 @@ class ZepAdapter(BaseAdapter):
             SearchResult with retrieved memories and formatted context
         """
         start_time = time.time()
-        
+
         graph_id = kwargs.get("graph_id") or user_id
-        edges_limit = top_k // 2
-        nodes_limit = top_k - edges_limit
-        
+
+        # Read search params from config, allow kwargs override
+        effective_top_k = top_k if top_k is not None else self.search_config.get("top_k", 10)
+        edges_limit = effective_top_k // 2
+        nodes_limit = effective_top_k - edges_limit
+
         # Zep API limit: query cannot be longer than 400 characters
-        max_query_length = kwargs.get("max_query_length", 400)
+        max_query_length = kwargs.get(
+            "max_query_length",
+            self.search_config.get("max_query_length", 400)
+        )
         original_query = query
         if len(query) > max_query_length:
             # Keep the tail of the query (most recent / most specific part).
@@ -298,21 +307,29 @@ class ZepAdapter(BaseAdapter):
         for attempt in range(self.max_retries):
             try:
                 # Search edges (facts)
+                reranker_edges = kwargs.get(
+                    "reranker_edges",
+                    self.search_config.get("reranker_edges", "cross_encoder")
+                )
                 edges_results = await self.client.graph.search(
                     graph_id=graph_id,
                     query=query,
                     scope="edges",
                     limit=edges_limit,
-                    reranker=kwargs.get("reranker_edges", "cross_encoder")
+                    reranker=reranker_edges
                 )
-                
+
                 # Search nodes (entities)
+                reranker_nodes = kwargs.get(
+                    "reranker_nodes",
+                    self.search_config.get("reranker_nodes", "rrf")
+                )
                 nodes_results = await self.client.graph.search(
                     graph_id=graph_id,
                     query=query,
                     scope="nodes",
                     limit=nodes_limit,
-                    reranker=kwargs.get("reranker_nodes", "rrf")
+                    reranker=reranker_nodes
                 )
                 
                 # Parse results

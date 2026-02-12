@@ -24,4 +24,10 @@ requests_per_second: 20
 max_retries: 5
 add_interval: 0.0
 
+# Search Configuration
+search:
+  top_k: 10
+  retrieve_method: "hybrid"
 
+# HTTP
+http_timeout: 60

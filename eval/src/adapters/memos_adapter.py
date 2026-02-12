@@ -67,7 +67,13 @@ class MemosAdapter(BaseAdapter):
         # Rate limiting
         requests_per_second = config.get("requests_per_second", 10)
         self.rate_limiter = AsyncLimiter(max_rate=requests_per_second, time_period=1.0)
-        
+
+        # Search configuration
+        self.search_config = config.get("search", {})
+
+        # HTTP configuration
+        self.http_timeout = config.get("http_timeout", 60)
+
         # HTTP session (lazy init)
         self._session: Optional[aiohttp.ClientSession] = None
         
@@ -81,7 +87,7 @@ class MemosAdapter(BaseAdapter):
     async def _get_session(self) -> aiohttp.ClientSession:
         """Get or create aiohttp session."""
         if self._session is None or self._session.closed:
-            timeout = aiohttp.ClientTimeout(total=60)
+            timeout = aiohttp.ClientTimeout(total=self.http_timeout)
             self._session = aiohttp.ClientSession(
                 headers=self.headers,
                 timeout=timeout
@@ -309,18 +315,23 @@ class MemosAdapter(BaseAdapter):
             SearchResult with retrieved memories and formatted context
         """
         start_time = time.time()
-        
+
         session = await self._get_session()
         # Correct endpoint: /search/memory
         url = f"{self.api_url}/search/memory"
-        
-        preference_limit = kwargs.get("preference_limit_number", 6)
-        
+
+        # Read search params from config, allow kwargs override
+        effective_top_k = top_k if top_k is not None else self.search_config.get("top_k", 10)
+        preference_limit = kwargs.get(
+            "preference_limit_number",
+            self.search_config.get("preference_limit_number", 6)
+        )
+
         # Correct payload format based on Postman screenshot
         payload = {
             "query": query,
             "user_id": user_id,
-            "memory_limit_number": top_k,
+            "memory_limit_number": effective_top_k,
             "preference_limit_number": preference_limit
         }
         

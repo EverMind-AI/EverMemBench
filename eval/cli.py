@@ -190,7 +190,6 @@ Examples:
     parser.add_argument(
         "--dataset",
         type=str,
-        required=True,
         help="Path to dataset JSON file (e.g., dataset/004/dialogue_en.json)"
     )
     
@@ -222,8 +221,8 @@ Examples:
     parser.add_argument(
         "--top-k",
         type=int,
-        default=10,
-        help="Number of memories to retrieve for search (default: 10)"
+        default=None,
+        help="Number of memories to retrieve for search (default: from system config)"
     )
     
     parser.add_argument(

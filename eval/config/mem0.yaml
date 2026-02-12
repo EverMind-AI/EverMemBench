@@ -19,3 +19,8 @@ batch_size: 30            # Messages per batch
 max_retries: 5           # Retry count for failed requests
 add_interval: 0.5        # Interval between batches (seconds)
 
+# Search Configuration
+search:
+  top_k: 10
+  group_ids: ["1", "2", "3"]
+
